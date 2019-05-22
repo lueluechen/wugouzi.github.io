@@ -1,0 +1,3 @@
+#+TITLE: Abstract Nonsense
+
+- [[file:thoughts.org][desperation]]
