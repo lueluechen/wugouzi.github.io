@@ -3,6 +3,5 @@
 #+OPTIONS: AUTHOR:wugouzi ;不显示作者
 
 
-* wefawef
-  initial commit
+
 
