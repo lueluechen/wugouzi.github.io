@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-05-23 四 11:25 -->
+<!-- 2019-05-23 四 11:41 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Numerical Analysis</title>
@@ -226,28 +226,6 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
-
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
-</script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
@@ -348,36 +326,27 @@ with only a finite number of digits.
 
 
 <p>
-Suppose \(y=\textcolor{blue}{0.d_1d_2\dots
-   d_k}d_{k+1}d_{k+2}\dots\textcolor{blue}{\times 10^n{}}\), then
+Suppose <img src="ltximg/NumericalAnalysis_1d461c52820da30f96fb184e3c2180edfe6344cf.png" alt="NumericalAnalysis_1d461c52820da30f96fb184e3c2180edfe6344cf.png" />, then
 </p>
 
 <p>
-\(fl(y)=\begin{cases} 0.d_1d_2\dots d_k\times 10^n&\quad\text{chopping}\\
-   chop(y+5\times 10^{n-(k+1)})=0.\delta_1\delta_2\dots \delta_k\times
-   10^n&\quad\text{Rounding}\\\end{cases}\)
+<img src="ltximg/NumericalAnalysis_0cc95064ea3ca00ce2f197b9320f41aed6365dee.png" alt="NumericalAnalysis_0cc95064ea3ca00ce2f197b9320f41aed6365dee.png" />
 </p>
 
 
-\begin{definition}
-If $p*$ is an approximation to $p$, the \textcolor{red}{absolute error} is $|p-p*|$,
-and the \textcolor{red}{relative error} is $\frac{|p-p*|}{|p|}$, provided that $p\neq 0$
-\end{definition}
 
-\begin{definition}
-The number $p*$ is said to approximate $p$ to $t$
-\textcolor{red}{significant digits} if $t$ is the largest nonnegative
-integer for which $\frac{|p-p*|}{|p|}<5\times 10^{-t}$
-\end{definition}
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_65826a611c9393ad9c9c0c7881c2d44a01459cc3.png" alt="NumericalAnalysis_65826a611c9393ad9c9c0c7881c2d44a01459cc3.png" /></p>
+</div>
+
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_c7b4888240b9f97dca22fdf3664f35c65411394f.png" alt="NumericalAnalysis_c7b4888240b9f97dca22fdf3664f35c65411394f.png" /></p>
+</div>
 
 <dl class="org-dl">
-<dt>chopping</dt><dd>\(|\frac{y-fl(y)}{y}|=|\frac{0.d_1d_2\dots d_kd_{k+1}\dots
-                 \times 10^n-0.d_1d_2\dots d_k\times 10^n}{0.d_1d_2\dots
-                 d_kd_{k+1}\times
-                 10^n}|=|\frac{0.d_{k+1}\dots}{0.d_1d_2\dots}|\times 10^{-k}\le
-                 \frac{1}{0.1}\times 10^{-k}=10^{-k+1}\)</dd>
-<dt>rounding</dt><dd>\(|\frac{y-fl(y)}{y}|\le \frac{0.5}{0.1}\times 10^{-k}=0.5\times
-                 10^{-k+1}\)</dd>
+<dt>chopping</dt><dd><img src="ltximg/NumericalAnalysis_1aea290a054ed4b66478256d5228abf5db21597a.png" alt="NumericalAnalysis_1aea290a054ed4b66478256d5228abf5db21597a.png" /></dd>
+<dt>rounding</dt><dd><img src="ltximg/NumericalAnalysis_07b09ca31938c8c0794ed64e47e846b9580b3b12.png" alt="NumericalAnalysis_07b09ca31938c8c0794ed64e47e846b9580b3b12.png" /></dd>
 </dl>
 
 <p>
@@ -385,10 +354,10 @@ integer for which $\frac{|p-p*|}{|p|}<5\times 10^{-t}$
 </p>
 
 <ul class="org-ul">
-<li>\(x\oplus y=fl(fl(x)+fl(y))\)</li>
-<li>\(x\otimes y=fl(fl(x)\times fl(y))\)</li>
-<li>\(x\ominus y=fl(fl(x)-fl(y))\)</li>
-<li>\(x\odiv y=fl(fl(x)\div fl(y))\)</li>
+<li><img src="ltximg/NumericalAnalysis_a2969efe97cd3da2a85b65bb6dfd6de4ff6d4436.png" alt="NumericalAnalysis_a2969efe97cd3da2a85b65bb6dfd6de4ff6d4436.png" /></li>
+<li><img src="ltximg/NumericalAnalysis_3aae90a446e5167334e7f7468f90dc1c90a2c369.png" alt="NumericalAnalysis_3aae90a446e5167334e7f7468f90dc1c90a2c369.png" /></li>
+<li><img src="ltximg/NumericalAnalysis_3b208d6ec08988e65e40673a1565e36aee094ea2.png" alt="NumericalAnalysis_3b208d6ec08988e65e40673a1565e36aee094ea2.png" /></li>
+<li><img src="ltximg/NumericalAnalysis_68239dca08d57f35f47b9dcaf2ad5c84a8dd4470.png" alt="NumericalAnalysis_68239dca08d57f35f47b9dcaf2ad5c84a8dd4470.png" /></li>
 </ul>
 </div>
 </div>
@@ -405,23 +374,22 @@ is stable only for certain choices of initial data.
 
 <p>
 Suppose that E₀ &gt; 0 denotes an initial error and En represents the magnitude
-of an error after n subsequent operations. If \(E_n\approx CnE_0\), where C is a
+of an error after n subsequent operations. If <img src="ltximg/NumericalAnalysis_896ea20fcc4f3681caefa8bf18e3e35f0dfff994.png" alt="NumericalAnalysis_896ea20fcc4f3681caefa8bf18e3e35f0dfff994.png" />, where C is a
 constant independent of n, then the growth of error is said to be <b>linear</b>. If
-\(E_n\approx C^nE_0\), for some C &gt; 1, then the growth of error is called <b>exponential</b> 
+<img src="ltximg/NumericalAnalysis_04f591ab3f1388a74938c3e42cd300e27d88c59d.png" alt="NumericalAnalysis_04f591ab3f1388a74938c3e42cd300e27d88c59d.png" />, for some C &gt; 1, then the growth of error is called <b>exponential</b> 
 </p>
 
 <p>
-Suppose \(\{\beta_n\}_{n=1}^\infty, \lim\limits_{n \to \infty}\beta_n=0,
-   \{\alpha_n\}_{n=1}^\infty, \lim\limits_{n\to\infty}\alpha_n=\alpha\).
-If a positive constant K exists with \(|\alpha_n-\alpha|\le K|\beta_n|\) for
-large n, then \(\{\alpha_n\}_{n=1}^\infty\) converges to α with <b>rate, or</b>
-<b>order, of convergence</b> \(O(\beta_n)\)
+Suppose <img src="ltximg/NumericalAnalysis_beb04d1ad6a38dc96f6cc29d6fe2cae4e1b91c37.png" alt="NumericalAnalysis_beb04d1ad6a38dc96f6cc29d6fe2cae4e1b91c37.png" />.
+If a positive constant K exists with <img src="ltximg/NumericalAnalysis_cc22f6fd6f0faa73d9d33dfecb30ebc513850753.png" alt="NumericalAnalysis_cc22f6fd6f0faa73d9d33dfecb30ebc513850753.png" /> for
+large n, then <img src="ltximg/NumericalAnalysis_94996bb3534fd4fb73c5218af14acc53f1b334c1.png" alt="NumericalAnalysis_94996bb3534fd4fb73c5218af14acc53f1b334c1.png" /> converges to α with <b>rate, or</b>
+<b>order, of convergence</b> <img src="ltximg/NumericalAnalysis_51aca82c80bc3dd1cf5a21393e927c9132209a59.png" alt="NumericalAnalysis_51aca82c80bc3dd1cf5a21393e927c9132209a59.png" />
 </p>
 
 <p>
-Suppose \(\lim\limits_{h\to 0}G(h)=0, \lim\limits_{h\to 0}F(h)=L\) and
-\(|F(h)-L|\le K|G(h)|\) for sufficiently small h, then we write
-\(F(h)=L+O(G(h))\)
+Suppose <img src="ltximg/NumericalAnalysis_65abc42f7093992eef67c565bf0fd2ff8b867568.png" alt="NumericalAnalysis_65abc42f7093992eef67c565bf0fd2ff8b867568.png" /> and
+<img src="ltximg/NumericalAnalysis_a970fd5277e24390e8200d33d51a893362a6ab70.png" alt="NumericalAnalysis_a970fd5277e24390e8200d33d51a893362a6ab70.png" /> for sufficiently small h, then we write
+<img src="ltximg/NumericalAnalysis_177e8b435c8597287de09ec9a69813cdff9501ab.png" alt="NumericalAnalysis_177e8b435c8597287de09ec9a69813cdff9501ab.png" />
 </p>
 </div>
 </div>
@@ -433,39 +401,33 @@ Suppose \(\lim\limits_{h\to 0}G(h)=0, \lim\limits_{h\to 0}F(h)=L\) and
 <div id="outline-container-org794c3fd" class="outline-3">
 <h3 id="org794c3fd">2.1 Bisection method</h3>
 <div class="outline-text-3" id="text-org794c3fd">
-\begin{theorem}{Intermediate Value Theorem}
-If $f\in C[a,b]$, $K\in(f(a), f(b))$, then there exists a number $p\in(a,b)$
-for which $f(p)=K$
-\end{theorem}
 
-\begin{theorem}
-Suppose that $f\in C[a,b]$ and $f(a)\cdot f(b)<0$. The bisection method
-generates a sequence $\{p_n\},n=0,1,\dots$ approximating a zero $p$ of $f$ with
-\begin{equation*}
-|p_n-p|\le\frac{b-a}{2^n}, \quad\text{when } n\ge 1
-\end{equation*}
-\end{theorem}
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_ef4450981126dc17b75e8635e5a139386295b726.png" alt="NumericalAnalysis_ef4450981126dc17b75e8635e5a139386295b726.png" /></p>
+</div>
+
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_6e8ce7017665c4238fd2003e8a809399a0d84aa1.png" alt="NumericalAnalysis_6e8ce7017665c4238fd2003e8a809399a0d84aa1.png" /></p>
+</div>
 </div>
 </div>
 <div id="outline-container-orgeefd951" class="outline-3">
 <h3 id="orgeefd951">2.2 Fixed-Point Iteration</h3>
 <div class="outline-text-3" id="text-orgeefd951">
 <p>
-\(f(x)=0\xleftrightarrow{\text{equivalent}} x=f(x)+x=g(x)\)
+<img src="ltximg/NumericalAnalysis_cc2d83fc37f6dfc044229d45c5268fe6f0a90fdb.png" alt="NumericalAnalysis_cc2d83fc37f6dfc044229d45c5268fe6f0a90fdb.png" />
 </p>
 
-\begin{theorem}{Fixed-Point Theorem}
-Let $g\in C[a,b]$ be s.t. $g(x)\in[a,b]$ for all $x\in[a,b]$. Suppose that
-$g'$ exists on $(a,b)$ and that a constant $0<k<1$ exists with $|g'(x)|\le k$
-for all $x\in(a,b)$ (hence $g'$ can't converge to 1). Then for any number
-$p_0$ in $[a,b]$, the sequence defined by $p_n=g(p_{n-1}), n\ge 1$ converges
-to the unique point $p$ in $[a,b]$
-\end{theorem}
 
-\begin{corollary}
-$|p_n-p|\le\frac{1}{1-k}|p_{n+1}-p_n|$ and
-$|p_n-p|\le\frac{k^n}{1-k}|p_1-p_0|$
-\end{corollary}
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_695b6e895b6a1201458ca5d8ac451ef5473b5381.png" alt="NumericalAnalysis_695b6e895b6a1201458ca5d8ac451ef5473b5381.png" /></p>
+</div>
+
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_96cf250865247d7f4709166351c3c2c78477078e.png" alt="NumericalAnalysis_96cf250865247d7f4709166351c3c2c78477078e.png" /></p>
+</div>
 </div>
 </div>
 <div id="outline-container-org1366344" class="outline-3">
@@ -476,133 +438,89 @@ Linearize a nonlinear function using <b>Taylor's expansion</b>
 </p>
 
 <p>
-Let \(p_0\in [a,b]\) be an approximation to \(p\) s.t. \(f'(p_0)\neq 0\), hence 
-\(f(x)=f(p_0)+f'(p_0)(x-p_0)+\frac{f''(\xi_x)}{2!}(x-p_0)^2\), then
-\(0=f(p)\approx f(p_0)+f'(p_0)(p-p0)\rightarrow p\approx
-   p_0-\frac{f(p_0)}{f'(p_0)}\)
-\(p_n=p_{n-1}-\frac{f(p_{n-1})}{f'(p_{n-1})},\quad\text{for} n\ge 1\)
+Let <img src="ltximg/NumericalAnalysis_a73da84d2c070e1c0700eba86246b9f474f418cb.png" alt="NumericalAnalysis_a73da84d2c070e1c0700eba86246b9f474f418cb.png" /> be an approximation to <img src="ltximg/NumericalAnalysis_f6790564aa002d161fef8af5770b64d8ef8e635c.png" alt="NumericalAnalysis_f6790564aa002d161fef8af5770b64d8ef8e635c.png" /> s.t. <img src="ltximg/NumericalAnalysis_5954c8f7271b3f7295030d0631f28db3ca80a399.png" alt="NumericalAnalysis_5954c8f7271b3f7295030d0631f28db3ca80a399.png" />, hence 
+<img src="ltximg/NumericalAnalysis_3b249284d14e58e625f3af89060609adb1cc9681.png" alt="NumericalAnalysis_3b249284d14e58e625f3af89060609adb1cc9681.png" />, then
+<img src="ltximg/NumericalAnalysis_1f5190e308093709e8779fd991d5e97178b574e7.png" alt="NumericalAnalysis_1f5190e308093709e8779fd991d5e97178b574e7.png" />
+<img src="ltximg/NumericalAnalysis_bec90d1a96606c347d795aa5973c6c257a2ee793.png" alt="NumericalAnalysis_bec90d1a96606c347d795aa5973c6c257a2ee793.png" />
 </p>
 
-\begin{theorem}
-Let $f\in C^2[a,b]$. If $p\in[a,b]$ is s.t. $f(p)=0,f'(p)\neq0$, then there
-exists a $\delta>0$ s.t. Newton's method generates a sequence $\{p_n\},
-n\in\mathbb{N}\setminus\{0\}$ converging to $p$ for any initial approximation
-$p\in[p-\delta,p+\delta]$.
-\end{theorem}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_e0386c9bd9c38c7f4df2363c8bd7a0f57681c2de.png" alt="NumericalAnalysis_e0386c9bd9c38c7f4df2363c8bd7a0f57681c2de.png" /></p>
+</div>
 </div>
 </div>
 <div id="outline-container-orgb13f6be" class="outline-3">
 <h3 id="orgb13f6be">2.4 Error analysis for iterative methods</h3>
 <div class="outline-text-3" id="text-orgb13f6be">
-\begin{definition}
-Suppose $\{p_n\}(n=0,1,\dots)$ is a sequence that converges to $p$ with
-$p_n\neq p$ for all $n$. If positive constants $\alpha$ and $\lambda$ exist
-with
-\begin{equation*}
-\lim\limits_{n\to\infty}\frac{|p_{n+1}-p|}{|p_n-p|^\alpha}=\lambda
-\end{equation*}
-then $\{p_n\}(n=0,1,\dots)$ \textcolor{red}{converges to p of order
-$\alpha$, with asymptotic error constant $\lambda$}
-\end{definition}
 
-\begin{theorem}
-Let $p$ be a fixed point of $g(x)$. If there exists some constant $\alpha\ge
-2$ s.t. $g\in C^\alpha[p-\delta,p+\delta]$,
-\textcolor{red}{$g'(p)=\dots=g^{\alpha-1}(p)=0$} and \textcolor{red}{$g^\alpha(p)\neq 0$}.
-Then the iterations with $p_n=g(p_{n-1})$, $n\ge1$ is of \textcolor{red}{order $\alpha$}
-\end{theorem}
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_87d42a7e6150a76d1225ecd8fd15192f405e69d1.png" alt="NumericalAnalysis_87d42a7e6150a76d1225ecd8fd15192f405e69d1.png" /></p>
+</div>
 
-\begin{equation*}
-p_{n+1}=g(p_n)=g(p)+g'(p)(p_n-p)+\dots+\frac{g^\alpha(\xi_n)}{\alpha!}(p_n-p)^\alpha
-\end{equation*}
 
-\begin{theorem}
-Let $g\in C[a,b]$ be s.t. $g(x)\in[a,b]$ for all $x\in[a,b]$. Suppose in
-addition that $g'$ is continuous on $(a,b)$ and a positive constant $k<1$
-exists with
-\begin{equation*}
-|g'(x)|\le k, \quad \text{for all } x\in(a,b)
-\end{equation*}
-If $g'(p)\neq0$, then for any number $p_0\neq p$ in $[a,b]$, the sequence
-\begin{equation*}
-p_n=g(p_{n-1}),\quad\text{for }n\ge 1
-\end{equation*}
-converges only linearly to the unique fixed point in $[a,b]$
-\end{theorem}
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_8ddca69c8d39320c922b245dda0e41c598be0eb1.png" alt="NumericalAnalysis_8ddca69c8d39320c922b245dda0e41c598be0eb1.png" /></p>
+</div>
 
-\begin{proof}
-\begin{align*}
-\lim\limits_{n\to\infty}\frac{|p_{n+1}-p|}{|p_n-p|}&=
-\lim\limits_{n\to\infty}\frac{|g(p_n)-p|}{|p_n-p|}\\
-&=\lim\limits_{n\to\infty}\frac{|g'(\xi)(p_n-p)|}{|p_n-p|}\\
-&=|g'(p)|
-\end{align*}
-\end{proof}
 
-\begin{theorem}
-Let $p$ be a solution of the equation $x=g(x)$. Suppose that $g'(p)=0$ and
-g'' is continuous with $|g''(x)|<M$ on an open interval $I$ containing $p$.
-Then there exists a $\delta>0$ s.t. for $p_0\in[p-\delta,p+\delta]$, the
-sequence defined by $p_n=g(p_{n-1})$, when $n\ge 1$ converges at least
-quadratically to $p$. Moreover, for sufficiently large values of $n$,
-\begin{equation*}
-|p_{n+1}-p|<\frac{M}{2}|p_n-p|^2
-\end{equation*}
-\end{theorem}
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_aa0f66b163ed86121855ea21f4d02f8ede8e1dfd.png" alt="NumericalAnalysis_aa0f66b163ed86121855ea21f4d02f8ede8e1dfd.png" /></p>
+</div>
 
-\begin{proof}
-Choose $k\in(0,1),\delta>0$ s.t. $[p-\delta,p+\delta]\subseteq I$ and
-$|g'(x)|<k$ and $g''$ is continuous.
-\begin{equation*}
-g(x)=g(p)+g'(p)(x-p)+\frac{g''(\xi)}{2}(x-p)^2
-\end{equation*}
-Hence $g(x)=p+\frac{g''(\xi)}{2}(x-p)^2$.
-$p_{n+1}=g(p_n)=p+\frac{g''(\xi_n)}{2}(p_n-p)^2$. Thus
-$p_{n+1}-p=\frac{g''(\xi_n)}{2}(p_n-p)^2$. We get
-\begin{equation*}
-\lim\limits_{n\to\infty}\frac{|p_{n+1}-p|}{|p_n-p|^2}=\frac{g''(p)}{2}
-\end{equation*}
-\end{proof}
 
-\begin{definition}
-A solution $p$ of $f(x) = 0$ is a \textcolor{red}{zero of multiplicity} $m$
-of $f$ if for $x\neq p$, $f(x)=(x-p)^mq(x)$ where $\lim\limits_{x\to
-p}q(x)\neq 0$
-\end{definition}
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_08228f5fb9f335f7abc7079a51962f5b80334ee0.png" alt="NumericalAnalysis_08228f5fb9f335f7abc7079a51962f5b80334ee0.png" /></p>
+</div>
 
-\begin{theorem}
-The function $f\in C^m[a,b]$ has a zero of multiplicity $m$ at $p$ in $(a,b)$
-if and only if
-\begin{equation*}
-0=f(p)=f'(p)=\dots=f^{(m-1)}(p),\quad\text{but } f^{(m)}(p)\neq 0
-\end{equation*}
-\end{theorem}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_94dcf7e038e331626f5a666ef71e4181257e16eb.png" alt="NumericalAnalysis_94dcf7e038e331626f5a666ef71e4181257e16eb.png" /></p>
+</div>
+
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_a5c17e5ccc325e042e22ab17fc506c3606c6b6f5.png" alt="NumericalAnalysis_a5c17e5ccc325e042e22ab17fc506c3606c6b6f5.png" /></p>
+</div>
+
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_6bcae755f8c31380c48fbbf99672ac39a7d37afe.png" alt="NumericalAnalysis_6bcae755f8c31380c48fbbf99672ac39a7d37afe.png" /></p>
+</div>
+
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_513f6d530e031ebf1dd624caac0f01a402927a0b.png" alt="NumericalAnalysis_513f6d530e031ebf1dd624caac0f01a402927a0b.png" /></p>
+</div>
+
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_a47733b3ae5d27b851867ae5de2382f91fe41eac.png" alt="NumericalAnalysis_a47733b3ae5d27b851867ae5de2382f91fe41eac.png" /></p>
+</div>
 
 <p>
-To handle the problem of multiple roots of a function \(f\) is to define
-\(\mu(x)=\frac{f(x)}{f'(x)}\).
+To handle the problem of multiple roots of a function <img src="ltximg/NumericalAnalysis_437f7bc465232f301713ea82a511ed3892545be8.png" alt="NumericalAnalysis_437f7bc465232f301713ea82a511ed3892545be8.png" /> is to define
+<img src="ltximg/NumericalAnalysis_5aef07e1330ad879bd3bd701df56156333f0e7ed.png" alt="NumericalAnalysis_5aef07e1330ad879bd3bd701df56156333f0e7ed.png" />.
 </p>
 
 <p>
-If p is a zero of f of multiplicity m with \(f(x)=(x-p)^mq(x
-   )\), then
+If p is a zero of f of multiplicity m with <img src="ltximg/NumericalAnalysis_88491d3b18bb4d505d6cccb632a89a1c6c2b6067.png" alt="NumericalAnalysis_88491d3b18bb4d505d6cccb632a89a1c6c2b6067.png" />, then
 </p>
-\begin{align*}
-\mu(x)&=\frac{(x-p)^mq(x)}{m(x-p)^{m-1}q(x)+(x-p)^mq'(x)}\\
-&=(x-p)\frac{q(x)}{mq(x)+(x-p)q'(x)}
-\end{align*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_989f1ad381c9187ab25b72705ec114b1570196a8.png" alt="NumericalAnalysis_989f1ad381c9187ab25b72705ec114b1570196a8.png" /></p>
+</div>
 <p>
-And \(q(x)\neq 0\).
+And <img src="ltximg/NumericalAnalysis_2c9e03e454c9a5b6d3e5a5121cd604997537b87b.png" alt="NumericalAnalysis_2c9e03e454c9a5b6d3e5a5121cd604997537b87b.png" />.
 </p>
 
 <p>
 Now Newton's method:
 </p>
-\begin{align*}
-g(x)&=x-\frac{\mu(x)}{\mu'(x)}\\
-&=x-\frac{f(x)/f'(x)}{(f'(x)^2-f(x)f''(x))/f'(x)^2}\\
-&=x-\frac{f(x)f'(x)}{f'(x)^2-f(x)f''(x)}
-\end{align*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_32787d217d9a25ce7968659fe1854f71adc1abec.png" alt="NumericalAnalysis_32787d217d9a25ce7968659fe1854f71adc1abec.png" /></p>
+</div>
 </div>
 </div>
 </div>
@@ -614,71 +532,57 @@ g(x)&=x-\frac{\mu(x)}{\mu'(x)}\\
 <h3 id="org9c85ec7">3.1 Interpolation and the Lagrange polynomial</h3>
 <div class="outline-text-3" id="text-org9c85ec7">
 <p>
-\(P_n(x)=\displaystyle\sum_{i=0}^nL_{n,i}(x)y_i\). Find \(L_{n,i}(x)\) for
-\(i=0,\dots,n\) s.t. \(L_{n,j}(x_j)=\delta_{ij}\). \(\delta_{ij}\) Kronecker delta.
-Each \(L_{n,i}\) has n roots \(x_0,\dots,\hat{x_i},\dots,x_n\).
-\(L_{n,j}(x)=C_i(x-x_0)\dots\hat{(x-x_i)}\dots(x-x_n)=C_i \displaystyle
-   \prod_{\substack{j\neq i\\j=0}}^n(x-x_j)\).
-\(L_{n,j}(x_i)=1\to C_i=\displaystyle\prod_{j\neq i}\frac{1}{x_i-x_j}\).
-Hence \(L_{n,i}(x)=\displaystyle\prod_{\substack{j\neq i\\j=0}}^n
-   \frac{x-x_j}{x_i-x_j}\)
+<img src="ltximg/NumericalAnalysis_29280a2c7cf405edfde4b7440df4254704112fef.png" alt="NumericalAnalysis_29280a2c7cf405edfde4b7440df4254704112fef.png" />. Find <img src="ltximg/NumericalAnalysis_9d537ca6cdd67dbed97ab05e5ae9c9d183cd87a2.png" alt="NumericalAnalysis_9d537ca6cdd67dbed97ab05e5ae9c9d183cd87a2.png" /> for
+<img src="ltximg/NumericalAnalysis_a0a081d5e05252cb95d395b8a3494cbbf8e732b6.png" alt="NumericalAnalysis_a0a081d5e05252cb95d395b8a3494cbbf8e732b6.png" /> s.t. <img src="ltximg/NumericalAnalysis_d9a4ffb0455873f308899724fb09c29cc8c58715.png" alt="NumericalAnalysis_d9a4ffb0455873f308899724fb09c29cc8c58715.png" />. <img src="ltximg/NumericalAnalysis_73cf3b0d2da03de18f1844da8aa307613b058dc8.png" alt="NumericalAnalysis_73cf3b0d2da03de18f1844da8aa307613b058dc8.png" /> Kronecker delta.
+Each <img src="ltximg/NumericalAnalysis_42c102cddf961e7e80af8d78073ce4afd7956e79.png" alt="NumericalAnalysis_42c102cddf961e7e80af8d78073ce4afd7956e79.png" /> has n roots <img src="ltximg/NumericalAnalysis_5c289b076ac60152a220256e4f90fcc9b93e7d9f.png" alt="NumericalAnalysis_5c289b076ac60152a220256e4f90fcc9b93e7d9f.png" />.
+<img src="ltximg/NumericalAnalysis_642f51d2fc5d86b5be979dbd734370e8e73504f6.png" alt="NumericalAnalysis_642f51d2fc5d86b5be979dbd734370e8e73504f6.png" />.
+<img src="ltximg/NumericalAnalysis_78abd0c281471084d1228b3f51423ee4f0c823c1.png" alt="NumericalAnalysis_78abd0c281471084d1228b3f51423ee4f0c823c1.png" />.
+Hence <img src="ltximg/NumericalAnalysis_e1c9f517e045114d43c713344360550a145e06f9.png" alt="NumericalAnalysis_e1c9f517e045114d43c713344360550a145e06f9.png" />
 </p>
 
-\begin{theorem}
-If $x_0,x_1,\dots,x_n$ are n+1 distinct numbers and $f$ is a function whose values
-are given at these numbers, then the n-th Lagrange interpolating polynomial 
-is unique
-\end{theorem}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_3135ea66de8993fa30fa592b421f3e75e9e76307.png" alt="NumericalAnalysis_3135ea66de8993fa30fa592b421f3e75e9e76307.png" /></p>
+</div>
 
 
 <p>
-<b>Analyze the remainder</b>. Suppose \(a\le x_0<x_1<\dots<x_n\le b\) and \(f\in
-   C^{n+1}[a,b]\). Consider \(R_n(x)=f(x)-P_n(x)\).
-\(R_n(x)\) has at least n+1 roots =&gt;
-\(R_n(x)=K(x)\displaystyle\prod_{i=0}^n(x-x_i)\).
-For any \(x\neq x_i\). Define
-\(g(t)=R_n(t)-K(x)\displaystyle\prod_{i=0}^n(t-x_i)\). \(g(x)\) has n+2 distinct
-roots \(x_0\dots x_n x\). Hence \(g^{(n+1)}(\xi_x)=0,\xi_x\in(a,b)\).
-\(f^{(n+1)}(\xi_x)-Pn^{(n+1)}(\xi_x)-K(x)(n+1)!=R_n^{(n+1)}(\xi_x)-K(x)(n+1)!\).
+<b>Analyze the remainder</b>. Suppose <img src="ltximg/NumericalAnalysis_c2c2085eaac70f98cac324bba2cf9b383a7e0fc6.png" alt="NumericalAnalysis_c2c2085eaac70f98cac324bba2cf9b383a7e0fc6.png" /> and <img src="ltximg/NumericalAnalysis_10395f4d4f9a70e3581d10b2e6782fdad9f84da0.png" alt="NumericalAnalysis_10395f4d4f9a70e3581d10b2e6782fdad9f84da0.png" />. Consider <img src="ltximg/NumericalAnalysis_785f7d982f6c38ec71e84ff8d1540d3a7655f6e3.png" alt="NumericalAnalysis_785f7d982f6c38ec71e84ff8d1540d3a7655f6e3.png" />.
+<img src="ltximg/NumericalAnalysis_db31c96ad5811e019acad6aff116b292ba4fa688.png" alt="NumericalAnalysis_db31c96ad5811e019acad6aff116b292ba4fa688.png" /> has at least n+1 roots =&gt;
+<img src="ltximg/NumericalAnalysis_bdd57fec41db7b6cd028594db64c470df0410d8a.png" alt="NumericalAnalysis_bdd57fec41db7b6cd028594db64c470df0410d8a.png" />.
+For any <img src="ltximg/NumericalAnalysis_512b610409422ee40fb890f9e299a55301732192.png" alt="NumericalAnalysis_512b610409422ee40fb890f9e299a55301732192.png" />. Define
+<img src="ltximg/NumericalAnalysis_72b803faf47d5ce7f419eb737a8429d91b526231.png" alt="NumericalAnalysis_72b803faf47d5ce7f419eb737a8429d91b526231.png" />. <img src="ltximg/NumericalAnalysis_67720240d507f323a7fc7735bcc45b2a7aba0d8d.png" alt="NumericalAnalysis_67720240d507f323a7fc7735bcc45b2a7aba0d8d.png" /> has n+2 distinct
+roots <img src="ltximg/NumericalAnalysis_7cb966c6df696ecb84cf8c25133c6925c8f354f5.png" alt="NumericalAnalysis_7cb966c6df696ecb84cf8c25133c6925c8f354f5.png" />. Hence <img src="ltximg/NumericalAnalysis_b74d382bf462dc8526326897e6b828e6b2b354f3.png" alt="NumericalAnalysis_b74d382bf462dc8526326897e6b828e6b2b354f3.png" />.
+<img src="ltximg/NumericalAnalysis_f212d37fc3c401d9029687f2abd52589884b4e23.png" alt="NumericalAnalysis_f212d37fc3c401d9029687f2abd52589884b4e23.png" />.
 Thus
-\(R_n(x)=\frac{f^{(n+1)}(\xi_x)}{(n+1)!}\displaystyle\prod_{i=0}^n(x-x_i)\).
+<img src="ltximg/NumericalAnalysis_091d1f29bdfab3ab28c3224ea40f1cc8bc527204.png" alt="NumericalAnalysis_091d1f29bdfab3ab28c3224ea40f1cc8bc527204.png" />.
 </p>
 
-\begin{definition}
-Let $f$ be a function defined at $x_0,\dots,x_n$ and suppose $m_1,\dots,m_k$ are
-k distinct integers with $0\le m_i\le n$ for each i. The Lagrange polynomial that
-agrees with $f(x)$ at the k points $x_{m_1},\dots,x_{m_k}$ denoted by 
-$P_{m_1,\dot,m_k}(x)$
-\end{definition}
 
-\begin{theorem}
-Let $f$ be defined at $x_0,\dots,x_k$ and let $x_i$ and $x_j$ be two distinct numbers in
-this set. Then
-\begin{equation*}
-P(x)=\frac{(x-x_j)P_{0,1,\dots,j-1,j+1,\dots,k(x)}-(x-x_i)P_{0,\dots,i-1,i+1,\dots,k(x)}}
-{x_i-x_j}
-\end{equation*}
-describes the k-th Lagrange polynomial that interpolates $f$ at the k+1 points
-$x_0,\dots,x_k$
-\end{theorem}
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_ef74ed5c53b964ca6fd7e373880bfd2ef5cbd4c0.png" alt="NumericalAnalysis_ef74ed5c53b964ca6fd7e373880bfd2ef5cbd4c0.png" /></p>
+</div>
+
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_fb99ae3ca7cfe3e7f43419fcdeaec133325cc068.png" alt="NumericalAnalysis_fb99ae3ca7cfe3e7f43419fcdeaec133325cc068.png" /></p>
+</div>
 
 <p>
 <b>Neville's Method</b>
 </p>
-\begin{tabular}{c c c c c c}
-$x_0$ & $P_0$ &           &             &            \\
-$x_1$ & $P_1$ & $P_{0,1}$ &             &            \\
-$x_2$ & $P_2$ & $P_{1,2}$ & $P_{0,1,2}$ &            \\
-$x_3$ & $P_3$ & $P_{2,3}$ & $P_{1,2,3}$ & $P_{0,1,2,3}$\\
-\end{tabular}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_fcfade9a86d59a5ff87e08d02c6827e7bf884698.png" alt="NumericalAnalysis_fcfade9a86d59a5ff87e08d02c6827e7bf884698.png" /></p>
+</div>
 </div>
 </div>
 <div id="outline-container-org0efd1cb" class="outline-3">
 <h3 id="org0efd1cb">3.2 Divied differences</h3>
 <div class="outline-text-3" id="text-org0efd1cb">
 <p>
-\(f[x_i,x_j]=\frac{f(x_i)-f(x_j)}{x_i-x_j}(i\neq j, x_i\neq x_j)\).
-\(f[x_i,x_j,x_k]=\frac{f[x_i,x_j]-f[x_j,x_k]}{x_i-x_k}\).
+<img src="ltximg/NumericalAnalysis_fdc6ac3acd2982f4e69a58bd16359fb0d47e5244.png" alt="NumericalAnalysis_fdc6ac3acd2982f4e69a58bd16359fb0d47e5244.png" />.
+<img src="ltximg/NumericalAnalysis_424afe38460b892e1dfb7798a72b951d60f5065a.png" alt="NumericalAnalysis_424afe38460b892e1dfb7798a72b951d60f5065a.png" />.
 </p>
 </div>
 </div>
@@ -690,50 +594,25 @@ $x_3$ & $P_3$ & $P_{2,3}$ & $P_{1,2,3}$ & $P_{0,1,2,3}$\\
 <h4 id="org3d34d5a">Simple idea</h4>
 <div class="outline-text-4" id="text-org3d34d5a">
 <p>
-Given \(x_0,\dots,x_n\)
+Given <img src="ltximg/NumericalAnalysis_1c9365d2ce34bcf18730e0c400220e505956aec9.png" alt="NumericalAnalysis_1c9365d2ce34bcf18730e0c400220e505956aec9.png" />
 </p>
-\begin{enumerate}
-\item Fitting $x_0$ first: $f(x)\approx f_0, f_0=f(x_0)$
-\item Add one more point $x_1$, $f_1=f(x_1)$
-\begin{equation*}
-f(x) \approx f_0+\alpha_1(x-x_0),\alpha_1=\frac{f_1-f_0}{x_1-x_0}
-\end{equation*}
-\item More points $f(x)\approx f_0+\alpha_1(x-x_0)+\alpha_2(x-x_0)(x-x_1)$
-\end{enumerate}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_077e053d8b4fea323a97e3528caa94462a6fd948.png" alt="NumericalAnalysis_077e053d8b4fea323a97e3528caa94462a6fd948.png" /></p>
+</div>
 
 <p>
 <b>The pattern and coefficients</b>.
-\(f(x)=\displaystyle\sum_{i=0}^n\alpha_i
-    \displaystyle\prod_{j=0}^{j<i}(x-x_j)
-    =\displaystyle\sum_{i=0}^n\alpha_iN^{(i)}(x)\)
+<img src="ltximg/NumericalAnalysis_6badd2a97888852ab1e0c1d90ea6752a76f12e00.png" alt="NumericalAnalysis_6badd2a97888852ab1e0c1d90ea6752a76f12e00.png" />
 </p>
 
-\begin{equation*}
-\begin{pmatrix}
-f_0\\
-f_1\\
-\vdots\\
-f_n
-\end{pmatrix}=
-\begin{pmatrix}
-N^{(0)}(x_0) & N^{(1)}(x_0) & \dots & N^{(n)}(x_0)\\
-N^{(0)}(x_1) & N^{(1)}(x_1) & \dots & N^{(n)}(x_1)\\
-\vdots & \vdots & \ddots&\vdots\\
-N^{(0)}(x_n) & N^{(1)}(x_n) & \dots & N^{(n)}(x_n)\\
-\end{pmatrix}
-\begin{pmatrix}
-\alpha_0\\
-\alpha_1\\
-\vdots\\
-\alpha_n
-\end{pmatrix}
-\end{equation*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_eb970657f79e5985fe40f393acbf18fb32ba2b94.png" alt="NumericalAnalysis_eb970657f79e5985fe40f393acbf18fb32ba2b94.png" /></p>
+</div>
 
 <p>
-\(N^{(i)}(x_k)=\begin{cases}
-    0&k<i\\
-    \prod_{j=0}^{j<i}(x_k-x_j)&k\ge i\\
-    \end{cases}\) with \(N^{(0)}(x) = 1\).
+<img src="ltximg/NumericalAnalysis_a795c1dcaa16b3fa423e2f2d33da6587720171f4.png" alt="NumericalAnalysis_a795c1dcaa16b3fa423e2f2d33da6587720171f4.png" /> with <img src="ltximg/NumericalAnalysis_e68b2fed93ada2c84fdbc1eaa424a02e37f68954.png" alt="NumericalAnalysis_e68b2fed93ada2c84fdbc1eaa424a02e37f68954.png" />.
 Newton interpolation matrix is lower triangular.
 Lagrange matrix is identity.
 </p>
@@ -742,33 +621,19 @@ Lagrange matrix is identity.
 <div id="outline-container-org6bc052a" class="outline-4">
 <h4 id="org6bc052a">Basis transformation</h4>
 <div class="outline-text-4" id="text-org6bc052a">
-\begin{equation*}
-\begin{pmatrix}
-1\\
-(x-x_0)\\
-(x-x_0)(x-x_1)\\
-\vdots
-\end{pmatrix}=(?)
-\begin{pmatrix}
-1\\
-x\\
-x^2\\
-\vdots
-\end{pmatrix}
-\end{equation*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_acdf88921a867ac42d2ddd3dc2c7b4268725171c.png" alt="NumericalAnalysis_acdf88921a867ac42d2ddd3dc2c7b4268725171c.png" /></p>
+</div>
 <p>
-Hence \((\Phi_B)^T=(T_A^B)^T(\Phi_A)^T\).
-\(\Phi_B=\Phi_AT_A^B\)
+Hence <img src="ltximg/NumericalAnalysis_1d75cf61e1f5ce01ef95c68ab4e18dedb189f2cd.png" alt="NumericalAnalysis_1d75cf61e1f5ce01ef95c68ab4e18dedb189f2cd.png" />.
+<img src="ltximg/NumericalAnalysis_a549270df2356fe1e40e49b76d3cf9a53d46df6f.png" alt="NumericalAnalysis_a549270df2356fe1e40e49b76d3cf9a53d46df6f.png" />
 </p>
 
-\begin{align*}
-(\Phi_A)(\alpha_A)=(f)&=(\Phi_B)(\alpha_B)\\
-&=(\Phi_A)(T_A^B)(\alpha_B)\\
-&\Rightarrow\\
-(\alpha_A)&=(T_A^B)(\alpha_B)\\
-(\alpha_B)&=(T_A^B)^{-1}(\alpha_A)\\
-&=(T_B^A)(\alpha_A)
-\end{align*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_2adfa0f924030edc1f377ea180cd8b5fe3189949.png" alt="NumericalAnalysis_2adfa0f924030edc1f377ea180cd8b5fe3189949.png" /></p>
+</div>
 </div>
 </div>
 </div>
@@ -776,47 +641,37 @@ Hence \((\Phi_B)^T=(T_A^B)^T(\Phi_A)^T\).
 <h3 id="org3872197">3.3 Hermite interpolation</h3>
 <div class="outline-text-3" id="text-org3872197">
 <p>
-Find the <b>osculating polynomial</b> \(P(x)\) s.t. \(P(x_i)=f(x_i),
-   P'(x_i)=f'(x_i),\dots,P^{(m_i)}(x_i)=f^{(m_i)}(x_i)\) for all \(i=0,1,\dots,n\).
+Find the <b>osculating polynomial</b> <img src="ltximg/NumericalAnalysis_ce48ce9a5de18eb2ec96888c37c5630e4bdcf140.png" alt="NumericalAnalysis_ce48ce9a5de18eb2ec96888c37c5630e4bdcf140.png" /> s.t. <img src="ltximg/NumericalAnalysis_47377d69b02eaa20894b280b192882320d89b8db.png" alt="NumericalAnalysis_47377d69b02eaa20894b280b192882320d89b8db.png" /> for all <img src="ltximg/NumericalAnalysis_90a71398e5fb8bb6ba2584dc807abb4eadebe24c.png" alt="NumericalAnalysis_90a71398e5fb8bb6ba2584dc807abb4eadebe24c.png" />.
 </p>
 
 <p>
-Just the Taylor polynomial \(P(x)=f(x_0)+f'(x_0)(x-x_0)+\dots+
-   \frac{f^{(m_0)}(x_0)}{m_0!}(x-x_0)^{m_0}\) with remainder 
-\(R(x)=f(x)-\varphi(x)=\frac{f^{(m_0+1)}(\xi)}{(m_0+1)!}(x-x_0)^{(m_0+1)}\)
+Just the Taylor polynomial <img src="ltximg/NumericalAnalysis_9b2cde6da626252030640e1f94e799cf5c50a97a.png" alt="NumericalAnalysis_9b2cde6da626252030640e1f94e799cf5c50a97a.png" /> with remainder 
+<img src="ltximg/NumericalAnalysis_2c61e2494c0c767a051d8a43b39c6b4fd8c645ca.png" alt="NumericalAnalysis_2c61e2494c0c767a051d8a43b39c6b4fd8c645ca.png" />
 </p>
 
 <p>
-\(m_i = 1\) gives <b>Hermite polynomial</b>
+<img src="ltximg/NumericalAnalysis_8052cc16a3d00b77e632843736718f4547395f7f.png" alt="NumericalAnalysis_8052cc16a3d00b77e632843736718f4547395f7f.png" /> gives <b>Hermite polynomial</b>
 </p>
 
-\begin{example}
-Suppose $x_0\neq x_1\neq x_2$. Given $f(x_0),f(x_1), f(x_2),
-f'(x_1)$ find the polynomial $P(x)$ s.t. $P(x_i)=f(x_i),P'(x_1)=f'(x_1)$ and
-analyze the errors.
-\end{example}
 
-\begin{proof}
-$P_3(x)=\displaystyle\sum_{i=0}^2f(x_i)h_i(x)+f'(x_1)\hat{h}_1(x)$ where
-$h_i(x_j)=\delta_{ij},h_i'(x_i)=0,\hat{h}_i(x_i)=0,\hat{h}_i'(x_1)=1$.
-\begin{itemize}
-\item $h_0(x)$. Has roots $x_1,x_2$ and $x_1$ is a multiple root.
-      $h_0(x)=C_0(x-x_1)^2(x-x_2)$ and $h_0(x_0)=1\Longrightarrow C_0$
-\item $\hat{h}_1(x)$ has root $x_0,x_1,x_2\Longrightarrow 
-      \hat{h}_1(x)=C_1(x-x_0)(x-x_1)(x-x_2)$
-\end{itemize}
-\end{proof}
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_b5e1d33355210d34db7cf30796c9fd4b7ea7c97a.png" alt="NumericalAnalysis_b5e1d33355210d34db7cf30796c9fd4b7ea7c97a.png" /></p>
+</div>
+
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_6174f3d82f03124777f158198ef60bc72356b708.png" alt="NumericalAnalysis_6174f3d82f03124777f158198ef60bc72356b708.png" /></p>
+</div>
 
 <p>
-In general, given \(x_0,\dots,x_n;y_0,\dots,y_n\) and \(y_0',\dots,y_n'\). The
-Hermite polynomial \(H_{2n+1}(x)\) satisfies \(H_{2n+1}(x_i)=y_i\) and
-\(H'_{2n+1}(x_i)=y_i'\) 
+In general, given <img src="ltximg/NumericalAnalysis_02c3b478e1dbd4fc33b7009aa886952dded75cb5.png" alt="NumericalAnalysis_02c3b478e1dbd4fc33b7009aa886952dded75cb5.png" /> and <img src="ltximg/NumericalAnalysis_9289e6e99ef69d89ddbbde27e09c42016698f4f3.png" alt="NumericalAnalysis_9289e6e99ef69d89ddbbde27e09c42016698f4f3.png" />. The
+Hermite polynomial <img src="ltximg/NumericalAnalysis_94ea567b9c9771ac784eb1874305963907e311fd.png" alt="NumericalAnalysis_94ea567b9c9771ac784eb1874305963907e311fd.png" /> satisfies <img src="ltximg/NumericalAnalysis_522fa45799e9174fbd5ed1e310c30e908036e4f5.png" alt="NumericalAnalysis_522fa45799e9174fbd5ed1e310c30e908036e4f5.png" /> and
+<img src="ltximg/NumericalAnalysis_d0c8d614f3a79cca1fd3fdad98bc09484616830d.png" alt="NumericalAnalysis_d0c8d614f3a79cca1fd3fdad98bc09484616830d.png" /> 
 </p>
 
 <p>
 <i>Solution</i>.
-\(H_{2n+1}(x)=\displaystyle\sum_{i=0}^ny_ih_i(x)+\displaystyle\sum_{i=0}^ny_i'
-   \hat{h}_i(x)\)
+<img src="ltximg/NumericalAnalysis_998b77babf695a7128d691660cbb8e61d95cc9dc.png" alt="NumericalAnalysis_998b77babf695a7128d691660cbb8e61d95cc9dc.png" />
 </p>
 </div>
 </div>
@@ -824,122 +679,94 @@ Hermite polynomial \(H_{2n+1}(x)\) satisfies \(H_{2n+1}(x_i)=y_i\) and
 <h3 id="orgae644b5">3.4 Cubic spline interpolation</h3>
 <div class="outline-text-3" id="text-orgae644b5">
 <p>
-<b>Piecewise linear interpolation</b>. Approximate \(f(x)\) by linear polynomials on
-each subinterval \([x_i,x_{i+1}]\).
+<b>Piecewise linear interpolation</b>. Approximate <img src="ltximg/NumericalAnalysis_d82f0e997eb350cc6d212774abd99a819508e298.png" alt="NumericalAnalysis_d82f0e997eb350cc6d212774abd99a819508e298.png" /> by linear polynomials on
+each subinterval <img src="ltximg/NumericalAnalysis_a4f4f838beac899b4529d54fec6e849eb8b01912.png" alt="NumericalAnalysis_a4f4f838beac899b4529d54fec6e849eb8b01912.png" />.
 </p>
 
 <p>
-\(f\approx P_1(x)=\frac{x-x_{i+1}}{x_i-x_{i+1}}y_i+\frac{x-x_i}
-   {x_{i+1}-x_i}y_{i+1} \quad\text{for} \;x\in[x_i,x_{i+1}]\) 
+<img src="ltximg/NumericalAnalysis_c66dd25767e1b71be832125f10fbc18c68e75e02.png" alt="NumericalAnalysis_c66dd25767e1b71be832125f10fbc18c68e75e02.png" /> 
 </p>
 
 <p>
-Let \(h=\max\abs{x_{i+1}-x_i}\). Then \(P_1^h(x)\xrightarrow{uniform} f(x)\) as
-\(h\to 0\) 
+Let <img src="ltximg/NumericalAnalysis_d1290f71dc6da00a5663b4d1a8c717751c9d5356.png" alt="NumericalAnalysis_d1290f71dc6da00a5663b4d1a8c717751c9d5356.png" />. Then <img src="ltximg/NumericalAnalysis_bc487d2f52246c5b5ed6ab5ae7a9e5b0a2721b3e.png" alt="NumericalAnalysis_bc487d2f52246c5b5ed6ab5ae7a9e5b0a2721b3e.png" /> as
+<img src="ltximg/NumericalAnalysis_f175971427081709cd5fc35bb67e1ef8d46d6dc6.png" alt="NumericalAnalysis_f175971427081709cd5fc35bb67e1ef8d46d6dc6.png" /> 
 However, this is no longer smooth.
 </p>
 
 <p>
 <b>Hermite piecewise polynomials</b>. Given
-\(x_0,\dots,x_n;y_0,\dots,y_n,y_0',\dots,y_n'\), construct the Hermite
-polynomial of degree 3 with \(y\) and \(y'\) on the two endpoints of
-\([x_i,x_{i+1}]\)
+<img src="ltximg/NumericalAnalysis_c809c70762fa51cc3ac39c0810b334b6444d950e.png" alt="NumericalAnalysis_c809c70762fa51cc3ac39c0810b334b6444d950e.png" />, construct the Hermite
+polynomial of degree 3 with <img src="ltximg/NumericalAnalysis_150ab4289e92a4e8c653f2e434677d08400b0d02.png" alt="NumericalAnalysis_150ab4289e92a4e8c653f2e434677d08400b0d02.png" /> and <img src="ltximg/NumericalAnalysis_ef78ea35f621200d1d441294ac68d4b5bfe5d6bc.png" alt="NumericalAnalysis_ef78ea35f621200d1d441294ac68d4b5bfe5d6bc.png" /> on the two endpoints of
+<img src="ltximg/NumericalAnalysis_a4f4f838beac899b4529d54fec6e849eb8b01912.png" alt="NumericalAnalysis_a4f4f838beac899b4529d54fec6e849eb8b01912.png" />
 </p>
 
 <p>
 <b>Cubic Spline</b>.
 </p>
-\begin{definition}
-Given a function $f$ define on $[a,b]$ and a set of nodes $a=x_0<x_1<\dots<x_n=b$,
-\textcolor{red}{cubic spline interpolant} $S$ for $f$ is a function that satisfies
-the following conditions
-\begin{itemize}
-\item $S(x)$ is a cubic polynomial, denoted by $S_i(x)$ on the subinterval
-$[x_i,x_{i+1}]$ for each $i=0,\dots,n-1$
-\item $S(x_i)=f(x_i)$ for each $i=0,\dots, n$
-\item $S_{i+1}(x_{i+1})=S_i(x_{i+1})$
-\item $S'_{i+1}(x_{i+1})=S'_i(x_{i+1})$
-\item $S''_{i+1}(x_{i+1})=S''_i(x_{i+1})$
-\end{itemize}
-\end{definition}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_f66b842edf8226d05a1a1108c686e7e2de6e6aa5.png" alt="NumericalAnalysis_f66b842edf8226d05a1a1108c686e7e2de6e6aa5.png" /></p>
+</div>
 
 <p>
-\includegraphics[width=100mm]{CubicSpline}
+
 </p>
 
 <p>
-<b>Method of Bending moment</b>. Let \(h_j=x_j-x_{j-1}\) and \(S(x)=S_j(x)\) for
-\(x\in[x_{j-1}, x_j]\). Then \(S_j''\) is a polynomial of degree
-\textcolor{red}{1}, which can be determined by the values of f on
-\textcolor{red}{2} nodes .
+<b>Method of Bending moment</b>. Let <img src="ltximg/NumericalAnalysis_c78ff75bcffba5d9ace84963d5ff04473d57f97d.png" alt="NumericalAnalysis_c78ff75bcffba5d9ace84963d5ff04473d57f97d.png" /> and <img src="ltximg/NumericalAnalysis_176b0a8c40398ec77a3e5fb9591bc91206072efc.png" alt="NumericalAnalysis_176b0a8c40398ec77a3e5fb9591bc91206072efc.png" /> for
+<img src="ltximg/NumericalAnalysis_a1b7914c300658e9d408b227b21a0b7ebe90c564.png" alt="NumericalAnalysis_a1b7914c300658e9d408b227b21a0b7ebe90c564.png" />. Then <img src="ltximg/NumericalAnalysis_d51897b22081aacbac29854eeb79abe800372379.png" alt="NumericalAnalysis_d51897b22081aacbac29854eeb79abe800372379.png" /> is a polynomial of degree
+, which can be determined by the values of f on
+nodes .
 </p>
 
 <p>
-Assume \(S_j''(x_{j-1})=M_{j-1},S_j''(x_j)=M_j\). Then for all
-\(x\in[x_{j-1},x_j]\),
-\(S_j''(x)=M_{j-1}\frac{x_j-x}{h_j}+M_j\frac{x-x_{j-1}}{h_j}\). Hence we get
+Assume <img src="ltximg/NumericalAnalysis_0b3b478d80cca34565450402b7f8d84cdd3f9289.png" alt="NumericalAnalysis_0b3b478d80cca34565450402b7f8d84cdd3f9289.png" />. Then for all
+<img src="ltximg/NumericalAnalysis_abc7bdc19eb25fd6186c8bde2da01f04cb7746df.png" alt="NumericalAnalysis_abc7bdc19eb25fd6186c8bde2da01f04cb7746df.png" />,
+<img src="ltximg/NumericalAnalysis_b53986b11ee59a9fa7e8cfa48dbbd64652ed099d.png" alt="NumericalAnalysis_b53986b11ee59a9fa7e8cfa48dbbd64652ed099d.png" />. Hence we get
 </p>
-\begin{align*}
-&S_j'(x)=-M_{j-1}\frac{(x_j-x)^2}{2h_j}+M_j\frac{(x-x_{j-1})^2}{2h_j}+A_j\\
-&S_j(x)=M_{j-1}\frac{(x_j-x)^3}{6h_j}+M_j\frac{(x-x_{j-1})^3}{6h_j}+A_jx+B_j
-\end{align*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_45eedd05363e2c4085ac67f93aae6d9161a27bbd.png" alt="NumericalAnalysis_45eedd05363e2c4085ac67f93aae6d9161a27bbd.png" /></p>
+</div>
 
 <p>
-Solve this by \(S_j(x_{j-1})=y_{j-1},S_j(x_j)=y_j\), we get
+Solve this by <img src="ltximg/NumericalAnalysis_be4c3e7784c8986c8a871a8a352f9fe223f5d6df.png" alt="NumericalAnalysis_be4c3e7784c8986c8a871a8a352f9fe223f5d6df.png" />, we get
 </p>
-\begin{align*}
-A_j&=\frac{y_j-y_{j-1}}{h_j}-\frac{M_j-M_{j-1}}{6}h_j\\
-A_jx+B_j&=(y_{i-1}-\frac{M_{j-1}}{6}h_j^2)\frac{x_j-x}{h_j}+ 
-(y_j-\frac{M_j}{6}h_j^2)\frac{x-x_{j-1}}{h_j}
-\end{align*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_ee3993b0b2fb054de14968470eab7b665387dccc.png" alt="NumericalAnalysis_ee3993b0b2fb054de14968470eab7b665387dccc.png" /></p>
+</div>
 
 <p>
-Now solve for \(M_j\): Since \(S'\) is continuous at \(x_j\)
+Now solve for <img src="ltximg/NumericalAnalysis_302b20df69d056378bf72cc5649ea34f36f10838.png" alt="NumericalAnalysis_302b20df69d056378bf72cc5649ea34f36f10838.png" />: Since <img src="ltximg/NumericalAnalysis_232892183aea30bc1018443fb2659a4fe2f83430.png" alt="NumericalAnalysis_232892183aea30bc1018443fb2659a4fe2f83430.png" /> is continuous at <img src="ltximg/NumericalAnalysis_90b6c116883fe841e9a0d6cd6b5c72a15780ea63.png" alt="NumericalAnalysis_90b6c116883fe841e9a0d6cd6b5c72a15780ea63.png" />
 </p>
- \begin{align*}
-[x_{j-1},x_j]:S'_j(x)&=-M_{j-1}\frac{(x_j-x)^2}{2h_j}+M_j\frac{(x-x_{j-1})^2}{2h_j}
-                       +f[x_{j-1},x_j]-\frac{M_j-M_{j-1}}{6}h_j\\
-[x_j,x_{j+1}]:S'_{j+1}(x)&=-M_j\frac{(x_{j+1}-x)^2}{2h_{j+1}}+M_{j+1}
-\frac{(x-x_j)^2}{2h_{j+1}}+f[x_j,x_{j+1}]-\frac{M_{j+1}-M_j}{6}h_{j+1}\\
-\end{align*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_a487f7f282d8b0686a929790479d60a12d94058a.png" alt="NumericalAnalysis_a487f7f282d8b0686a929790479d60a12d94058a.png" /></p>
+</div>
 <p>
-From \(S'_j(x_j)=S'_{j+1}(x_j)\), let \(\lambda_j=\frac{h_{j+1}}{h_j+h_{j+1}},
-   \mu_j=1-\lambda_j,g_j=\frac{6}{h_j+h_{j+1}}(f[x_j,x_{j+1}]-f[x_{j-1},x_j])\)
+From <img src="ltximg/NumericalAnalysis_bad703327d51faaafe802c8d1d4f934cb3a0e6b1.png" alt="NumericalAnalysis_bad703327d51faaafe802c8d1d4f934cb3a0e6b1.png" />, let <img src="ltximg/NumericalAnalysis_14531a425eab0c47bee4d5e2fd89c1a1d11a39d6.png" alt="NumericalAnalysis_14531a425eab0c47bee4d5e2fd89c1a1d11a39d6.png" />
 we get
 </p>
-\begin{equation*}
-\mu_jM_{j-1}+2M_j+\lambda_jM_{j+1}=g_j\quad\text{for } \;1\le j\le n-1
-\end{equation*}
-\begin{equation*}
-\begin{pmatrix}
-\mu_1 & 2 & \lambda_1 &&\\
-& \ddots &\ddots &\ddots &\\
-&&\mu_{n-1}&2&\lambda_{n-1}
-\end{pmatrix}
-\begin{pmatrix}
-M_0\\
-\vdots\\
-\vdots\\
-M_n\\
-\end{pmatrix}=
-\begin{pmatrix}
-g_1\\
-\vdots\\
-g_{n-1}
-\end{pmatrix}
-\end{equation*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_6e70218d04d2ad5287f3e10018d5cf6b75c07f6b.png" alt="NumericalAnalysis_6e70218d04d2ad5287f3e10018d5cf6b75c07f6b.png" /></p>
+</div>
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_2fda42ae173d2378cbad76a91b36a1c6f88fd2a4.png" alt="NumericalAnalysis_2fda42ae173d2378cbad76a91b36a1c6f88fd2a4.png" /></p>
+</div>
 
 <p>
-And  \(S'(a)=y_0',S'(b)=y_n'\)
+And  <img src="ltximg/NumericalAnalysis_3748a6678c8614f65b3694da292c12fb52121b06.png" alt="NumericalAnalysis_3748a6678c8614f65b3694da292c12fb52121b06.png" />
 </p>
 
 <p>
-If \(S''(a)=y_0''=M_0,S''(b)=y_n''=M_n\), then \(\lambda_0=0,g_0=2y_0'',\mu_n=0
-   g_n=2y_n''\).
+If <img src="ltximg/NumericalAnalysis_79ca445dd99a6cab3aada389ba5a1be08166d6c0.png" alt="NumericalAnalysis_79ca445dd99a6cab3aada389ba5a1be08166d6c0.png" />, then <img src="ltximg/NumericalAnalysis_a42d284bb81092dbb5195851ac38eac2a39925dc.png" alt="NumericalAnalysis_a42d284bb81092dbb5195851ac38eac2a39925dc.png" />.
 </p>
 
 <p>
-The case when \(M_0=M_n=0\) is called a <b>free boundary</b>, the spline is called
+The case when <img src="ltximg/NumericalAnalysis_83360d54708072c95958e0178e4ac358a02f03dd.png" alt="NumericalAnalysis_83360d54708072c95958e0178e4ac358a02f03dd.png" /> is called a <b>free boundary</b>, the spline is called
 <b>natural spline</b>
 </p>
 </div>
@@ -953,108 +780,100 @@ The case when \(M_0=M_n=0\) is called a <b>free boundary</b>, the spline is call
 <h3 id="org9bd904f">4.1 numerical differentiation</h3>
 <div class="outline-text-3" id="text-org9bd904f">
 <p>
-<b>Target</b>: Given \(x_0\), approximate \(f'(x_0)\)
+<b>Target</b>: Given <img src="ltximg/NumericalAnalysis_d0530e147baa072d4f7a4333adf8a4d131f9cfba.png" alt="NumericalAnalysis_d0530e147baa072d4f7a4333adf8a4d131f9cfba.png" />, approximate <img src="ltximg/NumericalAnalysis_5dc67e29ff67425919fd7530a6eed22435ec147f.png" alt="NumericalAnalysis_5dc67e29ff67425919fd7530a6eed22435ec147f.png" />
 </p>
 
-\begin{equation*}
-f'(x_0)=\lim\limits_{h\to0}\frac{f(x_0+h)-f(x_0)}{h}
-\end{equation*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_2254a117983b7677ec19dd7f8dfd4afcce811772.png" alt="NumericalAnalysis_2254a117983b7677ec19dd7f8dfd4afcce811772.png" /></p>
+</div>
 
 <p>
-Approximate \(f(x)\) by its lagrange polynomial with interpolating points \(x_0\)
-and \(x_0+h\)
+Approximate <img src="ltximg/NumericalAnalysis_d82f0e997eb350cc6d212774abd99a819508e298.png" alt="NumericalAnalysis_d82f0e997eb350cc6d212774abd99a819508e298.png" /> by its lagrange polynomial with interpolating points <img src="ltximg/NumericalAnalysis_d0530e147baa072d4f7a4333adf8a4d131f9cfba.png" alt="NumericalAnalysis_d0530e147baa072d4f7a4333adf8a4d131f9cfba.png" />
+and <img src="ltximg/NumericalAnalysis_36b90628006958280e29953df282effad1b9ce98.png" alt="NumericalAnalysis_36b90628006958280e29953df282effad1b9ce98.png" />
 </p>
 
-\begin{align*}
-f(x)&=\frac{f(x_0)(x-x_0-h)}{x_0-x_0-h}+\frac{f(x_0+h)(x-x_0)}{x_0+h-x_0}\\
-&+\frac{(x-x_0)(x-x_0-h)}{2}f''(\xi_x)\\
-f'(x)&=\frac{f(x_0+h)-f(x_0)}{h}+\frac{2(x-x_0)-h}{2}f''(\xi_x)\\
-&+\frac{(x-x_0)(x-x_0-h)}{2}\frac{d}{dx}[f''(\xi_x)]\\
-f'(x_0)&=\frac{f(x_0+h)-f(x_0)}{h}-\frac{h}{2}f''(\xi)
-\end{align*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_c019131cba8dee5f397c94f141479f955c1ed6f9.png" alt="NumericalAnalysis_c019131cba8dee5f397c94f141479f955c1ed6f9.png" /></p>
+</div>
 
 <p>
-Approximate \(f(x)\) by its Lagrange polynomial with interpolating points
-\(\{x_0,x_1,\dots,x_n\}\)
+Approximate <img src="ltximg/NumericalAnalysis_d82f0e997eb350cc6d212774abd99a819508e298.png" alt="NumericalAnalysis_d82f0e997eb350cc6d212774abd99a819508e298.png" /> by its Lagrange polynomial with interpolating points
+<img src="ltximg/NumericalAnalysis_5ead27c1b5e222f277d3292f35faed29cde46c5d.png" alt="NumericalAnalysis_5ead27c1b5e222f277d3292f35faed29cde46c5d.png" />
 </p>
 
-\begin{align*}
-f(x)&=\displaystyle\sum_{k=0}^nf(x_k)L_k(x)+\frac{(x-x_0)\dots(x-x_n)}{(n+1)!}
-f^{(n+1)}(\xi_x)\\
-f'(x_j)&=\displaystyle\sum_{k=0}^nf(x_k)L_k'(x_j)+\frac{f^{(n+1)}(\xi_j)}{(n+1)!}
-\displaystyle\prod_{\substack{k=0\\k\neq j}}^n(x_j-x_k)
-\end{align*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_798b867b1ca64718739a0adc7e590baafb1aa5f8.png" alt="NumericalAnalysis_798b867b1ca64718739a0adc7e590baafb1aa5f8.png" /></p>
+</div>
 </div>
 </div>
 <div id="outline-container-org98bf015" class="outline-3">
 <h3 id="org98bf015">4.3 elements of numerical integration</h3>
 <div class="outline-text-3" id="text-org98bf015">
 <p>
-<b>Target</b>: approximate \(I=\int_a^bf(x)dx\)
+<b>Target</b>: approximate <img src="ltximg/NumericalAnalysis_b465a409bc760546600b53da8b558f90052ae7a3.png" alt="NumericalAnalysis_b465a409bc760546600b53da8b558f90052ae7a3.png" />
 </p>
 
 <p>
-Integrate the <b>Lagrange interpolating polynomial</b> of \(f(x)\) instead
+Integrate the <b>Lagrange interpolating polynomial</b> of <img src="ltximg/NumericalAnalysis_d82f0e997eb350cc6d212774abd99a819508e298.png" alt="NumericalAnalysis_d82f0e997eb350cc6d212774abd99a819508e298.png" /> instead
 </p>
 
 <p>
-Select a set of distinct nodes \(a\le x_0<x_1<\dots<x_n\le b\) from \([a,b]\).
-The Lagrange polynomial is \(P_n(x)=\displaystyle\sum_{k=0}^nf(x_k)L_k(x)\)
+Select a set of distinct nodes <img src="ltximg/NumericalAnalysis_c2c2085eaac70f98cac324bba2cf9b383a7e0fc6.png" alt="NumericalAnalysis_c2c2085eaac70f98cac324bba2cf9b383a7e0fc6.png" /> from <img src="ltximg/NumericalAnalysis_7cb107a2f79c192fa3a747f63eb1001fe3d98b74.png" alt="NumericalAnalysis_7cb107a2f79c192fa3a747f63eb1001fe3d98b74.png" />.
+The Lagrange polynomial is <img src="ltximg/NumericalAnalysis_8dd9cfb0af639f809af11c574a43bb2cb445d502.png" alt="NumericalAnalysis_8dd9cfb0af639f809af11c574a43bb2cb445d502.png" />
 </p>
 
-\begin{equation*}
-\int_a^bf(x)dx\approx \displaystyle\sum_{k=0}^nf(x_k)
-\overbrace{\int_a^b L_k(x)dx}^{A_k}
-\end{equation*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_32e7c704ed76f1c2d5bea1af7daa48e1830b2ae4.png" alt="NumericalAnalysis_32e7c704ed76f1c2d5bea1af7daa48e1830b2ae4.png" /></p>
+</div>
 
 <p>
 Error
 </p>
-\begin{align*}
-R[f]&=\int_a^bf(x)dx-\displaystyle\sum_{k=0}^nA_kf(x_k)\\
-&=\int_a^b[f(x)-P_n(x)]dx=\int_a^bR_n(x)dx\\
-&=\int_a^b\frac{f^{(n+1)}(\xi_x)}{(n+1)!}\displaystyle\prod_{i=0}^n(x-x_i)dx
-\end{align*}
 
-\begin{definition}
-The \textcolor{red}{degree of accuracy}, or \textcolor{red}{precision} of a quadrature
-formula is the largest positive integer \textcolor{red}{$n$}   s.t. 
-the formula is \textcolor{red}{exact}
-for $x^k$ for each $k=0,1,\dots,n$
-\end{definition}
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_d3172179a78a38fcd9134017d4dcc08f98f00f51.png" alt="NumericalAnalysis_d3172179a78a38fcd9134017d4dcc08f98f00f51.png" /></p>
+</div>
+
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_a95d2375d708bd1106bb227fb7eb54fbc3fce755.png" alt="NumericalAnalysis_a95d2375d708bd1106bb227fb7eb54fbc3fce755.png" /></p>
+</div>
 
 <p>
-Example. Consider the linear interpolation on \([a,b]\), we have 
+Example. Consider the linear interpolation on <img src="ltximg/NumericalAnalysis_7cb107a2f79c192fa3a747f63eb1001fe3d98b74.png" alt="NumericalAnalysis_7cb107a2f79c192fa3a747f63eb1001fe3d98b74.png" />, we have 
 </p>
-\begin{equation*}
-P_1(x)=\frac{x-b}{a-b}f(a)+\frac{x-a}{b-a}f(b)
-\end{equation*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_b160e89282b21a73bedcd92239b034f6f8921bd4.png" alt="NumericalAnalysis_b160e89282b21a73bedcd92239b034f6f8921bd4.png" /></p>
+</div>
 <p>
-\(A_1=A_2=\frac{b-a}{2}, \int_a^bf(x)dx\approx\frac{b-a}{2}[f(a)+f(b)]\). This
-is \textcolor{red}{trapezoidal rule}.
+<img src="ltximg/NumericalAnalysis_f607bc69c9e9990ba4a52b17c59de68fc4a53c37.png" alt="NumericalAnalysis_f607bc69c9e9990ba4a52b17c59de68fc4a53c37.png" />. This
+is .
 </p>
 
 <p>
-Consider \(x^k\)
-</p>
-\begin{align*}
-1:\quad &\int_a^b1dx=b-a \textcolor{red}{=} \frac{b-a}{2}[1+1]\\
-x:\quad &\int_a^bxdx=b-a \textcolor{red}{=}\frac{b-a}{2}[a+b]\\
-x^2:\quad &\int_a^bx^2dx=b-a \textcolor{red}{\neq}  \frac{b-a}{2}[a^2+b^2]\\
-\end{align*}
-
-<p>
-For equally spaced nodes: \(x_i=a+ih,h=\frac{b-a}{n}, i=0,1,\dots,n\)
+Consider <img src="ltximg/NumericalAnalysis_dd705c0aaf579f0a34152326945a9e2175704582.png" alt="NumericalAnalysis_dd705c0aaf579f0a34152326945a9e2175704582.png" />
 </p>
 
-\begin{align*}
-A_i&=\int_{x_0}^{x_n}\displaystyle\prod_{j\neq i}\frac{x-x_j}{x_i-x_j}dx\\
-&=\int_0^n\displaystyle\prod_{i\neq j}\frac{(t-j)h}{(i-j)h}\times hdt\quad x=a+th\\
-&=\frac{(b-a)(-1)^{n-i}}{n\;i!(n-i)!}\int_0^n\displaystyle\prod_{i\neq j}(t-j)dt
-\end{align*}
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_969a5b36fd88436c71b034d89e4e0051cb652ba1.png" alt="NumericalAnalysis_969a5b36fd88436c71b034d89e4e0051cb652ba1.png" /></p>
+</div>
 
 <p>
-\(\frac{(-1)^{n-i}}{n\;i!(n-i)!}\int_0^n\displaystyle\prod_{i\neq j}(t-j)dt\)
+For equally spaced nodes: <img src="ltximg/NumericalAnalysis_b096b45caa78e5d810f16ac8b7f276560b96f437.png" alt="NumericalAnalysis_b096b45caa78e5d810f16ac8b7f276560b96f437.png" />
+</p>
+
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_45864e8354e4b838d2184d7eda5b03187a9343ae.png" alt="NumericalAnalysis_45864e8354e4b838d2184d7eda5b03187a9343ae.png" /></p>
+</div>
+
+<p>
+<img src="ltximg/NumericalAnalysis_c65bedc1d925597d0a9b37e52570beae6de54fb5.png" alt="NumericalAnalysis_c65bedc1d925597d0a9b37e52570beae6de54fb5.png" />
 is the <b>Cotes coefficients</b>
 </p>
 </div>
@@ -1065,53 +884,46 @@ is the <b>Cotes coefficients</b>
 <div class="outline-text-3" id="text-orgb5d3049">
 <p>
 Due to the oscillatory nature of high-degree polynomials, <b>piecewise</b>
-interpolation is applied to approximate \(f(x)\). A piecewise approach that
+interpolation is applied to approximate <img src="ltximg/NumericalAnalysis_d82f0e997eb350cc6d212774abd99a819508e298.png" alt="NumericalAnalysis_d82f0e997eb350cc6d212774abd99a819508e298.png" />. A piecewise approach that
 uses the low-order Newton-Cotes formulae
 </p>
 
 
 <p>
-Composite Trapezoidal rule: \(h=\frac{b-a}{n}, x_k=a+kh\).
+Composite Trapezoidal rule: <img src="ltximg/NumericalAnalysis_ff83a31d095d7302ce2ec6d76b66bac47efcc8cc.png" alt="NumericalAnalysis_ff83a31d095d7302ce2ec6d76b66bac47efcc8cc.png" />.
 </p>
 
 <p>
-Apply Trapezoidal Rule on each \([x_{k-1}, x_k]\)
+Apply Trapezoidal Rule on each <img src="ltximg/NumericalAnalysis_d36563a69d921eccaef922594b1f03edb40d856e.png" alt="NumericalAnalysis_d36563a69d921eccaef922594b1f03edb40d856e.png" />
 </p>
-\begin{tikzpicture}
-\filldraw [gray] (0,0) circle [radius=2pt]
-(-1.5,0) circle [radius=2pt]
-(0,0.5) circle [radius=2pt]
-(-0.75,0) circle [radius=2pt]
-(-0.75,0.5) circle [radius=2pt]
-(0.75,0.5) circle [radius=2pt]
-(1.5,0) circle [radius=2pt]
-(0.75,0) circle [radius=2pt];
-\draw (-1.5,0) -- (1.5,0);
-\end{tikzpicture}
 
-\begin{equation*}
-\int_{x_{k-1}}^{x_k}f(x)d(x)\approx \frac{x_k-x_{k-1}}{2}[f(x_{k-1})-f(x_k)]
-\end{equation*}
-\begin{equation*}
-\int_a^bf(x)dx\approx \displaystyle\sum_{k=1}^n\frac{h}{2}[f(x_{k-1})+f(x_k)]=
-\frac{h}{2}\left[f(a)+2 \displaystyle\sum_{k=1}^{n-1}f(x_k)+f(b)\right]=
-\textcolor{red}{T_n} 
-\end{equation*}
-\begin{equation*}
-R[f]=\displaystyle\sum_{k=1}^n\left[-\frac{h^3}{12}f''(\xi_k)\right]=-\frac{h^2}
-{12}(b-a)\frac{\displaystyle\sum_{k=1}^nf''(\xi_k)}{n}=
--\frac{h^2}{12}(b-a)f''(\xi),\xi\in(a,b)
-\end{equation*}
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_baf274fb4a8f8d61b26c46cc95da6c02144e8807.png" alt="NumericalAnalysis_baf274fb4a8f8d61b26c46cc95da6c02144e8807.png" /></p>
+</div>
+
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_577e4b4470faa05ef12bd5fbcb07301dfa32ec12.png" alt="NumericalAnalysis_577e4b4470faa05ef12bd5fbcb07301dfa32ec12.png" /></p>
+</div>
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_3092d0a0def88f508bcc2019706ed1a790e104a3.png" alt="NumericalAnalysis_3092d0a0def88f508bcc2019706ed1a790e104a3.png" /></p>
+</div>
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_b22b5ac376d7098f5ed1aa3a00f228667ac56b54.png" alt="NumericalAnalysis_b22b5ac376d7098f5ed1aa3a00f228667ac56b54.png" /></p>
+</div>
 
 
 <p>
 <b>Composite simpson's rule</b>
 </p>
-\begin{equation*}
-\int_{x_k}^{x_{k+1}}f(x)dx\approx\frac{h}{6}\left[f(x_k)+4f(x_{k+1/2})+f(x_{k+1})\right]
-\end{equation*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_e2d747de292186b6b2d9782bcbd7d0413eb27d98.png" alt="NumericalAnalysis_e2d747de292186b6b2d9782bcbd7d0413eb27d98.png" /></p>
+</div>
 <p>
-In fact, it's just a mean value \((f(x_k)+4f(x_{k+1/2})+f(x_{k+1})) / 6\)
+In fact, it's just a mean value <img src="ltximg/NumericalAnalysis_5597e243d40db72f9b54081a67ea24ba419c773d.png" alt="NumericalAnalysis_5597e243d40db72f9b54081a67ea24ba419c773d.png" />
 </p>
 </div>
 </div>
@@ -1119,19 +931,20 @@ In fact, it's just a mean value \((f(x_k)+4f(x_{k+1/2})+f(x_{k+1})) / 6\)
 <div id="outline-container-orgb74e262" class="outline-3">
 <h3 id="orgb74e262">4.5 Romberg integration</h3>
 <div class="outline-text-3" id="text-orgb74e262">
-\begin{align*}
-R_n[f]&=-\frac{h^2}{12}(b-a)f''(\xi)\\
-R_{2n}[f]&=-\frac{h^2/4}{12}(b-a)f''(\xi')\approx \frac{1}{4}R_n[f]\\
-\end{align*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_4ae6e357515753bb3c9d5fc0e8514a99e8fbf6b9.png" alt="NumericalAnalysis_4ae6e357515753bb3c9d5fc0e8514a99e8fbf6b9.png" /></p>
+</div>
 <p>
 Hence we have
 </p>
-\begin{equation*}
-\frac{I-T_{2n}}{I-T_n}\approx\frac{1}{4}
-\end{equation*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_f8dd3b90f890077a21a8bb81e3f0defbcc09b50d.png" alt="NumericalAnalysis_f8dd3b90f890077a21a8bb81e3f0defbcc09b50d.png" /></p>
+</div>
 <p>
-and \(I\approx \frac{4}{3}T_{2n}-\frac{1}{3}T_n=\textcolor{red}{S_n}\)
-.\(\frac{4^2S_{2n}-S_n}{4^2-1}=C_n\), \(\frac{4^3C_{2n}-S_n}{4^3-1}=R_n\), the
+and <img src="ltximg/NumericalAnalysis_6bd5a6a2182f1716be773ac4d710561c4194692c.png" alt="NumericalAnalysis_6bd5a6a2182f1716be773ac4d710561c4194692c.png" />
+.<img src="ltximg/NumericalAnalysis_9ac1c8648f7fe1a97f37fe6eb8c7d7e3730bdea5.png" alt="NumericalAnalysis_9ac1c8648f7fe1a97f37fe6eb8c7d7e3730bdea5.png" />, <img src="ltximg/NumericalAnalysis_c3dca48d80c4fcb2691fbd843962b4d2e12e81ab.png" alt="NumericalAnalysis_c3dca48d80c4fcb2691fbd843962b4d2e12e81ab.png" />, the
 <b>Romberg sequence</b>
 </p>
 </div>
@@ -1145,13 +958,13 @@ generate high-accuracy results while using low-order formulae
 </p>
 
 <p>
-For some \(h\neq 0\), suppose we have \(T_0(h)\) that approximates an unknown
-\(I\), and
+For some <img src="ltximg/NumericalAnalysis_5ae7e4b97c6e5399d7f1a416f38a5c19b9ce348c.png" alt="NumericalAnalysis_5ae7e4b97c6e5399d7f1a416f38a5c19b9ce348c.png" />, suppose we have <img src="ltximg/NumericalAnalysis_7eb46193c241248889fcb4198d8e23228c2a48a6.png" alt="NumericalAnalysis_7eb46193c241248889fcb4198d8e23228c2a48a6.png" /> that approximates an unknown
+<img src="ltximg/NumericalAnalysis_558025fc229dfee58c54911e31dbd3144463ab70.png" alt="NumericalAnalysis_558025fc229dfee58c54911e31dbd3144463ab70.png" />, and
 </p>
-\begin{align*}
-T_0(h)-I&=\alpha_1 h+\alpha_2h+\dots\\
-T_0(h/2)-I&=\alpha_1(h/2)+\alpha_2(h/2)^2+\dots\\
-\end{align*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_ed1027ea4af45897f228594694ed3170277afb2c.png" alt="NumericalAnalysis_ed1027ea4af45897f228594694ed3170277afb2c.png" /></p>
+</div>
 <p>
 Hence can improve accuracy by substituting
 </p>
@@ -1178,20 +991,22 @@ using the composite integration
 
 
 <p>
-A simple strategy to bound the total error by \(\epsilon\) of
+A simple strategy to bound the total error by <img src="ltximg/NumericalAnalysis_d7816c8dbb7be8330ec9bbd095e0dbae0da68f9b.png" alt="NumericalAnalysis_d7816c8dbb7be8330ec9bbd095e0dbae0da68f9b.png" /> of
 </p>
-\begin{equation*}
-\int_a^bf(x)dx
-\end{equation*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_3814e263331f5c2a202360fdcc81fe989cf989ec.png" alt="NumericalAnalysis_3814e263331f5c2a202360fdcc81fe989cf989ec.png" /></p>
+</div>
 <p>
-In an interval with length \(h\), the error is smaller than
-\(h\frac{\epsilon}{b-a}\)
+In an interval with length <img src="ltximg/NumericalAnalysis_744a7929df77df282d4efb16391a1e41b3943810.png" alt="NumericalAnalysis_744a7929df77df282d4efb16391a1e41b3943810.png" />, the error is smaller than
+<img src="ltximg/NumericalAnalysis_bb9f425e5186f19e1c3c0dae82ec22074ca7f2d6.png" alt="NumericalAnalysis_bb9f425e5186f19e1c3c0dae82ec22074ca7f2d6.png" />
 </p>
 
 
-\begin{equation*}
-\epsilon(f,a,b)=\int_a^bf(x)dx-S(a,b)=\frac{h^5}{90}f^{(4)}(\xi)
-\end{equation*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_15d953cb68e6f2201f4ee32d83a85806238764d6.png" alt="NumericalAnalysis_15d953cb68e6f2201f4ee32d83a85806238764d6.png" /></p>
+</div>
 </div>
 </div>
 
@@ -1220,7 +1035,7 @@ In an interval with length \(h\), the error is smaller than
 
 <p>
 <b>Paritial Pivoting</b>: Determine the smallest p≥k s.t.
-\(|a_{pk}^{(k)}|=\displaystyle\max_{k\le j\le n}|a_{ik}^{(k)}|\) and
+<img src="ltximg/NumericalAnalysis_94cfdc4f545f688a8bdf370221361e2e86eaa2d8.png" alt="NumericalAnalysis_94cfdc4f545f688a8bdf370221361e2e86eaa2d8.png" /> and
 interchange the pth and the kth rows
 </p>
 
@@ -1228,17 +1043,15 @@ interchange the pth and the kth rows
 <b>Scaled Partial Pivoting</b>:
 </p>
 <ol class="org-ol">
-<li>Define a scale factor \(s_i\) for each row as \(s_i=\displaystyle\max_{1\le
-      j\le n}|a_{ij}|\)</li>
-<li>Determine the smallest \(p\ge k\) s.t.
-\(\frac{|a_{pk}^{(k)}}{s_p}=\displaystyle\max_{k\le i\le
-      n}\frac{|a_{ik}^{(k)}|}{s_i}\)
+<li>Define a scale factor <img src="ltximg/NumericalAnalysis_6bba7b202bf9b278339d00278341cbb3793c78ab.png" alt="NumericalAnalysis_6bba7b202bf9b278339d00278341cbb3793c78ab.png" /> for each row as <img src="ltximg/NumericalAnalysis_22018d8bfb398202673cd4a98615fd6e3db7dfc9.png" alt="NumericalAnalysis_22018d8bfb398202673cd4a98615fd6e3db7dfc9.png" /></li>
+<li>Determine the smallest <img src="ltximg/NumericalAnalysis_dffc10c5b92d8f4e09690f3225ba23457104da2b.png" alt="NumericalAnalysis_dffc10c5b92d8f4e09690f3225ba23457104da2b.png" /> s.t.
+<img src="ltximg/NumericalAnalysis_efdc0a2938040b5563d6e031002f2e6198c63efb.png" alt="NumericalAnalysis_efdc0a2938040b5563d6e031002f2e6198c63efb.png" />
 and interchange the pth and the kth rows</li>
 </ol>
 
 
 <p>
-<b>Complete Pivoting</b>: Search all the entries \(a_{ij}\) to find the entry with
+<b>Complete Pivoting</b>: Search all the entries <img src="ltximg/NumericalAnalysis_644cd9f315963171ecdd041e57d47836452284d9.png" alt="NumericalAnalysis_644cd9f315963171ecdd041e57d47836452284d9.png" /> to find the entry with
 the largest magnitude
 </p>
 </div>
@@ -1247,47 +1060,30 @@ the largest magnitude
 <h3 id="org8af5e7b">6.5 Matrix Factorization</h3>
 <div class="outline-text-3" id="text-org8af5e7b">
 <p>
-\(m_{ik}=a_{ik}/a_{kk}\)
+<img src="ltximg/NumericalAnalysis_c9990fbeae7091876705c07d86b70a7b69ed70f8.png" alt="NumericalAnalysis_c9990fbeae7091876705c07d86b70a7b69ed70f8.png" />
 </p>
-\begin{equation*}
-L_k=
-\begin{pmatrix}
-1 &            &            &               &  \\
-  & \ddots     &            &\mbox{\Huge 0} &  \\
-  &            & 1          &               &  \\
-  &            & -m_{k+1,k} &               &  \\
-  &            & \vdots     & \ddots        &  \\
-  &            & -m_{n,k}   &               & 1\\
-\end{pmatrix}
-\end{equation*}  
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_059b08963fc4f6d740dbd039b40d63bed79e4366.png" alt="NumericalAnalysis_059b08963fc4f6d740dbd039b40d63bed79e4366.png" /></p>
+</div>
 
 
 <p>
 Hence 
 </p>
 
-\begin{equation*}
-L_1^{-1}L_2^{-1}\dots L_{n-1}^{-1}=
-\begin{pmatrix}
-1&&&\mbox{\Huge 0}\\
-&1&&\\
-&&\ddots&\\
-\text{\Huge $m_{i,j}$}&&&1\\
-\end{pmatrix}
-\end{equation*}
 
-\begin{equation*}
-U=
-\begin{pmatrix}
-a_{11}&a_{12}&\dots&a_{1n}\\
-&a_{22}&\dots&a_{2n}\\
-&&\dots&\vdots\\
-&&&a_{nn}\\
-\end{pmatrix}
-\end{equation*}
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_b314c90d05b73827c99d535a0e93cb5705d3f9c4.png" alt="NumericalAnalysis_b314c90d05b73827c99d535a0e93cb5705d3f9c4.png" /></p>
+</div>
+
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_bd3a5b1302bede8dd1adffc2b8ee184c0f3dc68f.png" alt="NumericalAnalysis_bd3a5b1302bede8dd1adffc2b8ee184c0f3dc68f.png" /></p>
+</div>
 
 <p>
-\(A=LU\)
+<img src="ltximg/NumericalAnalysis_e72019f2c02971f6b9a21942341dd7f9cbf50288.png" alt="NumericalAnalysis_e72019f2c02971f6b9a21942341dd7f9cbf50288.png" />
 </p>
 </div>
 </div>
@@ -1296,112 +1092,59 @@ a_{11}&a_{12}&\dots&a_{1n}\\
 <div class="outline-text-3" id="text-orgbdabf26">
 <p>
 <b>Strictly Diagonally Dominant Matrix</b>.
-\(|a_{ii}|>\displaystyle\sum_{\substack{j=1,\\j\neq i}}^n|a_{ij}| \quad
-   \text{for each } i=1,\dots,n\)
+<img src="ltximg/NumericalAnalysis_29dd9a3a26b2bccf36764986d8ca82754b3c3071.png" alt="NumericalAnalysis_29dd9a3a26b2bccf36764986d8ca82754b3c3071.png" />
 </p>
 
-\begin{theorem}
-A strictly diagonally dominant matrix A is \textcolor{red}{nonsingular}. Moreover,
-Gaussian elimination can be performed \textcolor{red}{without} row or column
-\textcolor{red}{interchanges}, and the computations will be \textcolor{red}{stable}
-w.r.t. the growth of roundoff errors
-\end{theorem}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_a5366fd2975f55168a40cd5343e3faf81d9f2fa2.png" alt="NumericalAnalysis_a5366fd2975f55168a40cd5343e3faf81d9f2fa2.png" /></p>
+</div>
 
 <p>
 <b>Choleski's Method for Positive Definite Matrix</b>:
 </p>
-\begin{definition}
-A matrix A is \textcolor{red}{positive definite} if ti's symmetric and if    
-$ \mathbf{x}^T \mathbf{A} \mathbf{x}>0$ for every n-dimensional vector $ \mathbf{x}\neq 0$
-\end{definition}
 
-\begin{lemma}
-A is positive definite
-\begin{enumerate}
-\item $A^{-1}$ is positive definite as well, and $a_{ii}>0$
-\item $\sum|a_{ij}|\le\max|a_{kk}|$; $(a_{ij})^2<a_{ii}a_{jj}$ for each i ≠ j
-\item Each of /A's leading principal submatrices $A_k$/ has a positive determinant
-\end{enumerate}
-\end{lemma}
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_739f68a3a41c575040e85d84c55a26f91887c9a1.png" alt="NumericalAnalysis_739f68a3a41c575040e85d84c55a26f91887c9a1.png" /></p>
+</div>
 
-\begin{equation*}
-U =
-\begin{pmatrix}
-&u_{ij}\\
-&&\\
-\end{pmatrix}=
-\begin{pmatrix}
-u_{11}&&\\
-&\ddots&\\
-&&u_{nn}\\
-\end{pmatrix}
-\begin{pmatrix}
-1&&u_{ij}/u_{ii}\\
-&1&\\
-&&1\\
-\end{pmatrix}=D\tilde{U}
-\end{equation*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_de06034bbc7a11246a6e59393c255ce7fc4641d0.png" alt="NumericalAnalysis_de06034bbc7a11246a6e59393c255ce7fc4641d0.png" /></p>
+</div>
+
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_1bef5d7b0af9a3f42dd077dd971c3ee10f38dace.png" alt="NumericalAnalysis_1bef5d7b0af9a3f42dd077dd971c3ee10f38dace.png" /></p>
+</div>
 <p>
 A is symmetric, hence 
 </p>
-\begin{equation*}
-L=\tilde{U}^t, A=LDL^t
-\end{equation*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_516120fad2c24bfa75486c8369a740292c4ef9b2.png" alt="NumericalAnalysis_516120fad2c24bfa75486c8369a740292c4ef9b2.png" /></p>
+</div>
 <p>
 Let 
 </p>
-\begin{equation*}
-D^{1/2}=
-\begin{pmatrix}
-\sqrt{u_{11}}&&\\
-&\ddots&\\
-&&\sqrt{u_{nn}}\\
-\end{pmatrix}, \tilde{L}=LD^{1/2/}, A=\tilde{L}\tilde{L}^t
-\end{equation*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_8e56dc41756108cd3dde2dd416f9030a898971b9.png" alt="NumericalAnalysis_8e56dc41756108cd3dde2dd416f9030a898971b9.png" /></p>
+</div>
 
 <p>
 <b>Crout Reduction for tridiagonal Linear System</b>
 </p>
 
-\begin{equation*}
-\begin{pmatrix}
-b_1 & c_1    &        &        &\\
-a_2 & b_2    & c_2    &        &\\
-    & \ddots & \ddots & \ddots &\\
-    &        & a_{n-1}& b_{n-1}& c_{n-1} \\
-    &        &        & a_n    & b_n\\
-\end{pmatrix}
-\begin{pmatrix}
-x_1\\
-x_2\\
-\vdots\\
-x_{n-1}\\
-x_n
-\end{pmatrix}=
-\begin{pmatrix}
-f_1\\
-f_2\\
-\vdots\\
-f_{n-1}\\
-f_n
-\end{pmatrix}
-\end{equation*}
 
-\begin{equation*}
-A=
-\begin{pmatrix}
-\alpha_1 &&&\\
-\gamma_2 & \ddots &&\\
-         & \ddots & \ddots   &\\
-         &        & \gamma_n & \alpha_n\\
-\end{pmatrix}
-\begin{pmatrix}
-1 & \beta_1 &&\\
-  & \ddots & \ddots &\\
-  &        & \ddots & \beta_{n-1}\\
-  &        &        & 1\\
-\end{pmatrix}
-\end{equation*}  
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_b7121fd2729ade163adad71370395d8a9e529fb1.png" alt="NumericalAnalysis_b7121fd2729ade163adad71370395d8a9e529fb1.png" /></p>
+</div>
+
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_753e5444613cb8b5af14c242ac199bf226b1c644.png" alt="NumericalAnalysis_753e5444613cb8b5af14c242ac199bf226b1c644.png" /></p>
+</div>
 </div>
 </div>
 </div>
@@ -1412,69 +1155,54 @@ A=
 <div id="outline-container-org478f639" class="outline-3">
 <h3 id="org478f639">7.1 Norms of vectors and matrices</h3>
 <div class="outline-text-3" id="text-org478f639">
-\begin{definition}
-A \textcolor{red}{vector norm} on $R^n$ is a function $||\cdot||: \mathbb{R}^n\to \mathbb{R}$
-with following properties for all $ \mathbf{x,y}\in \mathbb{R}^n, \alpha\in C$
-\begin{enumerate}
-\item $|| \mathbf{x}||\le 0$; $|| \mathbf{x}||=0\Longleftrightarrow \mathbf{x}= \mathbf{0}$
-\item $||\alpha \mathbf{x}||=|\alpha|\cdot|| \mathbf{x}||$
-\item $|| \mathbf{x}+ \mathbf{y}||\le|| \mathbf{x}||+|| \mathbf{y}||$
-\end{enumerate}
-\end{definition}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_c870122d2acef7e395cf97b8793b64b2d90c53a2.png" alt="NumericalAnalysis_c870122d2acef7e395cf97b8793b64b2d90c53a2.png" /></p>
+</div>
 
 <p>
-\(|| \mathbf{x}||_1=\displaystyle\sum_{i=1}^n|x_i|\).
-\(||\mathbf{x}_p||=(\displaystyle\sum_{i=1}^n|x_i|^p)^{1/p}\)
+<img src="ltximg/NumericalAnalysis_8814745667f9ad23fdba0f30000602175dc7852d.png" alt="NumericalAnalysis_8814745667f9ad23fdba0f30000602175dc7852d.png" />.
+<img src="ltximg/NumericalAnalysis_aef3f3551708b33fccd1b087859ed7b3f899c7b7.png" alt="NumericalAnalysis_aef3f3551708b33fccd1b087859ed7b3f899c7b7.png" />
 </p>
 
-\begin{definition}
-A sequence $\{\mathbf{x}^{(k)}\}_{k=1}^\infty$ of vectors in $R^n$ 
-\textcolor{red}{converge to} $\mathbf{x}$ w.r.t the norm $||\cdot||$ if
-given any $\epsilon>0$ there exists an integer $N(\epsilon)$ s.t.
-$||\mathbf{x}^{(k)}-\mathbf{x}||<\epsilon$ for all $k\ge N(\epsilon)$
-\end{definition}
 
-\begin{theorem}
-The sequence of vectors $\{\mathbf{x}^{(k)}\}$ converges to $ \mathbf{x}\in R^n$
-w.r.t. $||\cdot||$ if and only if $ \lim\limits_{k\to\infty}\mathbf{x}^{(k)}_i=x_i$
-for each $i=1,2,\dots,n$
-\end{theorem}
-
-\begin{definition}
-If there exist positive constants $C_1,C_2$ s.t. $C_1||\mathbf{x}||_B\le||\mathbf{x}||_A
-\le C_2||\mathbf{x}|_B|$. Then $||\cdot||_A,||\cdot||_B$ are \textcolor{red}{equivalent} 
-\end{definition}
-
-\begin{theorem}
-All the vector norm in $R^n$ are equivalent
-\end{theorem}
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_12453d90582fe762a46ff47debe4cf6fb03096f3.png" alt="NumericalAnalysis_12453d90582fe762a46ff47debe4cf6fb03096f3.png" /></p>
+</div>
 
 
-\begin{definition}
-A \textcolor{red}{matrix norm} on the set of $n\times n$:
-\begin{enumerate}
-\item $||\mathbf{A}||\ge0;||\mathbf{A}||=0\Longleftrightarrow \mathbf{A}=\mathbf{0}$
-\item $||\alpha \mathbf{A}||=|\alpha|\cdot||\mathbf{A}||$
-\item $||\mathbf{A}+\mathbf{B}||\le||\mathbf{A}||+||\mathbf{B}||$
-\item $||\mathbf{AB}||\le||\mathbf{A}||\cdot||\mathbf{B}||$
-\end{enumerate}
-\end{definition}
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_ad1b3e51a041fd0a33889aa0b8778f684cb632c5.png" alt="NumericalAnalysis_ad1b3e51a041fd0a33889aa0b8778f684cb632c5.png" /></p>
+</div>
+
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_14153f3362418f126a3c0bc0fcd7205d91ebcb8c.png" alt="NumericalAnalysis_14153f3362418f126a3c0bc0fcd7205d91ebcb8c.png" /></p>
+</div>
+
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_48a8857982e36df5b40e7af3d385116a0acc3649.png" alt="NumericalAnalysis_48a8857982e36df5b40e7af3d385116a0acc3649.png" /></p>
+</div>
+
+
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_14c8e6be462d7050f390cb6549802b5c2998da11.png" alt="NumericalAnalysis_14c8e6be462d7050f390cb6549802b5c2998da11.png" /></p>
+</div>
 
 <p>
-<b>Frobenius Norm</b>: \(||\mathbf{A}||_F=\sqrt{\displaystyle\sum_{i=1}^n
-   \displaystyle\sum_{j=1}^n|a_{ij}|^2}\)
+<b>Frobenius Norm</b>: <img src="ltximg/NumericalAnalysis_3a80a3e39f0307eb925050fabc8650aba2939db4.png" alt="NumericalAnalysis_3a80a3e39f0307eb925050fabc8650aba2939db4.png" />
 </p>
 
 <p>
-<b>Natural Norm</b>: \(||\mathbf{A}||_p=\displaystyle\max_{\mathbf{x}\neq
-   \mathbf{0}}\frac{||\mathbf{Ax}||_p}{||\mathbf{x}||_p}=\displaystyle\max_{\mathbf{z}\neq
-   \mathbf{0}}||\mathbf{A}\frac{\mathbf{z}}{||\mathbf{z}||}||=\displaystyle\max_{||\mathbf{x}||_p=1}||\mathbf{Ax}||_p\)
+<b>Natural Norm</b>: <img src="ltximg/NumericalAnalysis_67284d81942a33996b6f924ef5c43aace98483be.png" alt="NumericalAnalysis_67284d81942a33996b6f924ef5c43aace98483be.png" />
 </p>
 
 <p>
-\(||\mathbf{A}||_\infty=\displaystyle\max_{1\le i\le n}\displaystyle\sum_{j=1}^n|a_{ij}|\),
-\(||\mathbf{A}||_1=\displaystyle\max_{1\le j\le n}\displaystyle\sum_{i=1}^n|a_{ij}|\),
-\(||\mathbf{A}||_2=\sqrt{\lambda_\text{max}(\mathbf{A}^T \mathbf{A})}\)
+<img src="ltximg/NumericalAnalysis_a7013da43fc4aa1777c4ef68cbb359ed24a20ff6.png" alt="NumericalAnalysis_a7013da43fc4aa1777c4ef68cbb359ed24a20ff6.png" />,
+<img src="ltximg/NumericalAnalysis_8aea8852c8d7c4d2cb55a2ec2de84f22847c00d8.png" alt="NumericalAnalysis_8aea8852c8d7c4d2cb55a2ec2de84f22847c00d8.png" />,
+<img src="ltximg/NumericalAnalysis_23034d11acda4e07815235d99d4970168a7593a6.png" alt="NumericalAnalysis_23034d11acda4e07815235d99d4970168a7593a6.png" />
 </p>
 </div>
 </div>
@@ -1484,23 +1212,25 @@ A \textcolor{red}{matrix norm} on the set of $n\times n$:
 <p>
 <b>spectral radius</b>.
 </p>
-\begin{definition}
-The \textcolor{red}{spectral radius $\rho(A)$} of a matrix A is defined as
-$\rho(A)=\max|\lambda|$ where $\lambda$ is an eigenvalue of A
-\end{definition}
 
-\begin{theorem}
-If A is an $n\times n$ matrix, then $\rho(A)\le||A||$ for any natural norm
-\end{theorem}
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_32121acda6b5f3db64308c24c5a061be768f228e.png" alt="NumericalAnalysis_32121acda6b5f3db64308c24c5a061be768f228e.png" /></p>
+</div>
 
-\begin{proof}
-$|\lambda|\cdot||\bl{x}||=||\lambda\bl{x}||=||A\bl{x}||\le||A||\cdot||\bl{x}||$
-\end{proof}
 
-\begin{definition}
-We call an $n\times n$ matrix A \textcolor{red}{convergent} if for all $i,j=1,\dots,n$
-$\lim\limits_{k\to\infty}(A^k)_{ij}=0$
-\end{definition}
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_977317099b2f50c14448fd26942ed2ece9364f2d.png" alt="NumericalAnalysis_977317099b2f50c14448fd26942ed2ece9364f2d.png" /></p>
+</div>
+
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_6c757d622dc00b1813c6d206d4b391d738df8ba2.png" alt="NumericalAnalysis_6c757d622dc00b1813c6d206d4b391d738df8ba2.png" /></p>
+</div>
+
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_b2f9ab3d30c5f10e8d96f221e5425982b46d1b91.png" alt="NumericalAnalysis_b2f9ab3d30c5f10e8d96f221e5425982b46d1b91.png" /></p>
+</div>
 </div>
 </div>
 <div id="outline-container-org9aa5047" class="outline-3">
@@ -1509,120 +1239,78 @@ $\lim\limits_{k\to\infty}(A^k)_{ij}=0$
 <p>
 <b>Jacobi iterative method</b>.
 </p>
-\begin{equation*}
-\begin{cases}
-a_{11}x_1+a_{12}x_2+\dots+a_{1n}x_n=b_1\\
-a_{21}x_1+a_{22}x_2+\dots+a_{2n}x_n=b_2\\
-\dots\\
-a_{n1}x_1+a_{n2}x_2+\dots+a_{nn}x_n=b_n\\
-\end{cases}\Longrightarrow
-\begin{cases}
-x_1=\frac{1}{a_{11}}(-a_{12}x_2-\dots-a_{1n}x_n+b_1)\\
-x_2=\frac{1}{a_{22}}(-a_{21}x_1-\dots-a_{2n}x_n+b_2)\\
-\dots\\
-x_1=\frac{1}{a_{nn}}(-a_{n2}x_1-\dots-a_{nn-1}x_{n-1}+b_n)\\
-\end{cases}
-\end{equation*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_bfc47b6db81690f5ea896c6ccae1231e39d25108.png" alt="NumericalAnalysis_bfc47b6db81690f5ea896c6ccae1231e39d25108.png" /></p>
+</div>
 <p>
 In matrix form, 
 </p>
-\begin{equation*}
-A=
-\begin{pmatrix}
-D&-U&-U\\
--L&D&-U\\
--L&-L&D
-\end{pmatrix}
-\end{equation*}
-\begin{align*}
-A\bl{x}=\bl{b}&\Leftrightarrow(D-L-U)\bl{x}=\bl{b}\\
-&\Leftrightarrow D\bl{x}=(L+U)\bl{x}+\bl{b}\\
-&\Leftrightarrow \bl{x}=\underbrace{D^{-1}(L+U)}_{T_j}\bl{x}+\underbrace{D^{-1}}_{\bl{c}_j}\bl{b}
-\end{align*}.
-\(T_j\) is Jacobi iterative matrix. \(\bl{x}^{(k)}=T_j\bl{x}^{(k-1)}+\bl{c}_j\)
 
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_c67bc09ac20a6777b7b518256358a064aad57833.png" alt="NumericalAnalysis_c67bc09ac20a6777b7b518256358a064aad57833.png" /></p>
+</div>
 
-*Gauss-Seidel iterative method*
-\begin{align*}
-&\bl{x}^{(k)}=D^{-1}(L\bl{x}^{(k)}+U\bl{x}^{(k-1)})+D^{-1}\bl{b}\\
-\Leftrightarrow&(D-L)\bl{x}^{(k)}=U\bl{x}^{(k-1)}+\bl{b}\\
-\Leftrightarrow&\bl{x}^{(k)}=\underbrace{(D-L)^{-1}U\bl{x^{(k-1)}}}_{T_g}
-+\underbrace{(D-L)^{-1}\bl{b}}_{\bl{c}_g}
-\end{align*}
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_daaa8ca66605bec45bf66a43b77e06b5abe5edaf.png" alt="NumericalAnalysis_daaa8ca66605bec45bf66a43b77e06b5abe5edaf.png" /></p>
+</div>
 
 
 <p>
 <b>convergence of iterative methods</b>
 </p>
-\begin{theorem}
-the following are equivalent:
-\begin{enumerate}
-\item A is a convergent matrix
-\item $\lim\limits_{n\to\infty}||A^n|| = 0$ for some natural norm
-\item $\lim\limits_{n\to\infty}||A^n||=0$ for all natural norms
-\item $\rho(A)<1$
-\item $\lim\limits_{n\to\infty}A^n\bl{x}=\bl{0}$ for every $\bl{x}$
-\end{enumerate}
-\end{theorem}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_6783b7088402ff7e07b3b47a37bd182850146791.png" alt="NumericalAnalysis_6783b7088402ff7e07b3b47a37bd182850146791.png" /></p>
+</div>
 
 <p>
-\(\bl{e}^{(k)}=\bl{x}^{(k)}-\bl{x}^*=(T\bl{x}^{(k-1)}+\bl{c})-(T\bl{x}^*+\bl{c})
-   =T(\bl{x}^{(k-1)}-\bl{x}^*)=T\bl{e}^{(k-1)}\Rightarrow\bl{e}^{(k)}=T^k\bl{e}^{(0)}\).
-\(||\bl{e}^{(k)}\le||T||\cdot||\bl{e}^{(k-1)}||\le\dots\le||T||^k\cdot||bl{e}^{(0)}||\)
+<img src="ltximg/NumericalAnalysis_43d4d8f5d3973e8dd47713b71459bf3494e40bd9.png" alt="NumericalAnalysis_43d4d8f5d3973e8dd47713b71459bf3494e40bd9.png" />.
+<img src="ltximg/NumericalAnalysis_e9332452ed42ff42581fa405786bb2722c16b959.png" alt="NumericalAnalysis_e9332452ed42ff42581fa405786bb2722c16b959.png" />
 </p>
 
-\begin{theorem}
-For any $\bl{x}^{(0)}\in R^n$, the sequence $\{\bl{x}^{(k)}\}_{k=0}^\infty$
-defined by $\bl{x}^{(k)}=T\bl{x}^{(k-1)}+\bl{c}$ for each k, converges to the
-unique solution of $\bl{x}=T\bl{x}+\bl{c}$ if and only if $\rho(T)<1$
-\end{theorem}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_abfdee2561049500f6c6e5d01e4bee0b5d49f236.png" alt="NumericalAnalysis_abfdee2561049500f6c6e5d01e4bee0b5d49f236.png" /></p>
+</div>
 <p>
-\(\rho(T)<1\Longrightarrow(I-T)^{-1}=\displaystyle\sum_{j=0}^\infty T^j\)
+<img src="ltximg/NumericalAnalysis_38cfce51e02e526878715a79c65849c426ec6163.png" alt="NumericalAnalysis_38cfce51e02e526878715a79c65849c426ec6163.png" />
 </p>
 
-\begin{theorem}
-If $\norm{T}<1$ for any natural matrix norm and $\bl{c}$ is a given vector, then the
-sequence $\{\bl{x}^{(k)}\}_{k=0}^\infty$ defined by $\bl{x}^{(k)}=T\bl{x}^{(k-1)}+\bl{c}$
-converges for any $\bl{x}^{(0)}\in R^n$ to a vector $\bl{x}$. And the following
-error bounds hold
-\begin{enumerate}
-\item $\norm{\bl{x}-\bl{x}^{(k)}}\le\norm{T}^k\norm{\bl{x}-\bl{x}^{(0)}}$
-\item $\norm{\bl{x}-\bl{x}^{(k)}}\le\frac{\norm{T}^k}{1-\norm{T}}\norm{\bl{x}^{(1)}
--\bl{x}^{(0)}}$
-\end{enumerate}
-\end{theorem}
 
-\begin{theorem}
-If A is a strictly diagonally dominant, then for any choice of $\bl{x}^{(0)}$, both the
-Jacobi and Gauss-Seidel methods give sequences $\{\bl{x}^{(k)}\}_{k=0}^\infty$
-that converges to the unique solution
-\end{theorem}
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_7bc67b20d21fb9476e6a584361ee4d02c2c7b599.png" alt="NumericalAnalysis_7bc67b20d21fb9476e6a584361ee4d02c2c7b599.png" /></p>
+</div>
+
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_0973f31cd2206902a787609494b32ed0cbf0dd16.png" alt="NumericalAnalysis_0973f31cd2206902a787609494b32ed0cbf0dd16.png" /></p>
+</div>
 
 <p>
 <b>relaxation methods</b>.
-\(x_i^{(k)}=\frac{1}{a_{ii}}(b_i-\displaystyle\sum_{j=1}^{i-1}a_{ij}x_i^{(k)}-
-   \displaystyle\sum_{j=i+1}^na_{ij}x_j^{(k-1)})=x_i^{(k-1)}+\frac{r_i^{(k)}}{a_{ii}}\)
+<img src="ltximg/NumericalAnalysis_2361de3aee5ab6b7170bbbc0a3b5a1859bc229f0.png" alt="NumericalAnalysis_2361de3aee5ab6b7170bbbc0a3b5a1859bc229f0.png" />
 and relaxation method is
-\(x_i^{(k)}=x_i^{(k-1)}+\omega\frac{r_i^{(k)}}{a_{ii}}\)
+<img src="ltximg/NumericalAnalysis_df3f61f4a4dcbaff5945c366c5a7fb0fed6f9bea.png" alt="NumericalAnalysis_df3f61f4a4dcbaff5945c366c5a7fb0fed6f9bea.png" />
 </p>
 
-\begin{theorem}{(kahan)}
-If $a_{ii}\neq 0$ for each i. Then $\rho(T_\omega)\ge\abs{\omega-1}$.
-\end{theorem}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_03ac455a7a428139d47c059c50beebff804fe056.png" alt="NumericalAnalysis_03ac455a7a428139d47c059c50beebff804fe056.png" /></p>
+</div>
 <p>
-This implies the SOR method can converge only if \(0<\omega<2\)
+This implies the SOR method can converge only if <img src="ltximg/NumericalAnalysis_7dae51c8954bf6b6d62f6af908516b932f1e8861.png" alt="NumericalAnalysis_7dae51c8954bf6b6d62f6af908516b932f1e8861.png" />
 </p>
 
-\begin{theorem}{(Ostrowski-Reich)}
-If A is positive definite and $0<\omega<2$, the SOR converges
-\end{theorem}
 
-\begin{theorem}
-If A is positive definite and tridiagonal, then $\rho(T_g)=(\rho(T_j))^2<1$, and
-the optimal choice of $\omega$ for the SOR method is
-$\omega=\frac{2}{1+\sqrt{1-(\rho(T_j))^2}}$. With this choice of $\omega$, we
-have $\rho(T_\omega)=\omega-1$
-\end{theorem}
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_628cb2b6f1eec0a56cb1cb8b07410e70b7400bf5.png" alt="NumericalAnalysis_628cb2b6f1eec0a56cb1cb8b07410e70b7400bf5.png" /></p>
+</div>
+
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_79952dc9c0449868ea70e7543a227a3087b3f464.png" alt="NumericalAnalysis_79952dc9c0449868ea70e7543a227a3087b3f464.png" /></p>
+</div>
 </div>
 </div>
 
@@ -1630,92 +1318,68 @@ have $\rho(T_\omega)=\omega-1$
 <h3 id="orgcf7aa9e">7.4 Error bounds and iterative refinement</h3>
 <div class="outline-text-3" id="text-orgcf7aa9e">
 <p>
-Assume that A is accurate and \(\bl{b}\) has the error \(\delta \bl{b}\),
-then \(\bl{A}(\bl{x}+\delta \bl{x})=\bl{b}+\delta \bl{b}\)
+Assume that A is accurate and <img src="ltximg/NumericalAnalysis_d18a309175293719028b0d0d1ac89353f1e9dba0.png" alt="NumericalAnalysis_d18a309175293719028b0d0d1ac89353f1e9dba0.png" /> has the error <img src="ltximg/NumericalAnalysis_20c13b3666a32f154071621420ac7121dd3fea61.png" alt="NumericalAnalysis_20c13b3666a32f154071621420ac7121dd3fea61.png" />,
+then <img src="ltximg/NumericalAnalysis_0d783606bdae8a0a3266a7a9c897ec119536d189.png" alt="NumericalAnalysis_0d783606bdae8a0a3266a7a9c897ec119536d189.png" />
 </p>
 
-\begin{theorem}
-Suppose $\tilde{\bl{x}}$ is an approximation to the solution of $ \bl{Ax=b}$
-A is nonsingular matrix. Then for any natural norm,
-\begin{equation*}
-||\bl{x-\tilde{x}}||\le||\bl{r}||\cdot||A^{-1}||
-\end{equation*}
-and if $ \bl{x\neq 0, b\neq 0}$,
-\begin{equation*}
-\frac{||\delta\bl{x}||}{||\bl{x}||}\le||\bl{A}
-||\cdot||\bl{A}^{-1}||\cdot \frac{||\delta\bl{b}||}{||\bl{b}||}
-\end{equation*}
-\end{theorem}
 
-\begin{proof}
-$\bl{r=b-A\tilde{x}}=A\bl{x}-A\tilde{\bl{x}}$ and A is nonsingular. Hence 
-$\bl{x-\tilde{x}}=A^{-1}\bl{r}$. Since $\frac{||A^{-1}\bl{r}||}{||\bl{r}||}\le||A^{-1}||$
-, $||\bl{x-\tilde{x}}||=||A^{-1}\bl{x}||\le||A^-1||\cdot||\bl{r}||$. Also
-$||\bl{b}||\le||A||\cdot||\bl{x}||$. So $1/||\bl{x}||\le||A||/||\bl{b}||$
-\end{proof}
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_6fbb561a97787ed46eac064c43a804f43dcf1d9c.png" alt="NumericalAnalysis_6fbb561a97787ed46eac064c43a804f43dcf1d9c.png" /></p>
+</div>
 
-\begin{theorem}
-If a matrix B satisfies $||B||<1$ for some natural norm, then
-\begin{enumerate}
-\item $I\pm B$ is nonsingular
-\item $||(I\pm B)^{-1}||\le \frac{1}{1-||B||}$
-\end{enumerate}
-\end{theorem}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_24b83371a28e36a4dea93b3f95c353fba32387ac.png" alt="NumericalAnalysis_24b83371a28e36a4dea93b3f95c353fba32387ac.png" /></p>
+</div>
+
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_d860abd85c963a870bf070880ad9be0375a49dc3.png" alt="NumericalAnalysis_d860abd85c963a870bf070880ad9be0375a49dc3.png" /></p>
+</div>
 
 <p>
-Assume \(\bl{b}\) is accurate, A has the error \(\delta A\), then
-\((A+\delta A)(\bl{x}+\delta\bl{x})=\bl{b}\). Hence
-\(\frac{||\delta\bl{x}||}{||\bl{x}||}\le \frac{||A^{-1}||\cdot||\delta
-   A||}{1-||A^{-1}||\cdot||\delta A||}=\frac{||A||\cdot||A^{-1}||}{1
-   -||A||\cdot||A^{-1}||\cdot \frac{||\delta A||}{||A||}}\)
+Assume <img src="ltximg/NumericalAnalysis_d18a309175293719028b0d0d1ac89353f1e9dba0.png" alt="NumericalAnalysis_d18a309175293719028b0d0d1ac89353f1e9dba0.png" /> is accurate, A has the error <img src="ltximg/NumericalAnalysis_96fade10eb6855340c414c898fe3f2ff0c3602eb.png" alt="NumericalAnalysis_96fade10eb6855340c414c898fe3f2ff0c3602eb.png" />, then
+<img src="ltximg/NumericalAnalysis_9e29644c105ce0cdc0c95c86f8ca547fb1e78059.png" alt="NumericalAnalysis_9e29644c105ce0cdc0c95c86f8ca547fb1e78059.png" />. Hence
+<img src="ltximg/NumericalAnalysis_8257ca8344d47fcba916a06cdfed48d53de42a6a.png" alt="NumericalAnalysis_8257ca8344d47fcba916a06cdfed48d53de42a6a.png" />
 </p>
 
 <p>
-<b>condition number K(A)</b> is \(||A||\cdot||A^{-1}||\)
+<b>condition number K(A)</b> is <img src="ltximg/NumericalAnalysis_8bf04af83aa6cadf35fd2a8fd2af85251dc9be03.png" alt="NumericalAnalysis_8bf04af83aa6cadf35fd2a8fd2af85251dc9be03.png" />
 </p>
 
-\begin{theorem}
-Suppose A is nonsingular and $||\delta A||\le \frac{1}{||A^{-1}||}$. The solution
-$\bl{x}+\delta\bl{x}$ to $(A+\delta A)(\bl{x}+\delta\bl{x})$ approximates the solution
-$\bl{x}$ of $A\bl{x}=\bl{b}$ with the error estimate
-\begin{equation*}
-\frac{||\delta\bl{x}||}{||\bl{x}||}\le \frac{K(A)}{1-K(A)||\delta A||/||A||}
-(\frac{||\delta A||}{||A||}+ \frac{||\delta\bl{b}||}{||\bl{b}||})
-\end{equation*}
-\end{theorem}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_6a3b028fbc09dde0f929601d68eaab9f91dc3fb3.png" alt="NumericalAnalysis_6a3b028fbc09dde0f929601d68eaab9f91dc3fb3.png" /></p>
+</div>
 
 <p>
 note:
 </p>
 <ol class="org-ol">
-<li>If A is symmetric, then \(K(A)_2= \frac{\max|\lambda|}{\min|\lambda|}\)</li>
-<li>\(K(A)_p\ge1\) for all natural norm</li>
-<li>\(K(\alpha A)_=K(A)\) for any \(\alpha\in R\)</li>
-<li>\(K(A)_2=1\) if A is orthogonal</li>
-<li>\(K(RA)_2=K(AR)_2=K(A)_2\) for all orthogonal matrix R_</li>
+<li>If A is symmetric, then <img src="ltximg/NumericalAnalysis_0dd4c8e8d04e8df5b3430e8f637856bebb1cbfe1.png" alt="NumericalAnalysis_0dd4c8e8d04e8df5b3430e8f637856bebb1cbfe1.png" /></li>
+<li><img src="ltximg/NumericalAnalysis_77e915c2bc8c33c7e7e213d2f750e8aeae639965.png" alt="NumericalAnalysis_77e915c2bc8c33c7e7e213d2f750e8aeae639965.png" /> for all natural norm</li>
+<li><img src="ltximg/NumericalAnalysis_34468f21b8ee71a447206e3c39a99e031ef8fbb3.png" alt="NumericalAnalysis_34468f21b8ee71a447206e3c39a99e031ef8fbb3.png" /> for any <img src="ltximg/NumericalAnalysis_995dfd265c92650a3ad23fd0d1432b6f4f40a437.png" alt="NumericalAnalysis_995dfd265c92650a3ad23fd0d1432b6f4f40a437.png" /></li>
+<li><img src="ltximg/NumericalAnalysis_fc4ebc95e1d8565c49766c21f9414f58d13a59a9.png" alt="NumericalAnalysis_fc4ebc95e1d8565c49766c21f9414f58d13a59a9.png" /> if A is orthogonal</li>
+<li><img src="ltximg/NumericalAnalysis_13a547251ea71ea463d44a3686965bedf3a609b0.png" alt="NumericalAnalysis_13a547251ea71ea463d44a3686965bedf3a609b0.png" /> for all orthogonal matrix R_</li>
 </ol>
 
 
 <p>
 <b>iterative refinement</b>:
 </p>
-\begin{theorem}
-Suppose $\bl{x}^*$ is an approximation to the solution of $A\bl{x}=\bl{b}$, A is
-nonsingular matrix and $\bl{r}=\bl{b}-A\bl{x}$. Then for any natural norm,
-$||\bl{x-x^*}\le||\bl{r}||\cdot||A^{-1}||$, and if $\bl{x,b}\neq\bl{0}$
-\begin{equation*}
-\frac{||\bl{x}-\bl{x}^*||}{||\bl{x}||}\le K(A)\frac{||\bl{r}||}{||\bl{b}||}
-\end{equation*}
-\end{theorem}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_3b80d91efe4dda265f2e78319e69ab5635ba34b5.png" alt="NumericalAnalysis_3b80d91efe4dda265f2e78319e69ab5635ba34b5.png" /></p>
+</div>
 
 <p>
 <b>refinement</b>
 </p>
 <ol class="org-ol">
-<li>\(A\bl{x}=\bl{b}\) =&gt; approximation \(\bl{x}_1\)</li>
-<li>\(\bl{r}_1=\bl{b}-A\bl{x}_1\)</li>
-<li>\(A\bl{d}_1=\bl{r}_1\) =&gt; \(\bl{d}_1\)</li>
-<li>\(\bl{x}_2=\bl{x}_1+\bl{d}_1\)</li>
+<li><img src="ltximg/NumericalAnalysis_d00cfb0a8aca06948df772dbad9940ac140d1d07.png" alt="NumericalAnalysis_d00cfb0a8aca06948df772dbad9940ac140d1d07.png" /> =&gt; approximation <img src="ltximg/NumericalAnalysis_d3de28e8d5ef3abb21f76bf0ab008eaf83908d93.png" alt="NumericalAnalysis_d3de28e8d5ef3abb21f76bf0ab008eaf83908d93.png" /></li>
+<li><img src="ltximg/NumericalAnalysis_9aad8a0ec25b090abd90f0620b3f2283d5ca1456.png" alt="NumericalAnalysis_9aad8a0ec25b090abd90f0620b3f2283d5ca1456.png" /></li>
+<li><img src="ltximg/NumericalAnalysis_21241a69b6f4433b20692230fa584a76b1a2452c.png" alt="NumericalAnalysis_21241a69b6f4433b20692230fa584a76b1a2452c.png" /> =&gt; <img src="ltximg/NumericalAnalysis_40f98995cf759266b143088ca427a6bde67873d4.png" alt="NumericalAnalysis_40f98995cf759266b143088ca427a6bde67873d4.png" /></li>
+<li><img src="ltximg/NumericalAnalysis_d450de7aadad788bda1e2e5099ec2e53b21c16e0.png" alt="NumericalAnalysis_d450de7aadad788bda1e2e5099ec2e53b21c16e0.png" /></li>
 </ol>
 </div>
 </div>
@@ -1724,93 +1388,70 @@ $||\bl{x-x^*}\le||\bl{r}||\cdot||A^{-1}||$, and if $\bl{x,b}\neq\bl{0}$
 <h2 id="org9f371e2">Chap8 Approximation theory</h2>
 <div class="outline-text-2" id="text-org9f371e2">
 <p>
-Given \(x_1\dots x_m\) and \(y_1\dots y_m\) find a <b>simpler</b> function \(P(x)\approx
-  f(x)\)
+Given <img src="ltximg/NumericalAnalysis_4dbc2b782620ef3d37163df6617635f180e9252f.png" alt="NumericalAnalysis_4dbc2b782620ef3d37163df6617635f180e9252f.png" /> and <img src="ltximg/NumericalAnalysis_f45af51a38e6bdfaac48e0aaa61656e9bdb006ba.png" alt="NumericalAnalysis_f45af51a38e6bdfaac48e0aaa61656e9bdb006ba.png" /> find a <b>simpler</b> function <img src="ltximg/NumericalAnalysis_8757b6e84b7fb8d1f5f959645871dd68e44d5e02.png" alt="NumericalAnalysis_8757b6e84b7fb8d1f5f959645871dd68e44d5e02.png" />
 </p>
 </div>
 <div id="outline-container-org71d62ed" class="outline-3">
 <h3 id="org71d62ed">8.1 Discrete least squares approximation</h3>
 <div class="outline-text-3" id="text-org71d62ed">
 <p>
-Determine the polynomial \(P_n(x)=a_0+a_1x+\dots+a_nx^n\) to approximate the
-data \(\{(x_i,y_i)\mid i=1,2,\dots,m\}\) s.t. the least squares error
-\(E_2=\displaystyle\sum_{i=1}^m(P_n(x_i)-y_i)^2\) is minimized. Here \(n\ll m\)
+Determine the polynomial <img src="ltximg/NumericalAnalysis_2f2f80d2690bb0c9a863c19677705c561bffc395.png" alt="NumericalAnalysis_2f2f80d2690bb0c9a863c19677705c561bffc395.png" /> to approximate the
+data <img src="ltximg/NumericalAnalysis_8b377378f1b923930fa1b919152a9b66a71e127c.png" alt="NumericalAnalysis_8b377378f1b923930fa1b919152a9b66a71e127c.png" /> s.t. the least squares error
+<img src="ltximg/NumericalAnalysis_83d4f640123a3ce7e94b641e077dc58baca91241.png" alt="NumericalAnalysis_83d4f640123a3ce7e94b641e077dc58baca91241.png" /> is minimized. Here <img src="ltximg/NumericalAnalysis_6617f16785f784c8ce8832e0a22c06f2b2f8669c.png" alt="NumericalAnalysis_6617f16785f784c8ce8832e0a22c06f2b2f8669c.png" />
 </p>
 
 <p>
-\(E_2(a_0,\dots,a_n)=\displaystyle\sum_{i=1}^m(a_0+a_1x_i+\dots+a_nx^n_i-y_i)^2\)
+<img src="ltximg/NumericalAnalysis_dd962a9fd40b909d6cd48756904fb53cd582e73e.png" alt="NumericalAnalysis_dd962a9fd40b909d6cd48756904fb53cd582e73e.png" />
 </p>
 
 <p>
-For \(E_2\) to be minimized it's necessary that \(\frac{\partial E_2}{\partial
-   a_k}=0\)
+For <img src="ltximg/NumericalAnalysis_7c352920dec4e8ce09f3154d4c4caa887109d9b1.png" alt="NumericalAnalysis_7c352920dec4e8ce09f3154d4c4caa887109d9b1.png" /> to be minimized it's necessary that <img src="ltximg/NumericalAnalysis_781595b193cc5fff7173b79c518d073410a7b467.png" alt="NumericalAnalysis_781595b193cc5fff7173b79c518d073410a7b467.png" />
 </p>
 
-\begin{align*}
-0&=\frac{\partial E_2}{\partial a_k}=
-2 \displaystyle\sum_{i=1}^m(P_n(x_i)-y_i)\frac{\partial P_N(x_i)}{\partial a_k}\\
-&=2 \displaystyle\sum_{i=1}^m(\displaystyle\sum_{j=0}^na_jx_i^j-y_i)x_i^k\\
-&=2(\displaystyle\sum_{j=0}^na_j(\displaystyle\sum_{i=1}^mx_i^{j+k})-
-\displaystyle\sum_{i=1}^my_ix_i^k)
-\end{align*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_eca34d509979ef232f3f68798688bf0e17f4d64b.png" alt="NumericalAnalysis_eca34d509979ef232f3f68798688bf0e17f4d64b.png" /></p>
+</div>
 
 <p>
-Let \(b_k=\displaystyle\sum_{i=1}^m x_i^k,
-   c_k=\displaystyle\sum_{i=1}^my_ix_i^k\), then
+Let <img src="ltximg/NumericalAnalysis_1b008cf5dd8cb2b5d715302c973a5472bec7d59e.png" alt="NumericalAnalysis_1b008cf5dd8cb2b5d715302c973a5472bec7d59e.png" />, then
 </p>
-\begin{equation*}
-\begin{pmatrix}
-b_{0+0} & \dots & b_{0+n}\\
-\vdots & \vdots&\vdots\\
-b_{n+0} & \dots & b_{n+n}\\
-\end{pmatrix}
-\begin{pmatrix}
-a_0\\
-\vdots\\
-a_n
-\end{pmatrix}=
-\begin{pmatrix}
-c_0\\
-\vdots
-c_n\\
-\end{pmatrix}
-\end{equation*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_add98a21b4f0b823c3c37ca3b511b82f3e07d054.png" alt="NumericalAnalysis_add98a21b4f0b823c3c37ca3b511b82f3e07d054.png" /></p>
+</div>
 </div>
 </div>
 <div id="outline-container-org3e87b92" class="outline-3">
 <h3 id="org3e87b92">8.2 orthogonal polynomials and least squares approximation</h3>
 <div class="outline-text-3" id="text-org3e87b92">
-\begin{theorem}
-If $\varphi_j(x)$ is a polynomial of degree $j$ for each $j=0,\dots,n$, then 
-$\{\varphi_0(x),\dots,\varphi_n(x)\}$ is \textcolor{red}{linearly independent} on
-any interval $[a,b]$
-\end{theorem}
 
-\begin{theorem}
-Let $\prod_n$ be the set of all polynomials of degree at most n. If
-$\{\varphi_0(x),\dots,\varphi_n(x)\}$ is a collection of linearly independent
-polynomials in $\prod_n$ then any polynomials in $\prod_n$ can be written
-uniquely as a linear combination of $\{\varphi_0(x),\dots,\varphi_n(x)\}$
-\end{theorem}
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_7e84ac04abd82fa507fbe0f4f5d9ff2b688b5456.png" alt="NumericalAnalysis_7e84ac04abd82fa507fbe0f4f5d9ff2b688b5456.png" /></p>
+</div>
 
-\begin{definition}
-For a general linear independent set of functions $\{\varphi_0(x),\dots,\varphi_n(x)\}$,
-a linear combination of $\{\varphi_0(x),\dots,\varphi_n(x)\}$.
-$P(x)=\displaystyle\sum_{j=0}^n\alpha_j\varphi_j(x)$ is called a
-\textcolor{red}{generalized polynomial} 
-\end{definition}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_e8d8527c76f5db4e2d21121e003630ecd25e1506.png" alt="NumericalAnalysis_e8d8527c76f5db4e2d21121e003630ecd25e1506.png" /></p>
+</div>
+
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_693429dae1a7f0346a9a5b10847d09f4bad8ff20.png" alt="NumericalAnalysis_693429dae1a7f0346a9a5b10847d09f4bad8ff20.png" /></p>
+</div>
 
 
 <p>
 Weight function
 </p>
-\begin{align*}
-&E=\sum w_i[P(x_i)-y_i]^2\\
-&E=\int_a^bw(x)[P(x)-f(x)]^2dx
-\end{align*}
-\begin{equation*}
-\sum w_i\norm{P(x)-f(x)}_2^2=\sum w_i\bl{e}^T\bl{e}=\bl{e}^TW\bl{e}
-\end{equation*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_618b0a50d6b028472902e30e1de9b65e30642885.png" alt="NumericalAnalysis_618b0a50d6b028472902e30e1de9b65e30642885.png" /></p>
+</div>
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_4a6b4b174e76e87b9700b9f5c2d3f1cfa78be3a9.png" alt="NumericalAnalysis_4a6b4b174e76e87b9700b9f5c2d3f1cfa78be3a9.png" /></p>
+</div>
 <p>
 where
 #+ATTR<sub>LATEX</sub> :mode math :environment pmatrix :math-preffix W=
@@ -1848,65 +1489,48 @@ where
 
 
 <p>
-The <b>general least squares approximation problem</b>. \(E\) is minimized
+The <b>general least squares approximation problem</b>. <img src="ltximg/NumericalAnalysis_feed7fd3ebaebb188aa3de9523a83b26f9c810f1.png" alt="NumericalAnalysis_feed7fd3ebaebb188aa3de9523a83b26f9c810f1.png" /> is minimized
 </p>
 
 
 <p>
 <b>Inner product</b> and <b>norm</b>
 </p>
-\begin{equation*}
-(f,g)=
-\begin{cases}
-\displaystyle\sum_{i=1}^m w_if(x_i)g(x_i)\\
-\int_a^bw(x)f(x)g(x)dx
-\end{cases}
-\end{equation*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_b100b7675d66051d3bdbfc70a494fcd422fd0655.png" alt="NumericalAnalysis_b100b7675d66051d3bdbfc70a494fcd422fd0655.png" /></p>
+</div>
 <p>
-It can be shown that \((f,g)\) is an <b>inner proudct</b> and \(\norm{f}=\sqrt{(f,f)}\)
+It can be shown that <img src="ltximg/NumericalAnalysis_67c7c89204eec97fae43904f83118f6425733035.png" alt="NumericalAnalysis_67c7c89204eec97fae43904f83118f6425733035.png" /> is an <b>inner proudct</b> and <img src="ltximg/NumericalAnalysis_81f652df715f7b04c45a4f2fbe4d6e966fe7287c.png" alt="NumericalAnalysis_81f652df715f7b04c45a4f2fbe4d6e966fe7287c.png" />
 is a <b>norm</b>
 </p>
 
 
 <p>
 Hence, The general least squares approximation problem is to find a
-generalized polynomial \(P(x)\) such that \(E=(P-y,P-y)=\norm{P-y}^2\) is
+generalized polynomial <img src="ltximg/NumericalAnalysis_ce48ce9a5de18eb2ec96888c37c5630e4bdcf140.png" alt="NumericalAnalysis_ce48ce9a5de18eb2ec96888c37c5630e4bdcf140.png" /> such that <img src="ltximg/NumericalAnalysis_0c906344fbc3ca4d4c51e81eb946ba8387226e05.png" alt="NumericalAnalysis_0c906344fbc3ca4d4c51e81eb946ba8387226e05.png" /> is
 minimized. 
 </p>
 
 
 <p>
-Let \(P(x)=a_0\phi_0(x)+\dots+a_n\phi_n(x)\). 
-\(\frac{\partial E}{\partial a_k}=0\Longrightarrow
-   \displaystyle\sum_{j=0}^n(\phi_k,\phi_j)a_j=(\phi_k,f)\).
+Let <img src="ltximg/NumericalAnalysis_83a0b32c1a88eddcf86250bf59090cc4b5b195bd.png" alt="NumericalAnalysis_83a0b32c1a88eddcf86250bf59090cc4b5b195bd.png" />. 
+<img src="ltximg/NumericalAnalysis_271e2f4e19e25471a0b49e006ca875f4f20e7675.png" alt="NumericalAnalysis_271e2f4e19e25471a0b49e006ca875f4f20e7675.png" />.
 </p>
-\begin{equation*}
-\begin{pmatrix}
-&&\\
-&b_{ij}=(\phi_i,\phi_j)&\\
-&&
-\end{pmatrix}
-\begin{pmatrix}
-a_0\\
-\vdots\\
-a_n
-\end{pmatrix}
-=
-\begin{pmatrix}
-(\phi_0,f)\\
-\dots\\
-(\phi_n,f)
-\end{pmatrix}=\vec{c}
-\end{equation*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_f4745eb442504e083868786b337dc03c126310bf.png" alt="NumericalAnalysis_f4745eb442504e083868786b337dc03c126310bf.png" /></p>
+</div>
 
 
 <p>
-Example. When approximating \(f(x)\in C[0,1]\) with \(\phi_j(x)=x^j\) and
-\(w(x)=1\), then
+Example. When approximating <img src="ltximg/NumericalAnalysis_b13e50645a854c1297e956d45e3c191a0a72469c.png" alt="NumericalAnalysis_b13e50645a854c1297e956d45e3c191a0a72469c.png" /> with <img src="ltximg/NumericalAnalysis_75154f14007c969f2f89139ed7741f2f9f1ca009.png" alt="NumericalAnalysis_75154f14007c969f2f89139ed7741f2f9f1ca009.png" /> and
+<img src="ltximg/NumericalAnalysis_67ed4e422113c2de3d00df6c32f6a754d0a89098.png" alt="NumericalAnalysis_67ed4e422113c2de3d00df6c32f6a754d0a89098.png" />, then
 </p>
-\begin{equation*}
-(\phi_i,\phi_j)=\int_0^1x^ix^jdx=\frac{1}{i+j+1}
-\end{equation*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_ee0ee3312dcdc395661b7f62ad62b2fcc46991fd.png" alt="NumericalAnalysis_ee0ee3312dcdc395661b7f62ad62b2fcc46991fd.png" /></p>
+</div>
 <p>
 Hilbert matrix.
 </p>
@@ -1916,25 +1540,19 @@ Hilbert matrix.
 Improvement: Find a general linear independent set of functions s.t. any pair
 is <b>orthogonal</b>, then the matrix will be diagonal. And
 </p>
-\begin{equation*}
-a_k=\frac{(\phi_k,f)}{(\phi_k,\phi_k)}
-\end{equation*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_17f61f72d2aee0227f7ae57420a9dd593bd8b20e.png" alt="NumericalAnalysis_17f61f72d2aee0227f7ae57420a9dd593bd8b20e.png" /></p>
+</div>
 
 
 <p>
 <b>Construction</b>
 </p>
-\begin{theorem}
-the set of polynomial functions defined in the following way is orthogonal on [a,b]
-w.r.t. weight function $w$
-\begin{align*}
-\phi_0(x)&=1\\
-\phi_1(x)&=x-B_1\\
-\phi_k(x)&=(x-B_k)\phi_{k-1}(x)-C_k\phi_{k-2}(x)\\
-B_k&=\frac{(x\phi_{k-1},\phi_{k-1})}{(\phi_{k-1},\phi_{k-1})}\\
-C_k&=\frac{(x\phi_{k-1},\phi_{k-2})}{(\phi_{k-2},\phi_{k-2})}
-\end{align*}
-\end{theorem}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_1c8c3f94066092d942cf64d64d5e50789e40436d.png" alt="NumericalAnalysis_1c8c3f94066092d942cf64d64d5e50789e40436d.png" /></p>
+</div>
 
 
 <p>
@@ -1974,12 +1592,12 @@ Example. Approximate
 </table>
 
 <p>
-with \(y=a_0+a_1x+a_2x^2, w=1\)
+with <img src="ltximg/NumericalAnalysis_39e320be840512d0bb9a2572880cee56229310b6.png" alt="NumericalAnalysis_39e320be840512d0bb9a2572880cee56229310b6.png" />
 </p>
 
 
 <p>
-Solution. \(y=a_0\phi_0(x)+a_1\phi_1(x)+a_2\phi_2(x)\). \(\phi_0(x)=1\)
+Solution. <img src="ltximg/NumericalAnalysis_282012096e2a50a28095359c5d55464301e5a44c.png" alt="NumericalAnalysis_282012096e2a50a28095359c5d55464301e5a44c.png" />. <img src="ltximg/NumericalAnalysis_9cc17ae4143b81c43da46d1dcd81fbb10308ec37.png" alt="NumericalAnalysis_9cc17ae4143b81c43da46d1dcd81fbb10308ec37.png" />
 </p>
 </div>
 </div>
@@ -1987,126 +1605,115 @@ Solution. \(y=a_0\phi_0(x)+a_1\phi_1(x)+a_2\phi_2(x)\). \(\phi_0(x)=1\)
 <h3 id="orgf0e8fe4">8.3 Chebyshev polynomials and economization of power series</h3>
 <div class="outline-text-3" id="text-orgf0e8fe4">
 <p>
-Minimize \(\norm{P-y}_\infty\), \textcolor{red}{minimax problem} 
+Minimize <img src="ltximg/NumericalAnalysis_a992f569c705073c453a6c35217053f0d44a1147.png" alt="NumericalAnalysis_a992f569c705073c453a6c35217053f0d44a1147.png" />, 
 </p>
 
 <ol class="org-ol">
 <li><p>
-Find a polynomial \(P_n(x)\) of degree n s.t. \(\norm{P_n-f}_\infty\) is
+Find a polynomial <img src="ltximg/NumericalAnalysis_a53114b845815c7b4312812dfa209f05b059af2b.png" alt="NumericalAnalysis_a53114b845815c7b4312812dfa209f05b059af2b.png" /> of degree n s.t. <img src="ltximg/NumericalAnalysis_5852da903da18c12a95a9698671988a95b051c3e.png" alt="NumericalAnalysis_5852da903da18c12a95a9698671988a95b051c3e.png" /> is
 minimized
 </p>
 
-\begin{definition}
-If $P(x_0)-f(x_0)=\pm\norm{P-f}_\infty, \textcolor{red}{x_0}$ is called a
-$(\pm)$ \textcolor{red}{deviation point}
-\end{definition}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_784f6fa0123436fe1b16eb244243a6dd61b8aff2.png" alt="NumericalAnalysis_784f6fa0123436fe1b16eb244243a6dd61b8aff2.png" /></p>
+</div>
 
 <p>
 We can estimate the features of the polynomial
 </p>
 <ol class="org-ol">
-<li>If \(f\in C[a,b]\) and f is \textcolor{red}{not} a polynomial of degree
-n, then there exists a \textcolor{red}{unique} polynomial \(P_n(x)\) s.t. 
-\(\norm{P_n-f}_\infty\) is minimized</li>
-<li>\(P_n(x)\) exists, and must have both + and - deviation points</li>
-<li>\begin{theorem}{Chebyshev Theorem }
-$P_n(x)$ minimizes $\norm{P_n-f}\Longleftrightarrow P_n(x)$ has at least
-\textcolor{red}{n+2} alternating + and - deviation points w.r.t. $f$.
-That is, there exists a set of points $a\le t_1<\dots<t_{n+2}\le b$
-s.t. 
-\begin{equation*}
-P_n(t_k)-f(t_k)=\pm(-1)^k\norm{P_n-f}_\infty
-\end{equation*}
-\end{theorem}
+<li>If <img src="ltximg/NumericalAnalysis_d556f11fb97dad61e8821632cc290787b872574e.png" alt="NumericalAnalysis_d556f11fb97dad61e8821632cc290787b872574e.png" /> and f is a polynomial of degree
+n, then there exists a polynomial <img src="ltximg/NumericalAnalysis_a53114b845815c7b4312812dfa209f05b059af2b.png" alt="NumericalAnalysis_a53114b845815c7b4312812dfa209f05b059af2b.png" /> s.t. 
+<img src="ltximg/NumericalAnalysis_5852da903da18c12a95a9698671988a95b051c3e.png" alt="NumericalAnalysis_5852da903da18c12a95a9698671988a95b051c3e.png" /> is minimized</li>
+<li><img src="ltximg/NumericalAnalysis_a53114b845815c7b4312812dfa209f05b059af2b.png" alt="NumericalAnalysis_a53114b845815c7b4312812dfa209f05b059af2b.png" /> exists, and must have both + and - deviation points</li>
+<li><div class="figure">
+<p><img src="ltximg/NumericalAnalysis_2c973c8884bc2ce3f553b226697632bfcc6e4937.png" alt="NumericalAnalysis_2c973c8884bc2ce3f553b226697632bfcc6e4937.png" /></p>
+</div>
 
 <p>
-The set \(\{t_k\}\) is called the \textcolor{red}{Chebyshev altenating
+The set <img src="ltximg/NumericalAnalysis_da6b61c2d0a9d922e5612f757e8e046e817ed907.png" alt="NumericalAnalysis_da6b61c2d0a9d922e5612f757e8e046e817ed907.png" /> is called the {Chebyshev altenating
 sequence} 
 </p></li>
 </ol></li>
 
 <li><p>
-Determine the interpolating points \(\{x_0,\dots,x_n\}\) s.t. \(P_n(x)\)
+Determine the interpolating points <img src="ltximg/NumericalAnalysis_1f55592643613f42382784734a77b7dd0d41b5c7.png" alt="NumericalAnalysis_1f55592643613f42382784734a77b7dd0d41b5c7.png" /> s.t. <img src="ltximg/NumericalAnalysis_a53114b845815c7b4312812dfa209f05b059af2b.png" alt="NumericalAnalysis_a53114b845815c7b4312812dfa209f05b059af2b.png" />
 minimizes the remainder
 </p>
 
-\begin{equation*}
-\abs{P_n(x)-f(x)}=
-\abs{R_n(x)}=\abs{\frac{f^{(n+1)}(\xi_x)}{(n+1)!}\displaystyle\prod_{i=0}^n(x-x_i)}
-\end{equation*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_17851581bcf2163cd6479df069c2710fce107813.png" alt="NumericalAnalysis_17851581bcf2163cd6479df069c2710fce107813.png" /></p>
+</div>
 
 <p>
-2.1 Find \(\{x_1,\dots,x_n\}\) s.t. \(\norm{\omega_n}_\infty\) is minimized on
-\([-1,1]\), where \(\omega_n(x)=\displaystyle\prod_{i=1}^n(x-x_i)\).
+2.1 Find <img src="ltximg/NumericalAnalysis_72fd0b19faa58dcae2824769f7d345057a0cb8ea.png" alt="NumericalAnalysis_72fd0b19faa58dcae2824769f7d345057a0cb8ea.png" /> s.t. <img src="ltximg/NumericalAnalysis_140a58ff5e1d31261a20284fa40d2d81f3574314.png" alt="NumericalAnalysis_140a58ff5e1d31261a20284fa40d2d81f3574314.png" /> is minimized on
+<img src="ltximg/NumericalAnalysis_91f11c79bd87806c47156a1aeabb8dfc4b255676.png" alt="NumericalAnalysis_91f11c79bd87806c47156a1aeabb8dfc4b255676.png" />, where <img src="ltximg/NumericalAnalysis_cea243aa8ac45151384a5df72c26ed6b00b3ab15.png" alt="NumericalAnalysis_cea243aa8ac45151384a5df72c26ed6b00b3ab15.png" />.
 </p>
 
 <p>
-Since \(\omega_n(x)=x^n-P_{n-1}(x)\), the problem becomes to
+Since <img src="ltximg/NumericalAnalysis_03ce38d2fa3596fcf0fb9bd0b148f42d173f256e.png" alt="NumericalAnalysis_03ce38d2fa3596fcf0fb9bd0b148f42d173f256e.png" />, the problem becomes to
 </p></li>
-<li>Find a polynomial \(P_{n-1}(x) s.t. \norm{x^n-P_{n-1}(x)}_\infty\) is
-minimized on \([-1,1]\)</li>
+<li>Find a polynomial <img src="ltximg/NumericalAnalysis_068ecaff95dcc0eb97fce8b0f976c00aed8cde96.png" alt="NumericalAnalysis_068ecaff95dcc0eb97fce8b0f976c00aed8cde96.png" /> is
+minimized on <img src="ltximg/NumericalAnalysis_91f11c79bd87806c47156a1aeabb8dfc4b255676.png" alt="NumericalAnalysis_91f11c79bd87806c47156a1aeabb8dfc4b255676.png" /></li>
 </ol>
 
 
 <p>
-<b>Chebyshev polynomials</b>. Consider the \(n+1\) extreme values of \(\cos(n\theta)\)
-on \([0,\pi]\).
+<b>Chebyshev polynomials</b>. Consider the <img src="ltximg/NumericalAnalysis_a3ce2600b8899d312d359507294e3b81bce55141.png" alt="NumericalAnalysis_a3ce2600b8899d312d359507294e3b81bce55141.png" /> extreme values of <img src="ltximg/NumericalAnalysis_a1e01f9bf78e60f900704400a592d164df96d7b8.png" alt="NumericalAnalysis_a1e01f9bf78e60f900704400a592d164df96d7b8.png" />
+on <img src="ltximg/NumericalAnalysis_481ae6a82f8ddd6aba7dbc0970ae716657460620.png" alt="NumericalAnalysis_481ae6a82f8ddd6aba7dbc0970ae716657460620.png" />.
 </p>
 
 <p>
-Let \(x=\cos(\theta)\), then \(x\in[-1,1]\), \(T_n(x)=\cos(n\theta)=
-   cos(n\cdot \arccos x)\) is called the \textcolor{red}{Chebyshev polynomial}.
+Let <img src="ltximg/NumericalAnalysis_50bef9fbf8bde03c5a2f1098606a3bce82683d68.png" alt="NumericalAnalysis_50bef9fbf8bde03c5a2f1098606a3bce82683d68.png" />, then <img src="ltximg/NumericalAnalysis_afbc1b2042ad7c76c1b9ac3957171ec958d132b7.png" alt="NumericalAnalysis_afbc1b2042ad7c76c1b9ac3957171ec958d132b7.png" />, <img src="ltximg/NumericalAnalysis_26bfb35a803b33172230702935a6d74d2230dc3c.png" alt="NumericalAnalysis_26bfb35a803b33172230702935a6d74d2230dc3c.png" /> is called the .
 </p>
 
 <p>
 Properties:
 </p>
 <ol class="org-ol">
-<li>\(t_k=\cos(\frac{k}{n}\pi), k=0,\dots,n,
-      T_n(t_k)=(-1)^k\norm{T_n(x)}_\infty\)</li>
-<li>\(T_n(x)\) has \(n\) roots \(x_k=\cos(\frac{2k-1}{2n}\pi), k=1,\dots,n\)</li>
+<li><img src="ltximg/NumericalAnalysis_4826068ea3022ea06cc7cff4568aa6d20da22ac1.png" alt="NumericalAnalysis_4826068ea3022ea06cc7cff4568aa6d20da22ac1.png" /></li>
+<li><img src="ltximg/NumericalAnalysis_a2dec0d0154ac209b805e2fc873b46c484c8573c.png" alt="NumericalAnalysis_a2dec0d0154ac209b805e2fc873b46c484c8573c.png" /> has <img src="ltximg/NumericalAnalysis_ac4e677c1ff6181e4eaf5ea73c75e784beaf4ad1.png" alt="NumericalAnalysis_ac4e677c1ff6181e4eaf5ea73c75e784beaf4ad1.png" /> roots <img src="ltximg/NumericalAnalysis_95bc22aad5441737ea620a89f808293c017b828e.png" alt="NumericalAnalysis_95bc22aad5441737ea620a89f808293c017b828e.png" /></li>
 <li><p>
-\(T_n\) has recurrence relation
+<img src="ltximg/NumericalAnalysis_2e005de5e85b3799e88b841ae4450df095c040a5.png" alt="NumericalAnalysis_2e005de5e85b3799e88b841ae4450df095c040a5.png" /> has recurrence relation
 </p>
-\begin{equation*}
-T_0(x)=1,T_1(x)=x,T_{n+1}(x)=2xT_n(x)-T_{n-1}(x)
-\end{equation*}</li>
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_c99a9e4cbfab10bec5e4a028dd2b0d17facaf6c2.png" alt="NumericalAnalysis_c99a9e4cbfab10bec5e4a028dd2b0d17facaf6c2.png" /></p>
+</div></li>
 <li><p>
-\(\{T_0(x),T_1(x),\dots\}\) are orthogonal on \([-1,1]\) w.r.t. weight
-function \(w(x)=1/\sqrt{1-x^2}\)
+<img src="ltximg/NumericalAnalysis_2c73e54ee291d697a3b0fa52d02b585ac34978ca.png" alt="NumericalAnalysis_2c73e54ee291d697a3b0fa52d02b585ac34978ca.png" /> are orthogonal on <img src="ltximg/NumericalAnalysis_91f11c79bd87806c47156a1aeabb8dfc4b255676.png" alt="NumericalAnalysis_91f11c79bd87806c47156a1aeabb8dfc4b255676.png" /> w.r.t. weight
+function <img src="ltximg/NumericalAnalysis_19e2f8bb1c9bbd6eea989c923a7a7cc888867fdb.png" alt="NumericalAnalysis_19e2f8bb1c9bbd6eea989c923a7a7cc888867fdb.png" />
 </p>
-\begin{equation*}
-(T_n,T_m)=\int_{-1}^1\frac{T_n(x)T_m(x)}{\sqrt{1-x^2}}dx=
-\begin{cases}
-0 & n\neq m\\
-\pi & n=m=0\\
-\pi/2&n=m\neq 0\\
-\end{cases}
-\end{equation*}</li>
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_627311599964afea1ea11b3d03c7f23836b28fb6.png" alt="NumericalAnalysis_627311599964afea1ea11b3d03c7f23836b28fb6.png" /></p>
+</div></li>
 </ol>
 
 
 <p>
-\(w_n(x)=x^n-P_{n-1}(x)=T_n(x)/2^{n-1}\). Let \(\Wt{\prod}\) ={monic polynomials
+<img src="ltximg/NumericalAnalysis_3f7df646ad8125be134df25bc2a017449a0cc5f7.png" alt="NumericalAnalysis_3f7df646ad8125be134df25bc2a017449a0cc5f7.png" />. Let <img src="ltximg/NumericalAnalysis_8e30e03b3ec87bac12fd8f645203206ca54411ed.png" alt="NumericalAnalysis_8e30e03b3ec87bac12fd8f645203206ca54411ed.png" /> ={monic polynomials
 of degree n}. 
 </p>
-\begin{equation*}
-\min_{w_n\in\wt{\prod}}\norm{w_n}_\infty=\norm{\frac{1}
-{2^{n-1}}T_n(x)}_\infty=\frac{1}{2^{n-1}}
-\end{equation*}
-\begin{equation*}
-\abs{P_n(x)-f(x)}=
-\abs{R_n(x)}=\abs{\frac{f^{(n+1)}(\xi_x)}{(n+1)!}\displaystyle\prod_{i=0}^n(x-x_i)}
-\end{equation*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_50c2b5057648b821196a0f63e44984e1bbe65ba0.png" alt="NumericalAnalysis_50c2b5057648b821196a0f63e44984e1bbe65ba0.png" /></p>
+</div>
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_17851581bcf2163cd6479df069c2710fce107813.png" alt="NumericalAnalysis_17851581bcf2163cd6479df069c2710fce107813.png" /></p>
+</div>
 <p>
-Take the \(n+1\) roots of \(T_{n+1}(x)\) as the interpolating points, then the
-interpolating polynomial \(P_n(x)\) assumes the minimum upper bound of the
-absolute error \(\frac{M}{2^n(n+1)!}\)
+Take the <img src="ltximg/NumericalAnalysis_a3ce2600b8899d312d359507294e3b81bce55141.png" alt="NumericalAnalysis_a3ce2600b8899d312d359507294e3b81bce55141.png" /> roots of <img src="ltximg/NumericalAnalysis_2c18be640b2b4f667e4ca3b5782e1c70c1083cd9.png" alt="NumericalAnalysis_2c18be640b2b4f667e4ca3b5782e1c70c1083cd9.png" /> as the interpolating points, then the
+interpolating polynomial <img src="ltximg/NumericalAnalysis_a53114b845815c7b4312812dfa209f05b059af2b.png" alt="NumericalAnalysis_a53114b845815c7b4312812dfa209f05b059af2b.png" /> assumes the minimum upper bound of the
+absolute error <img src="ltximg/NumericalAnalysis_f5c732c8042fd9154c9a728286df4d1c3113c9aa.png" alt="NumericalAnalysis_f5c732c8042fd9154c9a728286df4d1c3113c9aa.png" />
 </p>
 
 
 <p>
-<b>Economization of power series</b>. Given \(P_n(x)\approx f(x)\), economization of
+<b>Economization of power series</b>. Given <img src="ltximg/NumericalAnalysis_01d9b3f7620a83434d3f15236a8cb3910dff53ff.png" alt="NumericalAnalysis_01d9b3f7620a83434d3f15236a8cb3910dff53ff.png" />, economization of
 pppppppower series is to reduce the degree of polynomial with a <b>minimal loss of
 accuracy</b> 
 </p>
@@ -2115,36 +1722,38 @@ accuracy</b>
 <p>
 Consider approximating an arbitrary n-th degree polynomial
 </p>
-\begin{equation*}
-P_n(x)=a_nx^n+a_{n-1}x^{n-1}+\dots+a_1x+a_0
-\end{equation*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_8eb955f8245a2b9e3c2d88ebf654d572735ec394.png" alt="NumericalAnalysis_8eb955f8245a2b9e3c2d88ebf654d572735ec394.png" /></p>
+</div>
 <p>
-with a polynomial \(P_{n-1}(x)\) by removing an n-th degree polynomial \(Q_n(x)\)
-that has the coefficient \(a_n\) for \(x_n\). Then
+with a polynomial <img src="ltximg/NumericalAnalysis_3758db31c0e8d2862d3668c486e03c625dd78c59.png" alt="NumericalAnalysis_3758db31c0e8d2862d3668c486e03c625dd78c59.png" /> by removing an n-th degree polynomial <img src="ltximg/NumericalAnalysis_c7152eaa6ecbb6daa3ab168108548e51be5629c5.png" alt="NumericalAnalysis_c7152eaa6ecbb6daa3ab168108548e51be5629c5.png" />
+that has the coefficient <img src="ltximg/NumericalAnalysis_d853504bb045dad6b17a247082dbd0617682f708.png" alt="NumericalAnalysis_d853504bb045dad6b17a247082dbd0617682f708.png" /> for <img src="ltximg/NumericalAnalysis_7d42dcad5beba5b9b54138ba2465f6b6673aef50.png" alt="NumericalAnalysis_7d42dcad5beba5b9b54138ba2465f6b6673aef50.png" />. Then
 </p>
-\begin{equation*}
-\max_{[-1,1]}\abs{f(x)-P_{n-1}(x)}\le\max_{[-1,1]}\abs{f(x)-P_n(x)}+
-\max_{[-1,1]}\abs{Q_n(x)}
-\end{equation*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_e82720943cfe5fd35709b7a388f5f2b2afaabe1d.png" alt="NumericalAnalysis_e82720943cfe5fd35709b7a388f5f2b2afaabe1d.png" /></p>
+</div>
 <p>
-To minimize the loss of accuracy, \(Q_n(x)=a_n\frac{T_n(x)}{2^{n-1}}\)
+To minimize the loss of accuracy, <img src="ltximg/NumericalAnalysis_f5da050b063df3d3101efee15f022b8988d9c131.png" alt="NumericalAnalysis_f5da050b063df3d3101efee15f022b8988d9c131.png" />
+</p>
+
+
+<p>
+Example. The 4-th order Taylor polynomial for <img src="ltximg/NumericalAnalysis_369424b24efaaf6da98c03d1192c1b60a70e334a.png" alt="NumericalAnalysis_369424b24efaaf6da98c03d1192c1b60a70e334a.png" /> on <img src="ltximg/NumericalAnalysis_91f11c79bd87806c47156a1aeabb8dfc4b255676.png" alt="NumericalAnalysis_91f11c79bd87806c47156a1aeabb8dfc4b255676.png" /> is
 </p>
 
 
-<p>
-Example. The 4-th order Taylor polynomial for \(f(x)=e^x\) on \([-1,1]\) is
-</p>
-
-\begin{equation*}
-P_4=1+x+\frac{x^2}{2}+\frac{x^3}{5}+\frac{x^4}{24}
-\end{equation*}
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_1b8b20d5ee99d722aa7dbfd3f2354a858fd4fa57.png" alt="NumericalAnalysis_1b8b20d5ee99d722aa7dbfd3f2354a858fd4fa57.png" /></p>
+</div>
 <p>
 .The upper bound of truncation error is 
-\(\abs{R_4(x)}\le\frac{e}{5!}\abs{x^5}\approx0.023\)
+<img src="ltximg/NumericalAnalysis_2ed422374fec933083b7cbff9fea9ee76b5c0856.png" alt="NumericalAnalysis_2ed422374fec933083b7cbff9fea9ee76b5c0856.png" />
 </p>
 
 <p>
-solution. \(T_4=8x^4-8x^2+1, Q_4\)
+solution. <img src="ltximg/NumericalAnalysis_badd61e196fced79b9ed5221a637312f32b9e170.png" alt="NumericalAnalysis_badd61e196fced79b9ed5221a637312f32b9e170.png" />
 </p>
 </div>
 </div>
@@ -2158,27 +1767,21 @@ solution. \(T_4=8x^4-8x^2+1, Q_4\)
 <div class="outline-text-3" id="text-org6280c01">
 <p>
 <b>the original method</b>
-Assumptions: A is an \(n\times n\) matrix with eigenvalues satisfying
-\(|\lambda_1|>|\lambda_2|\ge\dots\ge|\lambda_n|\ge 0\)
+Assumptions: A is an <img src="ltximg/NumericalAnalysis_d6ad36ef91c2c7cb28fcf2976480cd454f0dc17c.png" alt="NumericalAnalysis_d6ad36ef91c2c7cb28fcf2976480cd454f0dc17c.png" /> matrix with eigenvalues satisfying
+<img src="ltximg/NumericalAnalysis_1f85e7154b0d533f2f7309617cb6ecdd23f49049.png" alt="NumericalAnalysis_1f85e7154b0d533f2f7309617cb6ecdd23f49049.png" />
 </p>
 
-\begin{align*}
-&\bl{x}^{(0)}=\displaystyle\sum_{j=1}^{n}\beta_j\bl{v}_j,\quad\beta_1\neq 0\\
-&\bl{x}^{(1)}=A\bl{x}^{(0)}=\displaystyle\sum_{j=1}^n\beta_j\lambda_j\bl{v}_j\\
-&\bl{x}^{(2)}=A\bl{x}^{(1)}=\displaystyle\sum_{j=1}^n\beta_j\lambda_j^2\bl{v}_j\\
-&\dots\\
-&\bl{x}^{(k)}\approx\lambda_1^k\beta_1\bl{v}_1, \quad \lambda_1\approx
-\frac{\bl{x}^{(k)}_i}{\bl{x}^{(k-1)}_i}
-\end{align*}
+
+<div class="figure">
+<p><img src="ltximg/NumericalAnalysis_03f2a1d371439a3e409252d3a3b64ad55f3a6a54.png" alt="NumericalAnalysis_03f2a1d371439a3e409252d3a3b64ad55f3a6a54.png" /></p>
+</div>
 
 <p>
-<b>Normalization</b>. Suppose \(||\bl{x}||_\infty=1\). Let
-\(||\bl{x}^{(k)}||_\infty=|x_{p_k}^{(k)}|\).Then \(\bl{u}^{(k-1)}=
-   \frac{\bl{x}^{(k-1)}}{|x_{p_{k-1}}^{(k-1)}|}\) and
-\(\bl{x}^{(k)}=A\bl{u}^{(k-1)}\).
-Then \(\bl{u}^{(k)}= \frac{\bl{x}^{(k)}}{|x_{p_k}^{(k)}|}\to \bl{v}_1\).
-\(\lambda_1\approx
-   \frac{\bl{x}_i^{(k)}}{\bl{u}_i^{(k-1)}}=\bl{x}_{p_{k-1}}^{(k)}\)
+<b>Normalization</b>. Suppose <img src="ltximg/NumericalAnalysis_a66c08344fd0490fa6db63fc2db087587e9e9784.png" alt="NumericalAnalysis_a66c08344fd0490fa6db63fc2db087587e9e9784.png" />. Let
+<img src="ltximg/NumericalAnalysis_94e4cb8cb5c2531bd01f5458ec24c800974af09d.png" alt="NumericalAnalysis_94e4cb8cb5c2531bd01f5458ec24c800974af09d.png" />.Then <img src="ltximg/NumericalAnalysis_a874afc73c746266df4ea9ffb39a412905a423d3.png" alt="NumericalAnalysis_a874afc73c746266df4ea9ffb39a412905a423d3.png" /> and
+<img src="ltximg/NumericalAnalysis_3867a13b0ee55cad3064dc6f8e7b3ef504745b0b.png" alt="NumericalAnalysis_3867a13b0ee55cad3064dc6f8e7b3ef504745b0b.png" />.
+Then <img src="ltximg/NumericalAnalysis_04b3d1353e26d977643664aab246290c51a049f9.png" alt="NumericalAnalysis_04b3d1353e26d977643664aab246290c51a049f9.png" />.
+<img src="ltximg/NumericalAnalysis_ca8c3d276676e372d3e5e8665524cae175394bde.png" alt="NumericalAnalysis_ca8c3d276676e372d3e5e8665524cae175394bde.png" />
 </p>
 
 <p>
@@ -2186,28 +1789,25 @@ Note:
 </p>
 <ol class="org-ol">
 <li>the method works for <b>multiple</b> eigenvalues
-\(\lambda_1=\lambda_2=\dots=\lambda_r\)</li>
-<li>the method fails to converge if \(\lambda_1=-\lambda_2\)</li>
-<li>Aitken's \(\Delta^2\) can be used</li>
+<img src="ltximg/NumericalAnalysis_9a04a631738fd6a06e619f77390c1277548a09c6.png" alt="NumericalAnalysis_9a04a631738fd6a06e619f77390c1277548a09c6.png" /></li>
+<li>the method fails to converge if <img src="ltximg/NumericalAnalysis_41cc136f6aa387a5caeca9474d74c2ffd692477b.png" alt="NumericalAnalysis_41cc136f6aa387a5caeca9474d74c2ffd692477b.png" /></li>
+<li>Aitken's <img src="ltximg/NumericalAnalysis_1a5c974f18cb7404c746938224674e616c363cc8.png" alt="NumericalAnalysis_1a5c974f18cb7404c746938224674e616c363cc8.png" /> can be used</li>
 </ol>
 
 
 <p>
-<b>Rate of convergence</b>. \(\bl{x}^{(k)}=A\bl{x}^{(k-1)}=\lambda_1^k
-   \displaystyle\sum_{j=1}^n\beta_j(\frac{\lambda_j}{\lambda_1})^k\bl{v}_j\).
-Make \(|\lambda_2/\lambda_1|\) as small as possible.
-Assume \(\lambda_1>\lambda_2\ge\dots\ge\lambda_n, |\lambda_2|>|\lambda_n|\).
-Let \(B=A-pI\), then \(|\lambda I-A|=|\lambda I-(B+pI)|=|(\lambda-p)I-B|\).
-Hence \(\lambda_A-p=\lambda_B\). Since  \(\frac{|\lambda_2-p|}{|\lambda_1-p|}<
-   \frac{|\lambda_2|}{|\lambda_1|}\) . The iteration is fast
+<b>Rate of convergence</b>. <img src="ltximg/NumericalAnalysis_826c17c8f34f96455fd478df67d7095f0965f1db.png" alt="NumericalAnalysis_826c17c8f34f96455fd478df67d7095f0965f1db.png" />.
+Make <img src="ltximg/NumericalAnalysis_ad8578b72b159d2dacd8e06a5d36b5c4c1ec220f.png" alt="NumericalAnalysis_ad8578b72b159d2dacd8e06a5d36b5c4c1ec220f.png" /> as small as possible.
+Assume <img src="ltximg/NumericalAnalysis_b11d8741933fac97e82ff20bdb0a0f947b2d76b1.png" alt="NumericalAnalysis_b11d8741933fac97e82ff20bdb0a0f947b2d76b1.png" />.
+Let <img src="ltximg/NumericalAnalysis_ca23f6fcccad28c14c4c1a3eb1ed6948720bcec5.png" alt="NumericalAnalysis_ca23f6fcccad28c14c4c1a3eb1ed6948720bcec5.png" />, then <img src="ltximg/NumericalAnalysis_d3d9ad4cbc12ee03d103e0deb07dd5bc37f034d5.png" alt="NumericalAnalysis_d3d9ad4cbc12ee03d103e0deb07dd5bc37f034d5.png" />.
+Hence <img src="ltximg/NumericalAnalysis_dd222506ea6a8d7eddc4c804c5dcd7e3d96e92b6.png" alt="NumericalAnalysis_dd222506ea6a8d7eddc4c804c5dcd7e3d96e92b6.png" />. Since  <img src="ltximg/NumericalAnalysis_326e16e827c9fa8b895153b09d0738a56a85449b.png" alt="NumericalAnalysis_326e16e827c9fa8b895153b09d0738a56a85449b.png" /> . The iteration is fast
 </p>
 
 
 <p>
 <b>Inverse power method</b>. If A has
-\(|\lambda_1|\ge|\lambda_2|\ge\dots>|\lambda_n|\), then \(A^{-1}\) has
-\(|\frac{1}{\lambda_n}|>| \frac{1}{\lambda_{n-1}}|\ge\dots\ge|
-   \frac{1}{\lambda_1}|\) 
+<img src="ltximg/NumericalAnalysis_68daeb609a03bccbb81be271b3de63f537f5686c.png" alt="NumericalAnalysis_68daeb609a03bccbb81be271b3de63f537f5686c.png" />, then <img src="ltximg/NumericalAnalysis_87c4ecb546d73ef1cc0bb157ee07d9813d4003a5.png" alt="NumericalAnalysis_87c4ecb546d73ef1cc0bb157ee07d9813d4003a5.png" /> has
+<img src="ltximg/NumericalAnalysis_08ba5d3ec412f4ee40c64aaddc97a8d7d260e0c9.png" alt="NumericalAnalysis_08ba5d3ec412f4ee40c64aaddc97a8d7d260e0c9.png" /> 
 </p>
 </div>
 </div>
@@ -2247,7 +1847,7 @@ numerical differentiation</li>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: gouziwu</p>
-<p class="date">Created: 2019-05-23 四 11:25</p>
+<p class="date">Created: 2019-05-23 四 11:41</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

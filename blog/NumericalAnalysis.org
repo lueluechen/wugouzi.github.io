@@ -2,8 +2,9 @@
 #+AUTHOR: gouziwu
 
 #+LATEX_HEADER: \input{preamble.tex}
-#+EXPORT_FILE_NAME: latex/NumericalAnalysis/NumericalAnalysis.tex
-#+LATEX_HEADER: \graphicspath{{../../images/NumericalAnalysis/}}
+
+#+LATEX_HEADER: \graphicspath{{images/NumericalAnalysis/}}
+#+OPTIONS: tex:imagemagick
 
 * Chap1 Mathematical Preliminaries
 ** 1.2 Roundoff Errors and Computer Arithmetic
