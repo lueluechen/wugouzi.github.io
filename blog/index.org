@@ -1,5 +1,6 @@
 #+TITLE: Abstract Nonsense
 
+- [[file:NumericalAnalysis.org][Numerical Analysis]]
 - [[file:thoughts.org][desperation]]
 - [[file:test.org][test]]
 - [[file:TheFirst.org][第一个blog]]
