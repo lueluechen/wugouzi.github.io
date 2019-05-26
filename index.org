@@ -1,7 +1,7 @@
 #+OPTIONS: TOC:nil ;关闭目录
 #+OPTIONS: NUM:nil ;关闭标题前面的数字
 #+OPTIONS: AUTHOR:wugouzi ;不显示作者
-
+#+OPTIOND: :exclude NumericalAnalysis.org
 
 
 

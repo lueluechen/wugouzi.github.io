@@ -2,6 +2,6 @@
 
 - [[file:BookList.org][Books I Collected]]
 - [[file:NumericalAnalysis.org][Numerical Analysis]]
-- [[file:thoughts.org][desperation]]
-- [[file:test.org][test]]
 - [[file:TheFirst.org][第一个blog]]
+- [[file:test.org][test]]
+- [[file:thoughts.org][desperation]]

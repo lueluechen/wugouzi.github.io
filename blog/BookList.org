@@ -51,7 +51,7 @@ I decide to clear up my books
 * Math [0/13]
   - [ ] Sergei I. Gelfand, Yuri Manin: /Methods of Homological Algebra/
   - [ ] Robert Rosenbrugh, William Lawvere: /Sets for Mathematics/
-
+    
     It's interesting from table of contents.
   - [ ] Dominik Wodarz, Natalia L. Komarova: /Dynamics of Cancer: Mathematical/
     /Foundations of Oncology/
@@ -72,18 +72,18 @@ I decide to clear up my books
 * Linguistics [0/4]
   Personally I don't like statistics though it's quite interesting
   - [ ] Patrick Blackburn, Johans Bos: /Representation and Inference for Natural
-    Language/
-  - [ ] N. Zalta: /Principia Logico-Metaphysica/
+    Language/  
   - [ ] 
   - [ ] 
 
-* Philosophy [0/5]
+* Philosophy [0/]5
   - [ ] Perter Van Inwagen: /Metaphysics/
   - [ ] Leon Horsten, Philip Welch: /Gödel's Disjunction: the scope and limits/
     /of mathematical knowledge/
   - [ ] 
   - [ ] 
   - [ ] 
+  - [ ] N. Zalta: /Principia Logico-Metaphysica/
 
 * Logic Programming [0/6]
   - [ ] Ivan Bratko: /Prolog Programming for Artificial Intelligence/
