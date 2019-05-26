@@ -1,0 +1,122 @@
+#+TITLE: Books I Collected
+
+I decide to clear up my books
+
+
+
+
+
+
+
+* Model Theory [0/5]
+  - [ ] Elisabeth Bouscaren: /Model Theory and Algebraic Geometry/
+  - [ ] Katrin Tent, Martin Ziegler: /A Course in Model Theory/
+
+    Advanced
+  - [ ] David Marker: /Model Theory: An Introduction/
+
+    Require some algebra knowledge. Concise.
+  - [ ] C. C. Chang, H. J. Keisler: /Model Theory/
+
+    Classic reference.
+  - [ ] Kees Doets: /Baisc Model Theory/
+
+* Set Theory [0/4]
+  - [ ] Irving Kaplansky: /Set Theory and Metric Spaces/
+  - [ ] Kenneth Kunen: /Set Theory/
+  - [ ] Kerbert B. Enderton: /Elements of Set Theory/
+
+    I don't like this book's writing style. Maybe it's too old.
+  - [ ] 
+
+
+
+* Categorical Logic [0/4]
+  - [ ] Bart Jacobs: /Categorical Logic and Type Theory/
+  - [ ] Jonathan D. H. Smith, Anna B. Romanowska: /Post Modern ALgebra/
+  - [ ] 
+  - [ ] 
+    
+* Lambda Calculus [0/4]
+  - [ ] J. Roger Hindley, Jonathan P. Seldin:  /Lambda-Calculus and Combinators,
+    an Introduction/
+  - [ ] 
+  - [ ] 
+  - [ ] 
+
+* Computability Theory [0/0]
+  - [ ] Michael R. Garey: /Computers and Intractability/
+
+
+* Math [0/13]
+  - [ ] Sergei I. Gelfand, Yuri Manin: /Methods of Homological Algebra/
+  - [ ] Robert Rosenbrugh, William Lawvere: /Sets for Mathematics/
+
+    It's interesting from table of contents.
+  - [ ] Dominik Wodarz, Natalia L. Komarova: /Dynamics of Cancer: Mathematical/
+    /Foundations of Oncology/
+
+    TOC is interesting.
+  - [ ] Bernhard Ganter, Gerd Stumme, Rudolf Wille(Eds.): /Formal Concept/
+    /Analysis, Foundations and Applications/
+  - [ ] David Eisenbud: /Commutative Algebra with a View Toward Algebraic
+    Geometry/
+  - [ ] Stanley Burris, H. P. Sankappanavar: /A course in Universal Algebra/
+  - [ ] G. Grätzer: /Universal Algebra/
+  - [ ] G. Grätzer: /Lattice Theory/
+  - [ ] B. A. Davey, H. A. Priestley: /Introduction to Lattices and Order/
+  - [ ] 
+  - [ ] 
+  - [ ] 
+
+* Linguistics [0/4]
+  Personally I don't like statistics though it's quite interesting
+  - [ ] Patrick Blackburn, Johans Bos: /Representation and Inference for Natural
+    Language/
+  - [ ] N. Zalta: /Principia Logico-Metaphysica/
+  - [ ] 
+  - [ ] 
+
+* Philosophy [0/5]
+  - [ ] Perter Van Inwagen: /Metaphysics/
+  - [ ] Leon Horsten, Philip Welch: /Gödel's Disjunction: the scope and limits/
+    /of mathematical knowledge/
+  - [ ] 
+  - [ ] 
+  - [ ] 
+
+* Logic Programming [0/6]
+  - [ ] Ivan Bratko: /Prolog Programming for Artificial Intelligence/
+  - [ ] Richard A. O'keefe: /The Craft of Prolog/
+  - [ ] Melvin Fitting: /Computability Theory, Semantics, and Logic Programming/
+  - [ ] Pascal Hitzler, Anthony Seda: /Mathematical Aspects of Logic Programming
+    Semantics/ 
+  - [ ] 
+  - [ ] 
+
+* Programming Language Theory [0/6]
+  - [ ] Zhaohui Luo: /Computation and Reasoning A Type Theory for Computer/
+    /Science/
+  - [ ] Rober Harper: /Foundations for Programming Languages/
+  - [ ] Carl A. Gunter: /Semantics of Programming Languages Structures and
+    Techniques/ 
+  - [ ] John C. Reynolds: /Theories of Programming Languages/
+  - [ ] J. Roger Hindley: /Basic Simple Type Theory/
+  - [ ] 
+  - [ ] Matthias Felleisen, Matthew Flatt: /Programming Languages and Lambda
+    Calculi/ 
+
+    A lecture note.
+
+* Combinatorial Optimization [0/6]
+  - [ ] Mark S. Daskin: /Network and Discrete Location: Models, Algorithms, and
+    Applications/
+  - [ ] Ding-Zhu Du, Peng-Jun Wan: /Connected Dominating Set: Theory and
+    Applications/
+  - [ ] James G. Oxley: /Matroid Theory/
+  - [ ] Douglas B. West: /Introduction to Graph Theory/
+  - [ ] 
+  - [ ] 
+
+* Technique Books [0/0]
+  - [ ] Daniel P. Bovet, Marco Cesati: /Understanding the Linux Kernel/
