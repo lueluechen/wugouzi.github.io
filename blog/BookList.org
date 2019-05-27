@@ -8,7 +8,7 @@ I decide to clear up my books
 
 
 
-* Model Theory [0/5]
+* Model Theory [0/8]
   - [ ] Elisabeth Bouscaren: /Model Theory and Algebraic Geometry/
   - [ ] Katrin Tent, Martin Ziegler: /A Course in Model Theory/
 
@@ -20,35 +20,55 @@ I decide to clear up my books
 
     Classic reference.
   - [ ] Kees Doets: /Baisc Model Theory/
+  - [ ] Maria Manzano, Ruy J. G. B. de Queiroz: /Model Theory/
+  - [ ] 
+  - [ ] 
 
-* Set Theory [0/4]
+* Set Theory [0/5]
   - [ ] Irving Kaplansky: /Set Theory and Metric Spaces/
   - [ ] Kenneth Kunen: /Set Theory/
   - [ ] Kerbert B. Enderton: /Elements of Set Theory/
 
     I don't like this book's writing style. Maybe it's too old.
-  - [ ] 
+  - [ ] A. A. Fraenkel, Y. Bar-Hillel, A. Levy: /Foundations of Set Theory/
+  - [ ] A. Shen, N. K. Vereshchagin: /Basic Set Theory/
 
+* Recursive Theory [0/4]
+  - [ ] Robert I. Soare: /Recursively Enumerable Sets and Degrees/
+  - [ ] Michael R. Garey: /Computers and Intractability/
+  - [ ] Robert I. Soare: /Turing Computability, Theory and Applications/
+  - [ ] S. Barry Cooper: /Computability Theory/
 
+* Proof Theory [0/0]
+  - [ ] Stephen Cook, Phuong Nguyen: /Logical Foundations of Proof Complexity/
 
 * Categorical Logic [0/4]
   - [ ] Bart Jacobs: /Categorical Logic and Type Theory/
   - [ ] Jonathan D. H. Smith, Anna B. Romanowska: /Post Modern ALgebra/
-  - [ ] 
-  - [ ] 
+  - [ ] Peter T. Johnstone: /Sketches of an Elephant, a Topos Theory Compendium/
+  - [ ] Robert Goldblatt: /Topoi/
     
 * Lambda Calculus [0/4]
   - [ ] J. Roger Hindley, Jonathan P. Seldin:  /Lambda-Calculus and Combinators,
     an Introduction/
-  - [ ] 
+  - [ ] H. P. Barendregt: /The Lambda Calculus: its Syntax and Semantics/
   - [ ] 
   - [ ] 
 
-* Computability Theory [0/0]
-  - [ ] Michael R. Garey: /Computers and Intractability/
+* Modal Logic [0/2]
+  - [ ] P. Blackburn, J. Van Benthem, F. Wolter(Eds.): /Handbook of Modal Logic/
+  - [ ] Patrick Blackburn, Maarten de Rijke, Yde Venema: /Modal Logic/
+
+* Other logic things [0/5]
+  - [ ] Derek Goldrei: /Propositional and Predicate Calculus/
+  - [ ] David Harel, Dexter Kozen, Jerzy Tiuryn: /Dynamic Logic/
+  - [ ] Bruno Courcelle, Joost Engelfriet: /Graph Structure and Monadic/
+    /Second-order Logic/
+  - [ ] 
+  - [ ] 
 
 
-* Math [0/13]
+* Math [1/23]
   - [ ] Sergei I. Gelfand, Yuri Manin: /Methods of Homological Algebra/
   - [ ] Robert Rosenbrugh, William Lawvere: /Sets for Mathematics/
     
@@ -65,9 +85,23 @@ I decide to clear up my books
   - [ ] G. Grätzer: /Universal Algebra/
   - [ ] G. Grätzer: /Lattice Theory/
   - [ ] B. A. Davey, H. A. Priestley: /Introduction to Lattices and Order/
+  - [ ] G. H. Hardy, E. M. Wright: /An Introduction to the Theory of Numbers/
+  - [ ] James Munkres: /Topology/
+  - [ ] H. L. Royden, P. M. Fitzpatrick: /Real Analysis/
+  - [ ] Tom Leinster: /Basic Category Theory/
+  - [X] Steve Awodey: /Category Theory/
+  - [ ] Haim Brezis: /Functional Analysis, Sobolev Spaces and Partial/
+    /Differential Equations/
+  - [ ] Saunders Mac Lane, Leke Moerdijk: /Sheaves in Geometry and Logic/
+  - [ ] Jiří Adámek, Horst Herrlich, George E. Strecker: /Abstract and/
+    /Concrete Categories: The Joy of Cats/
+  - [ ] D. E. Rydeheard, R. M. Burstall: /Computational Category Theory/
+  - [ ] Ernest G. Manes: /Algebraic Theories/
+  - [ ] Francis Borceux: /Handbook of Categorical Algebra/
   - [ ] 
   - [ ] 
   - [ ] 
+
 
 * Linguistics [0/4]
   Personally I don't like statistics though it's quite interesting
@@ -91,10 +125,10 @@ I decide to clear up my books
   - [ ] Melvin Fitting: /Computability Theory, Semantics, and Logic Programming/
   - [ ] Pascal Hitzler, Anthony Seda: /Mathematical Aspects of Logic Programming
     Semantics/ 
-  - [ ] 
-  - [ ] 
+  - [ ] Leon Sterling, Ehud Shapiro: /The Art of Prolog/
+  - [ ] Kees Doets: /From Logic to Logic Programming/
 
-* Programming Language Theory [0/6]
+* Programming Language Theory [0/14]
   - [ ] Zhaohui Luo: /Computation and Reasoning A Type Theory for Computer/
     /Science/
   - [ ] Rober Harper: /Foundations for Programming Languages/
@@ -107,6 +141,14 @@ I decide to clear up my books
     Calculi/ 
 
     A lecture note.
+  - [ ] Richard Bird, Oege de Moor: /Algebra of Programming/
+  - [ ] Morten Heine Sørensen, Paweł Urzyczyn: /Lectrues on the Curry-Howard
+    Isomorphism/ 
+  - [ ] Roy L. Crole: /Categories for Types/
+  - [ ] /Object Orientation with Parallelism and Persistence/
+  - [ ] Bart Jacobs: /Introduction to Coalgebra/
+  - [ ] 
+  - [ ] 
 
 * Combinatorial Optimization [0/6]
   - [ ] Mark S. Daskin: /Network and Discrete Location: Models, Algorithms, and
@@ -118,5 +160,14 @@ I decide to clear up my books
   - [ ] 
   - [ ] 
 
+
+* Artificial Intelligence [0/5]
+  - [ ] Ronald J. Branchman, Hector J. Levesque: /Knowledge Representation and
+    Reasoning/
+  - [ ] Stuart Russel, Peter Norvig: /Artificial Intelligence: A Modern Approach/
+  - [ ] Christopher M. Bishop: /Pattern Recoginition and Machine Learning/
+  - [ ] 
+  - [ ] 
+    
 * Technique Books [0/0]
   - [ ] Daniel P. Bovet, Marco Cesati: /Understanding the Linux Kernel/
