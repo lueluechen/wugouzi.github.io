@@ -33,31 +33,26 @@ The books I collected.
   - [ ] A. A. Fraenkel, Y. Bar-Hillel, A. Levy: /Foundations of Set Theory/
   - [ ] A. Shen, N. K. Vereshchagin: /Basic Set Theory/
 
-* Recursive Theory [0/5]
+* Recursive Theory [0/4]
   - [ ] Robert I. Soare: /Recursively Enumerable Sets and Degrees/
   - [ ] Michael R. Garey: /Computers and Intractability/
   - [ ] Robert I. Soare: /Turing Computability, Theory and Applications/
   - [ ] S. Barry Cooper: /Computability Theory/
-  - [ ] 
 
 * Proof Theory [0/2]
   - [ ] Stephen Cook, Phuong Nguyen: /Logical Foundations of Proof Complexity/
   - [ ] A. S. Troelstra, H. Schwichtenberg: /Basic Proof Theory/
 
-* Categorical Logic [0/7]
+* Categorical Logic [0/4]
   - [ ] Bart Jacobs: /Categorical Logic and Type Theory/
   - [ ] Jonathan D. H. Smith, Anna B. Romanowska: /Post Modern ALgebra/
   - [ ] Peter T. Johnstone: /Sketches of an Elephant, a Topos Theory Compendium/
   - [ ] Robert Goldblatt: /Topoi/
-  - [ ] 
-  - [ ] 
     
-* Lambda Calculus [0/4]
+* Lambda Calculus [0/2]
   - [ ] J. Roger Hindley, Jonathan P. Seldin:  /Lambda-Calculus and Combinators,
     an Introduction/
   - [ ] H. P. Barendregt: /The Lambda Calculus: Its Syntax and Semantics/
-  - [ ] 
-  - [ ] 
 
 * Modal Logic [0/3]
   - [ ] P. Blackburn, J. Van Benthem, F. Wolter(Eds.): /Handbook of Modal Logic/
@@ -79,7 +74,7 @@ The books I collected.
 
 
 
-* Math [1/23]
+* Math [1/21]
   - [ ] Sergei I. Gelfand, Yuri Manin: /Methods of Homological Algebra/
   - [ ] Robert Rosenbrugh, William Lawvere: /Sets for Mathematics/
     
@@ -111,25 +106,19 @@ The books I collected.
   - [ ] Francis Borceux: /Handbook of Categorical Algebra/
   - [ ] Harold Abelson, Andrea A. diSessa: /Turtle Geometry: The Computer as a
     Medium for Exploring Mathematics/
-  - [ ] 
-  - [ ] 
 
 
-* Linguistics [0/4]
+* Linguistics [0/2]
   Personally I don't like statistics though it's quite interesting
   - [ ] Patrick Blackburn, Johans Bos: /Representation and Inference for Natural
     Language/  
-  - [ ] 
-  - [ ] 
+  - [ ] Marcus Kracht: /The Mathematics of Language/
 
-* Philosophy [0/5]
+* Philosophy [0/3]
   - [ ] Perter Van Inwagen: /Metaphysics/
   - [ ] Leon Horsten, Philip Welch: /Gödel's Disjunction: the scope and limits/
     /of mathematical knowledge/
   - [ ] N. Zalta: /Principia Logico-Metaphysica/
-  - [ ] 
-  - [ ] 
-  - [ ] 
   
 
 * Logic Programming [0/6]
@@ -141,7 +130,7 @@ The books I collected.
   - [ ] Leon Sterling, Ehud Shapiro: /The Art of Prolog/
   - [ ] Kees Doets: /From Logic to Logic Programming/
 
-* Programming Language Theory [0/14]
+* Programming Language Theory [0/13]
   - [ ] Zhaohui Luo: /Computation and Reasoning A Type Theory for Computer/
     /Science/
   - [ ] Rober Harper: /Foundations for Programming Languages/
@@ -161,26 +150,21 @@ The books I collected.
   - [ ] /Object Orientation with Parallelism and Persistence/
   - [ ] Bart Jacobs: /Introduction to Coalgebra/
   - [ ] Daniel P. Freidman, Mitchell Wand: /Esstentials of Programming Languages/
-  - [ ] 
 
-* Combinatorial Optimization [0/6]
+* Combinatorial Optimization [0/4]
   - [ ] Mark S. Daskin: /Network and Discrete Location: Models, Algorithms, and
     Applications/
   - [ ] Ding-Zhu Du, Peng-Jun Wan: /Connected Dominating Set: Theory and
     Applications/
   - [ ] James G. Oxley: /Matroid Theory/
   - [ ] Douglas B. West: /Introduction to Graph Theory/
-  - [ ] 
-  - [ ] 
 
 
-* Artificial Intelligence [0/5]
+* Artificial Intelligence [0/3]
   - [ ] Ronald J. Branchman, Hector J. Levesque: /Knowledge Representation and
     Reasoning/
   - [ ] Stuart Russel, Peter Norvig: /Artificial Intelligence: A Modern Approach/
   - [ ] Christopher M. Bishop: /Pattern Recoginition and Machine Learning/
-  - [ ] 
-  - [ ] 
     
 * Technique Books [0/0]
   - [ ] Daniel P. Bovet, Marco Cesati: /Understanding the Linux Kernel/
