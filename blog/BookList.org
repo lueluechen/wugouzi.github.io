@@ -1,6 +1,6 @@
 #+TITLE: Books I Collected
 
-I decide to clear up my books
+The books I collected.
 
 
 
@@ -21,7 +21,7 @@ I decide to clear up my books
     Classic reference.
   - [ ] Kees Doets: /Baisc Model Theory/
   - [ ] Maria Manzano, Ruy J. G. B. de Queiroz: /Model Theory/
-  - [ ] 
+  - [ ] Wilfrid Hodges: /A shorter Model Theory/
   - [ ] 
 
 * Set Theory [0/5]
@@ -33,39 +33,50 @@ I decide to clear up my books
   - [ ] A. A. Fraenkel, Y. Bar-Hillel, A. Levy: /Foundations of Set Theory/
   - [ ] A. Shen, N. K. Vereshchagin: /Basic Set Theory/
 
-* Recursive Theory [0/4]
+* Recursive Theory [0/5]
   - [ ] Robert I. Soare: /Recursively Enumerable Sets and Degrees/
   - [ ] Michael R. Garey: /Computers and Intractability/
   - [ ] Robert I. Soare: /Turing Computability, Theory and Applications/
   - [ ] S. Barry Cooper: /Computability Theory/
+  - [ ] 
 
-* Proof Theory [0/0]
+* Proof Theory [0/2]
   - [ ] Stephen Cook, Phuong Nguyen: /Logical Foundations of Proof Complexity/
+  - [ ] A. S. Troelstra, H. Schwichtenberg: /Basic Proof Theory/
 
-* Categorical Logic [0/4]
+* Categorical Logic [0/7]
   - [ ] Bart Jacobs: /Categorical Logic and Type Theory/
   - [ ] Jonathan D. H. Smith, Anna B. Romanowska: /Post Modern ALgebra/
   - [ ] Peter T. Johnstone: /Sketches of an Elephant, a Topos Theory Compendium/
   - [ ] Robert Goldblatt: /Topoi/
+  - [ ] 
+  - [ ] 
     
 * Lambda Calculus [0/4]
   - [ ] J. Roger Hindley, Jonathan P. Seldin:  /Lambda-Calculus and Combinators,
     an Introduction/
-  - [ ] H. P. Barendregt: /The Lambda Calculus: its Syntax and Semantics/
+  - [ ] H. P. Barendregt: /The Lambda Calculus: Its Syntax and Semantics/
   - [ ] 
   - [ ] 
 
-* Modal Logic [0/2]
+* Modal Logic [0/3]
   - [ ] P. Blackburn, J. Van Benthem, F. Wolter(Eds.): /Handbook of Modal Logic/
   - [ ] Patrick Blackburn, Maarten de Rijke, Yde Venema: /Modal Logic/
+  - [ ] Davide Sangiorgi: /Introduction to Bisimulation and Coinduction/
 
-* Other logic things [0/5]
+* Other logic things [0/6]
   - [ ] Derek Goldrei: /Propositional and Predicate Calculus/
   - [ ] David Harel, Dexter Kozen, Jerzy Tiuryn: /Dynamic Logic/
   - [ ] Bruno Courcelle, Joost Engelfriet: /Graph Structure and Monadic/
     /Second-order Logic/
-  - [ ] 
-  - [ ] 
+  - [ ] V. Wiktor Marek, Mirosław Truszczyński: /Nonmonotonic Logic/
+  - [ ] Franz Baader, Ian Horrocks, Carsten Lutz, Uli Sattler: /An Introduction/
+    /to Description Logic/
+  - [ ] J. Michael Dunn, Gary M. Hardegree: /Algebraic Methods in Philosophical
+    Logic/
+    
+    I like this kind of book.
+
 
 
 * Math [1/23]
@@ -98,7 +109,8 @@ I decide to clear up my books
   - [ ] D. E. Rydeheard, R. M. Burstall: /Computational Category Theory/
   - [ ] Ernest G. Manes: /Algebraic Theories/
   - [ ] Francis Borceux: /Handbook of Categorical Algebra/
-  - [ ] 
+  - [ ] Harold Abelson, Andrea A. diSessa: /Turtle Geometry: The Computer as a
+    Medium for Exploring Mathematics/
   - [ ] 
   - [ ] 
 
@@ -110,14 +122,15 @@ I decide to clear up my books
   - [ ] 
   - [ ] 
 
-* Philosophy [0/]5
+* Philosophy [0/5]
   - [ ] Perter Van Inwagen: /Metaphysics/
   - [ ] Leon Horsten, Philip Welch: /Gödel's Disjunction: the scope and limits/
     /of mathematical knowledge/
-  - [ ] 
-  - [ ] 
-  - [ ] 
   - [ ] N. Zalta: /Principia Logico-Metaphysica/
+  - [ ] 
+  - [ ] 
+  - [ ] 
+  
 
 * Logic Programming [0/6]
   - [ ] Ivan Bratko: /Prolog Programming for Artificial Intelligence/
@@ -147,7 +160,7 @@ I decide to clear up my books
   - [ ] Roy L. Crole: /Categories for Types/
   - [ ] /Object Orientation with Parallelism and Persistence/
   - [ ] Bart Jacobs: /Introduction to Coalgebra/
-  - [ ] 
+  - [ ] Daniel P. Freidman, Mitchell Wand: /Esstentials of Programming Languages/
   - [ ] 
 
 * Combinatorial Optimization [0/6]
