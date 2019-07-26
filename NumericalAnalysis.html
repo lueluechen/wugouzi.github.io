@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-05-29 三 12:05 -->
+<!-- 2019-07-26 五 11:08 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Numerical Analysis</title>
@@ -286,6 +286,13 @@ for the JavaScript code in this tag.
 <li><a href="#org819446c">4.7 Gaussian Quadrature</a></li>
 </ul>
 </li>
+<li><a href="#orgaa83473">chap5 Initial-value problems for ordinary differential equations</a>
+<ul>
+<li><a href="#orgf27a965">5.1 the elementary theory of initial-value problems</a></li>
+<li><a href="#org498bd19">5.2 Euler's Method</a></li>
+<li><a href="#org012d229">5.3 Higher Order Taylor Methods</a></li>
+</ul>
+</li>
 <li><a href="#org6f7ef83">Chap6 Direct Methods for Solving Linear Systems</a>
 <ul>
 <li><a href="#org980a232">6.1 Linear Systems of Equations</a></li>
@@ -314,7 +321,6 @@ for the JavaScript code in this tag.
 <li><a href="#org65aeb87">9.3 the power method</a></li>
 </ul>
 </li>
-<li><a href="#org0b0b5a4"><span class="todo TODO">TODO</span> hw <code>[0/15]</code></a></li>
 </ul>
 </div>
 </div>
@@ -339,18 +345,18 @@ with only a finite number of digits.
 
 
 <p>
-Suppose <img src="ltximg/NumericalAnalysis_eed9bb4c925b54f88a29309bdeaa256ba773a08a.png" alt="NumericalAnalysis_eed9bb4c925b54f88a29309bdeaa256ba773a08a.png" />, then
+Suppose <img src="ltximg/NumericalAnalysis_1d461c52820da30f96fb184e3c2180edfe6344cf.png" alt="NumericalAnalysis_1d461c52820da30f96fb184e3c2180edfe6344cf.png" />, then
 </p>
 
 <p>
-<img src="ltximg/NumericalAnalysis_09850585eaaa6125879723eb2def3b1ab5c68d1b.png" alt="NumericalAnalysis_09850585eaaa6125879723eb2def3b1ab5c68d1b.png" />
+<img src="ltximg/NumericalAnalysis_0cc95064ea3ca00ce2f197b9320f41aed6365dee.png" alt="NumericalAnalysis_0cc95064ea3ca00ce2f197b9320f41aed6365dee.png" />
 </p>
 
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_53174aed9330ad0a031efe5260193089056f6b0d.png" alt="NumericalAnalysis_53174aed9330ad0a031efe5260193089056f6b0d.png" />
+<img src="ltximg/NumericalAnalysis_3a38f1b0e67032552ec9a41b774cfaf8f6de64c8.png" alt="NumericalAnalysis_3a38f1b0e67032552ec9a41b774cfaf8f6de64c8.png" />
 </span>
 <span class="equation-label">
 1
@@ -360,7 +366,7 @@ Suppose <img src="ltximg/NumericalAnalysis_eed9bb4c925b54f88a29309bdeaa256ba773a
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_9513f980e7bdfdc1b9fae4aec6d5729ad22ad2f9.png" alt="NumericalAnalysis_9513f980e7bdfdc1b9fae4aec6d5729ad22ad2f9.png" />
+<img src="ltximg/NumericalAnalysis_18d7d2956b2e3172ca20960d02fa9e3ad8e1de71.png" alt="NumericalAnalysis_18d7d2956b2e3172ca20960d02fa9e3ad8e1de71.png" />
 </span>
 <span class="equation-label">
 1
@@ -368,19 +374,32 @@ Suppose <img src="ltximg/NumericalAnalysis_eed9bb4c925b54f88a29309bdeaa256ba773a
 </div>
 
 <dl class="org-dl">
-<dt>chopping</dt><dd><img src="ltximg/NumericalAnalysis_434624c571dc8b67d5c82eb91d84ac5772c6b224.png" alt="NumericalAnalysis_434624c571dc8b67d5c82eb91d84ac5772c6b224.png" /></dd>
-<dt>rounding</dt><dd><img src="ltximg/NumericalAnalysis_eb3d9b3e1ee7c8761d4fab85a4246c38b144ae9d.png" alt="NumericalAnalysis_eb3d9b3e1ee7c8761d4fab85a4246c38b144ae9d.png" /></dd>
+<dt>chopping</dt><dd><img src="ltximg/NumericalAnalysis_1aea290a054ed4b66478256d5228abf5db21597a.png" alt="NumericalAnalysis_1aea290a054ed4b66478256d5228abf5db21597a.png" /></dd>
+<dt>rounding</dt><dd><img src="ltximg/NumericalAnalysis_07b09ca31938c8c0794ed64e47e846b9580b3b12.png" alt="NumericalAnalysis_07b09ca31938c8c0794ed64e47e846b9580b3b12.png" /></dd>
 </dl>
+
+
+<p>
+{ Subtraction of nearly equal numbers will
+cause a cancellation of significant digits.} 
+</p>
+
+
+<p>
+{Dividing by a number with small magnitude (or, 
+equivalently, multiplying by a number with large magnitude) will 
+cause an enlargement of the error.} 
+</p>
 
 <p>
 <b>Finite digit arithmetic</b>
 </p>
 
 <ul class="org-ul">
-<li><img src="ltximg/NumericalAnalysis_5afc8b966ae316ca77b05dd276c0084f03aaf82b.png" alt="NumericalAnalysis_5afc8b966ae316ca77b05dd276c0084f03aaf82b.png" /></li>
-<li><img src="ltximg/NumericalAnalysis_182f2be7ebe32145ad882f56de099fda4017c36e.png" alt="NumericalAnalysis_182f2be7ebe32145ad882f56de099fda4017c36e.png" /></li>
-<li><img src="ltximg/NumericalAnalysis_02f4f906a09768f7904c15de92bda7f18088e5b6.png" alt="NumericalAnalysis_02f4f906a09768f7904c15de92bda7f18088e5b6.png" /></li>
-<li><img src="ltximg/NumericalAnalysis_4493621344223374c4e4a762317069f202713af2.png" alt="NumericalAnalysis_4493621344223374c4e4a762317069f202713af2.png" /></li>
+<li><img src="ltximg/NumericalAnalysis_a2969efe97cd3da2a85b65bb6dfd6de4ff6d4436.png" alt="NumericalAnalysis_a2969efe97cd3da2a85b65bb6dfd6de4ff6d4436.png" /></li>
+<li><img src="ltximg/NumericalAnalysis_3aae90a446e5167334e7f7468f90dc1c90a2c369.png" alt="NumericalAnalysis_3aae90a446e5167334e7f7468f90dc1c90a2c369.png" /></li>
+<li><img src="ltximg/NumericalAnalysis_3b208d6ec08988e65e40673a1565e36aee094ea2.png" alt="NumericalAnalysis_3b208d6ec08988e65e40673a1565e36aee094ea2.png" /></li>
+<li><img src="ltximg/NumericalAnalysis_68239dca08d57f35f47b9dcaf2ad5c84a8dd4470.png" alt="NumericalAnalysis_68239dca08d57f35f47b9dcaf2ad5c84a8dd4470.png" /></li>
 </ul>
 </div>
 </div>
@@ -397,22 +416,22 @@ is stable only for certain choices of initial data.
 
 <p>
 Suppose that E₀ &gt; 0 denotes an initial error and En represents the magnitude
-of an error after n subsequent operations. If <img src="ltximg/NumericalAnalysis_e23b33d91f7fe2c7fba3b1bde107b59141dbecd3.png" alt="NumericalAnalysis_e23b33d91f7fe2c7fba3b1bde107b59141dbecd3.png" />, where C is a
+of an error after n subsequent operations. If <img src="ltximg/NumericalAnalysis_896ea20fcc4f3681caefa8bf18e3e35f0dfff994.png" alt="NumericalAnalysis_896ea20fcc4f3681caefa8bf18e3e35f0dfff994.png" />, where C is a
 constant independent of n, then the growth of error is said to be <b>linear</b>. If
-<img src="ltximg/NumericalAnalysis_a957397d6a094744c8855679e81c455a41b8afd9.png" alt="NumericalAnalysis_a957397d6a094744c8855679e81c455a41b8afd9.png" />, for some C &gt; 1, then the growth of error is called <b>exponential</b> 
+<img src="ltximg/NumericalAnalysis_04f591ab3f1388a74938c3e42cd300e27d88c59d.png" alt="NumericalAnalysis_04f591ab3f1388a74938c3e42cd300e27d88c59d.png" />, for some C &gt; 1, then the growth of error is called <b>exponential</b> 
 </p>
 
 <p>
-Suppose <img src="ltximg/NumericalAnalysis_b35337c8daa58a1ab11e947b054428336bd19c0f.png" alt="NumericalAnalysis_b35337c8daa58a1ab11e947b054428336bd19c0f.png" />.
-If a positive constant K exists with <img src="ltximg/NumericalAnalysis_e031e6134faf767240d45d09548a2d0a53203787.png" alt="NumericalAnalysis_e031e6134faf767240d45d09548a2d0a53203787.png" /> for
-large n, then <img src="ltximg/NumericalAnalysis_6ce9c8e347d49394ba5992ed3fb643444cc1c949.png" alt="NumericalAnalysis_6ce9c8e347d49394ba5992ed3fb643444cc1c949.png" /> converges to α with <b>rate, or</b>
-<b>order, of convergence</b> <img src="ltximg/NumericalAnalysis_a6e0ba1577e46e1dbe6a223d9b395fc25a8b8c2d.png" alt="NumericalAnalysis_a6e0ba1577e46e1dbe6a223d9b395fc25a8b8c2d.png" />
+Suppose <img src="ltximg/NumericalAnalysis_beb04d1ad6a38dc96f6cc29d6fe2cae4e1b91c37.png" alt="NumericalAnalysis_beb04d1ad6a38dc96f6cc29d6fe2cae4e1b91c37.png" />.
+If a positive constant K exists with <img src="ltximg/NumericalAnalysis_cc22f6fd6f0faa73d9d33dfecb30ebc513850753.png" alt="NumericalAnalysis_cc22f6fd6f0faa73d9d33dfecb30ebc513850753.png" /> for
+large n, then <img src="ltximg/NumericalAnalysis_94996bb3534fd4fb73c5218af14acc53f1b334c1.png" alt="NumericalAnalysis_94996bb3534fd4fb73c5218af14acc53f1b334c1.png" /> converges to α with <b>rate, or</b>
+<b>order, of convergence</b> <img src="ltximg/NumericalAnalysis_51aca82c80bc3dd1cf5a21393e927c9132209a59.png" alt="NumericalAnalysis_51aca82c80bc3dd1cf5a21393e927c9132209a59.png" />
 </p>
 
 <p>
-Suppose <img src="ltximg/NumericalAnalysis_1c73fa83bd1274f7ba88a3d589c37e9f560d83c2.png" alt="NumericalAnalysis_1c73fa83bd1274f7ba88a3d589c37e9f560d83c2.png" /> and
-<img src="ltximg/NumericalAnalysis_e3d66f92a6eae89efde7cb8fe8ced65d77dd518a.png" alt="NumericalAnalysis_e3d66f92a6eae89efde7cb8fe8ced65d77dd518a.png" /> for sufficiently small h, then we write
-<img src="ltximg/NumericalAnalysis_b88924b8327948cdefbe26dcd881bd785422423d.png" alt="NumericalAnalysis_b88924b8327948cdefbe26dcd881bd785422423d.png" />
+Suppose <img src="ltximg/NumericalAnalysis_65abc42f7093992eef67c565bf0fd2ff8b867568.png" alt="NumericalAnalysis_65abc42f7093992eef67c565bf0fd2ff8b867568.png" /> and
+<img src="ltximg/NumericalAnalysis_a970fd5277e24390e8200d33d51a893362a6ab70.png" alt="NumericalAnalysis_a970fd5277e24390e8200d33d51a893362a6ab70.png" /> for sufficiently small h, then we write
+<img src="ltximg/NumericalAnalysis_177e8b435c8597287de09ec9a69813cdff9501ab.png" alt="NumericalAnalysis_177e8b435c8597287de09ec9a69813cdff9501ab.png" />
 </p>
 </div>
 </div>
@@ -427,7 +446,7 @@ Suppose <img src="ltximg/NumericalAnalysis_1c73fa83bd1274f7ba88a3d589c37e9f560d8
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_cb35c766b13a21701da08c76c356ef8ffc87ed95.png" alt="NumericalAnalysis_cb35c766b13a21701da08c76c356ef8ffc87ed95.png" />
+<img src="ltximg/NumericalAnalysis_79b375f5c0d82f38b0bb7c25044c3356d5f887e0.png" alt="NumericalAnalysis_79b375f5c0d82f38b0bb7c25044c3356d5f887e0.png" />
 </span>
 <span class="equation-label">
 1
@@ -437,7 +456,7 @@ Suppose <img src="ltximg/NumericalAnalysis_1c73fa83bd1274f7ba88a3d589c37e9f560d8
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_db0bd9ba9c081c7775d6e50dd24eff3a7bc651bf.png" alt="NumericalAnalysis_db0bd9ba9c081c7775d6e50dd24eff3a7bc651bf.png" />
+<img src="ltximg/NumericalAnalysis_35c7d8ed695cbdc1380a72d62bce71cf3fc6b71e.png" alt="NumericalAnalysis_35c7d8ed695cbdc1380a72d62bce71cf3fc6b71e.png" />
 </span>
 <span class="equation-label">
 1
@@ -449,13 +468,13 @@ Suppose <img src="ltximg/NumericalAnalysis_1c73fa83bd1274f7ba88a3d589c37e9f560d8
 <h3 id="org1428284">2.2 Fixed-Point Iteration</h3>
 <div class="outline-text-3" id="text-org1428284">
 <p>
-<img src="ltximg/NumericalAnalysis_21c92e00f02fa0ee0c76cab8bb74f3c10fe2ba7b.png" alt="NumericalAnalysis_21c92e00f02fa0ee0c76cab8bb74f3c10fe2ba7b.png" />
+<img src="ltximg/NumericalAnalysis_cc2d83fc37f6dfc044229d45c5268fe6f0a90fdb.png" alt="NumericalAnalysis_cc2d83fc37f6dfc044229d45c5268fe6f0a90fdb.png" />
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_6fee01127e4410cec792de298ef4f71f7dee9dbb.png" alt="NumericalAnalysis_6fee01127e4410cec792de298ef4f71f7dee9dbb.png" />
+<img src="ltximg/NumericalAnalysis_435d9223d65994f49deb34c710fc427800daf723.png" alt="NumericalAnalysis_435d9223d65994f49deb34c710fc427800daf723.png" />
 </span>
 <span class="equation-label">
 1
@@ -465,7 +484,7 @@ Suppose <img src="ltximg/NumericalAnalysis_1c73fa83bd1274f7ba88a3d589c37e9f560d8
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_c143e5bbd614fb56bb6642b8a1b743e51569277f.png" alt="NumericalAnalysis_c143e5bbd614fb56bb6642b8a1b743e51569277f.png" />
+<img src="ltximg/NumericalAnalysis_a65855cfa988438abee327892dd76c3030dc476b.png" alt="NumericalAnalysis_a65855cfa988438abee327892dd76c3030dc476b.png" />
 </span>
 <span class="equation-label">
 1
@@ -481,16 +500,16 @@ Linearize a nonlinear function using <b>Taylor's expansion</b>
 </p>
 
 <p>
-Let <img src="ltximg/NumericalAnalysis_fdfa55a903111d98afda740a41a99f72707c1da3.png" alt="NumericalAnalysis_fdfa55a903111d98afda740a41a99f72707c1da3.png" /> be an approximation to <img src="ltximg/NumericalAnalysis_102e49fa51426a837242c295faeba989b00c5239.png" alt="NumericalAnalysis_102e49fa51426a837242c295faeba989b00c5239.png" /> s.t. <img src="ltximg/NumericalAnalysis_ef5eb49840b603b1fe84767bcb68db14969635c1.png" alt="NumericalAnalysis_ef5eb49840b603b1fe84767bcb68db14969635c1.png" />, hence 
-<img src="ltximg/NumericalAnalysis_d8a195918cb348dfcf43ca19ac8ec14e09a830e4.png" alt="NumericalAnalysis_d8a195918cb348dfcf43ca19ac8ec14e09a830e4.png" />, then
-<img src="ltximg/NumericalAnalysis_de532337348cbed3e9a13adc6f1c190959f95da5.png" alt="NumericalAnalysis_de532337348cbed3e9a13adc6f1c190959f95da5.png" />
-<img src="ltximg/NumericalAnalysis_6156f8ac97bdb0977aba30852ee939f6b3079e90.png" alt="NumericalAnalysis_6156f8ac97bdb0977aba30852ee939f6b3079e90.png" />
+Let <img src="ltximg/NumericalAnalysis_a73da84d2c070e1c0700eba86246b9f474f418cb.png" alt="NumericalAnalysis_a73da84d2c070e1c0700eba86246b9f474f418cb.png" /> be an approximation to <img src="ltximg/NumericalAnalysis_f6790564aa002d161fef8af5770b64d8ef8e635c.png" alt="NumericalAnalysis_f6790564aa002d161fef8af5770b64d8ef8e635c.png" /> s.t. <img src="ltximg/NumericalAnalysis_5954c8f7271b3f7295030d0631f28db3ca80a399.png" alt="NumericalAnalysis_5954c8f7271b3f7295030d0631f28db3ca80a399.png" />, hence 
+<img src="ltximg/NumericalAnalysis_3b249284d14e58e625f3af89060609adb1cc9681.png" alt="NumericalAnalysis_3b249284d14e58e625f3af89060609adb1cc9681.png" />, then
+<img src="ltximg/NumericalAnalysis_1f5190e308093709e8779fd991d5e97178b574e7.png" alt="NumericalAnalysis_1f5190e308093709e8779fd991d5e97178b574e7.png" />
+<img src="ltximg/NumericalAnalysis_bec90d1a96606c347d795aa5973c6c257a2ee793.png" alt="NumericalAnalysis_bec90d1a96606c347d795aa5973c6c257a2ee793.png" />
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_537de0979039f76ea47ec00d5dfae0898ef5e59b.png" alt="NumericalAnalysis_537de0979039f76ea47ec00d5dfae0898ef5e59b.png" />
+<img src="ltximg/NumericalAnalysis_41a60bfed7100946e401ce15595d26feeda8abab.png" alt="NumericalAnalysis_41a60bfed7100946e401ce15595d26feeda8abab.png" />
 </span>
 <span class="equation-label">
 1
@@ -504,7 +523,7 @@ Let <img src="ltximg/NumericalAnalysis_fdfa55a903111d98afda740a41a99f72707c1da3.
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_df07ffc58cf8b5e4846552f8b7b979f19ffa689f.png" alt="NumericalAnalysis_df07ffc58cf8b5e4846552f8b7b979f19ffa689f.png" />
+<img src="ltximg/NumericalAnalysis_da0c07f73fdf25d47382f01efabd3bb7507aa545.png" alt="NumericalAnalysis_da0c07f73fdf25d47382f01efabd3bb7507aa545.png" />
 </span>
 <span class="equation-label">
 1
@@ -514,7 +533,7 @@ Let <img src="ltximg/NumericalAnalysis_fdfa55a903111d98afda740a41a99f72707c1da3.
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_263c61d810e5cd66bf4183c57c4107a92478bf1a.png" alt="NumericalAnalysis_263c61d810e5cd66bf4183c57c4107a92478bf1a.png" />
+<img src="ltximg/NumericalAnalysis_2b9942078c63c046aaf1cbffcfba134db20fbb76.png" alt="NumericalAnalysis_2b9942078c63c046aaf1cbffcfba134db20fbb76.png" />
 </span>
 <span class="equation-label">
 1
@@ -524,7 +543,7 @@ Let <img src="ltximg/NumericalAnalysis_fdfa55a903111d98afda740a41a99f72707c1da3.
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_23c4d441bb857b094a2301076af3de5db023b35c.png" alt="NumericalAnalysis_23c4d441bb857b094a2301076af3de5db023b35c.png" />
+<img src="ltximg/NumericalAnalysis_aa0f66b163ed86121855ea21f4d02f8ede8e1dfd.png" alt="NumericalAnalysis_aa0f66b163ed86121855ea21f4d02f8ede8e1dfd.png" />
 </span>
 <span class="equation-label">
 1
@@ -534,7 +553,7 @@ Let <img src="ltximg/NumericalAnalysis_fdfa55a903111d98afda740a41a99f72707c1da3.
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_dd55de2edf1edaa1d961e0043dcbfea32490a6b5.png" alt="NumericalAnalysis_dd55de2edf1edaa1d961e0043dcbfea32490a6b5.png" />
+<img src="ltximg/NumericalAnalysis_07c602bb46b8f75f90da7fc5f1d1f8d6d1daf531.png" alt="NumericalAnalysis_07c602bb46b8f75f90da7fc5f1d1f8d6d1daf531.png" />
 </span>
 <span class="equation-label">
 2
@@ -544,7 +563,7 @@ Let <img src="ltximg/NumericalAnalysis_fdfa55a903111d98afda740a41a99f72707c1da3.
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_df0aded429c23af0e9a6a7a78c56e3f8a0897ac5.png" alt="NumericalAnalysis_df0aded429c23af0e9a6a7a78c56e3f8a0897ac5.png" />
+<img src="ltximg/NumericalAnalysis_47b5d27916a799c4af1a85579777a877b943e58a.png" alt="NumericalAnalysis_47b5d27916a799c4af1a85579777a877b943e58a.png" />
 </span>
 <span class="equation-label">
 2
@@ -554,7 +573,7 @@ Let <img src="ltximg/NumericalAnalysis_fdfa55a903111d98afda740a41a99f72707c1da3.
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_0746f50e306ab517e9ff0212275bbe74fa37909f.png" alt="NumericalAnalysis_0746f50e306ab517e9ff0212275bbe74fa37909f.png" />
+<img src="ltximg/NumericalAnalysis_db94597eebc7bd7ea4dfcb33ebcbf2b5718a80eb.png" alt="NumericalAnalysis_db94597eebc7bd7ea4dfcb33ebcbf2b5718a80eb.png" />
 </span>
 <span class="equation-label">
 2
@@ -564,7 +583,7 @@ Let <img src="ltximg/NumericalAnalysis_fdfa55a903111d98afda740a41a99f72707c1da3.
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_89b477aed32be1348736332a7143e1a37ce59271.png" alt="NumericalAnalysis_89b477aed32be1348736332a7143e1a37ce59271.png" />
+<img src="ltximg/NumericalAnalysis_5547f4e9658dbb6a18bf4bae8dfc6887382ef6de.png" alt="NumericalAnalysis_5547f4e9658dbb6a18bf4bae8dfc6887382ef6de.png" />
 </span>
 <span class="equation-label">
 2
@@ -574,7 +593,7 @@ Let <img src="ltximg/NumericalAnalysis_fdfa55a903111d98afda740a41a99f72707c1da3.
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_a06ffcd75a96bb75e9ea1fea5e6f263cc7264855.png" alt="NumericalAnalysis_a06ffcd75a96bb75e9ea1fea5e6f263cc7264855.png" />
+<img src="ltximg/NumericalAnalysis_88b9f68c7b3badf6360c6ac1c11faa18cc4e3836.png" alt="NumericalAnalysis_88b9f68c7b3badf6360c6ac1c11faa18cc4e3836.png" />
 </span>
 <span class="equation-label">
 2
@@ -584,7 +603,7 @@ Let <img src="ltximg/NumericalAnalysis_fdfa55a903111d98afda740a41a99f72707c1da3.
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_75af2251045f29a35b6d936d12d437e023996d30.png" alt="NumericalAnalysis_75af2251045f29a35b6d936d12d437e023996d30.png" />
+<img src="ltximg/NumericalAnalysis_49ec3a89ead95829f667ef48d61abbab4816b682.png" alt="NumericalAnalysis_49ec3a89ead95829f667ef48d61abbab4816b682.png" />
 </span>
 <span class="equation-label">
 2
@@ -592,24 +611,24 @@ Let <img src="ltximg/NumericalAnalysis_fdfa55a903111d98afda740a41a99f72707c1da3.
 </div>
 
 <p>
-To handle the problem of multiple roots of a function <img src="ltximg/NumericalAnalysis_fcd521d18e0b8d28c21d2135932a719c95e89bef.png" alt="NumericalAnalysis_fcd521d18e0b8d28c21d2135932a719c95e89bef.png" /> is to define
-<img src="ltximg/NumericalAnalysis_006e4a37031cb77cd2e8a7944ec710cc229ffd3b.png" alt="NumericalAnalysis_006e4a37031cb77cd2e8a7944ec710cc229ffd3b.png" />.
+To handle the problem of multiple roots of a function <img src="ltximg/NumericalAnalysis_437f7bc465232f301713ea82a511ed3892545be8.png" alt="NumericalAnalysis_437f7bc465232f301713ea82a511ed3892545be8.png" /> is to define
+<img src="ltximg/NumericalAnalysis_5aef07e1330ad879bd3bd701df56156333f0e7ed.png" alt="NumericalAnalysis_5aef07e1330ad879bd3bd701df56156333f0e7ed.png" />.
 </p>
 
 <p>
-If p is a zero of f of multiplicity m with <img src="ltximg/NumericalAnalysis_536d6054e67fc28f9ff5faf7975892c2d8b46b17.png" alt="NumericalAnalysis_536d6054e67fc28f9ff5faf7975892c2d8b46b17.png" />, then
+If p is a zero of f of multiplicity m with <img src="ltximg/NumericalAnalysis_88491d3b18bb4d505d6cccb632a89a1c6c2b6067.png" alt="NumericalAnalysis_88491d3b18bb4d505d6cccb632a89a1c6c2b6067.png" />, then
 </p>
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_edeb5042aa509fe3a236b0c40978802bcc43a4de.png" alt="NumericalAnalysis_edeb5042aa509fe3a236b0c40978802bcc43a4de.png" />
+<img src="ltximg/NumericalAnalysis_989f1ad381c9187ab25b72705ec114b1570196a8.png" alt="NumericalAnalysis_989f1ad381c9187ab25b72705ec114b1570196a8.png" />
 </span>
 <span class="equation-label">
 2
 </span>
 </div>
 <p>
-And <img src="ltximg/NumericalAnalysis_861ae109aa4a49ee2e24260d809600391fc8e02c.png" alt="NumericalAnalysis_861ae109aa4a49ee2e24260d809600391fc8e02c.png" />.
+And <img src="ltximg/NumericalAnalysis_2c9e03e454c9a5b6d3e5a5121cd604997537b87b.png" alt="NumericalAnalysis_2c9e03e454c9a5b6d3e5a5121cd604997537b87b.png" />.
 </p>
 
 <p>
@@ -618,7 +637,7 @@ Now Newton's method:
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_3a71f5d00bf56168db4bb7d1030cceb1d52f1b58.png" alt="NumericalAnalysis_3a71f5d00bf56168db4bb7d1030cceb1d52f1b58.png" />
+<img src="ltximg/NumericalAnalysis_32787d217d9a25ce7968659fe1854f71adc1abec.png" alt="NumericalAnalysis_32787d217d9a25ce7968659fe1854f71adc1abec.png" />
 </span>
 <span class="equation-label">
 3
@@ -635,18 +654,18 @@ Now Newton's method:
 <h3 id="orgd828930">3.1 Interpolation and the Lagrange polynomial</h3>
 <div class="outline-text-3" id="text-orgd828930">
 <p>
-<img src="ltximg/NumericalAnalysis_6e5ddffa0ec642b1466b6480f37bafb28b950103.png" alt="NumericalAnalysis_6e5ddffa0ec642b1466b6480f37bafb28b950103.png" />. Find <img src="ltximg/NumericalAnalysis_c972c62e93b4f5d49c2098a2cc04b600df1a1b0e.png" alt="NumericalAnalysis_c972c62e93b4f5d49c2098a2cc04b600df1a1b0e.png" /> for
-<img src="ltximg/NumericalAnalysis_f368ca5ce9d5a68c4fc3280f3939d64e6632f970.png" alt="NumericalAnalysis_f368ca5ce9d5a68c4fc3280f3939d64e6632f970.png" /> s.t. <img src="ltximg/NumericalAnalysis_6720d5bdab6433a0170245aff4b602f64adefa50.png" alt="NumericalAnalysis_6720d5bdab6433a0170245aff4b602f64adefa50.png" />. <img src="ltximg/NumericalAnalysis_753b89f3ac7566b38f689bcd16c4931402e19a8e.png" alt="NumericalAnalysis_753b89f3ac7566b38f689bcd16c4931402e19a8e.png" /> Kronecker delta.
-Each <img src="ltximg/NumericalAnalysis_511e2dc54028b99ea1067e80a675004946f6a4bc.png" alt="NumericalAnalysis_511e2dc54028b99ea1067e80a675004946f6a4bc.png" /> has n roots <img src="ltximg/NumericalAnalysis_7a991509e437c32299a15794a497f34b606a5f7b.png" alt="NumericalAnalysis_7a991509e437c32299a15794a497f34b606a5f7b.png" />.
-<img src="ltximg/NumericalAnalysis_600e470fe16b9f8fae30217792cbdf082f911fc8.png" alt="NumericalAnalysis_600e470fe16b9f8fae30217792cbdf082f911fc8.png" />.
-<img src="ltximg/NumericalAnalysis_d0d08f5827b2323266519a551b368e9631a9325e.png" alt="NumericalAnalysis_d0d08f5827b2323266519a551b368e9631a9325e.png" />.
-Hence <img src="ltximg/NumericalAnalysis_1d40685e4239c811b0396bf761d88a0beff55b20.png" alt="NumericalAnalysis_1d40685e4239c811b0396bf761d88a0beff55b20.png" />
+<img src="ltximg/NumericalAnalysis_29280a2c7cf405edfde4b7440df4254704112fef.png" alt="NumericalAnalysis_29280a2c7cf405edfde4b7440df4254704112fef.png" />. Find <img src="ltximg/NumericalAnalysis_9d537ca6cdd67dbed97ab05e5ae9c9d183cd87a2.png" alt="NumericalAnalysis_9d537ca6cdd67dbed97ab05e5ae9c9d183cd87a2.png" /> for
+<img src="ltximg/NumericalAnalysis_a0a081d5e05252cb95d395b8a3494cbbf8e732b6.png" alt="NumericalAnalysis_a0a081d5e05252cb95d395b8a3494cbbf8e732b6.png" /> s.t. <img src="ltximg/NumericalAnalysis_d9a4ffb0455873f308899724fb09c29cc8c58715.png" alt="NumericalAnalysis_d9a4ffb0455873f308899724fb09c29cc8c58715.png" />. <img src="ltximg/NumericalAnalysis_73cf3b0d2da03de18f1844da8aa307613b058dc8.png" alt="NumericalAnalysis_73cf3b0d2da03de18f1844da8aa307613b058dc8.png" /> Kronecker delta.
+Each <img src="ltximg/NumericalAnalysis_42c102cddf961e7e80af8d78073ce4afd7956e79.png" alt="NumericalAnalysis_42c102cddf961e7e80af8d78073ce4afd7956e79.png" /> has n roots <img src="ltximg/NumericalAnalysis_5c289b076ac60152a220256e4f90fcc9b93e7d9f.png" alt="NumericalAnalysis_5c289b076ac60152a220256e4f90fcc9b93e7d9f.png" />.
+<img src="ltximg/NumericalAnalysis_642f51d2fc5d86b5be979dbd734370e8e73504f6.png" alt="NumericalAnalysis_642f51d2fc5d86b5be979dbd734370e8e73504f6.png" />.
+<img src="ltximg/NumericalAnalysis_78abd0c281471084d1228b3f51423ee4f0c823c1.png" alt="NumericalAnalysis_78abd0c281471084d1228b3f51423ee4f0c823c1.png" />.
+Hence <img src="ltximg/NumericalAnalysis_e1c9f517e045114d43c713344360550a145e06f9.png" alt="NumericalAnalysis_e1c9f517e045114d43c713344360550a145e06f9.png" />
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_6f56d3635dd9d63fb5d31656a81d92cb38abe256.png" alt="NumericalAnalysis_6f56d3635dd9d63fb5d31656a81d92cb38abe256.png" />
+<img src="ltximg/NumericalAnalysis_090b61c8891c6b823a9c917b96c340b1bcd206d2.png" alt="NumericalAnalysis_090b61c8891c6b823a9c917b96c340b1bcd206d2.png" />
 </span>
 <span class="equation-label">
 4
@@ -655,21 +674,21 @@ Hence <img src="ltximg/NumericalAnalysis_1d40685e4239c811b0396bf761d88a0beff55b2
 
 
 <p>
-<b>Analyze the remainder</b>. Suppose <img src="ltximg/NumericalAnalysis_949a9e8f324357c6e445d1ae477816c9ad623d67.png" alt="NumericalAnalysis_949a9e8f324357c6e445d1ae477816c9ad623d67.png" /> and <img src="ltximg/NumericalAnalysis_2dcf708883aed3c6db32117dcbcedd9256490ddc.png" alt="NumericalAnalysis_2dcf708883aed3c6db32117dcbcedd9256490ddc.png" />. Consider <img src="ltximg/NumericalAnalysis_c6028c4d508a0faa42c193198c3b8a5ffe2fee18.png" alt="NumericalAnalysis_c6028c4d508a0faa42c193198c3b8a5ffe2fee18.png" />.
-<img src="ltximg/NumericalAnalysis_d92c88d63ed8ff0930e2bac3025c1e4434bf6f32.png" alt="NumericalAnalysis_d92c88d63ed8ff0930e2bac3025c1e4434bf6f32.png" /> has at least n+1 roots =&gt;
-<img src="ltximg/NumericalAnalysis_a4fc13daccdd5fc7a3ca86ff6f64838adc092627.png" alt="NumericalAnalysis_a4fc13daccdd5fc7a3ca86ff6f64838adc092627.png" />.
-For any <img src="ltximg/NumericalAnalysis_7c94a4efbeae130a0333f163135f03b18016716f.png" alt="NumericalAnalysis_7c94a4efbeae130a0333f163135f03b18016716f.png" />. Define
-<img src="ltximg/NumericalAnalysis_4c8ed6d61dcd2c97ded956b5135a681e82365450.png" alt="NumericalAnalysis_4c8ed6d61dcd2c97ded956b5135a681e82365450.png" />. <img src="ltximg/NumericalAnalysis_3afeadcc899550141c342a8a2be56a3cbd4a09a9.png" alt="NumericalAnalysis_3afeadcc899550141c342a8a2be56a3cbd4a09a9.png" /> has n+2 distinct
-roots <img src="ltximg/NumericalAnalysis_68712274417e74314c5c9ce2dfb599f8cd4943db.png" alt="NumericalAnalysis_68712274417e74314c5c9ce2dfb599f8cd4943db.png" />. Hence <img src="ltximg/NumericalAnalysis_f61fafd5083b7314176cd92c3d14a8019b3d64c3.png" alt="NumericalAnalysis_f61fafd5083b7314176cd92c3d14a8019b3d64c3.png" />.
-<img src="ltximg/NumericalAnalysis_96b55103866d4c3a365a1422ef94ff93aac0d73e.png" alt="NumericalAnalysis_96b55103866d4c3a365a1422ef94ff93aac0d73e.png" />.
+<b>Analyze the remainder</b>. Suppose <img src="ltximg/NumericalAnalysis_c2c2085eaac70f98cac324bba2cf9b383a7e0fc6.png" alt="NumericalAnalysis_c2c2085eaac70f98cac324bba2cf9b383a7e0fc6.png" /> and <img src="ltximg/NumericalAnalysis_10395f4d4f9a70e3581d10b2e6782fdad9f84da0.png" alt="NumericalAnalysis_10395f4d4f9a70e3581d10b2e6782fdad9f84da0.png" />. Consider <img src="ltximg/NumericalAnalysis_785f7d982f6c38ec71e84ff8d1540d3a7655f6e3.png" alt="NumericalAnalysis_785f7d982f6c38ec71e84ff8d1540d3a7655f6e3.png" />.
+<img src="ltximg/NumericalAnalysis_db31c96ad5811e019acad6aff116b292ba4fa688.png" alt="NumericalAnalysis_db31c96ad5811e019acad6aff116b292ba4fa688.png" /> has at least n+1 roots =&gt;
+<img src="ltximg/NumericalAnalysis_bdd57fec41db7b6cd028594db64c470df0410d8a.png" alt="NumericalAnalysis_bdd57fec41db7b6cd028594db64c470df0410d8a.png" />.
+For any <img src="ltximg/NumericalAnalysis_512b610409422ee40fb890f9e299a55301732192.png" alt="NumericalAnalysis_512b610409422ee40fb890f9e299a55301732192.png" />. Define
+<img src="ltximg/NumericalAnalysis_72b803faf47d5ce7f419eb737a8429d91b526231.png" alt="NumericalAnalysis_72b803faf47d5ce7f419eb737a8429d91b526231.png" />. <img src="ltximg/NumericalAnalysis_67720240d507f323a7fc7735bcc45b2a7aba0d8d.png" alt="NumericalAnalysis_67720240d507f323a7fc7735bcc45b2a7aba0d8d.png" /> has n+2 distinct
+roots <img src="ltximg/NumericalAnalysis_7cb966c6df696ecb84cf8c25133c6925c8f354f5.png" alt="NumericalAnalysis_7cb966c6df696ecb84cf8c25133c6925c8f354f5.png" />. Hence <img src="ltximg/NumericalAnalysis_b74d382bf462dc8526326897e6b828e6b2b354f3.png" alt="NumericalAnalysis_b74d382bf462dc8526326897e6b828e6b2b354f3.png" />.
+<img src="ltximg/NumericalAnalysis_f212d37fc3c401d9029687f2abd52589884b4e23.png" alt="NumericalAnalysis_f212d37fc3c401d9029687f2abd52589884b4e23.png" />.
 Thus
-<img src="ltximg/NumericalAnalysis_68a553544ca436433f4cfe9ae797698180575f62.png" alt="NumericalAnalysis_68a553544ca436433f4cfe9ae797698180575f62.png" />.
+<img src="ltximg/NumericalAnalysis_091d1f29bdfab3ab28c3224ea40f1cc8bc527204.png" alt="NumericalAnalysis_091d1f29bdfab3ab28c3224ea40f1cc8bc527204.png" />.
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_05c49ee7a12b52505827aa8513cc96eb849dba97.png" alt="NumericalAnalysis_05c49ee7a12b52505827aa8513cc96eb849dba97.png" />
+<img src="ltximg/NumericalAnalysis_e25f6ba3ed2a35cfeeb40cd6cc71f4eb8704e1d6.png" alt="NumericalAnalysis_e25f6ba3ed2a35cfeeb40cd6cc71f4eb8704e1d6.png" />
 </span>
 <span class="equation-label">
 4
@@ -679,7 +698,7 @@ Thus
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_9b4e5b839fe8d7b6d8895d67a2a1a3e9b801018b.png" alt="NumericalAnalysis_9b4e5b839fe8d7b6d8895d67a2a1a3e9b801018b.png" />
+<img src="ltximg/NumericalAnalysis_f6862ade8be5bfdfdb9277bc7c2ef36a42335a61.png" alt="NumericalAnalysis_f6862ade8be5bfdfdb9277bc7c2ef36a42335a61.png" />
 </span>
 <span class="equation-label">
 4
@@ -692,7 +711,7 @@ Thus
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_0ff699a5838cd5028c836966176a03627cfaf6cd.png" alt="NumericalAnalysis_0ff699a5838cd5028c836966176a03627cfaf6cd.png" />
+<img src="ltximg/NumericalAnalysis_6d4a8d0446192e3b18fa6aeed46f790f19240ca5.png" alt="NumericalAnalysis_6d4a8d0446192e3b18fa6aeed46f790f19240ca5.png" />
 </span>
 <span class="equation-label">
 4
@@ -704,8 +723,8 @@ Thus
 <h3 id="org1fd9465">3.2 Divied differences</h3>
 <div class="outline-text-3" id="text-org1fd9465">
 <p>
-<img src="ltximg/NumericalAnalysis_3b0e3a625491fa2069070f21b1cf8db2574b629c.png" alt="NumericalAnalysis_3b0e3a625491fa2069070f21b1cf8db2574b629c.png" />.
-<img src="ltximg/NumericalAnalysis_1ea25ef7f4d3eab67d41515c35ddae25dc1a0d72.png" alt="NumericalAnalysis_1ea25ef7f4d3eab67d41515c35ddae25dc1a0d72.png" />.
+<img src="ltximg/NumericalAnalysis_fdc6ac3acd2982f4e69a58bd16359fb0d47e5244.png" alt="NumericalAnalysis_fdc6ac3acd2982f4e69a58bd16359fb0d47e5244.png" />.
+<img src="ltximg/NumericalAnalysis_424afe38460b892e1dfb7798a72b951d60f5065a.png" alt="NumericalAnalysis_424afe38460b892e1dfb7798a72b951d60f5065a.png" />.
 </p>
 </div>
 </div>
@@ -717,12 +736,12 @@ Thus
 <h4 id="org15c92d4">Simple idea</h4>
 <div class="outline-text-4" id="text-org15c92d4">
 <p>
-Given <img src="ltximg/NumericalAnalysis_a7f4cc548e52f748f99a52b05063090a0439e9ae.png" alt="NumericalAnalysis_a7f4cc548e52f748f99a52b05063090a0439e9ae.png" />
+Given <img src="ltximg/NumericalAnalysis_1c9365d2ce34bcf18730e0c400220e505956aec9.png" alt="NumericalAnalysis_1c9365d2ce34bcf18730e0c400220e505956aec9.png" />
 </p>
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_e06353b3350cda0a622d49ff9c000eb6703ffef4.png" alt="NumericalAnalysis_e06353b3350cda0a622d49ff9c000eb6703ffef4.png" />
+<img src="ltximg/NumericalAnalysis_c2adf1c3972122be8cc450f83c07475c833d7c55.png" alt="NumericalAnalysis_c2adf1c3972122be8cc450f83c07475c833d7c55.png" />
 </span>
 <span class="equation-label">
 4
@@ -731,13 +750,13 @@ Given <img src="ltximg/NumericalAnalysis_a7f4cc548e52f748f99a52b05063090a0439e9a
 
 <p>
 <b>The pattern and coefficients</b>.
-<img src="ltximg/NumericalAnalysis_943e22005764447613881cc8ca28fdf6453fbca7.png" alt="NumericalAnalysis_943e22005764447613881cc8ca28fdf6453fbca7.png" />
+<img src="ltximg/NumericalAnalysis_6badd2a97888852ab1e0c1d90ea6752a76f12e00.png" alt="NumericalAnalysis_6badd2a97888852ab1e0c1d90ea6752a76f12e00.png" />
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_a0206a8d8841a7724b9355a6fd3254caac92accd.png" alt="NumericalAnalysis_a0206a8d8841a7724b9355a6fd3254caac92accd.png" />
+<img src="ltximg/NumericalAnalysis_eb970657f79e5985fe40f393acbf18fb32ba2b94.png" alt="NumericalAnalysis_eb970657f79e5985fe40f393acbf18fb32ba2b94.png" />
 </span>
 <span class="equation-label">
 4
@@ -745,7 +764,7 @@ Given <img src="ltximg/NumericalAnalysis_a7f4cc548e52f748f99a52b05063090a0439e9a
 </div>
 
 <p>
-<img src="ltximg/NumericalAnalysis_c4fbc9076d15f1fdb96b6d0092a7b93820d97767.png" alt="NumericalAnalysis_c4fbc9076d15f1fdb96b6d0092a7b93820d97767.png" /> with <img src="ltximg/NumericalAnalysis_4585fddd31e2bb2ff1e491dcaecae5e94dbb2d29.png" alt="NumericalAnalysis_4585fddd31e2bb2ff1e491dcaecae5e94dbb2d29.png" />.
+<img src="ltximg/NumericalAnalysis_a795c1dcaa16b3fa423e2f2d33da6587720171f4.png" alt="NumericalAnalysis_a795c1dcaa16b3fa423e2f2d33da6587720171f4.png" /> with <img src="ltximg/NumericalAnalysis_e68b2fed93ada2c84fdbc1eaa424a02e37f68954.png" alt="NumericalAnalysis_e68b2fed93ada2c84fdbc1eaa424a02e37f68954.png" />.
 Newton interpolation matrix is lower triangular.
 Lagrange matrix is identity.
 </p>
@@ -757,21 +776,21 @@ Lagrange matrix is identity.
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_20efca7358dffe163c19ff584b42bef72f988875.png" alt="NumericalAnalysis_20efca7358dffe163c19ff584b42bef72f988875.png" />
+<img src="ltximg/NumericalAnalysis_acdf88921a867ac42d2ddd3dc2c7b4268725171c.png" alt="NumericalAnalysis_acdf88921a867ac42d2ddd3dc2c7b4268725171c.png" />
 </span>
 <span class="equation-label">
 5
 </span>
 </div>
 <p>
-Hence <img src="ltximg/NumericalAnalysis_bffc6fdb02a96c71f7873713a9461b4656c0c244.png" alt="NumericalAnalysis_bffc6fdb02a96c71f7873713a9461b4656c0c244.png" />.
-<img src="ltximg/NumericalAnalysis_80d7c56ba41ade64ba94040d5ea23599caf44a2c.png" alt="NumericalAnalysis_80d7c56ba41ade64ba94040d5ea23599caf44a2c.png" />
+Hence <img src="ltximg/NumericalAnalysis_1d75cf61e1f5ce01ef95c68ab4e18dedb189f2cd.png" alt="NumericalAnalysis_1d75cf61e1f5ce01ef95c68ab4e18dedb189f2cd.png" />.
+<img src="ltximg/NumericalAnalysis_a549270df2356fe1e40e49b76d3cf9a53d46df6f.png" alt="NumericalAnalysis_a549270df2356fe1e40e49b76d3cf9a53d46df6f.png" />
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_2d5485dfdf3e157049137236bc916d0a7fef574f.png" alt="NumericalAnalysis_2d5485dfdf3e157049137236bc916d0a7fef574f.png" />
+<img src="ltximg/NumericalAnalysis_2adfa0f924030edc1f377ea180cd8b5fe3189949.png" alt="NumericalAnalysis_2adfa0f924030edc1f377ea180cd8b5fe3189949.png" />
 </span>
 <span class="equation-label">
 6
@@ -784,22 +803,22 @@ Hence <img src="ltximg/NumericalAnalysis_bffc6fdb02a96c71f7873713a9461b4656c0c24
 <h3 id="org630d05c">3.3 Hermite interpolation</h3>
 <div class="outline-text-3" id="text-org630d05c">
 <p>
-Find the <b>osculating polynomial</b> <img src="ltximg/NumericalAnalysis_58b382be591752c27715cfb5eb94b244bdefad94.png" alt="NumericalAnalysis_58b382be591752c27715cfb5eb94b244bdefad94.png" /> s.t. <img src="ltximg/NumericalAnalysis_a12042d788c0e4a576859b21d1e1f95824116089.png" alt="NumericalAnalysis_a12042d788c0e4a576859b21d1e1f95824116089.png" /> for all <img src="ltximg/NumericalAnalysis_988b0caa029c87eae6b7290b441ccec69439b64c.png" alt="NumericalAnalysis_988b0caa029c87eae6b7290b441ccec69439b64c.png" />.
+Find the <b>osculating polynomial</b> <img src="ltximg/NumericalAnalysis_ce48ce9a5de18eb2ec96888c37c5630e4bdcf140.png" alt="NumericalAnalysis_ce48ce9a5de18eb2ec96888c37c5630e4bdcf140.png" /> s.t. <img src="ltximg/NumericalAnalysis_47377d69b02eaa20894b280b192882320d89b8db.png" alt="NumericalAnalysis_47377d69b02eaa20894b280b192882320d89b8db.png" /> for all <img src="ltximg/NumericalAnalysis_90a71398e5fb8bb6ba2584dc807abb4eadebe24c.png" alt="NumericalAnalysis_90a71398e5fb8bb6ba2584dc807abb4eadebe24c.png" />.
 </p>
 
 <p>
-Just the Taylor polynomial <img src="ltximg/NumericalAnalysis_2b1f67d4ae666db5f3c1ffd38659443250f5b08e.png" alt="NumericalAnalysis_2b1f67d4ae666db5f3c1ffd38659443250f5b08e.png" /> with remainder 
-<img src="ltximg/NumericalAnalysis_3155ca90b0b0ebb3e7d3bc6b2daa7ed5d1fc7265.png" alt="NumericalAnalysis_3155ca90b0b0ebb3e7d3bc6b2daa7ed5d1fc7265.png" />
+Just the Taylor polynomial <img src="ltximg/NumericalAnalysis_9b2cde6da626252030640e1f94e799cf5c50a97a.png" alt="NumericalAnalysis_9b2cde6da626252030640e1f94e799cf5c50a97a.png" /> with remainder 
+<img src="ltximg/NumericalAnalysis_2c61e2494c0c767a051d8a43b39c6b4fd8c645ca.png" alt="NumericalAnalysis_2c61e2494c0c767a051d8a43b39c6b4fd8c645ca.png" />
 </p>
 
 <p>
-<img src="ltximg/NumericalAnalysis_0a2b30dad9fc3c4ddc7a05a591d835780e82a76d.png" alt="NumericalAnalysis_0a2b30dad9fc3c4ddc7a05a591d835780e82a76d.png" /> gives <b>Hermite polynomial</b>
+<img src="ltximg/NumericalAnalysis_8052cc16a3d00b77e632843736718f4547395f7f.png" alt="NumericalAnalysis_8052cc16a3d00b77e632843736718f4547395f7f.png" /> gives <b>Hermite polynomial</b>
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_27e5f2f2cdf10265b1d702a1760169a6be1daeac.png" alt="NumericalAnalysis_27e5f2f2cdf10265b1d702a1760169a6be1daeac.png" />
+<img src="ltximg/NumericalAnalysis_08ecb6425122af4d79ff583c3ec5279628d8aa15.png" alt="NumericalAnalysis_08ecb6425122af4d79ff583c3ec5279628d8aa15.png" />
 </span>
 <span class="equation-label">
 7
@@ -809,7 +828,7 @@ Just the Taylor polynomial <img src="ltximg/NumericalAnalysis_2b1f67d4ae666db5f3
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_cd5eaed8ad7e8d8e60248a2b04cdf79d292e68a1.png" alt="NumericalAnalysis_cd5eaed8ad7e8d8e60248a2b04cdf79d292e68a1.png" />
+<img src="ltximg/NumericalAnalysis_5beff2774e3161e02aaca44c6b21e98e34ab254a.png" alt="NumericalAnalysis_5beff2774e3161e02aaca44c6b21e98e34ab254a.png" />
 </span>
 <span class="equation-label">
 7
@@ -817,14 +836,14 @@ Just the Taylor polynomial <img src="ltximg/NumericalAnalysis_2b1f67d4ae666db5f3
 </div>
 
 <p>
-In general, given <img src="ltximg/NumericalAnalysis_00843c0cea928f1819197c83bcc6ab78e7f0a24a.png" alt="NumericalAnalysis_00843c0cea928f1819197c83bcc6ab78e7f0a24a.png" /> and <img src="ltximg/NumericalAnalysis_9020273eb7aba114f22f8d9740c70c5550991ec7.png" alt="NumericalAnalysis_9020273eb7aba114f22f8d9740c70c5550991ec7.png" />. The
-Hermite polynomial <img src="ltximg/NumericalAnalysis_a105964712d411ac7fbf6ec641def02494a1f810.png" alt="NumericalAnalysis_a105964712d411ac7fbf6ec641def02494a1f810.png" /> satisfies <img src="ltximg/NumericalAnalysis_3e123cd7c8edf8a8208e6b1624f4ccc753b78443.png" alt="NumericalAnalysis_3e123cd7c8edf8a8208e6b1624f4ccc753b78443.png" /> and
-<img src="ltximg/NumericalAnalysis_c4e0c1a7b0c37a1f28e45c9c0968430551e3e2de.png" alt="NumericalAnalysis_c4e0c1a7b0c37a1f28e45c9c0968430551e3e2de.png" /> 
+In general, given <img src="ltximg/NumericalAnalysis_02c3b478e1dbd4fc33b7009aa886952dded75cb5.png" alt="NumericalAnalysis_02c3b478e1dbd4fc33b7009aa886952dded75cb5.png" /> and <img src="ltximg/NumericalAnalysis_9289e6e99ef69d89ddbbde27e09c42016698f4f3.png" alt="NumericalAnalysis_9289e6e99ef69d89ddbbde27e09c42016698f4f3.png" />. The
+Hermite polynomial <img src="ltximg/NumericalAnalysis_94ea567b9c9771ac784eb1874305963907e311fd.png" alt="NumericalAnalysis_94ea567b9c9771ac784eb1874305963907e311fd.png" /> satisfies <img src="ltximg/NumericalAnalysis_522fa45799e9174fbd5ed1e310c30e908036e4f5.png" alt="NumericalAnalysis_522fa45799e9174fbd5ed1e310c30e908036e4f5.png" /> and
+<img src="ltximg/NumericalAnalysis_d0c8d614f3a79cca1fd3fdad98bc09484616830d.png" alt="NumericalAnalysis_d0c8d614f3a79cca1fd3fdad98bc09484616830d.png" /> 
 </p>
 
 <p>
 <i>Solution</i>.
-<img src="ltximg/NumericalAnalysis_9c356d3670fb0b3874ca0ee720bf7f1d1f63343c.png" alt="NumericalAnalysis_9c356d3670fb0b3874ca0ee720bf7f1d1f63343c.png" />
+<img src="ltximg/NumericalAnalysis_998b77babf695a7128d691660cbb8e61d95cc9dc.png" alt="NumericalAnalysis_998b77babf695a7128d691660cbb8e61d95cc9dc.png" />
 </p>
 </div>
 </div>
@@ -832,25 +851,25 @@ Hermite polynomial <img src="ltximg/NumericalAnalysis_a105964712d411ac7fbf6ec641
 <h3 id="orgb657633">3.4 Cubic spline interpolation</h3>
 <div class="outline-text-3" id="text-orgb657633">
 <p>
-<b>Piecewise linear interpolation</b>. Approximate <img src="ltximg/NumericalAnalysis_b2b7a28a5569bdafb8de467b47083e8ce7bae744.png" alt="NumericalAnalysis_b2b7a28a5569bdafb8de467b47083e8ce7bae744.png" /> by linear polynomials on
-each subinterval <img src="ltximg/NumericalAnalysis_be3879cbb07bba7a36f7ce1b386a467a004b9e27.png" alt="NumericalAnalysis_be3879cbb07bba7a36f7ce1b386a467a004b9e27.png" />.
+<b>Piecewise linear interpolation</b>. Approximate <img src="ltximg/NumericalAnalysis_d82f0e997eb350cc6d212774abd99a819508e298.png" alt="NumericalAnalysis_d82f0e997eb350cc6d212774abd99a819508e298.png" /> by linear polynomials on
+each subinterval <img src="ltximg/NumericalAnalysis_a4f4f838beac899b4529d54fec6e849eb8b01912.png" alt="NumericalAnalysis_a4f4f838beac899b4529d54fec6e849eb8b01912.png" />.
 </p>
 
 <p>
-<img src="ltximg/NumericalAnalysis_fa342034b8919d1be28ce07e573301a6a526e5b7.png" alt="NumericalAnalysis_fa342034b8919d1be28ce07e573301a6a526e5b7.png" /> 
+<img src="ltximg/NumericalAnalysis_c66dd25767e1b71be832125f10fbc18c68e75e02.png" alt="NumericalAnalysis_c66dd25767e1b71be832125f10fbc18c68e75e02.png" /> 
 </p>
 
 <p>
-Let <img src="ltximg/NumericalAnalysis_eeb261c5774cd816bcf6f9b32ce0368e511c7266.png" alt="NumericalAnalysis_eeb261c5774cd816bcf6f9b32ce0368e511c7266.png" />. Then <img src="ltximg/NumericalAnalysis_a3102c9c255b7675837245accbb3b7059ee9494d.png" alt="NumericalAnalysis_a3102c9c255b7675837245accbb3b7059ee9494d.png" /> as
-<img src="ltximg/NumericalAnalysis_5fa25fcb896cb770602052db0c6f37749ce9d94f.png" alt="NumericalAnalysis_5fa25fcb896cb770602052db0c6f37749ce9d94f.png" /> 
+Let <img src="ltximg/NumericalAnalysis_d1290f71dc6da00a5663b4d1a8c717751c9d5356.png" alt="NumericalAnalysis_d1290f71dc6da00a5663b4d1a8c717751c9d5356.png" />. Then <img src="ltximg/NumericalAnalysis_bc487d2f52246c5b5ed6ab5ae7a9e5b0a2721b3e.png" alt="NumericalAnalysis_bc487d2f52246c5b5ed6ab5ae7a9e5b0a2721b3e.png" /> as
+<img src="ltximg/NumericalAnalysis_f175971427081709cd5fc35bb67e1ef8d46d6dc6.png" alt="NumericalAnalysis_f175971427081709cd5fc35bb67e1ef8d46d6dc6.png" /> 
 However, this is no longer smooth.
 </p>
 
 <p>
 <b>Hermite piecewise polynomials</b>. Given
-<img src="ltximg/NumericalAnalysis_aaade7a33e09015e4e5f159fa436e26ae1324d3c.png" alt="NumericalAnalysis_aaade7a33e09015e4e5f159fa436e26ae1324d3c.png" />, construct the Hermite
-polynomial of degree 3 with <img src="ltximg/NumericalAnalysis_9565c7a280bb590b3671937bbfb8ba37c4b58700.png" alt="NumericalAnalysis_9565c7a280bb590b3671937bbfb8ba37c4b58700.png" /> and <img src="ltximg/NumericalAnalysis_bd8e69ccc9b0962f8563c0853c68765ca6058823.png" alt="NumericalAnalysis_bd8e69ccc9b0962f8563c0853c68765ca6058823.png" /> on the two endpoints of
-<img src="ltximg/NumericalAnalysis_be3879cbb07bba7a36f7ce1b386a467a004b9e27.png" alt="NumericalAnalysis_be3879cbb07bba7a36f7ce1b386a467a004b9e27.png" />
+<img src="ltximg/NumericalAnalysis_c809c70762fa51cc3ac39c0810b334b6444d950e.png" alt="NumericalAnalysis_c809c70762fa51cc3ac39c0810b334b6444d950e.png" />, construct the Hermite
+polynomial of degree 3 with <img src="ltximg/NumericalAnalysis_150ab4289e92a4e8c653f2e434677d08400b0d02.png" alt="NumericalAnalysis_150ab4289e92a4e8c653f2e434677d08400b0d02.png" /> and <img src="ltximg/NumericalAnalysis_ef78ea35f621200d1d441294ac68d4b5bfe5d6bc.png" alt="NumericalAnalysis_ef78ea35f621200d1d441294ac68d4b5bfe5d6bc.png" /> on the two endpoints of
+<img src="ltximg/NumericalAnalysis_a4f4f838beac899b4529d54fec6e849eb8b01912.png" alt="NumericalAnalysis_a4f4f838beac899b4529d54fec6e849eb8b01912.png" />
 </p>
 
 <p>
@@ -859,7 +878,7 @@ polynomial of degree 3 with <img src="ltximg/NumericalAnalysis_9565c7a280bb590b3
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_67c2e33b2c849cc2ed92b12efaf04125df15760a.png" alt="NumericalAnalysis_67c2e33b2c849cc2ed92b12efaf04125df15760a.png" />
+<img src="ltximg/NumericalAnalysis_cc9c01cb64116bc9200bac0a39bb1b265e316f77.png" alt="NumericalAnalysis_cc9c01cb64116bc9200bac0a39bb1b265e316f77.png" />
 </span>
 <span class="equation-label">
 7
@@ -871,21 +890,21 @@ polynomial of degree 3 with <img src="ltximg/NumericalAnalysis_9565c7a280bb590b3
 </p>
 
 <p>
-<b>Method of Bending moment</b>. Let <img src="ltximg/NumericalAnalysis_c773859d029c14980fba2957bf97c757759fd7a2.png" alt="NumericalAnalysis_c773859d029c14980fba2957bf97c757759fd7a2.png" /> and <img src="ltximg/NumericalAnalysis_2c96bee31ee9d6406dca498dbe287c44642fe599.png" alt="NumericalAnalysis_2c96bee31ee9d6406dca498dbe287c44642fe599.png" /> for
-<img src="ltximg/NumericalAnalysis_5e66b3a88c2f8b0546bd43ca968bb53e99be1f89.png" alt="NumericalAnalysis_5e66b3a88c2f8b0546bd43ca968bb53e99be1f89.png" />. Then <img src="ltximg/NumericalAnalysis_e84bfaf781f293ee423b075aa61205870d10348b.png" alt="NumericalAnalysis_e84bfaf781f293ee423b075aa61205870d10348b.png" /> is a polynomial of degree
+<b>Method of Bending moment</b>. Let <img src="ltximg/NumericalAnalysis_c78ff75bcffba5d9ace84963d5ff04473d57f97d.png" alt="NumericalAnalysis_c78ff75bcffba5d9ace84963d5ff04473d57f97d.png" /> and <img src="ltximg/NumericalAnalysis_176b0a8c40398ec77a3e5fb9591bc91206072efc.png" alt="NumericalAnalysis_176b0a8c40398ec77a3e5fb9591bc91206072efc.png" /> for
+<img src="ltximg/NumericalAnalysis_a1b7914c300658e9d408b227b21a0b7ebe90c564.png" alt="NumericalAnalysis_a1b7914c300658e9d408b227b21a0b7ebe90c564.png" />. Then <img src="ltximg/NumericalAnalysis_d51897b22081aacbac29854eeb79abe800372379.png" alt="NumericalAnalysis_d51897b22081aacbac29854eeb79abe800372379.png" /> is a polynomial of degree
 , which can be determined by the values of f on
 nodes .
 </p>
 
 <p>
-Assume <img src="ltximg/NumericalAnalysis_728866618b5c0e82191411e4fbc94e87e1f8fbea.png" alt="NumericalAnalysis_728866618b5c0e82191411e4fbc94e87e1f8fbea.png" />. Then for all
-<img src="ltximg/NumericalAnalysis_ee5ea22fe7d64777837828f659369ae983c273f0.png" alt="NumericalAnalysis_ee5ea22fe7d64777837828f659369ae983c273f0.png" />,
-<img src="ltximg/NumericalAnalysis_b020928b46b99c7c2a020b54a3fb8de541aacc2b.png" alt="NumericalAnalysis_b020928b46b99c7c2a020b54a3fb8de541aacc2b.png" />. Hence we get
+Assume <img src="ltximg/NumericalAnalysis_0b3b478d80cca34565450402b7f8d84cdd3f9289.png" alt="NumericalAnalysis_0b3b478d80cca34565450402b7f8d84cdd3f9289.png" />. Then for all
+<img src="ltximg/NumericalAnalysis_abc7bdc19eb25fd6186c8bde2da01f04cb7746df.png" alt="NumericalAnalysis_abc7bdc19eb25fd6186c8bde2da01f04cb7746df.png" />,
+<img src="ltximg/NumericalAnalysis_b53986b11ee59a9fa7e8cfa48dbbd64652ed099d.png" alt="NumericalAnalysis_b53986b11ee59a9fa7e8cfa48dbbd64652ed099d.png" />. Hence we get
 </p>
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_cf0f7b1c9a5f087c6345af43601d297cf73441c1.png" alt="NumericalAnalysis_cf0f7b1c9a5f087c6345af43601d297cf73441c1.png" />
+<img src="ltximg/NumericalAnalysis_45eedd05363e2c4085ac67f93aae6d9161a27bbd.png" alt="NumericalAnalysis_45eedd05363e2c4085ac67f93aae6d9161a27bbd.png" />
 </span>
 <span class="equation-label">
 7
@@ -893,12 +912,12 @@ Assume <img src="ltximg/NumericalAnalysis_728866618b5c0e82191411e4fbc94e87e1f8fb
 </div>
 
 <p>
-Solve this by <img src="ltximg/NumericalAnalysis_601077d2a8675aebda99da563524a3e11e2e1e57.png" alt="NumericalAnalysis_601077d2a8675aebda99da563524a3e11e2e1e57.png" />, we get
+Solve this by <img src="ltximg/NumericalAnalysis_be4c3e7784c8986c8a871a8a352f9fe223f5d6df.png" alt="NumericalAnalysis_be4c3e7784c8986c8a871a8a352f9fe223f5d6df.png" />, we get
 </p>
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_68ec37d030c387677bf7abe4a44be409ca9aca49.png" alt="NumericalAnalysis_68ec37d030c387677bf7abe4a44be409ca9aca49.png" />
+<img src="ltximg/NumericalAnalysis_ee3993b0b2fb054de14968470eab7b665387dccc.png" alt="NumericalAnalysis_ee3993b0b2fb054de14968470eab7b665387dccc.png" />
 </span>
 <span class="equation-label">
 8
@@ -906,25 +925,25 @@ Solve this by <img src="ltximg/NumericalAnalysis_601077d2a8675aebda99da563524a3e
 </div>
 
 <p>
-Now solve for <img src="ltximg/NumericalAnalysis_38f68529d41be29f6b2b34994f03a5c8b18f739a.png" alt="NumericalAnalysis_38f68529d41be29f6b2b34994f03a5c8b18f739a.png" />: Since <img src="ltximg/NumericalAnalysis_85c05de04237093c401b15920a5c7a09bb0d2760.png" alt="NumericalAnalysis_85c05de04237093c401b15920a5c7a09bb0d2760.png" /> is continuous at <img src="ltximg/NumericalAnalysis_e228cba55127b7cac8fff9680e641d1339f73bd6.png" alt="NumericalAnalysis_e228cba55127b7cac8fff9680e641d1339f73bd6.png" />
+Now solve for <img src="ltximg/NumericalAnalysis_302b20df69d056378bf72cc5649ea34f36f10838.png" alt="NumericalAnalysis_302b20df69d056378bf72cc5649ea34f36f10838.png" />: Since <img src="ltximg/NumericalAnalysis_232892183aea30bc1018443fb2659a4fe2f83430.png" alt="NumericalAnalysis_232892183aea30bc1018443fb2659a4fe2f83430.png" /> is continuous at <img src="ltximg/NumericalAnalysis_90b6c116883fe841e9a0d6cd6b5c72a15780ea63.png" alt="NumericalAnalysis_90b6c116883fe841e9a0d6cd6b5c72a15780ea63.png" />
 </p>
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_9f684ed7fce98c49bcb834f53de318fc9958d8d8.png" alt="NumericalAnalysis_9f684ed7fce98c49bcb834f53de318fc9958d8d8.png" />
+<img src="ltximg/NumericalAnalysis_a487f7f282d8b0686a929790479d60a12d94058a.png" alt="NumericalAnalysis_a487f7f282d8b0686a929790479d60a12d94058a.png" />
 </span>
 <span class="equation-label">
 9
 </span>
 </div>
 <p>
-From <img src="ltximg/NumericalAnalysis_71970218dc394438ed0e0471ddf02ab6af279fa8.png" alt="NumericalAnalysis_71970218dc394438ed0e0471ddf02ab6af279fa8.png" />, let <img src="ltximg/NumericalAnalysis_8792ab55916f6eae142800a79ace948aaa274e9a.png" alt="NumericalAnalysis_8792ab55916f6eae142800a79ace948aaa274e9a.png" />
+From <img src="ltximg/NumericalAnalysis_bad703327d51faaafe802c8d1d4f934cb3a0e6b1.png" alt="NumericalAnalysis_bad703327d51faaafe802c8d1d4f934cb3a0e6b1.png" />, let <img src="ltximg/NumericalAnalysis_14531a425eab0c47bee4d5e2fd89c1a1d11a39d6.png" alt="NumericalAnalysis_14531a425eab0c47bee4d5e2fd89c1a1d11a39d6.png" />
 we get
 </p>
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_a17be233f579da9644444d057f21edcba96678e9.png" alt="NumericalAnalysis_a17be233f579da9644444d057f21edcba96678e9.png" />
+<img src="ltximg/NumericalAnalysis_6e70218d04d2ad5287f3e10018d5cf6b75c07f6b.png" alt="NumericalAnalysis_6e70218d04d2ad5287f3e10018d5cf6b75c07f6b.png" />
 </span>
 <span class="equation-label">
 10
@@ -933,7 +952,7 @@ we get
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_e5cc45baddee034e775cebfbf040d6dadf6e7947.png" alt="NumericalAnalysis_e5cc45baddee034e775cebfbf040d6dadf6e7947.png" />
+<img src="ltximg/NumericalAnalysis_2fda42ae173d2378cbad76a91b36a1c6f88fd2a4.png" alt="NumericalAnalysis_2fda42ae173d2378cbad76a91b36a1c6f88fd2a4.png" />
 </span>
 <span class="equation-label">
 11
@@ -941,15 +960,15 @@ we get
 </div>
 
 <p>
-And  <img src="ltximg/NumericalAnalysis_2a54c50d2d85e0fe9c18b7571235b15ad7454758.png" alt="NumericalAnalysis_2a54c50d2d85e0fe9c18b7571235b15ad7454758.png" />
+And  <img src="ltximg/NumericalAnalysis_3748a6678c8614f65b3694da292c12fb52121b06.png" alt="NumericalAnalysis_3748a6678c8614f65b3694da292c12fb52121b06.png" />
 </p>
 
 <p>
-If <img src="ltximg/NumericalAnalysis_290d1dac21b35a88341536ac1ce2efec2523f2ce.png" alt="NumericalAnalysis_290d1dac21b35a88341536ac1ce2efec2523f2ce.png" />, then <img src="ltximg/NumericalAnalysis_ccc18d9f2da4dd30025b99936b19b3117d935bd2.png" alt="NumericalAnalysis_ccc18d9f2da4dd30025b99936b19b3117d935bd2.png" />.
+If <img src="ltximg/NumericalAnalysis_79ca445dd99a6cab3aada389ba5a1be08166d6c0.png" alt="NumericalAnalysis_79ca445dd99a6cab3aada389ba5a1be08166d6c0.png" />, then <img src="ltximg/NumericalAnalysis_a42d284bb81092dbb5195851ac38eac2a39925dc.png" alt="NumericalAnalysis_a42d284bb81092dbb5195851ac38eac2a39925dc.png" />.
 </p>
 
 <p>
-The case when <img src="ltximg/NumericalAnalysis_4ae39c63f232981261276aac75ed5b82f87391fe.png" alt="NumericalAnalysis_4ae39c63f232981261276aac75ed5b82f87391fe.png" /> is called a <b>free boundary</b>, the spline is called
+The case when <img src="ltximg/NumericalAnalysis_83360d54708072c95958e0178e4ac358a02f03dd.png" alt="NumericalAnalysis_83360d54708072c95958e0178e4ac358a02f03dd.png" /> is called a <b>free boundary</b>, the spline is called
 <b>natural spline</b>
 </p>
 </div>
@@ -963,13 +982,13 @@ The case when <img src="ltximg/NumericalAnalysis_4ae39c63f232981261276aac75ed5b8
 <h3 id="org7887841">4.1 numerical differentiation</h3>
 <div class="outline-text-3" id="text-org7887841">
 <p>
-<b>Target</b>: Given <img src="ltximg/NumericalAnalysis_9a22e837c40a132a0020b1ce89c56632e3be5e62.png" alt="NumericalAnalysis_9a22e837c40a132a0020b1ce89c56632e3be5e62.png" />, approximate <img src="ltximg/NumericalAnalysis_bb62d90a491557e608e0fd18b2b8379ce826edb0.png" alt="NumericalAnalysis_bb62d90a491557e608e0fd18b2b8379ce826edb0.png" />
+<b>Target</b>: Given <img src="ltximg/NumericalAnalysis_d0530e147baa072d4f7a4333adf8a4d131f9cfba.png" alt="NumericalAnalysis_d0530e147baa072d4f7a4333adf8a4d131f9cfba.png" />, approximate <img src="ltximg/NumericalAnalysis_5dc67e29ff67425919fd7530a6eed22435ec147f.png" alt="NumericalAnalysis_5dc67e29ff67425919fd7530a6eed22435ec147f.png" />
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_0ad9e163f2a1645af235fd02d5ba68c126f7c2d1.png" alt="NumericalAnalysis_0ad9e163f2a1645af235fd02d5ba68c126f7c2d1.png" />
+<img src="ltximg/NumericalAnalysis_2254a117983b7677ec19dd7f8dfd4afcce811772.png" alt="NumericalAnalysis_2254a117983b7677ec19dd7f8dfd4afcce811772.png" />
 </span>
 <span class="equation-label">
 12
@@ -977,14 +996,14 @@ The case when <img src="ltximg/NumericalAnalysis_4ae39c63f232981261276aac75ed5b8
 </div>
 
 <p>
-Approximate <img src="ltximg/NumericalAnalysis_b2b7a28a5569bdafb8de467b47083e8ce7bae744.png" alt="NumericalAnalysis_b2b7a28a5569bdafb8de467b47083e8ce7bae744.png" /> by its lagrange polynomial with interpolating points <img src="ltximg/NumericalAnalysis_9a22e837c40a132a0020b1ce89c56632e3be5e62.png" alt="NumericalAnalysis_9a22e837c40a132a0020b1ce89c56632e3be5e62.png" />
-and <img src="ltximg/NumericalAnalysis_b061c9eb5a12fe1b59367570d078cb6408c22ef3.png" alt="NumericalAnalysis_b061c9eb5a12fe1b59367570d078cb6408c22ef3.png" />
+Approximate <img src="ltximg/NumericalAnalysis_d82f0e997eb350cc6d212774abd99a819508e298.png" alt="NumericalAnalysis_d82f0e997eb350cc6d212774abd99a819508e298.png" /> by its lagrange polynomial with interpolating points <img src="ltximg/NumericalAnalysis_d0530e147baa072d4f7a4333adf8a4d131f9cfba.png" alt="NumericalAnalysis_d0530e147baa072d4f7a4333adf8a4d131f9cfba.png" />
+and <img src="ltximg/NumericalAnalysis_36b90628006958280e29953df282effad1b9ce98.png" alt="NumericalAnalysis_36b90628006958280e29953df282effad1b9ce98.png" />
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_a5493cce331b3db935c91e31284fe7c2a93c6a33.png" alt="NumericalAnalysis_a5493cce331b3db935c91e31284fe7c2a93c6a33.png" />
+<img src="ltximg/NumericalAnalysis_c019131cba8dee5f397c94f141479f955c1ed6f9.png" alt="NumericalAnalysis_c019131cba8dee5f397c94f141479f955c1ed6f9.png" />
 </span>
 <span class="equation-label">
 13
@@ -992,14 +1011,14 @@ and <img src="ltximg/NumericalAnalysis_b061c9eb5a12fe1b59367570d078cb6408c22ef3.
 </div>
 
 <p>
-Approximate <img src="ltximg/NumericalAnalysis_b2b7a28a5569bdafb8de467b47083e8ce7bae744.png" alt="NumericalAnalysis_b2b7a28a5569bdafb8de467b47083e8ce7bae744.png" /> by its Lagrange polynomial with interpolating points
-<img src="ltximg/NumericalAnalysis_6d95cffdb61f30efaef0c27b20020c69e3b25e40.png" alt="NumericalAnalysis_6d95cffdb61f30efaef0c27b20020c69e3b25e40.png" />
+Approximate <img src="ltximg/NumericalAnalysis_d82f0e997eb350cc6d212774abd99a819508e298.png" alt="NumericalAnalysis_d82f0e997eb350cc6d212774abd99a819508e298.png" /> by its Lagrange polynomial with interpolating points
+<img src="ltximg/NumericalAnalysis_5ead27c1b5e222f277d3292f35faed29cde46c5d.png" alt="NumericalAnalysis_5ead27c1b5e222f277d3292f35faed29cde46c5d.png" />
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_6425bbaa301dd250fdd48557c7f3c8236224cdfc.png" alt="NumericalAnalysis_6425bbaa301dd250fdd48557c7f3c8236224cdfc.png" />
+<img src="ltximg/NumericalAnalysis_798b867b1ca64718739a0adc7e590baafb1aa5f8.png" alt="NumericalAnalysis_798b867b1ca64718739a0adc7e590baafb1aa5f8.png" />
 </span>
 <span class="equation-label">
 14
@@ -1011,22 +1030,22 @@ Approximate <img src="ltximg/NumericalAnalysis_b2b7a28a5569bdafb8de467b47083e8ce
 <h3 id="orgccb12ef">4.3 elements of numerical integration</h3>
 <div class="outline-text-3" id="text-orgccb12ef">
 <p>
-<b>Target</b>: approximate <img src="ltximg/NumericalAnalysis_e5bafe90bada70e4a67346890b9e11a4e9c251e1.png" alt="NumericalAnalysis_e5bafe90bada70e4a67346890b9e11a4e9c251e1.png" />
+<b>Target</b>: approximate <img src="ltximg/NumericalAnalysis_b465a409bc760546600b53da8b558f90052ae7a3.png" alt="NumericalAnalysis_b465a409bc760546600b53da8b558f90052ae7a3.png" />
 </p>
 
 <p>
-Integrate the <b>Lagrange interpolating polynomial</b> of <img src="ltximg/NumericalAnalysis_b2b7a28a5569bdafb8de467b47083e8ce7bae744.png" alt="NumericalAnalysis_b2b7a28a5569bdafb8de467b47083e8ce7bae744.png" /> instead
+Integrate the <b>Lagrange interpolating polynomial</b> of <img src="ltximg/NumericalAnalysis_d82f0e997eb350cc6d212774abd99a819508e298.png" alt="NumericalAnalysis_d82f0e997eb350cc6d212774abd99a819508e298.png" /> instead
 </p>
 
 <p>
-Select a set of distinct nodes <img src="ltximg/NumericalAnalysis_949a9e8f324357c6e445d1ae477816c9ad623d67.png" alt="NumericalAnalysis_949a9e8f324357c6e445d1ae477816c9ad623d67.png" /> from <img src="ltximg/NumericalAnalysis_8e296e247f7f97e50b558aac11e41494ceaf3f9f.png" alt="NumericalAnalysis_8e296e247f7f97e50b558aac11e41494ceaf3f9f.png" />.
-The Lagrange polynomial is <img src="ltximg/NumericalAnalysis_b236d48b10a49f88868140f3bc1ff0829f8093d0.png" alt="NumericalAnalysis_b236d48b10a49f88868140f3bc1ff0829f8093d0.png" />
+Select a set of distinct nodes <img src="ltximg/NumericalAnalysis_c2c2085eaac70f98cac324bba2cf9b383a7e0fc6.png" alt="NumericalAnalysis_c2c2085eaac70f98cac324bba2cf9b383a7e0fc6.png" /> from <img src="ltximg/NumericalAnalysis_7cb107a2f79c192fa3a747f63eb1001fe3d98b74.png" alt="NumericalAnalysis_7cb107a2f79c192fa3a747f63eb1001fe3d98b74.png" />.
+The Lagrange polynomial is <img src="ltximg/NumericalAnalysis_8dd9cfb0af639f809af11c574a43bb2cb445d502.png" alt="NumericalAnalysis_8dd9cfb0af639f809af11c574a43bb2cb445d502.png" />
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_ccb545649c691da62a3f87ba7dfd2869162de31c.png" alt="NumericalAnalysis_ccb545649c691da62a3f87ba7dfd2869162de31c.png" />
+<img src="ltximg/NumericalAnalysis_32e7c704ed76f1c2d5bea1af7daa48e1830b2ae4.png" alt="NumericalAnalysis_32e7c704ed76f1c2d5bea1af7daa48e1830b2ae4.png" />
 </span>
 <span class="equation-label">
 15
@@ -1039,7 +1058,7 @@ Error
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_d7298f1b351348b41a0eb1404ccfd6e4cf3474e3.png" alt="NumericalAnalysis_d7298f1b351348b41a0eb1404ccfd6e4cf3474e3.png" />
+<img src="ltximg/NumericalAnalysis_d3172179a78a38fcd9134017d4dcc08f98f00f51.png" alt="NumericalAnalysis_d3172179a78a38fcd9134017d4dcc08f98f00f51.png" />
 </span>
 <span class="equation-label">
 16
@@ -1049,7 +1068,7 @@ Error
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_bd2746c954ab4b2a563274ab79a97809ef477d73.png" alt="NumericalAnalysis_bd2746c954ab4b2a563274ab79a97809ef477d73.png" />
+<img src="ltximg/NumericalAnalysis_dbb25e3491b4d91bd6dec3c4290456f9ed0c8b38.png" alt="NumericalAnalysis_dbb25e3491b4d91bd6dec3c4290456f9ed0c8b38.png" />
 </span>
 <span class="equation-label">
 17
@@ -1057,29 +1076,29 @@ Error
 </div>
 
 <p>
-Example. Consider the linear interpolation on <img src="ltximg/NumericalAnalysis_8e296e247f7f97e50b558aac11e41494ceaf3f9f.png" alt="NumericalAnalysis_8e296e247f7f97e50b558aac11e41494ceaf3f9f.png" />, we have 
+Example. Consider the linear interpolation on <img src="ltximg/NumericalAnalysis_7cb107a2f79c192fa3a747f63eb1001fe3d98b74.png" alt="NumericalAnalysis_7cb107a2f79c192fa3a747f63eb1001fe3d98b74.png" />, we have 
 </p>
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_cdf176c79ff94fea654dcd27f4d6cd38d8f3db12.png" alt="NumericalAnalysis_cdf176c79ff94fea654dcd27f4d6cd38d8f3db12.png" />
+<img src="ltximg/NumericalAnalysis_b160e89282b21a73bedcd92239b034f6f8921bd4.png" alt="NumericalAnalysis_b160e89282b21a73bedcd92239b034f6f8921bd4.png" />
 </span>
 <span class="equation-label">
 17
 </span>
 </div>
 <p>
-<img src="ltximg/NumericalAnalysis_2c1b93919901032a4f763d07ce3bce9e3506c21e.png" alt="NumericalAnalysis_2c1b93919901032a4f763d07ce3bce9e3506c21e.png" />. This
+<img src="ltximg/NumericalAnalysis_f607bc69c9e9990ba4a52b17c59de68fc4a53c37.png" alt="NumericalAnalysis_f607bc69c9e9990ba4a52b17c59de68fc4a53c37.png" />. This
 is .
 </p>
 
 <p>
-Consider <img src="ltximg/NumericalAnalysis_e8da0a373073535d79560a6a9dccd230a2a8d7cd.png" alt="NumericalAnalysis_e8da0a373073535d79560a6a9dccd230a2a8d7cd.png" />
+Consider <img src="ltximg/NumericalAnalysis_dd705c0aaf579f0a34152326945a9e2175704582.png" alt="NumericalAnalysis_dd705c0aaf579f0a34152326945a9e2175704582.png" />
 </p>
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_4751762dc5baef0a3d1f0b9f31015dc5213d3638.png" alt="NumericalAnalysis_4751762dc5baef0a3d1f0b9f31015dc5213d3638.png" />
+<img src="ltximg/NumericalAnalysis_969a5b36fd88436c71b034d89e4e0051cb652ba1.png" alt="NumericalAnalysis_969a5b36fd88436c71b034d89e4e0051cb652ba1.png" />
 </span>
 <span class="equation-label">
 18
@@ -1087,13 +1106,13 @@ Consider <img src="ltximg/NumericalAnalysis_e8da0a373073535d79560a6a9dccd230a2a8
 </div>
 
 <p>
-For equally spaced nodes: <img src="ltximg/NumericalAnalysis_4d909283098fc2db55204a68cb3c117eeb1399bd.png" alt="NumericalAnalysis_4d909283098fc2db55204a68cb3c117eeb1399bd.png" />
+For equally spaced nodes: <img src="ltximg/NumericalAnalysis_b096b45caa78e5d810f16ac8b7f276560b96f437.png" alt="NumericalAnalysis_b096b45caa78e5d810f16ac8b7f276560b96f437.png" />
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_24af4b0baa4d79c87df9f4fc25cc7d0c39248799.png" alt="NumericalAnalysis_24af4b0baa4d79c87df9f4fc25cc7d0c39248799.png" />
+<img src="ltximg/NumericalAnalysis_45864e8354e4b838d2184d7eda5b03187a9343ae.png" alt="NumericalAnalysis_45864e8354e4b838d2184d7eda5b03187a9343ae.png" />
 </span>
 <span class="equation-label">
 19
@@ -1101,7 +1120,7 @@ For equally spaced nodes: <img src="ltximg/NumericalAnalysis_4d909283098fc2db552
 </div>
 
 <p>
-<img src="ltximg/NumericalAnalysis_cdc9afd4092533b89eab88252946f1388288de4c.png" alt="NumericalAnalysis_cdc9afd4092533b89eab88252946f1388288de4c.png" />
+<img src="ltximg/NumericalAnalysis_c65bedc1d925597d0a9b37e52570beae6de54fb5.png" alt="NumericalAnalysis_c65bedc1d925597d0a9b37e52570beae6de54fb5.png" />
 is the <b>Cotes coefficients</b>
 </p>
 </div>
@@ -1112,22 +1131,22 @@ is the <b>Cotes coefficients</b>
 <div class="outline-text-3" id="text-org5fdbefd">
 <p>
 Due to the oscillatory nature of high-degree polynomials, <b>piecewise</b>
-interpolation is applied to approximate <img src="ltximg/NumericalAnalysis_b2b7a28a5569bdafb8de467b47083e8ce7bae744.png" alt="NumericalAnalysis_b2b7a28a5569bdafb8de467b47083e8ce7bae744.png" />. A piecewise approach that
+interpolation is applied to approximate <img src="ltximg/NumericalAnalysis_d82f0e997eb350cc6d212774abd99a819508e298.png" alt="NumericalAnalysis_d82f0e997eb350cc6d212774abd99a819508e298.png" />. A piecewise approach that
 uses the low-order Newton-Cotes formulae
 </p>
 
 
 <p>
-Composite Trapezoidal rule: <img src="ltximg/NumericalAnalysis_0d46fb7654274d288a637dd1bd1014cad69d4a9d.png" alt="NumericalAnalysis_0d46fb7654274d288a637dd1bd1014cad69d4a9d.png" />.
+Composite Trapezoidal rule: <img src="ltximg/NumericalAnalysis_ff83a31d095d7302ce2ec6d76b66bac47efcc8cc.png" alt="NumericalAnalysis_ff83a31d095d7302ce2ec6d76b66bac47efcc8cc.png" />.
 </p>
 
 <p>
-Apply Trapezoidal Rule on each <img src="ltximg/NumericalAnalysis_2b39f4f61273878d4b18bbf554ac1f0a7d984a84.png" alt="NumericalAnalysis_2b39f4f61273878d4b18bbf554ac1f0a7d984a84.png" />
+Apply Trapezoidal Rule on each <img src="ltximg/NumericalAnalysis_d36563a69d921eccaef922594b1f03edb40d856e.png" alt="NumericalAnalysis_d36563a69d921eccaef922594b1f03edb40d856e.png" />
 </p>
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_36c6a4ef008976349916829cc9d5c979194d87d6.png" alt="NumericalAnalysis_36c6a4ef008976349916829cc9d5c979194d87d6.png" />
+<img src="ltximg/NumericalAnalysis_367a01d3f08c724a5003f07470691db015e0ca35.png" alt="NumericalAnalysis_367a01d3f08c724a5003f07470691db015e0ca35.png" />
 </span>
 <span class="equation-label">
 20
@@ -1137,7 +1156,7 @@ Apply Trapezoidal Rule on each <img src="ltximg/NumericalAnalysis_2b39f4f6127387
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_a1970c291b57a28d80fcccb36aa0e884bcab673e.png" alt="NumericalAnalysis_a1970c291b57a28d80fcccb36aa0e884bcab673e.png" />
+<img src="ltximg/NumericalAnalysis_577e4b4470faa05ef12bd5fbcb07301dfa32ec12.png" alt="NumericalAnalysis_577e4b4470faa05ef12bd5fbcb07301dfa32ec12.png" />
 </span>
 <span class="equation-label">
 20
@@ -1146,7 +1165,7 @@ Apply Trapezoidal Rule on each <img src="ltximg/NumericalAnalysis_2b39f4f6127387
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_d471764d217820e1729527de15919b3973c6ab9b.png" alt="NumericalAnalysis_d471764d217820e1729527de15919b3973c6ab9b.png" />
+<img src="ltximg/NumericalAnalysis_3092d0a0def88f508bcc2019706ed1a790e104a3.png" alt="NumericalAnalysis_3092d0a0def88f508bcc2019706ed1a790e104a3.png" />
 </span>
 <span class="equation-label">
 21
@@ -1155,7 +1174,7 @@ Apply Trapezoidal Rule on each <img src="ltximg/NumericalAnalysis_2b39f4f6127387
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_30ff2c4336da0e8db7514dbe2d98f401e99071f2.png" alt="NumericalAnalysis_30ff2c4336da0e8db7514dbe2d98f401e99071f2.png" />
+<img src="ltximg/NumericalAnalysis_b22b5ac376d7098f5ed1aa3a00f228667ac56b54.png" alt="NumericalAnalysis_b22b5ac376d7098f5ed1aa3a00f228667ac56b54.png" />
 </span>
 <span class="equation-label">
 22
@@ -1169,14 +1188,14 @@ Apply Trapezoidal Rule on each <img src="ltximg/NumericalAnalysis_2b39f4f6127387
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_db0ccd2143a48a45876dcc935db0c2e5ac56148e.png" alt="NumericalAnalysis_db0ccd2143a48a45876dcc935db0c2e5ac56148e.png" />
+<img src="ltximg/NumericalAnalysis_e2d747de292186b6b2d9782bcbd7d0413eb27d98.png" alt="NumericalAnalysis_e2d747de292186b6b2d9782bcbd7d0413eb27d98.png" />
 </span>
 <span class="equation-label">
 23
 </span>
 </div>
 <p>
-In fact, it's just a mean value <img src="ltximg/NumericalAnalysis_d81211c89cbcae41942c737a59161d6c32750112.png" alt="NumericalAnalysis_d81211c89cbcae41942c737a59161d6c32750112.png" />
+In fact, it's just a mean value <img src="ltximg/NumericalAnalysis_5597e243d40db72f9b54081a67ea24ba419c773d.png" alt="NumericalAnalysis_5597e243d40db72f9b54081a67ea24ba419c773d.png" />
 </p>
 </div>
 </div>
@@ -1187,7 +1206,7 @@ In fact, it's just a mean value <img src="ltximg/NumericalAnalysis_d81211c89cbca
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_6320f8fd78cff6e03d46c74288760c0f9317b57a.png" alt="NumericalAnalysis_6320f8fd78cff6e03d46c74288760c0f9317b57a.png" />
+<img src="ltximg/NumericalAnalysis_4ae6e357515753bb3c9d5fc0e8514a99e8fbf6b9.png" alt="NumericalAnalysis_4ae6e357515753bb3c9d5fc0e8514a99e8fbf6b9.png" />
 </span>
 <span class="equation-label">
 24
@@ -1199,15 +1218,15 @@ Hence we have
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_1f0c8d89f5fc64104255007d0c5f9122c3f3633b.png" alt="NumericalAnalysis_1f0c8d89f5fc64104255007d0c5f9122c3f3633b.png" />
+<img src="ltximg/NumericalAnalysis_f8dd3b90f890077a21a8bb81e3f0defbcc09b50d.png" alt="NumericalAnalysis_f8dd3b90f890077a21a8bb81e3f0defbcc09b50d.png" />
 </span>
 <span class="equation-label">
 25
 </span>
 </div>
 <p>
-and <img src="ltximg/NumericalAnalysis_27a78223a1d3cd6a0124cf2337e610c075c3afaa.png" alt="NumericalAnalysis_27a78223a1d3cd6a0124cf2337e610c075c3afaa.png" />
-.<img src="ltximg/NumericalAnalysis_f0b08c81981b2b955418d1d5b1544d81af53f94e.png" alt="NumericalAnalysis_f0b08c81981b2b955418d1d5b1544d81af53f94e.png" />, <img src="ltximg/NumericalAnalysis_52275cc109af5f2d2d6eb9faebef9d4f01079218.png" alt="NumericalAnalysis_52275cc109af5f2d2d6eb9faebef9d4f01079218.png" />, the
+and <img src="ltximg/NumericalAnalysis_6bd5a6a2182f1716be773ac4d710561c4194692c.png" alt="NumericalAnalysis_6bd5a6a2182f1716be773ac4d710561c4194692c.png" />
+.<img src="ltximg/NumericalAnalysis_9ac1c8648f7fe1a97f37fe6eb8c7d7e3730bdea5.png" alt="NumericalAnalysis_9ac1c8648f7fe1a97f37fe6eb8c7d7e3730bdea5.png" />, <img src="ltximg/NumericalAnalysis_c3dca48d80c4fcb2691fbd843962b4d2e12e81ab.png" alt="NumericalAnalysis_c3dca48d80c4fcb2691fbd843962b4d2e12e81ab.png" />, the
 <b>Romberg sequence</b>
 </p>
 </div>
@@ -1221,13 +1240,13 @@ generate high-accuracy results while using low-order formulae
 </p>
 
 <p>
-For some <img src="ltximg/NumericalAnalysis_98c36f5fcd2914583d519aa7cd1b529a6b774496.png" alt="NumericalAnalysis_98c36f5fcd2914583d519aa7cd1b529a6b774496.png" />, suppose we have <img src="ltximg/NumericalAnalysis_3fc9a7f83b6ab0edcf2b86c0614d4ad7556fb89b.png" alt="NumericalAnalysis_3fc9a7f83b6ab0edcf2b86c0614d4ad7556fb89b.png" /> that approximates an unknown
-<img src="ltximg/NumericalAnalysis_ce9cb653cace88e14491d9ae9672b5822bac8b8b.png" alt="NumericalAnalysis_ce9cb653cace88e14491d9ae9672b5822bac8b8b.png" />, and
+For some <img src="ltximg/NumericalAnalysis_5ae7e4b97c6e5399d7f1a416f38a5c19b9ce348c.png" alt="NumericalAnalysis_5ae7e4b97c6e5399d7f1a416f38a5c19b9ce348c.png" />, suppose we have <img src="ltximg/NumericalAnalysis_7eb46193c241248889fcb4198d8e23228c2a48a6.png" alt="NumericalAnalysis_7eb46193c241248889fcb4198d8e23228c2a48a6.png" /> that approximates an unknown
+<img src="ltximg/NumericalAnalysis_558025fc229dfee58c54911e31dbd3144463ab70.png" alt="NumericalAnalysis_558025fc229dfee58c54911e31dbd3144463ab70.png" />, and
 </p>
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_624c874d989a62e8da99b30c450532da4a8c707a.png" alt="NumericalAnalysis_624c874d989a62e8da99b30c450532da4a8c707a.png" />
+<img src="ltximg/NumericalAnalysis_ed1027ea4af45897f228594694ed3170277afb2c.png" alt="NumericalAnalysis_ed1027ea4af45897f228594694ed3170277afb2c.png" />
 </span>
 <span class="equation-label">
 26
@@ -1259,27 +1278,27 @@ using the composite integration
 
 
 <p>
-A simple strategy to bound the total error by <img src="ltximg/NumericalAnalysis_7cad476b2e9645552df9a570bd01a07350ea5051.png" alt="NumericalAnalysis_7cad476b2e9645552df9a570bd01a07350ea5051.png" /> of
+A simple strategy to bound the total error by <img src="ltximg/NumericalAnalysis_d7816c8dbb7be8330ec9bbd095e0dbae0da68f9b.png" alt="NumericalAnalysis_d7816c8dbb7be8330ec9bbd095e0dbae0da68f9b.png" /> of
 </p>
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_f57eee90781c79f1c6611b7196c7f18103bcb1d1.png" alt="NumericalAnalysis_f57eee90781c79f1c6611b7196c7f18103bcb1d1.png" />
+<img src="ltximg/NumericalAnalysis_3814e263331f5c2a202360fdcc81fe989cf989ec.png" alt="NumericalAnalysis_3814e263331f5c2a202360fdcc81fe989cf989ec.png" />
 </span>
 <span class="equation-label">
 27
 </span>
 </div>
 <p>
-In an interval with length <img src="ltximg/NumericalAnalysis_f0811fcb39279753909fe4a5da27cdc99d9ad313.png" alt="NumericalAnalysis_f0811fcb39279753909fe4a5da27cdc99d9ad313.png" />, the error is smaller than
-<img src="ltximg/NumericalAnalysis_05ecea55532ba2b30064cec86e0f6d65d2fd0b53.png" alt="NumericalAnalysis_05ecea55532ba2b30064cec86e0f6d65d2fd0b53.png" />
+In an interval with length <img src="ltximg/NumericalAnalysis_744a7929df77df282d4efb16391a1e41b3943810.png" alt="NumericalAnalysis_744a7929df77df282d4efb16391a1e41b3943810.png" />, the error is smaller than
+<img src="ltximg/NumericalAnalysis_bb9f425e5186f19e1c3c0dae82ec22074ca7f2d6.png" alt="NumericalAnalysis_bb9f425e5186f19e1c3c0dae82ec22074ca7f2d6.png" />
 </p>
 
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_4d9fc83136c04d49a5044f42c091bd47a78478aa.png" alt="NumericalAnalysis_4d9fc83136c04d49a5044f42c091bd47a78478aa.png" />
+<img src="ltximg/NumericalAnalysis_15d953cb68e6f2201f4ee32d83a85806238764d6.png" alt="NumericalAnalysis_15d953cb68e6f2201f4ee32d83a85806238764d6.png" />
 </span>
 <span class="equation-label">
 28
@@ -1290,6 +1309,162 @@ In an interval with length <img src="ltximg/NumericalAnalysis_f0811fcb3927975390
 
 <div id="outline-container-org819446c" class="outline-3">
 <h3 id="org819446c">4.7 Gaussian Quadrature</h3>
+<div class="outline-text-3" id="text-org819446c">
+<p>
+Construct formula 
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/NumericalAnalysis_9a936aea5a1f353eb4da13e042fffe067c1544e0.png" alt="NumericalAnalysis_9a936aea5a1f353eb4da13e042fffe067c1544e0.png" />
+</span>
+<span class="equation-label">
+29
+</span>
+</div>
+<p>
+of precision degree with n+1 points
+</p>
+
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/NumericalAnalysis_eeefc2bad6334e98ea112ec02b8f6a47394ac5bb.png" alt="NumericalAnalysis_eeefc2bad6334e98ea112ec02b8f6a47394ac5bb.png" />
+</span>
+<span class="equation-label">
+30
+</span>
+</div>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/NumericalAnalysis_4b5e437d622fe191e5f77cb2253cbeff99fad03f.png" alt="NumericalAnalysis_4b5e437d622fe191e5f77cb2253cbeff99fad03f.png" />
+</span>
+<span class="equation-label">
+30
+</span>
+</div>
+
+<p>
+Suppose <img src="ltximg/NumericalAnalysis_89ccc732021c212ab70bd47b2472c1fb31f75b10.png" alt="NumericalAnalysis_89ccc732021c212ab70bd47b2472c1fb31f75b10.png" /> are linearly independent and
+<img src="ltximg/NumericalAnalysis_818f02ea1aea5542a0d96642e678f2d518b89474.png" alt="NumericalAnalysis_818f02ea1aea5542a0d96642e678f2d518b89474.png" /> is orthogonal to any polynomial <img src="ltximg/NumericalAnalysis_97e96d86efe9012a3d5fb1058caceb7000b67ca9.png" alt="NumericalAnalysis_97e96d86efe9012a3d5fb1058caceb7000b67ca9.png" /> with <img src="ltximg/NumericalAnalysis_185444de5d7cc36a80976969df7fbca6837354e4.png" alt="NumericalAnalysis_185444de5d7cc36a80976969df7fbca6837354e4.png" />. If we
+take <img src="ltximg/NumericalAnalysis_bf15b269aea00ec2c7afebc39ecedf6529315871.png" alt="NumericalAnalysis_bf15b269aea00ec2c7afebc39ecedf6529315871.png" /> to be <img src="ltximg/NumericalAnalysis_6df672c2842ea26565af02f80ff41fb5e342e822.png" alt="NumericalAnalysis_6df672c2842ea26565af02f80ff41fb5e342e822.png" />, the the <img src="ltximg/NumericalAnalysis_694d8f6caee81a9c01bde224dad6968d49ec7ef7.png" alt="NumericalAnalysis_694d8f6caee81a9c01bde224dad6968d49ec7ef7.png" />
+are the Gaussian points
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgaa83473" class="outline-2">
+<h2 id="orgaa83473">chap5 Initial-value problems for ordinary differential equations</h2>
+<div class="outline-text-2" id="text-orgaa83473">
+</div>
+<div id="outline-container-orgf27a965" class="outline-3">
+<h3 id="orgf27a965">5.1 the elementary theory of initial-value problems</h3>
+<div class="outline-text-3" id="text-orgf27a965">
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/NumericalAnalysis_9ea6046966aca29a5e86b409d504ab0e901acbee.png" alt="NumericalAnalysis_9ea6046966aca29a5e86b409d504ab0e901acbee.png" />
+</span>
+<span class="equation-label">
+30
+</span>
+</div>
+
+<p>
+Compute the approximation of <img src="ltximg/NumericalAnalysis_46aae394e87a34af442d6de72102fd43c1529f8b.png" alt="NumericalAnalysis_46aae394e87a34af442d6de72102fd43c1529f8b.png" /> at a set of mesh points 
+<img src="ltximg/NumericalAnalysis_e68cdd982b3259817a68c9a1a67cebed92b9e7ea.png" alt="NumericalAnalysis_e68cdd982b3259817a68c9a1a67cebed92b9e7ea.png" />
+</p>
+
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/NumericalAnalysis_fbc89f12ad3984b011b1b4bcfa50add17ea7e4d0.png" alt="NumericalAnalysis_fbc89f12ad3984b011b1b4bcfa50add17ea7e4d0.png" />
+</span>
+<span class="equation-label">
+31
+</span>
+</div>
+
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/NumericalAnalysis_940c85d33fc07cfdd1956061bfeb9db42554e8db.png" alt="NumericalAnalysis_940c85d33fc07cfdd1956061bfeb9db42554e8db.png" />
+</span>
+<span class="equation-label">
+31
+</span>
+</div>
+
+
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/NumericalAnalysis_0412cf738760ceda2798c5759b3d2d99901a4961.png" alt="NumericalAnalysis_0412cf738760ceda2798c5759b3d2d99901a4961.png" />
+</span>
+<span class="equation-label">
+31
+</span>
+</div>
+
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/NumericalAnalysis_a94e2f8fe7be4fc12a784a3c5dc0a8cd138fbdff.png" alt="NumericalAnalysis_a94e2f8fe7be4fc12a784a3c5dc0a8cd138fbdff.png" />
+</span>
+<span class="equation-label">
+31
+</span>
+</div>
+</div>
+</div>
+<div id="outline-container-org498bd19" class="outline-3">
+<h3 id="org498bd19">5.2 Euler's Method</h3>
+<div class="outline-text-3" id="text-org498bd19">
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/NumericalAnalysis_9defda2ba8ce99b3a7fef79a65729d64641664bb.png" alt="NumericalAnalysis_9defda2ba8ce99b3a7fef79a65729d64641664bb.png" />
+</span>
+<span class="equation-label">
+31
+</span>
+</div>
+</div>
+</div>
+<div id="outline-container-org012d229" class="outline-3">
+<h3 id="org012d229">5.3 Higher Order Taylor Methods</h3>
+<div class="outline-text-3" id="text-org012d229">
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/NumericalAnalysis_c43f8db92a21dbf8cab5310e046a30bf91889b6b.png" alt="NumericalAnalysis_c43f8db92a21dbf8cab5310e046a30bf91889b6b.png" />
+</span>
+<span class="equation-label">
+32
+</span>
+</div>
+
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/NumericalAnalysis_d473259958ec007a765ebe1652142031a0ae0f8e.png" alt="NumericalAnalysis_d473259958ec007a765ebe1652142031a0ae0f8e.png" />
+</span>
+<span class="equation-label">
+32
+</span>
+</div>
+
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/NumericalAnalysis_40f879f89e2091fcb495d6b71eb6b7bd9fde1b0c.png" alt="NumericalAnalysis_40f879f89e2091fcb495d6b71eb6b7bd9fde1b0c.png" />
+</span>
+<span class="equation-label">
+33
+</span>
+</div>
+</div>
 </div>
 </div>
 <div id="outline-container-org6f7ef83" class="outline-2">
@@ -1312,8 +1487,8 @@ In an interval with length <img src="ltximg/NumericalAnalysis_f0811fcb3927975390
 </p>
 
 <p>
-<b>Paritial Pivoting</b>: Determine the smallest p≥k s.t.
-<img src="ltximg/NumericalAnalysis_1d80f87966e95ec9e72c33f3df9930ba6e466663.png" alt="NumericalAnalysis_1d80f87966e95ec9e72c33f3df9930ba6e466663.png" /> and
+<b>Paritial Pivoting</b>: Determine the smallest <img src="ltximg/NumericalAnalysis_dffc10c5b92d8f4e09690f3225ba23457104da2b.png" alt="NumericalAnalysis_dffc10c5b92d8f4e09690f3225ba23457104da2b.png" /> s.t.
+<img src="ltximg/NumericalAnalysis_94cfdc4f545f688a8bdf370221361e2e86eaa2d8.png" alt="NumericalAnalysis_94cfdc4f545f688a8bdf370221361e2e86eaa2d8.png" /> and
 interchange the pth and the kth rows
 </p>
 
@@ -1321,15 +1496,15 @@ interchange the pth and the kth rows
 <b>Scaled Partial Pivoting</b>:
 </p>
 <ol class="org-ol">
-<li>Define a scale factor <img src="ltximg/NumericalAnalysis_ce8d4d10c80d8a4ba9acd067e614a0dcbf7cc7c4.png" alt="NumericalAnalysis_ce8d4d10c80d8a4ba9acd067e614a0dcbf7cc7c4.png" /> for each row as <img src="ltximg/NumericalAnalysis_f0241cfd61104c4a08474bf019dec5d14a79d11f.png" alt="NumericalAnalysis_f0241cfd61104c4a08474bf019dec5d14a79d11f.png" /></li>
-<li>Determine the smallest <img src="ltximg/NumericalAnalysis_81aa7f5fc228d0db23de6ab80d919152caaa3924.png" alt="NumericalAnalysis_81aa7f5fc228d0db23de6ab80d919152caaa3924.png" /> s.t.
-<img src="ltximg/NumericalAnalysis_1c98dd23d10d6ec6c3111b7e1ffa28faec08b249.png" alt="NumericalAnalysis_1c98dd23d10d6ec6c3111b7e1ffa28faec08b249.png" />
+<li>Define a scale factor <img src="ltximg/NumericalAnalysis_6bba7b202bf9b278339d00278341cbb3793c78ab.png" alt="NumericalAnalysis_6bba7b202bf9b278339d00278341cbb3793c78ab.png" /> for each row as <img src="ltximg/NumericalAnalysis_22018d8bfb398202673cd4a98615fd6e3db7dfc9.png" alt="NumericalAnalysis_22018d8bfb398202673cd4a98615fd6e3db7dfc9.png" /></li>
+<li>Determine the smallest <img src="ltximg/NumericalAnalysis_dffc10c5b92d8f4e09690f3225ba23457104da2b.png" alt="NumericalAnalysis_dffc10c5b92d8f4e09690f3225ba23457104da2b.png" /> s.t.
+<img src="ltximg/NumericalAnalysis_efdc0a2938040b5563d6e031002f2e6198c63efb.png" alt="NumericalAnalysis_efdc0a2938040b5563d6e031002f2e6198c63efb.png" />
 and interchange the pth and the kth rows</li>
 </ol>
 
 
 <p>
-<b>Complete Pivoting</b>: Search all the entries <img src="ltximg/NumericalAnalysis_9c51a5fb13b2adb02f6331d8f7ceacbce4768698.png" alt="NumericalAnalysis_9c51a5fb13b2adb02f6331d8f7ceacbce4768698.png" /> to find the entry with
+<b>Complete Pivoting</b>: Search all the entries <img src="ltximg/NumericalAnalysis_644cd9f315963171ecdd041e57d47836452284d9.png" alt="NumericalAnalysis_644cd9f315963171ecdd041e57d47836452284d9.png" /> to find the entry with
 the largest magnitude
 </p>
 </div>
@@ -1338,15 +1513,15 @@ the largest magnitude
 <h3 id="orgf8cc7c4">6.5 Matrix Factorization</h3>
 <div class="outline-text-3" id="text-orgf8cc7c4">
 <p>
-<img src="ltximg/NumericalAnalysis_596bc39aa22fd74d03096ae603a6e257029f07af.png" alt="NumericalAnalysis_596bc39aa22fd74d03096ae603a6e257029f07af.png" />
+<img src="ltximg/NumericalAnalysis_c9990fbeae7091876705c07d86b70a7b69ed70f8.png" alt="NumericalAnalysis_c9990fbeae7091876705c07d86b70a7b69ed70f8.png" />
 </p>
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_62054a7a3e395c80278d3c9a243152bf9c52730c.png" alt="NumericalAnalysis_62054a7a3e395c80278d3c9a243152bf9c52730c.png" />
+<img src="ltximg/NumericalAnalysis_059b08963fc4f6d740dbd039b40d63bed79e4366.png" alt="NumericalAnalysis_059b08963fc4f6d740dbd039b40d63bed79e4366.png" />
 </span>
 <span class="equation-label">
-29
+34
 </span>
 </div>
 
@@ -1358,25 +1533,25 @@ Hence
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_d328507f0266f4a1ce8950ba97ab0941670a241e.png" alt="NumericalAnalysis_d328507f0266f4a1ce8950ba97ab0941670a241e.png" />
+<img src="ltximg/NumericalAnalysis_b314c90d05b73827c99d535a0e93cb5705d3f9c4.png" alt="NumericalAnalysis_b314c90d05b73827c99d535a0e93cb5705d3f9c4.png" />
 </span>
 <span class="equation-label">
-30
+35
 </span>
 </div>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_6c75158f29301753d4902d6c00aeb70b2fefbd13.png" alt="NumericalAnalysis_6c75158f29301753d4902d6c00aeb70b2fefbd13.png" />
+<img src="ltximg/NumericalAnalysis_bd3a5b1302bede8dd1adffc2b8ee184c0f3dc68f.png" alt="NumericalAnalysis_bd3a5b1302bede8dd1adffc2b8ee184c0f3dc68f.png" />
 </span>
 <span class="equation-label">
-31
+36
 </span>
 </div>
 
 <p>
-<img src="ltximg/NumericalAnalysis_f0a3c6c9833d1a554f440eaaf7852b0226ae730b.png" alt="NumericalAnalysis_f0a3c6c9833d1a554f440eaaf7852b0226ae730b.png" />
+<img src="ltximg/NumericalAnalysis_e72019f2c02971f6b9a21942341dd7f9cbf50288.png" alt="NumericalAnalysis_e72019f2c02971f6b9a21942341dd7f9cbf50288.png" />
 </p>
 </div>
 </div>
@@ -1385,16 +1560,16 @@ Hence
 <div class="outline-text-3" id="text-orgf6fe7dd">
 <p>
 <b>Strictly Diagonally Dominant Matrix</b>.
-<img src="ltximg/NumericalAnalysis_667b91dcafa89ac21fc6cb450681aadad36763ba.png" alt="NumericalAnalysis_667b91dcafa89ac21fc6cb450681aadad36763ba.png" />
+<img src="ltximg/NumericalAnalysis_29dd9a3a26b2bccf36764986d8ca82754b3c3071.png" alt="NumericalAnalysis_29dd9a3a26b2bccf36764986d8ca82754b3c3071.png" />
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_2280623e3b444b1adab88c74d07a915ea21301d1.png" alt="NumericalAnalysis_2280623e3b444b1adab88c74d07a915ea21301d1.png" />
+<img src="ltximg/NumericalAnalysis_bbff9a7bd1e6eaeb2df60de99b5b377473beb362.png" alt="NumericalAnalysis_bbff9a7bd1e6eaeb2df60de99b5b377473beb362.png" />
 </span>
 <span class="equation-label">
-32
+37
 </span>
 </div>
 
@@ -1404,30 +1579,30 @@ Hence
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_156346c05e87792f92ea4096a139241b6d52f9ae.png" alt="NumericalAnalysis_156346c05e87792f92ea4096a139241b6d52f9ae.png" />
+<img src="ltximg/NumericalAnalysis_20e10374d5f55b48cc79a10c3494560e6ab69c1b.png" alt="NumericalAnalysis_20e10374d5f55b48cc79a10c3494560e6ab69c1b.png" />
 </span>
 <span class="equation-label">
-32
+37
 </span>
 </div>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_08428aff158add7fd5c3a70f835e09f62874013c.png" alt="NumericalAnalysis_08428aff158add7fd5c3a70f835e09f62874013c.png" />
+<img src="ltximg/NumericalAnalysis_5dffafe534d1c63f12befb0fb8ffc5f0de0678fd.png" alt="NumericalAnalysis_5dffafe534d1c63f12befb0fb8ffc5f0de0678fd.png" />
 </span>
 <span class="equation-label">
-32
+37
 </span>
 </div>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_fae6b25030465ccc8042986bcb0ec8a6a2a96bbb.png" alt="NumericalAnalysis_fae6b25030465ccc8042986bcb0ec8a6a2a96bbb.png" />
+<img src="ltximg/NumericalAnalysis_1bef5d7b0af9a3f42dd077dd971c3ee10f38dace.png" alt="NumericalAnalysis_1bef5d7b0af9a3f42dd077dd971c3ee10f38dace.png" />
 </span>
 <span class="equation-label">
-32
+37
 </span>
 </div>
 <p>
@@ -1436,10 +1611,10 @@ A is symmetric, hence
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_94b1682111b6c460e736b6c6caf6d605d90005fe.png" alt="NumericalAnalysis_94b1682111b6c460e736b6c6caf6d605d90005fe.png" />
+<img src="ltximg/NumericalAnalysis_516120fad2c24bfa75486c8369a740292c4ef9b2.png" alt="NumericalAnalysis_516120fad2c24bfa75486c8369a740292c4ef9b2.png" />
 </span>
 <span class="equation-label">
-33
+38
 </span>
 </div>
 <p>
@@ -1448,10 +1623,10 @@ Let
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_20bd8e87f334bd5ece96dceff377ddd537ec5a8a.png" alt="NumericalAnalysis_20bd8e87f334bd5ece96dceff377ddd537ec5a8a.png" />
+<img src="ltximg/NumericalAnalysis_8e56dc41756108cd3dde2dd416f9030a898971b9.png" alt="NumericalAnalysis_8e56dc41756108cd3dde2dd416f9030a898971b9.png" />
 </span>
 <span class="equation-label">
-34
+39
 </span>
 </div>
 
@@ -1462,20 +1637,20 @@ Let
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_a78f45792dc84e65b333b26aae375989349156a5.png" alt="NumericalAnalysis_a78f45792dc84e65b333b26aae375989349156a5.png" />
+<img src="ltximg/NumericalAnalysis_b7121fd2729ade163adad71370395d8a9e529fb1.png" alt="NumericalAnalysis_b7121fd2729ade163adad71370395d8a9e529fb1.png" />
 </span>
 <span class="equation-label">
-35
+40
 </span>
 </div>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_8da21fab20ceb8b417b8b02cbcad63661360c94e.png" alt="NumericalAnalysis_8da21fab20ceb8b417b8b02cbcad63661360c94e.png" />
+<img src="ltximg/NumericalAnalysis_753e5444613cb8b5af14c242ac199bf226b1c644.png" alt="NumericalAnalysis_753e5444613cb8b5af14c242ac199bf226b1c644.png" />
 </span>
 <span class="equation-label">
-36
+41
 </span>
 </div>
 </div>
@@ -1491,55 +1666,55 @@ Let
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_a8a0e151a665284d9ea2a967c2dd168239139102.png" alt="NumericalAnalysis_a8a0e151a665284d9ea2a967c2dd168239139102.png" />
+<img src="ltximg/NumericalAnalysis_f3093571018454d19d203c961507ef042d5365a2.png" alt="NumericalAnalysis_f3093571018454d19d203c961507ef042d5365a2.png" />
 </span>
 <span class="equation-label">
-37
+42
 </span>
 </div>
 
 <p>
-<img src="ltximg/NumericalAnalysis_231fe75098c801d8c4ff96b81b30ee19655709c5.png" alt="NumericalAnalysis_231fe75098c801d8c4ff96b81b30ee19655709c5.png" />.
-<img src="ltximg/NumericalAnalysis_90ccedeceabc17d0030c9eda7778fd890be76fc9.png" alt="NumericalAnalysis_90ccedeceabc17d0030c9eda7778fd890be76fc9.png" />
+<img src="ltximg/NumericalAnalysis_8814745667f9ad23fdba0f30000602175dc7852d.png" alt="NumericalAnalysis_8814745667f9ad23fdba0f30000602175dc7852d.png" />.
+<img src="ltximg/NumericalAnalysis_aef3f3551708b33fccd1b087859ed7b3f899c7b7.png" alt="NumericalAnalysis_aef3f3551708b33fccd1b087859ed7b3f899c7b7.png" />
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_3cd2eed793d64ae084c4fcb5d120fd9e4b3ee4bd.png" alt="NumericalAnalysis_3cd2eed793d64ae084c4fcb5d120fd9e4b3ee4bd.png" />
+<img src="ltximg/NumericalAnalysis_b25fb643e7cc74a207eeea616306dfecc26429d0.png" alt="NumericalAnalysis_b25fb643e7cc74a207eeea616306dfecc26429d0.png" />
 </span>
 <span class="equation-label">
-37
+42
 </span>
 </div>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_e7827686cbdce3c5dd210eaa441ae7c96e1d1362.png" alt="NumericalAnalysis_e7827686cbdce3c5dd210eaa441ae7c96e1d1362.png" />
+<img src="ltximg/NumericalAnalysis_6f71b293b1ab64e44e0826ebcb736fe604c285da.png" alt="NumericalAnalysis_6f71b293b1ab64e44e0826ebcb736fe604c285da.png" />
 </span>
 <span class="equation-label">
-37
+42
 </span>
 </div>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_be7a4fa12bf7647a8cb2d8d33f97cd35cf24fd2b.png" alt="NumericalAnalysis_be7a4fa12bf7647a8cb2d8d33f97cd35cf24fd2b.png" />
+<img src="ltximg/NumericalAnalysis_7db24c421946069873183790564869eab2a9aced.png" alt="NumericalAnalysis_7db24c421946069873183790564869eab2a9aced.png" />
 </span>
 <span class="equation-label">
-37
+42
 </span>
 </div>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_2871cb70b4198615a9388d37f1b149cc35d505c9.png" alt="NumericalAnalysis_2871cb70b4198615a9388d37f1b149cc35d505c9.png" />
+<img src="ltximg/NumericalAnalysis_3ab6005893d81d1f4285f9e7f8785dbe30f8325b.png" alt="NumericalAnalysis_3ab6005893d81d1f4285f9e7f8785dbe30f8325b.png" />
 </span>
 <span class="equation-label">
-37
+42
 </span>
 </div>
 
@@ -1547,25 +1722,25 @@ Let
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_b11e0b0da49656c82584cdfebc883bfec1ded51d.png" alt="NumericalAnalysis_b11e0b0da49656c82584cdfebc883bfec1ded51d.png" />
+<img src="ltximg/NumericalAnalysis_af7327c40ee5357e612d89a2a5f79ecb710ee881.png" alt="NumericalAnalysis_af7327c40ee5357e612d89a2a5f79ecb710ee881.png" />
 </span>
 <span class="equation-label">
-37
+42
 </span>
 </div>
 
 <p>
-<b>Frobenius Norm</b>: <img src="ltximg/NumericalAnalysis_849e88d6b600f5ca25f8fee250f640d38679ff70.png" alt="NumericalAnalysis_849e88d6b600f5ca25f8fee250f640d38679ff70.png" />
+<b>Frobenius Norm</b>: <img src="ltximg/NumericalAnalysis_3a80a3e39f0307eb925050fabc8650aba2939db4.png" alt="NumericalAnalysis_3a80a3e39f0307eb925050fabc8650aba2939db4.png" />
 </p>
 
 <p>
-<b>Natural Norm</b>: <img src="ltximg/NumericalAnalysis_c9f35f2b11da4b028aee6de8f34f9942ca176ff8.png" alt="NumericalAnalysis_c9f35f2b11da4b028aee6de8f34f9942ca176ff8.png" />
+<b>Natural Norm</b>: <img src="ltximg/NumericalAnalysis_67284d81942a33996b6f924ef5c43aace98483be.png" alt="NumericalAnalysis_67284d81942a33996b6f924ef5c43aace98483be.png" />
 </p>
 
 <p>
-<img src="ltximg/NumericalAnalysis_b4bfae9190b0ec2b873586b271b23a4403a9249d.png" alt="NumericalAnalysis_b4bfae9190b0ec2b873586b271b23a4403a9249d.png" />,
-<img src="ltximg/NumericalAnalysis_d3f26815058fa4fef892390abdcc27d594e490f4.png" alt="NumericalAnalysis_d3f26815058fa4fef892390abdcc27d594e490f4.png" />,
-<img src="ltximg/NumericalAnalysis_f9d97e2f35a382b6645f1773ffa10f45079c20c1.png" alt="NumericalAnalysis_f9d97e2f35a382b6645f1773ffa10f45079c20c1.png" />
+<img src="ltximg/NumericalAnalysis_a7013da43fc4aa1777c4ef68cbb359ed24a20ff6.png" alt="NumericalAnalysis_a7013da43fc4aa1777c4ef68cbb359ed24a20ff6.png" />,
+<img src="ltximg/NumericalAnalysis_8aea8852c8d7c4d2cb55a2ec2de84f22847c00d8.png" alt="NumericalAnalysis_8aea8852c8d7c4d2cb55a2ec2de84f22847c00d8.png" />,
+<img src="ltximg/NumericalAnalysis_23034d11acda4e07815235d99d4970168a7593a6.png" alt="NumericalAnalysis_23034d11acda4e07815235d99d4970168a7593a6.png" />
 </p>
 </div>
 </div>
@@ -1578,40 +1753,40 @@ Let
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_074a384e62206a40647cff0e004c05f3ffe4cd14.png" alt="NumericalAnalysis_074a384e62206a40647cff0e004c05f3ffe4cd14.png" />
+<img src="ltximg/NumericalAnalysis_699e077a5983a95d2fa6324cd46cb67d9fa30c10.png" alt="NumericalAnalysis_699e077a5983a95d2fa6324cd46cb67d9fa30c10.png" />
 </span>
 <span class="equation-label">
-37
+42
 </span>
 </div>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_a0e3bcf5337cf61e23adb68b2a93bbf9515219d6.png" alt="NumericalAnalysis_a0e3bcf5337cf61e23adb68b2a93bbf9515219d6.png" />
+<img src="ltximg/NumericalAnalysis_e4b1160317848a9308dec190c07a118dbb1d4019.png" alt="NumericalAnalysis_e4b1160317848a9308dec190c07a118dbb1d4019.png" />
 </span>
 <span class="equation-label">
-37
+42
 </span>
 </div>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_377aac3f28293e8b3d74558af80b91e247920b3b.png" alt="NumericalAnalysis_377aac3f28293e8b3d74558af80b91e247920b3b.png" />
+<img src="ltximg/NumericalAnalysis_35f383f6051d7d0208284c5343ce4ff8aea03c8f.png" alt="NumericalAnalysis_35f383f6051d7d0208284c5343ce4ff8aea03c8f.png" />
 </span>
 <span class="equation-label">
-37
+42
 </span>
 </div>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_f4ab746754447ce898b35bf31e59b5617d64ca24.png" alt="NumericalAnalysis_f4ab746754447ce898b35bf31e59b5617d64ca24.png" />
+<img src="ltximg/NumericalAnalysis_4917164231688f764c14013f0486800a3a262804.png" alt="NumericalAnalysis_4917164231688f764c14013f0486800a3a262804.png" />
 </span>
 <span class="equation-label">
-37
+42
 </span>
 </div>
 </div>
@@ -1625,10 +1800,10 @@ Let
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_068cabe8a6f2bbde8dcfd6cbff86e88bc2d45842.png" alt="NumericalAnalysis_068cabe8a6f2bbde8dcfd6cbff86e88bc2d45842.png" />
+<img src="ltximg/NumericalAnalysis_bfc47b6db81690f5ea896c6ccae1231e39d25108.png" alt="NumericalAnalysis_bfc47b6db81690f5ea896c6ccae1231e39d25108.png" />
 </span>
 <span class="equation-label">
-37
+42
 </span>
 </div>
 <p>
@@ -1637,19 +1812,19 @@ In matrix form,
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_5f3964397e62f11bcd3f0ce2c51bad88746d2680.png" alt="NumericalAnalysis_5f3964397e62f11bcd3f0ce2c51bad88746d2680.png" />
+<img src="ltximg/NumericalAnalysis_c67bc09ac20a6777b7b518256358a064aad57833.png" alt="NumericalAnalysis_c67bc09ac20a6777b7b518256358a064aad57833.png" />
 </span>
 <span class="equation-label">
-38
+43
 </span>
 </div>
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_d1bdbedc52254cac05a98ae375d5f41b280df695.png" alt="NumericalAnalysis_d1bdbedc52254cac05a98ae375d5f41b280df695.png" />
+<img src="ltximg/NumericalAnalysis_daaa8ca66605bec45bf66a43b77e06b5abe5edaf.png" alt="NumericalAnalysis_daaa8ca66605bec45bf66a43b77e06b5abe5edaf.png" />
 </span>
 <span class="equation-label">
-39
+44
 </span>
 </div>
 
@@ -1660,88 +1835,88 @@ In matrix form,
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_22b804cd94a1cf8f0b9cc76f22e9e050cd731ba1.png" alt="NumericalAnalysis_22b804cd94a1cf8f0b9cc76f22e9e050cd731ba1.png" />
+<img src="ltximg/NumericalAnalysis_a24dbd5718569b38ad62f30b95facfa15b4f1493.png" alt="NumericalAnalysis_a24dbd5718569b38ad62f30b95facfa15b4f1493.png" />
 </span>
 <span class="equation-label">
-40
+45
 </span>
 </div>
 
 <p>
-<img src="ltximg/NumericalAnalysis_621ade65c1f9827ee52860f47370f6c142909922.png" alt="NumericalAnalysis_621ade65c1f9827ee52860f47370f6c142909922.png" />.
-<img src="ltximg/NumericalAnalysis_da289f5aef2875b1c9ac0862ba3c1462073d1200.png" alt="NumericalAnalysis_da289f5aef2875b1c9ac0862ba3c1462073d1200.png" />
+<img src="ltximg/NumericalAnalysis_43d4d8f5d3973e8dd47713b71459bf3494e40bd9.png" alt="NumericalAnalysis_43d4d8f5d3973e8dd47713b71459bf3494e40bd9.png" />.
+<img src="ltximg/NumericalAnalysis_e9332452ed42ff42581fa405786bb2722c16b959.png" alt="NumericalAnalysis_e9332452ed42ff42581fa405786bb2722c16b959.png" />
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_110058547c629fe3c2c8b8e3c807112ccf21bab0.png" alt="NumericalAnalysis_110058547c629fe3c2c8b8e3c807112ccf21bab0.png" />
+<img src="ltximg/NumericalAnalysis_c111f69a34a53cd314ab21001e5d70e586cc42f5.png" alt="NumericalAnalysis_c111f69a34a53cd314ab21001e5d70e586cc42f5.png" />
 </span>
 <span class="equation-label">
-40
+45
 </span>
 </div>
 <p>
-<img src="ltximg/NumericalAnalysis_6b8bb4658f32ccf57d50582234475c07335bed7f.png" alt="NumericalAnalysis_6b8bb4658f32ccf57d50582234475c07335bed7f.png" />
+<img src="ltximg/NumericalAnalysis_38cfce51e02e526878715a79c65849c426ec6163.png" alt="NumericalAnalysis_38cfce51e02e526878715a79c65849c426ec6163.png" />
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_9bf8b163b34fc4b818eb2271a9bd888a7350c00d.png" alt="NumericalAnalysis_9bf8b163b34fc4b818eb2271a9bd888a7350c00d.png" />
+<img src="ltximg/NumericalAnalysis_4098751f00ccac53197d15f5e37e737a4a41198a.png" alt="NumericalAnalysis_4098751f00ccac53197d15f5e37e737a4a41198a.png" />
 </span>
 <span class="equation-label">
-40
+45
 </span>
 </div>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_3c41fedea785fc05d233387cbf617a755a9f9e95.png" alt="NumericalAnalysis_3c41fedea785fc05d233387cbf617a755a9f9e95.png" />
+<img src="ltximg/NumericalAnalysis_b9827981f52002d1d9697583c83ba463393f26f5.png" alt="NumericalAnalysis_b9827981f52002d1d9697583c83ba463393f26f5.png" />
 </span>
 <span class="equation-label">
-40
+45
 </span>
 </div>
 
 <p>
 <b>relaxation methods</b>.
-<img src="ltximg/NumericalAnalysis_6954f2bd3bfaeb5992effa400c1c486393077048.png" alt="NumericalAnalysis_6954f2bd3bfaeb5992effa400c1c486393077048.png" />
+<img src="ltximg/NumericalAnalysis_2361de3aee5ab6b7170bbbc0a3b5a1859bc229f0.png" alt="NumericalAnalysis_2361de3aee5ab6b7170bbbc0a3b5a1859bc229f0.png" />
 and relaxation method is
-<img src="ltximg/NumericalAnalysis_085085190f52931292968165a4eaedf16870b0a2.png" alt="NumericalAnalysis_085085190f52931292968165a4eaedf16870b0a2.png" />
+<img src="ltximg/NumericalAnalysis_df3f61f4a4dcbaff5945c366c5a7fb0fed6f9bea.png" alt="NumericalAnalysis_df3f61f4a4dcbaff5945c366c5a7fb0fed6f9bea.png" />
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_dd77b32e3f8059a68e98288ded5a1184948afae4.png" alt="NumericalAnalysis_dd77b32e3f8059a68e98288ded5a1184948afae4.png" />
+<img src="ltximg/NumericalAnalysis_3e7d73085b82e6fa17ce1e4c1e14f9f7a8cd6343.png" alt="NumericalAnalysis_3e7d73085b82e6fa17ce1e4c1e14f9f7a8cd6343.png" />
 </span>
 <span class="equation-label">
-40
+45
 </span>
 </div>
 <p>
-This implies the SOR method can converge only if <img src="ltximg/NumericalAnalysis_a292fd9919af47c7acf44635347243f4e362793e.png" alt="NumericalAnalysis_a292fd9919af47c7acf44635347243f4e362793e.png" />
+This implies the SOR method can converge only if <img src="ltximg/NumericalAnalysis_7dae51c8954bf6b6d62f6af908516b932f1e8861.png" alt="NumericalAnalysis_7dae51c8954bf6b6d62f6af908516b932f1e8861.png" />
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_06a29786ad296dc4aa70b8a41b7bd7823979edb4.png" alt="NumericalAnalysis_06a29786ad296dc4aa70b8a41b7bd7823979edb4.png" />
+<img src="ltximg/NumericalAnalysis_05a8611cfb1709f03438f8c176d286d90ba212c9.png" alt="NumericalAnalysis_05a8611cfb1709f03438f8c176d286d90ba212c9.png" />
 </span>
 <span class="equation-label">
-40
+45
 </span>
 </div>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_6a6433ba15c95b59438e5eda68a764d8845c2857.png" alt="NumericalAnalysis_6a6433ba15c95b59438e5eda68a764d8845c2857.png" />
+<img src="ltximg/NumericalAnalysis_4136ccbd477c0f0790091a739d5f0ad239eedada.png" alt="NumericalAnalysis_4136ccbd477c0f0790091a739d5f0ad239eedada.png" />
 </span>
 <span class="equation-label">
-40
+45
 </span>
 </div>
 </div>
@@ -1751,57 +1926,57 @@ This implies the SOR method can converge only if <img src="ltximg/NumericalAnaly
 <h3 id="org83fe3a7">7.4 Error bounds and iterative refinement</h3>
 <div class="outline-text-3" id="text-org83fe3a7">
 <p>
-Assume that A is accurate and <img src="ltximg/NumericalAnalysis_88f146ba31ed0b3f7b50848f4f490c01af3f2dc1.png" alt="NumericalAnalysis_88f146ba31ed0b3f7b50848f4f490c01af3f2dc1.png" /> has the error <img src="ltximg/NumericalAnalysis_c7fdee1be4a6932aaaccd870271a86e4bada02dd.png" alt="NumericalAnalysis_c7fdee1be4a6932aaaccd870271a86e4bada02dd.png" />,
-then <img src="ltximg/NumericalAnalysis_a2ca95a7f1af48bb78a34e089038ab5e0d4597c1.png" alt="NumericalAnalysis_a2ca95a7f1af48bb78a34e089038ab5e0d4597c1.png" />
+Assume that A is accurate and <img src="ltximg/NumericalAnalysis_d18a309175293719028b0d0d1ac89353f1e9dba0.png" alt="NumericalAnalysis_d18a309175293719028b0d0d1ac89353f1e9dba0.png" /> has the error <img src="ltximg/NumericalAnalysis_20c13b3666a32f154071621420ac7121dd3fea61.png" alt="NumericalAnalysis_20c13b3666a32f154071621420ac7121dd3fea61.png" />,
+then <img src="ltximg/NumericalAnalysis_0d783606bdae8a0a3266a7a9c897ec119536d189.png" alt="NumericalAnalysis_0d783606bdae8a0a3266a7a9c897ec119536d189.png" />
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_1839221db32601b16fc3ec4ff887c3c8bf63a8b6.png" alt="NumericalAnalysis_1839221db32601b16fc3ec4ff887c3c8bf63a8b6.png" />
+<img src="ltximg/NumericalAnalysis_6e9104edb590b41d2bb92039ce26991d4f5e53c8.png" alt="NumericalAnalysis_6e9104edb590b41d2bb92039ce26991d4f5e53c8.png" />
 </span>
 <span class="equation-label">
-40
+45
 </span>
 </div>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_88ca32f1ccc01485f0ed74d5f834c4aa5dd54984.png" alt="NumericalAnalysis_88ca32f1ccc01485f0ed74d5f834c4aa5dd54984.png" />
+<img src="ltximg/NumericalAnalysis_049856f5535dfa11438b8f11342cd9bc3996b45f.png" alt="NumericalAnalysis_049856f5535dfa11438b8f11342cd9bc3996b45f.png" />
 </span>
 <span class="equation-label">
-40
+45
 </span>
 </div>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_9eead581fec8c26621958a5c196c38ab92197422.png" alt="NumericalAnalysis_9eead581fec8c26621958a5c196c38ab92197422.png" />
+<img src="ltximg/NumericalAnalysis_cb8bad5965b27ef2ab55bd0b845adc2955d009b5.png" alt="NumericalAnalysis_cb8bad5965b27ef2ab55bd0b845adc2955d009b5.png" />
 </span>
 <span class="equation-label">
-40
+45
 </span>
 </div>
 
 <p>
-Assume <img src="ltximg/NumericalAnalysis_88f146ba31ed0b3f7b50848f4f490c01af3f2dc1.png" alt="NumericalAnalysis_88f146ba31ed0b3f7b50848f4f490c01af3f2dc1.png" /> is accurate, A has the error <img src="ltximg/NumericalAnalysis_397f61fb3d923a607dd974bb436b80c85539add2.png" alt="NumericalAnalysis_397f61fb3d923a607dd974bb436b80c85539add2.png" />, then
-<img src="ltximg/NumericalAnalysis_3945f8ff6aac35f94e58a4c93650e63646ec0ad3.png" alt="NumericalAnalysis_3945f8ff6aac35f94e58a4c93650e63646ec0ad3.png" />. Hence
-<img src="ltximg/NumericalAnalysis_0780883d477aeaf740dcabf3a580b1148f7c48ad.png" alt="NumericalAnalysis_0780883d477aeaf740dcabf3a580b1148f7c48ad.png" />
+Assume <img src="ltximg/NumericalAnalysis_d18a309175293719028b0d0d1ac89353f1e9dba0.png" alt="NumericalAnalysis_d18a309175293719028b0d0d1ac89353f1e9dba0.png" /> is accurate, A has the error <img src="ltximg/NumericalAnalysis_96fade10eb6855340c414c898fe3f2ff0c3602eb.png" alt="NumericalAnalysis_96fade10eb6855340c414c898fe3f2ff0c3602eb.png" />, then
+<img src="ltximg/NumericalAnalysis_9e29644c105ce0cdc0c95c86f8ca547fb1e78059.png" alt="NumericalAnalysis_9e29644c105ce0cdc0c95c86f8ca547fb1e78059.png" />. Hence
+<img src="ltximg/NumericalAnalysis_8257ca8344d47fcba916a06cdfed48d53de42a6a.png" alt="NumericalAnalysis_8257ca8344d47fcba916a06cdfed48d53de42a6a.png" />
 </p>
 
 <p>
-<b>condition number K(A)</b> is <img src="ltximg/NumericalAnalysis_dd14f78c7b1ae4f9b6f60fb8cc7233564c218a4a.png" alt="NumericalAnalysis_dd14f78c7b1ae4f9b6f60fb8cc7233564c218a4a.png" />
+<b>condition number K(A)</b> is <img src="ltximg/NumericalAnalysis_8bf04af83aa6cadf35fd2a8fd2af85251dc9be03.png" alt="NumericalAnalysis_8bf04af83aa6cadf35fd2a8fd2af85251dc9be03.png" />
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_cb118f32428b652c8d305671efcb088cc3b971f2.png" alt="NumericalAnalysis_cb118f32428b652c8d305671efcb088cc3b971f2.png" />
+<img src="ltximg/NumericalAnalysis_2b26134dde164cf5d26ba793cb685ad793d48fff.png" alt="NumericalAnalysis_2b26134dde164cf5d26ba793cb685ad793d48fff.png" />
 </span>
 <span class="equation-label">
-40
+45
 </span>
 </div>
 
@@ -1809,11 +1984,11 @@ Assume <img src="ltximg/NumericalAnalysis_88f146ba31ed0b3f7b50848f4f490c01af3f2d
 note:
 </p>
 <ol class="org-ol">
-<li>If A is symmetric, then <img src="ltximg/NumericalAnalysis_ad2a1816df7a78bf37190dc280c388b9f2e35992.png" alt="NumericalAnalysis_ad2a1816df7a78bf37190dc280c388b9f2e35992.png" /></li>
-<li><img src="ltximg/NumericalAnalysis_ad4dda8f649e892a3abe2427225fbab207d1b2b3.png" alt="NumericalAnalysis_ad4dda8f649e892a3abe2427225fbab207d1b2b3.png" /> for all natural norm</li>
-<li><img src="ltximg/NumericalAnalysis_74c6190d691f02c91c4124726ce20c82734404f3.png" alt="NumericalAnalysis_74c6190d691f02c91c4124726ce20c82734404f3.png" /> for any <img src="ltximg/NumericalAnalysis_576edfb7baf009015bdaa65a2338af2ccafa63b4.png" alt="NumericalAnalysis_576edfb7baf009015bdaa65a2338af2ccafa63b4.png" /></li>
-<li><img src="ltximg/NumericalAnalysis_41761c198b326d769c2063c033ce85e357eb8cb0.png" alt="NumericalAnalysis_41761c198b326d769c2063c033ce85e357eb8cb0.png" /> if A is orthogonal</li>
-<li><img src="ltximg/NumericalAnalysis_08f761307f1ff8ff2d5e513c43f202032208522b.png" alt="NumericalAnalysis_08f761307f1ff8ff2d5e513c43f202032208522b.png" /> for all orthogonal matrix R_</li>
+<li>If A is symmetric, then <img src="ltximg/NumericalAnalysis_0dd4c8e8d04e8df5b3430e8f637856bebb1cbfe1.png" alt="NumericalAnalysis_0dd4c8e8d04e8df5b3430e8f637856bebb1cbfe1.png" /></li>
+<li><img src="ltximg/NumericalAnalysis_77e915c2bc8c33c7e7e213d2f750e8aeae639965.png" alt="NumericalAnalysis_77e915c2bc8c33c7e7e213d2f750e8aeae639965.png" /> for all natural norm</li>
+<li><img src="ltximg/NumericalAnalysis_34468f21b8ee71a447206e3c39a99e031ef8fbb3.png" alt="NumericalAnalysis_34468f21b8ee71a447206e3c39a99e031ef8fbb3.png" /> for any <img src="ltximg/NumericalAnalysis_995dfd265c92650a3ad23fd0d1432b6f4f40a437.png" alt="NumericalAnalysis_995dfd265c92650a3ad23fd0d1432b6f4f40a437.png" /></li>
+<li><img src="ltximg/NumericalAnalysis_fc4ebc95e1d8565c49766c21f9414f58d13a59a9.png" alt="NumericalAnalysis_fc4ebc95e1d8565c49766c21f9414f58d13a59a9.png" /> if A is orthogonal</li>
+<li><img src="ltximg/NumericalAnalysis_13a547251ea71ea463d44a3686965bedf3a609b0.png" alt="NumericalAnalysis_13a547251ea71ea463d44a3686965bedf3a609b0.png" /> for all orthogonal matrix R_</li>
 </ol>
 
 
@@ -1823,10 +1998,10 @@ note:
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_e6dc3f5bb342be2d9af987ad536c64d5fa9ec439.png" alt="NumericalAnalysis_e6dc3f5bb342be2d9af987ad536c64d5fa9ec439.png" />
+<img src="ltximg/NumericalAnalysis_eda374460585c0dd12dfbee790182f463cc3f6ee.png" alt="NumericalAnalysis_eda374460585c0dd12dfbee790182f463cc3f6ee.png" />
 </span>
 <span class="equation-label">
-40
+45
 </span>
 </div>
 
@@ -1834,10 +2009,10 @@ note:
 <b>refinement</b>
 </p>
 <ol class="org-ol">
-<li><img src="ltximg/NumericalAnalysis_c564df4ad676abe7fb9b41f2b462cc72552b1067.png" alt="NumericalAnalysis_c564df4ad676abe7fb9b41f2b462cc72552b1067.png" /> =&gt; approximation <img src="ltximg/NumericalAnalysis_632071846e1f8277d2012d08a665c63689f77799.png" alt="NumericalAnalysis_632071846e1f8277d2012d08a665c63689f77799.png" /></li>
-<li><img src="ltximg/NumericalAnalysis_a83a532c0d3de5fec814744952ee846bef3208dc.png" alt="NumericalAnalysis_a83a532c0d3de5fec814744952ee846bef3208dc.png" /></li>
-<li><img src="ltximg/NumericalAnalysis_67396461c25a031ff2d9cc9f7e138f2a817ae9c0.png" alt="NumericalAnalysis_67396461c25a031ff2d9cc9f7e138f2a817ae9c0.png" /> =&gt; <img src="ltximg/NumericalAnalysis_3069a94766f05d61af8479e20101385ce991cf12.png" alt="NumericalAnalysis_3069a94766f05d61af8479e20101385ce991cf12.png" /></li>
-<li><img src="ltximg/NumericalAnalysis_cedaaa41823657c63ee041b7e0a71316711463d1.png" alt="NumericalAnalysis_cedaaa41823657c63ee041b7e0a71316711463d1.png" /></li>
+<li><img src="ltximg/NumericalAnalysis_d00cfb0a8aca06948df772dbad9940ac140d1d07.png" alt="NumericalAnalysis_d00cfb0a8aca06948df772dbad9940ac140d1d07.png" /> =&gt; approximation <img src="ltximg/NumericalAnalysis_d3de28e8d5ef3abb21f76bf0ab008eaf83908d93.png" alt="NumericalAnalysis_d3de28e8d5ef3abb21f76bf0ab008eaf83908d93.png" /></li>
+<li><img src="ltximg/NumericalAnalysis_9aad8a0ec25b090abd90f0620b3f2283d5ca1456.png" alt="NumericalAnalysis_9aad8a0ec25b090abd90f0620b3f2283d5ca1456.png" /></li>
+<li><img src="ltximg/NumericalAnalysis_21241a69b6f4433b20692230fa584a76b1a2452c.png" alt="NumericalAnalysis_21241a69b6f4433b20692230fa584a76b1a2452c.png" /> =&gt; <img src="ltximg/NumericalAnalysis_40f98995cf759266b143088ca427a6bde67873d4.png" alt="NumericalAnalysis_40f98995cf759266b143088ca427a6bde67873d4.png" /></li>
+<li><img src="ltximg/NumericalAnalysis_d450de7aadad788bda1e2e5099ec2e53b21c16e0.png" alt="NumericalAnalysis_d450de7aadad788bda1e2e5099ec2e53b21c16e0.png" /></li>
 </ol>
 </div>
 </div>
@@ -1846,46 +2021,46 @@ note:
 <h2 id="org21196bf">Chap8 Approximation theory</h2>
 <div class="outline-text-2" id="text-org21196bf">
 <p>
-Given <img src="ltximg/NumericalAnalysis_8052c8aca3f1ed5c88b1a204c61f868ac6e64059.png" alt="NumericalAnalysis_8052c8aca3f1ed5c88b1a204c61f868ac6e64059.png" /> and <img src="ltximg/NumericalAnalysis_87ed17e1270710de65e266b14c97f2bed6b95b74.png" alt="NumericalAnalysis_87ed17e1270710de65e266b14c97f2bed6b95b74.png" /> find a <b>simpler</b> function <img src="ltximg/NumericalAnalysis_366a49e40d8197f986f27928d851f33cc2b1e37e.png" alt="NumericalAnalysis_366a49e40d8197f986f27928d851f33cc2b1e37e.png" />
+Given <img src="ltximg/NumericalAnalysis_4dbc2b782620ef3d37163df6617635f180e9252f.png" alt="NumericalAnalysis_4dbc2b782620ef3d37163df6617635f180e9252f.png" /> and <img src="ltximg/NumericalAnalysis_f45af51a38e6bdfaac48e0aaa61656e9bdb006ba.png" alt="NumericalAnalysis_f45af51a38e6bdfaac48e0aaa61656e9bdb006ba.png" /> find a <b>simpler</b> function <img src="ltximg/NumericalAnalysis_8757b6e84b7fb8d1f5f959645871dd68e44d5e02.png" alt="NumericalAnalysis_8757b6e84b7fb8d1f5f959645871dd68e44d5e02.png" />
 </p>
 </div>
 <div id="outline-container-orgc5228e6" class="outline-3">
 <h3 id="orgc5228e6">8.1 Discrete least squares approximation</h3>
 <div class="outline-text-3" id="text-orgc5228e6">
 <p>
-Determine the polynomial <img src="ltximg/NumericalAnalysis_62d06c946d1d13e101f9c69f5de41df6d5233044.png" alt="NumericalAnalysis_62d06c946d1d13e101f9c69f5de41df6d5233044.png" /> to approximate the
-data <img src="ltximg/NumericalAnalysis_b295b7833db1a9782a2a7a798aa18112eaa1807d.png" alt="NumericalAnalysis_b295b7833db1a9782a2a7a798aa18112eaa1807d.png" /> s.t. the least squares error
-<img src="ltximg/NumericalAnalysis_44e62184a9940665e5307668920c432a79e111e2.png" alt="NumericalAnalysis_44e62184a9940665e5307668920c432a79e111e2.png" /> is minimized. Here <img src="ltximg/NumericalAnalysis_e3782b00d081072e01c5ac28a597d93f7ec0384e.png" alt="NumericalAnalysis_e3782b00d081072e01c5ac28a597d93f7ec0384e.png" />
+Determine the polynomial <img src="ltximg/NumericalAnalysis_2f2f80d2690bb0c9a863c19677705c561bffc395.png" alt="NumericalAnalysis_2f2f80d2690bb0c9a863c19677705c561bffc395.png" /> to approximate the
+data <img src="ltximg/NumericalAnalysis_8b377378f1b923930fa1b919152a9b66a71e127c.png" alt="NumericalAnalysis_8b377378f1b923930fa1b919152a9b66a71e127c.png" /> s.t. the least squares error
+<img src="ltximg/NumericalAnalysis_83d4f640123a3ce7e94b641e077dc58baca91241.png" alt="NumericalAnalysis_83d4f640123a3ce7e94b641e077dc58baca91241.png" /> is minimized. Here <img src="ltximg/NumericalAnalysis_6617f16785f784c8ce8832e0a22c06f2b2f8669c.png" alt="NumericalAnalysis_6617f16785f784c8ce8832e0a22c06f2b2f8669c.png" />
 </p>
 
 <p>
-<img src="ltximg/NumericalAnalysis_0cbb2c009ec73b84caa3f59aca99ef416baa211a.png" alt="NumericalAnalysis_0cbb2c009ec73b84caa3f59aca99ef416baa211a.png" />
+<img src="ltximg/NumericalAnalysis_dd962a9fd40b909d6cd48756904fb53cd582e73e.png" alt="NumericalAnalysis_dd962a9fd40b909d6cd48756904fb53cd582e73e.png" />
 </p>
 
 <p>
-For <img src="ltximg/NumericalAnalysis_cdbecd43a87c018b1efe519e7e7a0ccbcc4c9617.png" alt="NumericalAnalysis_cdbecd43a87c018b1efe519e7e7a0ccbcc4c9617.png" /> to be minimized it's necessary that <img src="ltximg/NumericalAnalysis_39dca442753d70b1ddae4c6f0d4a20e31d5d73d5.png" alt="NumericalAnalysis_39dca442753d70b1ddae4c6f0d4a20e31d5d73d5.png" />
+For <img src="ltximg/NumericalAnalysis_7c352920dec4e8ce09f3154d4c4caa887109d9b1.png" alt="NumericalAnalysis_7c352920dec4e8ce09f3154d4c4caa887109d9b1.png" /> to be minimized it's necessary that <img src="ltximg/NumericalAnalysis_781595b193cc5fff7173b79c518d073410a7b467.png" alt="NumericalAnalysis_781595b193cc5fff7173b79c518d073410a7b467.png" />
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_0266815df94578b9907e1bfde39ddedb32baea71.png" alt="NumericalAnalysis_0266815df94578b9907e1bfde39ddedb32baea71.png" />
+<img src="ltximg/NumericalAnalysis_eca34d509979ef232f3f68798688bf0e17f4d64b.png" alt="NumericalAnalysis_eca34d509979ef232f3f68798688bf0e17f4d64b.png" />
 </span>
 <span class="equation-label">
-40
+45
 </span>
 </div>
 
 <p>
-Let <img src="ltximg/NumericalAnalysis_dca80af01dbf82006b65c51e075664bd8277cdf1.png" alt="NumericalAnalysis_dca80af01dbf82006b65c51e075664bd8277cdf1.png" />, then
+Let <img src="ltximg/NumericalAnalysis_1b008cf5dd8cb2b5d715302c973a5472bec7d59e.png" alt="NumericalAnalysis_1b008cf5dd8cb2b5d715302c973a5472bec7d59e.png" />, then
 </p>
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_3187958bf3a1ea861755706939ab2848457e9988.png" alt="NumericalAnalysis_3187958bf3a1ea861755706939ab2848457e9988.png" />
+<img src="ltximg/NumericalAnalysis_add98a21b4f0b823c3c37ca3b511b82f3e07d054.png" alt="NumericalAnalysis_add98a21b4f0b823c3c37ca3b511b82f3e07d054.png" />
 </span>
 <span class="equation-label">
-41
+46
 </span>
 </div>
 </div>
@@ -1896,30 +2071,30 @@ Let <img src="ltximg/NumericalAnalysis_dca80af01dbf82006b65c51e075664bd8277cdf1.
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_18ca4ef0fe198da895f72a4ea6f81280a121f692.png" alt="NumericalAnalysis_18ca4ef0fe198da895f72a4ea6f81280a121f692.png" />
+<img src="ltximg/NumericalAnalysis_c171120fc630c9c26d36e054880c73ea64e9e5b0.png" alt="NumericalAnalysis_c171120fc630c9c26d36e054880c73ea64e9e5b0.png" />
 </span>
 <span class="equation-label">
-42
+47
 </span>
 </div>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_f7d5af4a7605d5b4254fe5238d6b65e38a4e2683.png" alt="NumericalAnalysis_f7d5af4a7605d5b4254fe5238d6b65e38a4e2683.png" />
+<img src="ltximg/NumericalAnalysis_9d6949698f53109146e29b15a6c7216615f0c2b3.png" alt="NumericalAnalysis_9d6949698f53109146e29b15a6c7216615f0c2b3.png" />
 </span>
 <span class="equation-label">
-42
+47
 </span>
 </div>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_61a8e40b6ffe9aa7b703752889690f6f4ca865a0.png" alt="NumericalAnalysis_61a8e40b6ffe9aa7b703752889690f6f4ca865a0.png" />
+<img src="ltximg/NumericalAnalysis_42d0eaaa9a1303a40e7f5ba1f5021ee7eb8dc794.png" alt="NumericalAnalysis_42d0eaaa9a1303a40e7f5ba1f5021ee7eb8dc794.png" />
 </span>
 <span class="equation-label">
-42
+47
 </span>
 </div>
 
@@ -1930,19 +2105,19 @@ Weight function
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_05fdf33cfab7d32f581395f8386f7077d4ee6798.png" alt="NumericalAnalysis_05fdf33cfab7d32f581395f8386f7077d4ee6798.png" />
+<img src="ltximg/NumericalAnalysis_618b0a50d6b028472902e30e1de9b65e30642885.png" alt="NumericalAnalysis_618b0a50d6b028472902e30e1de9b65e30642885.png" />
 </span>
 <span class="equation-label">
-42
+47
 </span>
 </div>
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_9f79c49b090c7bfb02a1d3c381bed0a475a7fc8a.png" alt="NumericalAnalysis_9f79c49b090c7bfb02a1d3c381bed0a475a7fc8a.png" />
+<img src="ltximg/NumericalAnalysis_4a6b4b174e76e87b9700b9f5c2d3f1cfa78be3a9.png" alt="NumericalAnalysis_4a6b4b174e76e87b9700b9f5c2d3f1cfa78be3a9.png" />
 </span>
 <span class="equation-label">
-43
+48
 </span>
 </div>
 <p>
@@ -1982,7 +2157,7 @@ where
 
 
 <p>
-The <b>general least squares approximation problem</b>. <img src="ltximg/NumericalAnalysis_c740a7673e58356eabfdfac88bbe39aafc998baf.png" alt="NumericalAnalysis_c740a7673e58356eabfdfac88bbe39aafc998baf.png" /> is minimized
+The <b>general least squares approximation problem</b>. <img src="ltximg/NumericalAnalysis_feed7fd3ebaebb188aa3de9523a83b26f9c810f1.png" alt="NumericalAnalysis_feed7fd3ebaebb188aa3de9523a83b26f9c810f1.png" /> is minimized
 </p>
 
 
@@ -1992,51 +2167,51 @@ The <b>general least squares approximation problem</b>. <img src="ltximg/Numeric
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_c8023a761b9b4f8456e14bf82ed70e871e097122.png" alt="NumericalAnalysis_c8023a761b9b4f8456e14bf82ed70e871e097122.png" />
+<img src="ltximg/NumericalAnalysis_b100b7675d66051d3bdbfc70a494fcd422fd0655.png" alt="NumericalAnalysis_b100b7675d66051d3bdbfc70a494fcd422fd0655.png" />
 </span>
 <span class="equation-label">
-44
+49
 </span>
 </div>
 <p>
-It can be shown that <img src="ltximg/NumericalAnalysis_f67d613e742bba3fb3ed643b1f21c09129470b16.png" alt="NumericalAnalysis_f67d613e742bba3fb3ed643b1f21c09129470b16.png" /> is an <b>inner proudct</b> and <img src="ltximg/NumericalAnalysis_193143304ba3c1403d41c1769d0c53ce212b7cb9.png" alt="NumericalAnalysis_193143304ba3c1403d41c1769d0c53ce212b7cb9.png" />
+It can be shown that <img src="ltximg/NumericalAnalysis_67c7c89204eec97fae43904f83118f6425733035.png" alt="NumericalAnalysis_67c7c89204eec97fae43904f83118f6425733035.png" /> is an <b>inner proudct</b> and <img src="ltximg/NumericalAnalysis_81f652df715f7b04c45a4f2fbe4d6e966fe7287c.png" alt="NumericalAnalysis_81f652df715f7b04c45a4f2fbe4d6e966fe7287c.png" />
 is a <b>norm</b>
 </p>
 
 
 <p>
 Hence, The general least squares approximation problem is to find a
-generalized polynomial <img src="ltximg/NumericalAnalysis_58b382be591752c27715cfb5eb94b244bdefad94.png" alt="NumericalAnalysis_58b382be591752c27715cfb5eb94b244bdefad94.png" /> such that <img src="ltximg/NumericalAnalysis_120b5af170841c83b6707eb3d264600770a70a99.png" alt="NumericalAnalysis_120b5af170841c83b6707eb3d264600770a70a99.png" /> is
+generalized polynomial <img src="ltximg/NumericalAnalysis_ce48ce9a5de18eb2ec96888c37c5630e4bdcf140.png" alt="NumericalAnalysis_ce48ce9a5de18eb2ec96888c37c5630e4bdcf140.png" /> such that <img src="ltximg/NumericalAnalysis_0c906344fbc3ca4d4c51e81eb946ba8387226e05.png" alt="NumericalAnalysis_0c906344fbc3ca4d4c51e81eb946ba8387226e05.png" /> is
 minimized. 
 </p>
 
 
 <p>
-Let <img src="ltximg/NumericalAnalysis_2870e98aaf8970cebcf8938f9d68b279393486e7.png" alt="NumericalAnalysis_2870e98aaf8970cebcf8938f9d68b279393486e7.png" />. 
-<img src="ltximg/NumericalAnalysis_c0df1fdc40ed3343297ab1a06b60c5158794dfc7.png" alt="NumericalAnalysis_c0df1fdc40ed3343297ab1a06b60c5158794dfc7.png" />.
+Let <img src="ltximg/NumericalAnalysis_83a0b32c1a88eddcf86250bf59090cc4b5b195bd.png" alt="NumericalAnalysis_83a0b32c1a88eddcf86250bf59090cc4b5b195bd.png" />. 
+<img src="ltximg/NumericalAnalysis_271e2f4e19e25471a0b49e006ca875f4f20e7675.png" alt="NumericalAnalysis_271e2f4e19e25471a0b49e006ca875f4f20e7675.png" />.
 </p>
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_79b30957dafec81fa4a40c7c3a4ba55eeb4e6599.png" alt="NumericalAnalysis_79b30957dafec81fa4a40c7c3a4ba55eeb4e6599.png" />
+<img src="ltximg/NumericalAnalysis_f4745eb442504e083868786b337dc03c126310bf.png" alt="NumericalAnalysis_f4745eb442504e083868786b337dc03c126310bf.png" />
 </span>
 <span class="equation-label">
-45
+50
 </span>
 </div>
 
 
 <p>
-Example. When approximating <img src="ltximg/NumericalAnalysis_ca10f440c98a67626ea24e150f727b112672a017.png" alt="NumericalAnalysis_ca10f440c98a67626ea24e150f727b112672a017.png" /> with <img src="ltximg/NumericalAnalysis_67b7c6de82d16ad930d60818363623ec9d9d740d.png" alt="NumericalAnalysis_67b7c6de82d16ad930d60818363623ec9d9d740d.png" /> and
-<img src="ltximg/NumericalAnalysis_f8f2aa58e7e43be7516040d3e2948e41713fc98a.png" alt="NumericalAnalysis_f8f2aa58e7e43be7516040d3e2948e41713fc98a.png" />, then
+Example. When approximating <img src="ltximg/NumericalAnalysis_b13e50645a854c1297e956d45e3c191a0a72469c.png" alt="NumericalAnalysis_b13e50645a854c1297e956d45e3c191a0a72469c.png" /> with <img src="ltximg/NumericalAnalysis_75154f14007c969f2f89139ed7741f2f9f1ca009.png" alt="NumericalAnalysis_75154f14007c969f2f89139ed7741f2f9f1ca009.png" /> and
+<img src="ltximg/NumericalAnalysis_67ed4e422113c2de3d00df6c32f6a754d0a89098.png" alt="NumericalAnalysis_67ed4e422113c2de3d00df6c32f6a754d0a89098.png" />, then
 </p>
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_f4c3e7983682fea94dd60f2aabb4658f4f7ae1dd.png" alt="NumericalAnalysis_f4c3e7983682fea94dd60f2aabb4658f4f7ae1dd.png" />
+<img src="ltximg/NumericalAnalysis_ee0ee3312dcdc395661b7f62ad62b2fcc46991fd.png" alt="NumericalAnalysis_ee0ee3312dcdc395661b7f62ad62b2fcc46991fd.png" />
 </span>
 <span class="equation-label">
-46
+51
 </span>
 </div>
 <p>
@@ -2051,10 +2226,10 @@ is <b>orthogonal</b>, then the matrix will be diagonal. And
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_7aa71c6e2beef44c4dfbe5d61c4f1dfecc03598f.png" alt="NumericalAnalysis_7aa71c6e2beef44c4dfbe5d61c4f1dfecc03598f.png" />
+<img src="ltximg/NumericalAnalysis_17f61f72d2aee0227f7ae57420a9dd593bd8b20e.png" alt="NumericalAnalysis_17f61f72d2aee0227f7ae57420a9dd593bd8b20e.png" />
 </span>
 <span class="equation-label">
-47
+52
 </span>
 </div>
 
@@ -2065,10 +2240,10 @@ is <b>orthogonal</b>, then the matrix will be diagonal. And
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_77992faab850f9a10b56d5a59d7085bfa9fb2d70.png" alt="NumericalAnalysis_77992faab850f9a10b56d5a59d7085bfa9fb2d70.png" />
+<img src="ltximg/NumericalAnalysis_0a9c86d37230a44de27fe637e64fc10c1b063768.png" alt="NumericalAnalysis_0a9c86d37230a44de27fe637e64fc10c1b063768.png" />
 </span>
 <span class="equation-label">
-48
+53
 </span>
 </div>
 
@@ -2110,12 +2285,12 @@ Example. Approximate
 </table>
 
 <p>
-with <img src="ltximg/NumericalAnalysis_aa31f719c433c10850c58d782d3f29fccd8b5e91.png" alt="NumericalAnalysis_aa31f719c433c10850c58d782d3f29fccd8b5e91.png" />
+with <img src="ltximg/NumericalAnalysis_39e320be840512d0bb9a2572880cee56229310b6.png" alt="NumericalAnalysis_39e320be840512d0bb9a2572880cee56229310b6.png" />
 </p>
 
 
 <p>
-Solution. <img src="ltximg/NumericalAnalysis_9efeecef68a3ff2e375c25ce498f39af188f0f42.png" alt="NumericalAnalysis_9efeecef68a3ff2e375c25ce498f39af188f0f42.png" />. <img src="ltximg/NumericalAnalysis_e751e6ab73c6a7e68b6c6159c68ec487f40df745.png" alt="NumericalAnalysis_e751e6ab73c6a7e68b6c6159c68ec487f40df745.png" />
+Solution. <img src="ltximg/NumericalAnalysis_282012096e2a50a28095359c5d55464301e5a44c.png" alt="NumericalAnalysis_282012096e2a50a28095359c5d55464301e5a44c.png" />. <img src="ltximg/NumericalAnalysis_9cc17ae4143b81c43da46d1dcd81fbb10308ec37.png" alt="NumericalAnalysis_9cc17ae4143b81c43da46d1dcd81fbb10308ec37.png" />
 </p>
 </div>
 </div>
@@ -2123,22 +2298,22 @@ Solution. <img src="ltximg/NumericalAnalysis_9efeecef68a3ff2e375c25ce498f39af188
 <h3 id="org6dfce5b">8.3 Chebyshev polynomials and economization of power series</h3>
 <div class="outline-text-3" id="text-org6dfce5b">
 <p>
-Minimize <img src="ltximg/NumericalAnalysis_7d946681b93201f9594f26ddf1e78bf7521fef88.png" alt="NumericalAnalysis_7d946681b93201f9594f26ddf1e78bf7521fef88.png" />, 
+Minimize <img src="ltximg/NumericalAnalysis_a992f569c705073c453a6c35217053f0d44a1147.png" alt="NumericalAnalysis_a992f569c705073c453a6c35217053f0d44a1147.png" />, 
 </p>
 
 <ol class="org-ol">
 <li><p>
-Find a polynomial <img src="ltximg/NumericalAnalysis_d334845855f66d0d826edbfc71f9a10e744c3b58.png" alt="NumericalAnalysis_d334845855f66d0d826edbfc71f9a10e744c3b58.png" /> of degree n s.t. <img src="ltximg/NumericalAnalysis_980f957d1cdf81bb2882a4695bf3c950d14ef87a.png" alt="NumericalAnalysis_980f957d1cdf81bb2882a4695bf3c950d14ef87a.png" /> is
+Find a polynomial <img src="ltximg/NumericalAnalysis_a53114b845815c7b4312812dfa209f05b059af2b.png" alt="NumericalAnalysis_a53114b845815c7b4312812dfa209f05b059af2b.png" /> of degree n s.t. <img src="ltximg/NumericalAnalysis_5852da903da18c12a95a9698671988a95b051c3e.png" alt="NumericalAnalysis_5852da903da18c12a95a9698671988a95b051c3e.png" /> is
 minimized
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_c0b208f9dec860528945e66f1c6808db8d17af65.png" alt="NumericalAnalysis_c0b208f9dec860528945e66f1c6808db8d17af65.png" />
+<img src="ltximg/NumericalAnalysis_b5181eee438e829b1cb6cbbef17f238c4724b537.png" alt="NumericalAnalysis_b5181eee438e829b1cb6cbbef17f238c4724b537.png" />
 </span>
 <span class="equation-label">
-48
+53
 </span>
 </div>
 
@@ -2146,127 +2321,127 @@ minimized
 We can estimate the features of the polynomial
 </p>
 <ol class="org-ol">
-<li>If <img src="ltximg/NumericalAnalysis_2eee3f0c200f362e46ef94bc48aef6e5133e0957.png" alt="NumericalAnalysis_2eee3f0c200f362e46ef94bc48aef6e5133e0957.png" /> and f is a polynomial of degree
-n, then there exists a polynomial <img src="ltximg/NumericalAnalysis_d334845855f66d0d826edbfc71f9a10e744c3b58.png" alt="NumericalAnalysis_d334845855f66d0d826edbfc71f9a10e744c3b58.png" /> s.t. 
-<img src="ltximg/NumericalAnalysis_980f957d1cdf81bb2882a4695bf3c950d14ef87a.png" alt="NumericalAnalysis_980f957d1cdf81bb2882a4695bf3c950d14ef87a.png" /> is minimized</li>
-<li><img src="ltximg/NumericalAnalysis_d334845855f66d0d826edbfc71f9a10e744c3b58.png" alt="NumericalAnalysis_d334845855f66d0d826edbfc71f9a10e744c3b58.png" /> exists, and must have both + and - deviation points</li>
+<li>If <img src="ltximg/NumericalAnalysis_d556f11fb97dad61e8821632cc290787b872574e.png" alt="NumericalAnalysis_d556f11fb97dad61e8821632cc290787b872574e.png" /> and f is a polynomial of degree
+n, then there exists a polynomial <img src="ltximg/NumericalAnalysis_a53114b845815c7b4312812dfa209f05b059af2b.png" alt="NumericalAnalysis_a53114b845815c7b4312812dfa209f05b059af2b.png" /> s.t. 
+<img src="ltximg/NumericalAnalysis_5852da903da18c12a95a9698671988a95b051c3e.png" alt="NumericalAnalysis_5852da903da18c12a95a9698671988a95b051c3e.png" /> is minimized</li>
+<li><img src="ltximg/NumericalAnalysis_a53114b845815c7b4312812dfa209f05b059af2b.png" alt="NumericalAnalysis_a53114b845815c7b4312812dfa209f05b059af2b.png" /> exists, and must have both + and - deviation points</li>
 <li><div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_75f587b045a4aea7a9f310e83f94bee28ed5dcf0.png" alt="NumericalAnalysis_75f587b045a4aea7a9f310e83f94bee28ed5dcf0.png" />
+<img src="ltximg/NumericalAnalysis_a24bc95ff1938ed5389d7dd573b33de159ceabb9.png" alt="NumericalAnalysis_a24bc95ff1938ed5389d7dd573b33de159ceabb9.png" />
 </span>
 <span class="equation-label">
-48
+53
 </span>
 </div>
 
 <p>
-The set <img src="ltximg/NumericalAnalysis_97b2fdaed563da3849a6b002424bc9d3d2eefe7f.png" alt="NumericalAnalysis_97b2fdaed563da3849a6b002424bc9d3d2eefe7f.png" /> is called the {Chebyshev altenating
+The set <img src="ltximg/NumericalAnalysis_da6b61c2d0a9d922e5612f757e8e046e817ed907.png" alt="NumericalAnalysis_da6b61c2d0a9d922e5612f757e8e046e817ed907.png" /> is called the {Chebyshev altenating
 sequence} 
 </p></li>
 </ol></li>
 
 <li><p>
-Determine the interpolating points <img src="ltximg/NumericalAnalysis_0c4931e6364ed61b0e38e0aa7c1f723ea78f6cbc.png" alt="NumericalAnalysis_0c4931e6364ed61b0e38e0aa7c1f723ea78f6cbc.png" /> s.t. <img src="ltximg/NumericalAnalysis_d334845855f66d0d826edbfc71f9a10e744c3b58.png" alt="NumericalAnalysis_d334845855f66d0d826edbfc71f9a10e744c3b58.png" />
+Determine the interpolating points <img src="ltximg/NumericalAnalysis_1f55592643613f42382784734a77b7dd0d41b5c7.png" alt="NumericalAnalysis_1f55592643613f42382784734a77b7dd0d41b5c7.png" /> s.t. <img src="ltximg/NumericalAnalysis_a53114b845815c7b4312812dfa209f05b059af2b.png" alt="NumericalAnalysis_a53114b845815c7b4312812dfa209f05b059af2b.png" />
 minimizes the remainder
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_ccf435f51d61df7c27bb8ed673aec7c95ea260b0.png" alt="NumericalAnalysis_ccf435f51d61df7c27bb8ed673aec7c95ea260b0.png" />
+<img src="ltximg/NumericalAnalysis_17851581bcf2163cd6479df069c2710fce107813.png" alt="NumericalAnalysis_17851581bcf2163cd6479df069c2710fce107813.png" />
 </span>
 <span class="equation-label">
-48
+53
 </span>
 </div>
 
 <p>
-2.1 Find <img src="ltximg/NumericalAnalysis_d21f66286b44b662470ed0341d579448bfad9101.png" alt="NumericalAnalysis_d21f66286b44b662470ed0341d579448bfad9101.png" /> s.t. <img src="ltximg/NumericalAnalysis_b314f125517da7452b7e27e4fdff97f5e793240c.png" alt="NumericalAnalysis_b314f125517da7452b7e27e4fdff97f5e793240c.png" /> is minimized on
-<img src="ltximg/NumericalAnalysis_91e71e41f20861fbe343d2ca2818a0ff900ad637.png" alt="NumericalAnalysis_91e71e41f20861fbe343d2ca2818a0ff900ad637.png" />, where <img src="ltximg/NumericalAnalysis_df3fe5d3785d2da249fdb84c49025e40f7994019.png" alt="NumericalAnalysis_df3fe5d3785d2da249fdb84c49025e40f7994019.png" />.
+2.1 Find <img src="ltximg/NumericalAnalysis_72fd0b19faa58dcae2824769f7d345057a0cb8ea.png" alt="NumericalAnalysis_72fd0b19faa58dcae2824769f7d345057a0cb8ea.png" /> s.t. <img src="ltximg/NumericalAnalysis_140a58ff5e1d31261a20284fa40d2d81f3574314.png" alt="NumericalAnalysis_140a58ff5e1d31261a20284fa40d2d81f3574314.png" /> is minimized on
+<img src="ltximg/NumericalAnalysis_91f11c79bd87806c47156a1aeabb8dfc4b255676.png" alt="NumericalAnalysis_91f11c79bd87806c47156a1aeabb8dfc4b255676.png" />, where <img src="ltximg/NumericalAnalysis_cea243aa8ac45151384a5df72c26ed6b00b3ab15.png" alt="NumericalAnalysis_cea243aa8ac45151384a5df72c26ed6b00b3ab15.png" />.
 </p>
 
 <p>
-Since <img src="ltximg/NumericalAnalysis_1ce5233155a3ddaee070c61156b28a645697e123.png" alt="NumericalAnalysis_1ce5233155a3ddaee070c61156b28a645697e123.png" />, the problem becomes to
+Since <img src="ltximg/NumericalAnalysis_03ce38d2fa3596fcf0fb9bd0b148f42d173f256e.png" alt="NumericalAnalysis_03ce38d2fa3596fcf0fb9bd0b148f42d173f256e.png" />, the problem becomes to
 </p></li>
-<li>Find a polynomial <img src="ltximg/NumericalAnalysis_d47ce96c171ed15df5aba3ff936bc490ac9a4b86.png" alt="NumericalAnalysis_d47ce96c171ed15df5aba3ff936bc490ac9a4b86.png" /> is
-minimized on <img src="ltximg/NumericalAnalysis_91e71e41f20861fbe343d2ca2818a0ff900ad637.png" alt="NumericalAnalysis_91e71e41f20861fbe343d2ca2818a0ff900ad637.png" /></li>
+<li>Find a polynomial <img src="ltximg/NumericalAnalysis_068ecaff95dcc0eb97fce8b0f976c00aed8cde96.png" alt="NumericalAnalysis_068ecaff95dcc0eb97fce8b0f976c00aed8cde96.png" /> is
+minimized on <img src="ltximg/NumericalAnalysis_91f11c79bd87806c47156a1aeabb8dfc4b255676.png" alt="NumericalAnalysis_91f11c79bd87806c47156a1aeabb8dfc4b255676.png" /></li>
 </ol>
 
 
 <p>
-<b>Chebyshev polynomials</b>. Consider the <img src="ltximg/NumericalAnalysis_543ef03399d99a23b4fac3ad0cf5c60976462f21.png" alt="NumericalAnalysis_543ef03399d99a23b4fac3ad0cf5c60976462f21.png" /> extreme values of <img src="ltximg/NumericalAnalysis_d9b7fe32f1c1da55f29294f27ba5bc20593905d8.png" alt="NumericalAnalysis_d9b7fe32f1c1da55f29294f27ba5bc20593905d8.png" />
-on <img src="ltximg/NumericalAnalysis_b8bc7d96f9bad4ab568fc6c3ec2ab9dc3acb55e7.png" alt="NumericalAnalysis_b8bc7d96f9bad4ab568fc6c3ec2ab9dc3acb55e7.png" />.
+<b>Chebyshev polynomials</b>. Consider the <img src="ltximg/NumericalAnalysis_a3ce2600b8899d312d359507294e3b81bce55141.png" alt="NumericalAnalysis_a3ce2600b8899d312d359507294e3b81bce55141.png" /> extreme values of <img src="ltximg/NumericalAnalysis_a1e01f9bf78e60f900704400a592d164df96d7b8.png" alt="NumericalAnalysis_a1e01f9bf78e60f900704400a592d164df96d7b8.png" />
+on <img src="ltximg/NumericalAnalysis_481ae6a82f8ddd6aba7dbc0970ae716657460620.png" alt="NumericalAnalysis_481ae6a82f8ddd6aba7dbc0970ae716657460620.png" />.
 </p>
 
 <p>
-Let <img src="ltximg/NumericalAnalysis_bebef37a7726f4c59a5ec15c156621354012e842.png" alt="NumericalAnalysis_bebef37a7726f4c59a5ec15c156621354012e842.png" />, then <img src="ltximg/NumericalAnalysis_0be124292a1f2c9109dc9508d5f72800ab98831e.png" alt="NumericalAnalysis_0be124292a1f2c9109dc9508d5f72800ab98831e.png" />, <img src="ltximg/NumericalAnalysis_1e1d9b920cef7dfe8464e14671d8f8aed193b020.png" alt="NumericalAnalysis_1e1d9b920cef7dfe8464e14671d8f8aed193b020.png" /> is called the .
+Let <img src="ltximg/NumericalAnalysis_50bef9fbf8bde03c5a2f1098606a3bce82683d68.png" alt="NumericalAnalysis_50bef9fbf8bde03c5a2f1098606a3bce82683d68.png" />, then <img src="ltximg/NumericalAnalysis_afbc1b2042ad7c76c1b9ac3957171ec958d132b7.png" alt="NumericalAnalysis_afbc1b2042ad7c76c1b9ac3957171ec958d132b7.png" />, <img src="ltximg/NumericalAnalysis_26bfb35a803b33172230702935a6d74d2230dc3c.png" alt="NumericalAnalysis_26bfb35a803b33172230702935a6d74d2230dc3c.png" /> is called the .
 </p>
 
 <p>
 Properties:
 </p>
 <ol class="org-ol">
-<li><img src="ltximg/NumericalAnalysis_f5d6a368ce5468a6f6d7e3a4c72206b385260198.png" alt="NumericalAnalysis_f5d6a368ce5468a6f6d7e3a4c72206b385260198.png" /></li>
-<li><img src="ltximg/NumericalAnalysis_949fea9ce56bc98848c21246c950d42fb86d0746.png" alt="NumericalAnalysis_949fea9ce56bc98848c21246c950d42fb86d0746.png" /> has <img src="ltximg/NumericalAnalysis_03a27c82ed1b197067dbae076438aa1a2314c522.png" alt="NumericalAnalysis_03a27c82ed1b197067dbae076438aa1a2314c522.png" /> roots <img src="ltximg/NumericalAnalysis_4f3703eaad4b627272346d23d724a76b2a1c4775.png" alt="NumericalAnalysis_4f3703eaad4b627272346d23d724a76b2a1c4775.png" /></li>
+<li><img src="ltximg/NumericalAnalysis_4826068ea3022ea06cc7cff4568aa6d20da22ac1.png" alt="NumericalAnalysis_4826068ea3022ea06cc7cff4568aa6d20da22ac1.png" /></li>
+<li><img src="ltximg/NumericalAnalysis_a2dec0d0154ac209b805e2fc873b46c484c8573c.png" alt="NumericalAnalysis_a2dec0d0154ac209b805e2fc873b46c484c8573c.png" /> has <img src="ltximg/NumericalAnalysis_ac4e677c1ff6181e4eaf5ea73c75e784beaf4ad1.png" alt="NumericalAnalysis_ac4e677c1ff6181e4eaf5ea73c75e784beaf4ad1.png" /> roots <img src="ltximg/NumericalAnalysis_95bc22aad5441737ea620a89f808293c017b828e.png" alt="NumericalAnalysis_95bc22aad5441737ea620a89f808293c017b828e.png" /></li>
 <li><p>
-<img src="ltximg/NumericalAnalysis_b6d2927a7a0cbe8142ce54aca5625637d26c51ab.png" alt="NumericalAnalysis_b6d2927a7a0cbe8142ce54aca5625637d26c51ab.png" /> has recurrence relation
+<img src="ltximg/NumericalAnalysis_2e005de5e85b3799e88b841ae4450df095c040a5.png" alt="NumericalAnalysis_2e005de5e85b3799e88b841ae4450df095c040a5.png" /> has recurrence relation
 </p>
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_3921aab2c26680f241ed0b1a70707b3d5df326aa.png" alt="NumericalAnalysis_3921aab2c26680f241ed0b1a70707b3d5df326aa.png" />
+<img src="ltximg/NumericalAnalysis_c99a9e4cbfab10bec5e4a028dd2b0d17facaf6c2.png" alt="NumericalAnalysis_c99a9e4cbfab10bec5e4a028dd2b0d17facaf6c2.png" />
 </span>
 <span class="equation-label">
-49
+54
 </span>
 </div></li>
 <li><p>
-<img src="ltximg/NumericalAnalysis_3731a9fea9b5ffdfd7c03a5d4778250f7a96a483.png" alt="NumericalAnalysis_3731a9fea9b5ffdfd7c03a5d4778250f7a96a483.png" /> are orthogonal on <img src="ltximg/NumericalAnalysis_91e71e41f20861fbe343d2ca2818a0ff900ad637.png" alt="NumericalAnalysis_91e71e41f20861fbe343d2ca2818a0ff900ad637.png" /> w.r.t. weight
-function <img src="ltximg/NumericalAnalysis_aa0293bb40d855aa7e106cd9f71b65e5b83805d2.png" alt="NumericalAnalysis_aa0293bb40d855aa7e106cd9f71b65e5b83805d2.png" />
+<img src="ltximg/NumericalAnalysis_2c73e54ee291d697a3b0fa52d02b585ac34978ca.png" alt="NumericalAnalysis_2c73e54ee291d697a3b0fa52d02b585ac34978ca.png" /> are orthogonal on <img src="ltximg/NumericalAnalysis_91f11c79bd87806c47156a1aeabb8dfc4b255676.png" alt="NumericalAnalysis_91f11c79bd87806c47156a1aeabb8dfc4b255676.png" /> w.r.t. weight
+function <img src="ltximg/NumericalAnalysis_19e2f8bb1c9bbd6eea989c923a7a7cc888867fdb.png" alt="NumericalAnalysis_19e2f8bb1c9bbd6eea989c923a7a7cc888867fdb.png" />
 </p>
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_e2b6eb2e9f505d305825d9ccaefc7ecec4e33619.png" alt="NumericalAnalysis_e2b6eb2e9f505d305825d9ccaefc7ecec4e33619.png" />
+<img src="ltximg/NumericalAnalysis_627311599964afea1ea11b3d03c7f23836b28fb6.png" alt="NumericalAnalysis_627311599964afea1ea11b3d03c7f23836b28fb6.png" />
 </span>
 <span class="equation-label">
-50
+55
 </span>
 </div></li>
 </ol>
 
 
 <p>
-<img src="ltximg/NumericalAnalysis_5b45781e903187545e7f8bfaab3578479e764e8e.png" alt="NumericalAnalysis_5b45781e903187545e7f8bfaab3578479e764e8e.png" />. Let <img src="ltximg/NumericalAnalysis_db95ecd298a6335e9c0a56249dd0b9f13c20c140.png" alt="NumericalAnalysis_db95ecd298a6335e9c0a56249dd0b9f13c20c140.png" /> ={monic polynomials
+<img src="ltximg/NumericalAnalysis_3f7df646ad8125be134df25bc2a017449a0cc5f7.png" alt="NumericalAnalysis_3f7df646ad8125be134df25bc2a017449a0cc5f7.png" />. Let <img src="ltximg/NumericalAnalysis_8e30e03b3ec87bac12fd8f645203206ca54411ed.png" alt="NumericalAnalysis_8e30e03b3ec87bac12fd8f645203206ca54411ed.png" /> ={monic polynomials
 of degree n}. 
 </p>
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_3b8408574b95a933d63d0c32d0f7417548359575.png" alt="NumericalAnalysis_3b8408574b95a933d63d0c32d0f7417548359575.png" />
+<img src="ltximg/NumericalAnalysis_50c2b5057648b821196a0f63e44984e1bbe65ba0.png" alt="NumericalAnalysis_50c2b5057648b821196a0f63e44984e1bbe65ba0.png" />
 </span>
 <span class="equation-label">
-51
+56
 </span>
 </div>
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_ccf435f51d61df7c27bb8ed673aec7c95ea260b0.png" alt="NumericalAnalysis_ccf435f51d61df7c27bb8ed673aec7c95ea260b0.png" />
+<img src="ltximg/NumericalAnalysis_17851581bcf2163cd6479df069c2710fce107813.png" alt="NumericalAnalysis_17851581bcf2163cd6479df069c2710fce107813.png" />
 </span>
 <span class="equation-label">
-52
+57
 </span>
 </div>
 <p>
-Take the <img src="ltximg/NumericalAnalysis_543ef03399d99a23b4fac3ad0cf5c60976462f21.png" alt="NumericalAnalysis_543ef03399d99a23b4fac3ad0cf5c60976462f21.png" /> roots of <img src="ltximg/NumericalAnalysis_65967fd06d6017e64e7cea4562796455c5107280.png" alt="NumericalAnalysis_65967fd06d6017e64e7cea4562796455c5107280.png" /> as the interpolating points, then the
-interpolating polynomial <img src="ltximg/NumericalAnalysis_d334845855f66d0d826edbfc71f9a10e744c3b58.png" alt="NumericalAnalysis_d334845855f66d0d826edbfc71f9a10e744c3b58.png" /> assumes the minimum upper bound of the
-absolute error <img src="ltximg/NumericalAnalysis_b0b84d64252be4fc2aca15544dc977cec8ba0f79.png" alt="NumericalAnalysis_b0b84d64252be4fc2aca15544dc977cec8ba0f79.png" />
+Take the <img src="ltximg/NumericalAnalysis_a3ce2600b8899d312d359507294e3b81bce55141.png" alt="NumericalAnalysis_a3ce2600b8899d312d359507294e3b81bce55141.png" /> roots of <img src="ltximg/NumericalAnalysis_2c18be640b2b4f667e4ca3b5782e1c70c1083cd9.png" alt="NumericalAnalysis_2c18be640b2b4f667e4ca3b5782e1c70c1083cd9.png" /> as the interpolating points, then the
+interpolating polynomial <img src="ltximg/NumericalAnalysis_a53114b845815c7b4312812dfa209f05b059af2b.png" alt="NumericalAnalysis_a53114b845815c7b4312812dfa209f05b059af2b.png" /> assumes the minimum upper bound of the
+absolute error <img src="ltximg/NumericalAnalysis_f5c732c8042fd9154c9a728286df4d1c3113c9aa.png" alt="NumericalAnalysis_f5c732c8042fd9154c9a728286df4d1c3113c9aa.png" />
 </p>
 
 
 <p>
-<b>Economization of power series</b>. Given <img src="ltximg/NumericalAnalysis_38daa0f6aea0c9fa74d55d3bed83f4df31df44dc.png" alt="NumericalAnalysis_38daa0f6aea0c9fa74d55d3bed83f4df31df44dc.png" />, economization of
+<b>Economization of power series</b>. Given <img src="ltximg/NumericalAnalysis_01d9b3f7620a83434d3f15236a8cb3910dff53ff.png" alt="NumericalAnalysis_01d9b3f7620a83434d3f15236a8cb3910dff53ff.png" />, economization of
 pppppppower series is to reduce the degree of polynomial with a <b>minimal loss of
 accuracy</b> 
 </p>
@@ -2278,50 +2453,50 @@ Consider approximating an arbitrary n-th degree polynomial
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_a99d4d538fa959853912d6b559805a4fbaaadf83.png" alt="NumericalAnalysis_a99d4d538fa959853912d6b559805a4fbaaadf83.png" />
+<img src="ltximg/NumericalAnalysis_8eb955f8245a2b9e3c2d88ebf654d572735ec394.png" alt="NumericalAnalysis_8eb955f8245a2b9e3c2d88ebf654d572735ec394.png" />
 </span>
 <span class="equation-label">
-53
+58
 </span>
 </div>
 <p>
-with a polynomial <img src="ltximg/NumericalAnalysis_bad0cd44efa3731a24dfd99e0bc2657691c6e797.png" alt="NumericalAnalysis_bad0cd44efa3731a24dfd99e0bc2657691c6e797.png" /> by removing an n-th degree polynomial <img src="ltximg/NumericalAnalysis_4124a875c9f164262a089cb9269051517c98a5f9.png" alt="NumericalAnalysis_4124a875c9f164262a089cb9269051517c98a5f9.png" />
-that has the coefficient <img src="ltximg/NumericalAnalysis_f3d2a8798395c155d16ec39f59a078048f0e2ccb.png" alt="NumericalAnalysis_f3d2a8798395c155d16ec39f59a078048f0e2ccb.png" /> for <img src="ltximg/NumericalAnalysis_f676f0b3bb67d41d159cc5e7cd1290b2d6f50d08.png" alt="NumericalAnalysis_f676f0b3bb67d41d159cc5e7cd1290b2d6f50d08.png" />. Then
+with a polynomial <img src="ltximg/NumericalAnalysis_3758db31c0e8d2862d3668c486e03c625dd78c59.png" alt="NumericalAnalysis_3758db31c0e8d2862d3668c486e03c625dd78c59.png" /> by removing an n-th degree polynomial <img src="ltximg/NumericalAnalysis_c7152eaa6ecbb6daa3ab168108548e51be5629c5.png" alt="NumericalAnalysis_c7152eaa6ecbb6daa3ab168108548e51be5629c5.png" />
+that has the coefficient <img src="ltximg/NumericalAnalysis_d853504bb045dad6b17a247082dbd0617682f708.png" alt="NumericalAnalysis_d853504bb045dad6b17a247082dbd0617682f708.png" /> for <img src="ltximg/NumericalAnalysis_7d42dcad5beba5b9b54138ba2465f6b6673aef50.png" alt="NumericalAnalysis_7d42dcad5beba5b9b54138ba2465f6b6673aef50.png" />. Then
 </p>
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_a190843ba6f8da5cd94c743b2ecded58d3576fee.png" alt="NumericalAnalysis_a190843ba6f8da5cd94c743b2ecded58d3576fee.png" />
+<img src="ltximg/NumericalAnalysis_e82720943cfe5fd35709b7a388f5f2b2afaabe1d.png" alt="NumericalAnalysis_e82720943cfe5fd35709b7a388f5f2b2afaabe1d.png" />
 </span>
 <span class="equation-label">
-54
+59
 </span>
 </div>
 <p>
-To minimize the loss of accuracy, <img src="ltximg/NumericalAnalysis_e08d140693c1a83af6179a45752858d5c1f093ea.png" alt="NumericalAnalysis_e08d140693c1a83af6179a45752858d5c1f093ea.png" />
+To minimize the loss of accuracy, <img src="ltximg/NumericalAnalysis_f5da050b063df3d3101efee15f022b8988d9c131.png" alt="NumericalAnalysis_f5da050b063df3d3101efee15f022b8988d9c131.png" />
 </p>
 
 
 <p>
-Example. The 4-th order Taylor polynomial for <img src="ltximg/NumericalAnalysis_937294cf0d97542af4f8392af26a423e9afba963.png" alt="NumericalAnalysis_937294cf0d97542af4f8392af26a423e9afba963.png" /> on <img src="ltximg/NumericalAnalysis_91e71e41f20861fbe343d2ca2818a0ff900ad637.png" alt="NumericalAnalysis_91e71e41f20861fbe343d2ca2818a0ff900ad637.png" /> is
+Example. The 4-th order Taylor polynomial for <img src="ltximg/NumericalAnalysis_369424b24efaaf6da98c03d1192c1b60a70e334a.png" alt="NumericalAnalysis_369424b24efaaf6da98c03d1192c1b60a70e334a.png" /> on <img src="ltximg/NumericalAnalysis_91f11c79bd87806c47156a1aeabb8dfc4b255676.png" alt="NumericalAnalysis_91f11c79bd87806c47156a1aeabb8dfc4b255676.png" /> is
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_3e2531d0d8e00192c2bc78527ff72b7048523ef9.png" alt="NumericalAnalysis_3e2531d0d8e00192c2bc78527ff72b7048523ef9.png" />
+<img src="ltximg/NumericalAnalysis_1b8b20d5ee99d722aa7dbfd3f2354a858fd4fa57.png" alt="NumericalAnalysis_1b8b20d5ee99d722aa7dbfd3f2354a858fd4fa57.png" />
 </span>
 <span class="equation-label">
-55
+60
 </span>
 </div>
 <p>
 .The upper bound of truncation error is 
-<img src="ltximg/NumericalAnalysis_097695628258cc1b1830188182fc2594b288513d.png" alt="NumericalAnalysis_097695628258cc1b1830188182fc2594b288513d.png" />
+<img src="ltximg/NumericalAnalysis_2ed422374fec933083b7cbff9fea9ee76b5c0856.png" alt="NumericalAnalysis_2ed422374fec933083b7cbff9fea9ee76b5c0856.png" />
 </p>
 
 <p>
-solution. <img src="ltximg/NumericalAnalysis_0cf2767a8f9b1dce2287cb3554f6539cb464a1e3.png" alt="NumericalAnalysis_0cf2767a8f9b1dce2287cb3554f6539cb464a1e3.png" />
+solution. <img src="ltximg/NumericalAnalysis_badd61e196fced79b9ed5221a637312f32b9e170.png" alt="NumericalAnalysis_badd61e196fced79b9ed5221a637312f32b9e170.png" />
 </p>
 </div>
 </div>
@@ -2335,26 +2510,26 @@ solution. <img src="ltximg/NumericalAnalysis_0cf2767a8f9b1dce2287cb3554f6539cb46
 <div class="outline-text-3" id="text-org65aeb87">
 <p>
 <b>the original method</b>
-Assumptions: A is an <img src="ltximg/NumericalAnalysis_bcc3c84fa4b8743adbb4aac7d31ec09fc0536cbf.png" alt="NumericalAnalysis_bcc3c84fa4b8743adbb4aac7d31ec09fc0536cbf.png" /> matrix with eigenvalues satisfying
-<img src="ltximg/NumericalAnalysis_975834575070e523268f2840d9dfd27e33b2da10.png" alt="NumericalAnalysis_975834575070e523268f2840d9dfd27e33b2da10.png" />
+Assumptions: A is an <img src="ltximg/NumericalAnalysis_d6ad36ef91c2c7cb28fcf2976480cd454f0dc17c.png" alt="NumericalAnalysis_d6ad36ef91c2c7cb28fcf2976480cd454f0dc17c.png" /> matrix with eigenvalues satisfying
+<img src="ltximg/NumericalAnalysis_1f85e7154b0d533f2f7309617cb6ecdd23f49049.png" alt="NumericalAnalysis_1f85e7154b0d533f2f7309617cb6ecdd23f49049.png" />
 </p>
 
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/NumericalAnalysis_4f6c034fc59635e2f5ca8a3510ce52dbc93ef3ae.png" alt="NumericalAnalysis_4f6c034fc59635e2f5ca8a3510ce52dbc93ef3ae.png" />
+<img src="ltximg/NumericalAnalysis_03f2a1d371439a3e409252d3a3b64ad55f3a6a54.png" alt="NumericalAnalysis_03f2a1d371439a3e409252d3a3b64ad55f3a6a54.png" />
 </span>
 <span class="equation-label">
-56
+61
 </span>
 </div>
 
 <p>
-<b>Normalization</b>. Suppose <img src="ltximg/NumericalAnalysis_ff2a624bf93cfb1a9e7882b0ed78e3c091febfac.png" alt="NumericalAnalysis_ff2a624bf93cfb1a9e7882b0ed78e3c091febfac.png" />. Let
-<img src="ltximg/NumericalAnalysis_0a5a260af92a00725eeb60accb5e44537db48c00.png" alt="NumericalAnalysis_0a5a260af92a00725eeb60accb5e44537db48c00.png" />.Then <img src="ltximg/NumericalAnalysis_999b105cb032e4c94b3fada66df82a75b1cb5ab2.png" alt="NumericalAnalysis_999b105cb032e4c94b3fada66df82a75b1cb5ab2.png" /> and
-<img src="ltximg/NumericalAnalysis_5150acbeab0e8cd23ef243bd5823892886c5e13b.png" alt="NumericalAnalysis_5150acbeab0e8cd23ef243bd5823892886c5e13b.png" />.
-Then <img src="ltximg/NumericalAnalysis_4709f61a2f12bddf53edea5b7324b8386d2a2626.png" alt="NumericalAnalysis_4709f61a2f12bddf53edea5b7324b8386d2a2626.png" />.
-<img src="ltximg/NumericalAnalysis_1f023525dfd4397558e8ad8ab3a8788e6f79c25d.png" alt="NumericalAnalysis_1f023525dfd4397558e8ad8ab3a8788e6f79c25d.png" />
+<b>Normalization</b>. Suppose <img src="ltximg/NumericalAnalysis_a66c08344fd0490fa6db63fc2db087587e9e9784.png" alt="NumericalAnalysis_a66c08344fd0490fa6db63fc2db087587e9e9784.png" />. Let
+<img src="ltximg/NumericalAnalysis_94e4cb8cb5c2531bd01f5458ec24c800974af09d.png" alt="NumericalAnalysis_94e4cb8cb5c2531bd01f5458ec24c800974af09d.png" />.Then <img src="ltximg/NumericalAnalysis_a874afc73c746266df4ea9ffb39a412905a423d3.png" alt="NumericalAnalysis_a874afc73c746266df4ea9ffb39a412905a423d3.png" /> and
+<img src="ltximg/NumericalAnalysis_3867a13b0ee55cad3064dc6f8e7b3ef504745b0b.png" alt="NumericalAnalysis_3867a13b0ee55cad3064dc6f8e7b3ef504745b0b.png" />.
+Then <img src="ltximg/NumericalAnalysis_04b3d1353e26d977643664aab246290c51a049f9.png" alt="NumericalAnalysis_04b3d1353e26d977643664aab246290c51a049f9.png" />.
+<img src="ltximg/NumericalAnalysis_ca8c3d276676e372d3e5e8665524cae175394bde.png" alt="NumericalAnalysis_ca8c3d276676e372d3e5e8665524cae175394bde.png" />
 </p>
 
 <p>
@@ -2362,65 +2537,33 @@ Note:
 </p>
 <ol class="org-ol">
 <li>the method works for <b>multiple</b> eigenvalues
-<img src="ltximg/NumericalAnalysis_111a979b078fc2cb4e9e7e2d0d3c50833d01c91d.png" alt="NumericalAnalysis_111a979b078fc2cb4e9e7e2d0d3c50833d01c91d.png" /></li>
-<li>the method fails to converge if <img src="ltximg/NumericalAnalysis_dd9780feb93e2045c1989d38195bcfe1b0c39e94.png" alt="NumericalAnalysis_dd9780feb93e2045c1989d38195bcfe1b0c39e94.png" /></li>
-<li>Aitken's <img src="ltximg/NumericalAnalysis_8e930b55af4a73185f2c17e76ae531386005fbc5.png" alt="NumericalAnalysis_8e930b55af4a73185f2c17e76ae531386005fbc5.png" /> can be used</li>
+<img src="ltximg/NumericalAnalysis_9a04a631738fd6a06e619f77390c1277548a09c6.png" alt="NumericalAnalysis_9a04a631738fd6a06e619f77390c1277548a09c6.png" /></li>
+<li>the method fails to converge if <img src="ltximg/NumericalAnalysis_41cc136f6aa387a5caeca9474d74c2ffd692477b.png" alt="NumericalAnalysis_41cc136f6aa387a5caeca9474d74c2ffd692477b.png" /></li>
+<li>Aitken's <img src="ltximg/NumericalAnalysis_1a5c974f18cb7404c746938224674e616c363cc8.png" alt="NumericalAnalysis_1a5c974f18cb7404c746938224674e616c363cc8.png" /> can be used</li>
 </ol>
 
 
 <p>
-<b>Rate of convergence</b>. <img src="ltximg/NumericalAnalysis_6b96d5eec7cf7ccf583a5fe6158d953c6feb5f0f.png" alt="NumericalAnalysis_6b96d5eec7cf7ccf583a5fe6158d953c6feb5f0f.png" />.
-Make <img src="ltximg/NumericalAnalysis_70c9cf8f7aaa044ff9e232a2fcea5b6fbfaef117.png" alt="NumericalAnalysis_70c9cf8f7aaa044ff9e232a2fcea5b6fbfaef117.png" /> as small as possible.
-Assume <img src="ltximg/NumericalAnalysis_b35a6e04b8c85f3d1e94e2452bb2cf6ce90e830c.png" alt="NumericalAnalysis_b35a6e04b8c85f3d1e94e2452bb2cf6ce90e830c.png" />.
-Let <img src="ltximg/NumericalAnalysis_11ada3814d7c077c6b416419c6cfb9dc2034c76f.png" alt="NumericalAnalysis_11ada3814d7c077c6b416419c6cfb9dc2034c76f.png" />, then <img src="ltximg/NumericalAnalysis_b1f260d5ac8d549301b1cd22f2a46d97a5fdca66.png" alt="NumericalAnalysis_b1f260d5ac8d549301b1cd22f2a46d97a5fdca66.png" />.
-Hence <img src="ltximg/NumericalAnalysis_7824efa2efb0d3a326907ff104bc39014ce55935.png" alt="NumericalAnalysis_7824efa2efb0d3a326907ff104bc39014ce55935.png" />. Since  <img src="ltximg/NumericalAnalysis_1d08ccb015e5e95d9886e3728103eac195257e64.png" alt="NumericalAnalysis_1d08ccb015e5e95d9886e3728103eac195257e64.png" /> . The iteration is fast
+<b>Rate of convergence</b>. <img src="ltximg/NumericalAnalysis_826c17c8f34f96455fd478df67d7095f0965f1db.png" alt="NumericalAnalysis_826c17c8f34f96455fd478df67d7095f0965f1db.png" />.
+Make <img src="ltximg/NumericalAnalysis_ad8578b72b159d2dacd8e06a5d36b5c4c1ec220f.png" alt="NumericalAnalysis_ad8578b72b159d2dacd8e06a5d36b5c4c1ec220f.png" /> as small as possible.
+Assume <img src="ltximg/NumericalAnalysis_b11d8741933fac97e82ff20bdb0a0f947b2d76b1.png" alt="NumericalAnalysis_b11d8741933fac97e82ff20bdb0a0f947b2d76b1.png" />.
+Let <img src="ltximg/NumericalAnalysis_ca23f6fcccad28c14c4c1a3eb1ed6948720bcec5.png" alt="NumericalAnalysis_ca23f6fcccad28c14c4c1a3eb1ed6948720bcec5.png" />, then <img src="ltximg/NumericalAnalysis_d3d9ad4cbc12ee03d103e0deb07dd5bc37f034d5.png" alt="NumericalAnalysis_d3d9ad4cbc12ee03d103e0deb07dd5bc37f034d5.png" />.
+Hence <img src="ltximg/NumericalAnalysis_dd222506ea6a8d7eddc4c804c5dcd7e3d96e92b6.png" alt="NumericalAnalysis_dd222506ea6a8d7eddc4c804c5dcd7e3d96e92b6.png" />. Since  <img src="ltximg/NumericalAnalysis_326e16e827c9fa8b895153b09d0738a56a85449b.png" alt="NumericalAnalysis_326e16e827c9fa8b895153b09d0738a56a85449b.png" /> . The iteration is fast
 </p>
 
 
 <p>
 <b>Inverse power method</b>. If A has
-<img src="ltximg/NumericalAnalysis_1e569fe35b875ded4e2908ecaf7172725cf3fa83.png" alt="NumericalAnalysis_1e569fe35b875ded4e2908ecaf7172725cf3fa83.png" />, then <img src="ltximg/NumericalAnalysis_12c92ceee1c999c1a39385e718c49ac4825757b2.png" alt="NumericalAnalysis_12c92ceee1c999c1a39385e718c49ac4825757b2.png" /> has
-<img src="ltximg/NumericalAnalysis_2a1182a79dcbb5b97befbdc905cf4682edc96dd3.png" alt="NumericalAnalysis_2a1182a79dcbb5b97befbdc905cf4682edc96dd3.png" /> 
+<img src="ltximg/NumericalAnalysis_68daeb609a03bccbb81be271b3de63f537f5686c.png" alt="NumericalAnalysis_68daeb609a03bccbb81be271b3de63f537f5686c.png" />, then <img src="ltximg/NumericalAnalysis_87c4ecb546d73ef1cc0bb157ee07d9813d4003a5.png" alt="NumericalAnalysis_87c4ecb546d73ef1cc0bb157ee07d9813d4003a5.png" /> has
+<img src="ltximg/NumericalAnalysis_08ba5d3ec412f4ee40c64aaddc97a8d7d260e0c9.png" alt="NumericalAnalysis_08ba5d3ec412f4ee40c64aaddc97a8d7d260e0c9.png" /> 
 </p>
 </div>
-</div>
-</div>
-
-<div id="outline-container-org0b0b5a4" class="outline-2">
-<h2 id="org0b0b5a4"><span class="todo TODO">TODO</span> hw <code>[0/15]</code></h2>
-<div class="outline-text-2" id="text-org0b0b5a4">
-<p>
-<code>C-u C-c C-c</code>
-</p>
-<ul class="org-ul">
-<li class="off"><code>[&#xa0;]</code> NA01-CH1-A</li>
-<li class="off"><code>[&#xa0;]</code> NA02-CH2-A</li>
-<li class="off"><code>[&#xa0;]</code> NA03-CH6-AB</li>
-<li class="off"><code>[&#xa0;]</code> NA04-CH6-A</li>
-<li class="off"><code>[&#xa0;]</code> NA04-CH7-A</li>
-<li class="off"><code>[&#xa0;]</code> NA05-CH7-A</li>
-<li class="off"><code>[&#xa0;]</code> NA06-CH3-A</li>
-<li class="off"><code>[&#xa0;]</code> NA06-CH7-A
-conditional number
-hilber matrix</li>
-<li class="off"><code>[&#xa0;]</code> NA06 CH9 -A</li>
-<li class="off"><code>[&#xa0;]</code> NA07-CH3-AB</li>
-<li class="off"><code>[&#xa0;]</code> NA08-CH3-A</li>
-<li class="off"><code>[&#xa0;]</code> NA08-CH8-A
-least squares polynomial</li>
-
-<li class="off"><code>[&#xa0;]</code> NA09-CH8-A
-least squares polynomial orthogonal</li>
-<li class="off"><code>[&#xa0;]</code> NA10-CH4-A
-numerical differentiation</li>
-<li class="off"><code>[&#xa0;]</code> NA10-CH8-A</li>
-</ul>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: gouziwu</p>
-<p class="date">Created: 2019-05-29 三 12:05</p>
+<p class="date">Created: 2019-07-26 五 11:08</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
