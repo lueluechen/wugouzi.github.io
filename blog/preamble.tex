@@ -1,3 +1,10 @@
+% TIPS
+% \substack{a\\b} for multiple lines text
+
+
+
+
+
 % pdfplots will load xolor automatically without option
 \usepackage[dvipsnames]{xcolor}
 
@@ -17,20 +24,41 @@
 % load order of mathtools and mathabx, otherwise conflict overbrace
 
 \usepackage{mathtools}
-\usepackage{amsthm, mathabx, pgfplots, amsmath, commath}
+%\usepackage{fourier}
+\usepackage{pgfplots}
+\usepackage{amsthm}
+\usepackage{amsmath}
+%
+\usepackage{commath}
+%\usepackage{,  , }
 \usepackage{amsfonts}
-
+\usepackage{amssymb}
+% importing symbols https://tex.stackexchange.com/questions/14386/importing-a-single-symbol-from-a-different-font
+%mathabx change every symbol
+% use instead stmaryrd
+%\usepackage{mathabx}
+\usepackage{stmaryrd}
 \usepackage{empheq}
 \usepackage{tikz}
+%\usepackage[notextcomp]{stix}
 \usetikzlibrary{arrows.meta}
 \usepackage[most]{tcolorbox}
+%\utilde
+%\usepackage{../../latexpackage/undertilde/undertilde}
+% left and right superscript and subscript
+\usepackage{actuarialsymbol}
+\usepackage{threeparttable}
 
 \newtheorem{theorem}{Theorem}[section]
+\theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
 \newtheorem{corollary}{Corollary}[section]
-\newtheorem{example}{Example}[section]
 \newtheorem{lemma}{Lemma}[section]
 \newtheorem{proposition}{Proposition}[section]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[section]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
 
 \newcommand{\bl}[1] {\boldsymbol{#1}}
 \newcommand{\Wt}[1] {\stackrel{\sim}{\smash{#1}\rule{0pt}{1.1ex}}}
@@ -60,12 +88,50 @@
 \makeatother
 
 
+\newcommand{\dom}[1]{%
+\mathrm{dom}{(#1)}
+}
+
+\def \fR {\mathfrak{R}}
 \def \bx {\boldsymbol{x}}
+\def \bz {\boldsymbol{z}}
+\def \ba {\boldsymbol{a}}
+\def \bh {\boldsymbol{h}}
+\def \bo {\boldsymbol{o}}
+\def \bU {\boldsymbol{U}}
+\def \bc {\boldsymbol{c}}
+\def \bV {\boldsymbol{V}}
+\def \bI {\boldsymbol{I}}
+\def \bK {\boldsymbol{K}}
+\def \bt {\boldsymbol{t}}
+\def \bb {\boldsymbol{b}}
+\def \bA {\boldsymbol{A}}
 \def \bX {\boldsymbol{X}}
+\def \bu {\boldsymbol{u}}
+\def \bS {\boldsymbol{S}}
 \def \bZ {\boldsymbol{Z}}
 \def \bz {\boldsymbol{z}}
+\def \by {\boldsymbol{y}}
+\def \bw {\boldsymbol{w}}
+\def \bT {\boldsymbol{T}}
+\def \bF {\boldsymbol{F}}
+\def \bS {\boldsymbol{S}}
+\def \bm {\boldsymbol{m}}
+\def \bW {\boldsymbol{W}}
+\def \bR {\boldsymbol{R}}
+\def \bQ {\boldsymbol{Q}}
+\def \bS {\boldsymbol{S}}
+\def \bP {\boldsymbol{P}}
+\def \bT {\boldsymbol{T}}
+\def \bY {\boldsymbol{Y}}
+\def \bH {\boldsymbol{H}}
+\def \bB {\boldsymbol{B}}
+\def \blambda {\boldsymbol{\lambda}}
+\def \bPhi {\boldsymbol{\Phi}}
 \def \btheta {\boldsymbol{\theta}}
+\def \bTheta {\boldsymbol{\Theta}}
 \def \bmu {\boldsymbol{\mu}}
+\def \bphi {\boldsymbol{\phi}}
 \def \bSigma {\boldsymbol{\Sigma}}
 \def \lb {\left\{}
 \def \rb {\right\}}
@@ -74,6 +140,63 @@
 \def \dispro {\displaystyle\prod}
 \def \E {\mathbb{E}}
 \def \Q {\mathbb{Q}}
+\def \V {\mathbb{V}}
+\def \R {\mathbb{R}}
+\def \P {\mathbb{P}}
+\def \A {\mathbb{A}}
+\def \cala {\mathcal{A}}
+\def \calb {\mathcal{B}}
 \def \calq {\mathcal{Q}}
+\def \calp {\mathcal{P}}
+\def \cals {\mathcal{S}}
 \def \calg {\mathcal{G}}
+\def \caln {\mathcal{N}}
+\def \calr {\mathcal{R}}
+\def \calm {\mathcal{M}}
+\def \calc {\mathcal{C}}
+\def \calf {\mathcal{F}}
+\def \calk {\mathcal{K}}
+\def \call {\mathcal{L}}
 \def \bcup {\bigcup}
+
+
+\def \uin {\underline{\in}}
+\def \oin {\overline{\in}}
+\def \uR {\underline{R}}
+\def \oR {\overline{R}}
+\def \uP {\underline{P}}
+\def \oP {\overline{P}}
+
+\def \Ra {\Rightarrow}
+
+% \varprod
+\DeclareSymbolFont{largesymbolsA}{U}{txexa}{m}{n}
+\DeclareMathSymbol{\varprod}{\mathop}{largesymbolsA}{16}
+
+% \bigtimes
+\DeclareFontFamily{U}{mathx}{\hyphenchar\font45}
+\DeclareFontShape{U}{mathx}{m}{n}{
+      <5> <6> <7> <8> <9> <10>
+      <10.95> <12> <14.4> <17.28> <20.74> <24.88>
+      mathx10
+      }{}
+\DeclareSymbolFont{mathx}{U}{mathx}{m}{n}
+\DeclareMathSymbol{\bigtimes}{1}{mathx}{"91}
+% \odiv
+\DeclareFontFamily{U}{matha}{\hyphenchar\font45}
+\DeclareFontShape{U}{matha}{m}{n}{
+      <5> <6> <7> <8> <9> <10> gen * matha
+      <10.95> matha10 <12> <14.4> <17.28> <20.74> <24.88> matha12
+      }{}
+\DeclareSymbolFont{matha}{U}{matha}{m}{n}
+\DeclareMathSymbol{\odiv}         {2}{matha}{"63}
+
+
+\newcommand\subsetsim{\mathrel{%
+  \ooalign{\raise0.2ex\hbox{\scalebox{0.9}{$\subset$}}\cr\hidewidth\raise-0.85ex\hbox{\scalebox{0.9}{$\sim$}}\hidewidth\cr}}}
+\newcommand\simsubset{\mathrel{%
+  \ooalign{\raise-0.2ex\hbox{\scalebox{0.9}{$\subset$}}\cr\hidewidth\raise0.75ex\hbox{\scalebox{0.9}{$\sim$}}\hidewidth\cr}}}
+
+\newcommand\simsubsetsim{\mathrel{%
+  \ooalign{\raise0ex\hbox{\scalebox{0.8}{$\subset$}}\cr\hidewidth\raise1ex\hbox{\scalebox{0.75}{$\sim$}}\hidewidth\cr\raise-0.95ex\hbox{\scalebox{0.8}{$\sim$}}\cr\hidewidth}}}
+\newcommand{\stcomp}[1]{{#1}^{\mathsf{c}}}

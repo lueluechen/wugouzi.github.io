@@ -2,7 +2,7 @@
 #+AUTHOR: wu
 #+OPTIONS: tex:imagemagick
 #+LATEX_HEADER: \input{preamble.tex}
-#+EXPORT_FILE_NAME: latex/RoughSets/RoughSets.tex
+
 * Knowledge
 ** Knowledge base
    Given a finite set $U\neq \emptyset$ (the universe). Any subset $X\subset U$
@@ -300,7 +300,7 @@
    #+END_proposition
 * Reduction of knowledge
 ** Reduct and Core of Knowledge
-   Let $\bR$ be a family of equivalence relations and let $P\in\bR$. $R$ is
+   Let $+\bR$ be a family of equivalence relations and let $P\in\bR$. $R$ is
    *dispensable* in $\bR$ if $IND(\bR)=IND(\bR-\lb R\rb)$. Otherwise $R$ is
    *indispensable* in $\bR$. The family of $\bR$ is *independent* if each $R\in\bR$
    is indispensable in $\bR$. Otherwise $\bR$ is *dependent*
