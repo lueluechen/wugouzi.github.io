@@ -21,14 +21,24 @@
     "tcolorbox"
     "actuarialsymbol"
     "threeparttable"
+    "scalerel"
+    "stackengine"
+    "stackrel"
+    "dsfont"
+    "newpxtext"
     "graphicx")
    (TeX-add-symbols
     '("stcomp" 1)
+    '("rom" 1)
     '("dom" 1)
     '("fixwidehat" 1)
+    '("tf" 1)
     '("wt" 1)
     '("Wt" 1)
     '("bl" 1)
+    '("wbar" 1)
+    '("wtilde" 1)
+    '("what" 1)
     "widehatsym"
     "lowerwidehatsym"
     "varprod"
@@ -37,12 +47,14 @@
     "subsetsim"
     "simsubset"
     "simsubsetsim")
-   (LaTeX-add-environments
-    "theorem"
+   (LaTeX-add-amsthm-newtheorems
+    "dummy"
     "definition"
     "corollary"
     "lemma"
     "proposition"
-    "example"))
+    "theorem"
+    "example"
+    "remark"))
  :latex)
 
