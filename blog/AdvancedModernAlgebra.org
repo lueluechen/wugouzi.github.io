@@ -1,6 +1,6 @@
 #+TITLE: Advanced Modern Algebra
 #+AUTHOR: Joseph J. Rotman
-
+#+OPTIONS: tex:imagemagick
 #+LATEX_HEADER: \input{preamble.tex}
 #+EXPORT_FILE_NAME: ../latex/AdvancedModernAlgebra/AdvancedModernAlgebra.tex
 
