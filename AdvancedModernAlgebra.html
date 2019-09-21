@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-09-12 四 13:58 -->
+<!-- 2019-09-21 六 15:13 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Advanced Modern Algebra</title>
@@ -247,25 +247,224 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgc649116">Group </a>
+<li><a href="#orgea568d0">Things Past</a>
 <ul>
-<li><a href="#orgb5955f2">Permutations</a></li>
-<li><a href="#orgd4e8328">Groups</a></li>
-<li><a href="#org485798d">Lagrange's theorem</a></li>
-<li><a href="#org2ea7916">Homomorphisms</a></li>
+<li><a href="#orgb734bd8">Roots of Unity</a></li>
+</ul>
+</li>
+<li><a href="#org4d0ff8e">Group </a>
+<ul>
+<li><a href="#org81c113c">Permutations</a></li>
+<li><a href="#orgde01873">Groups</a></li>
+<li><a href="#org533c4e6">Lagrange's theorem</a></li>
+<li><a href="#orge7f1ef6">Homomorphisms</a></li>
+<li><a href="#orgec1c57a">Quotient group</a></li>
+<li><a href="#orge0787e8">Group Actions</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-
-<div id="outline-container-orgc649116" class="outline-2">
-<h2 id="orgc649116">Group </h2>
-<div class="outline-text-2" id="text-orgc649116">
+<div id="outline-container-orgea568d0" class="outline-2">
+<h2 id="orgea568d0">Things Past</h2>
+<div class="outline-text-2" id="text-orgea568d0">
 </div>
-<div id="outline-container-orgb5955f2" class="outline-3">
-<h3 id="orgb5955f2">Permutations</h3>
-<div class="outline-text-3" id="text-orgb5955f2">
+<div id="outline-container-orgb734bd8" class="outline-3">
+<h3 id="orgb734bd8">Roots of Unity</h3>
+<div class="outline-text-3" id="text-orgb734bd8">
+<div class="proposition">
+<p>
+Every complex number <img src="ltximg/AdvancedModernAlgebra_ae0af8245621a16c7f37cdc5e19065499c76d9ab.png" alt="AdvancedModernAlgebra_ae0af8245621a16c7f37cdc5e19065499c76d9ab.png" /> has a factorization
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_89e4b55836acbcbfaaee4005eb960d5ff590c82b.png" alt="AdvancedModernAlgebra_89e4b55836acbcbfaaee4005eb960d5ff590c82b.png" />
+</span>
+<span class="equation-label">
+1
+</span>
+</div>
+<p>
+where <img src="ltximg/AdvancedModernAlgebra_3f73f830dc8b881efce70103715d404cbcf0c29f.png" alt="AdvancedModernAlgebra_3f73f830dc8b881efce70103715d404cbcf0c29f.png" /> and <img src="ltximg/AdvancedModernAlgebra_fa687d4dff42aa83691c90eb2d12951b8617c0cb.png" alt="AdvancedModernAlgebra_fa687d4dff42aa83691c90eb2d12951b8617c0cb.png" />
+</p>
+
+</div>
+
+<div class="proposition">
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_17356379a240c6e4ff2f3189b9c85183cef2d391.png" alt="AdvancedModernAlgebra_17356379a240c6e4ff2f3189b9c85183cef2d391.png" /> and <img src="ltximg/AdvancedModernAlgebra_2edfaea067af559371aa2d694dfdbf6a62f89ca9.png" alt="AdvancedModernAlgebra_2edfaea067af559371aa2d694dfdbf6a62f89ca9.png" />, then
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_56fa0493ccb561ce23fde28ffcac4377ed2b32d9.png" alt="AdvancedModernAlgebra_56fa0493ccb561ce23fde28ffcac4377ed2b32d9.png" />
+</span>
+<span class="equation-label">
+2
+</span>
+</div>
+
+</div>
+
+<div class="theorem">
+<p>
+<img src="ltximg/AdvancedModernAlgebra_acd01808012c8ee75d5fa155163ee2c330fc1657.png" alt="AdvancedModernAlgebra_acd01808012c8ee75d5fa155163ee2c330fc1657.png" />
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_56323a8e7e489741522351e72a4275df6c0bf3d0.png" alt="AdvancedModernAlgebra_56323a8e7e489741522351e72a4275df6c0bf3d0.png" />
+</span>
+<span class="equation-label">
+3
+</span>
+</div>
+
+</div>
+
+<div class="theorem">
+<p>
+<img src="ltximg/AdvancedModernAlgebra_16bd4923074aa46e57e437db053f582e1dc542fe.png" alt="AdvancedModernAlgebra_16bd4923074aa46e57e437db053f582e1dc542fe.png" />
+</p>
+
+</div>
+
+<div class="definition">
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_e77df8e51deae9eb59b9aea709a594dcdf8eb0c4.png" alt="AdvancedModernAlgebra_e77df8e51deae9eb59b9aea709a594dcdf8eb0c4.png" /> , an is a complex number <img src="ltximg/AdvancedModernAlgebra_ba916e2a4a759d27381a85b13df166f4628f9ed6.png" alt="AdvancedModernAlgebra_ba916e2a4a759d27381a85b13df166f4628f9ed6.png" /> with
+<img src="ltximg/AdvancedModernAlgebra_c88364c7ca9b2c1a9ce2231bf4ecb6d38b6cbb6c.png" alt="AdvancedModernAlgebra_c88364c7ca9b2c1a9ce2231bf4ecb6d38b6cbb6c.png" />
+</p>
+
+</div>
+
+<div class="corollary">
+<p>
+Every nth root of unity is equal to
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_cfc3053f55f81b74e7ac2edb7cc47c17d700deec.png" alt="AdvancedModernAlgebra_cfc3053f55f81b74e7ac2edb7cc47c17d700deec.png" />
+</span>
+<span class="equation-label">
+4
+</span>
+</div>
+<p>
+for <img src="ltximg/AdvancedModernAlgebra_23c0c864048a8737f6c1b51b0e642e71ee1e1c71.png" alt="AdvancedModernAlgebra_23c0c864048a8737f6c1b51b0e642e71ee1e1c71.png" />
+</p>
+
+</div>
+
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_29920f1fcdd2ce75b48a2c49c87e5a5460e2fc41.png" alt="AdvancedModernAlgebra_29920f1fcdd2ce75b48a2c49c87e5a5460e2fc41.png" />
+</span>
+<span class="equation-label">
+5
+</span>
+</div>
+
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_ba916e2a4a759d27381a85b13df166f4628f9ed6.png" alt="AdvancedModernAlgebra_ba916e2a4a759d27381a85b13df166f4628f9ed6.png" /> is an nth root of unity and if <img src="ltximg/AdvancedModernAlgebra_ac4e677c1ff6181e4eaf5ea73c75e784beaf4ad1.png" alt="AdvancedModernAlgebra_ac4e677c1ff6181e4eaf5ea73c75e784beaf4ad1.png" /> is the smallest, then <img src="ltximg/AdvancedModernAlgebra_ba916e2a4a759d27381a85b13df166f4628f9ed6.png" alt="AdvancedModernAlgebra_ba916e2a4a759d27381a85b13df166f4628f9ed6.png" /> is a
+n
+</p>
+
+<div class="definition">
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_608b6ca6ad775ff4b0d0bd528a0909da6efc76c9.png" alt="AdvancedModernAlgebra_608b6ca6ad775ff4b0d0bd528a0909da6efc76c9.png" /> , then the $d$th is 
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_e743d3cfb9b0e4f4a599297b3b3b68367590f252.png" alt="AdvancedModernAlgebra_e743d3cfb9b0e4f4a599297b3b3b68367590f252.png" />
+</span>
+<span class="equation-label">
+6
+</span>
+</div>
+<p>
+where <img src="ltximg/AdvancedModernAlgebra_ba916e2a4a759d27381a85b13df166f4628f9ed6.png" alt="AdvancedModernAlgebra_ba916e2a4a759d27381a85b13df166f4628f9ed6.png" /> ranges over all the <i>primitive dth</i> roots of unity
+</p>
+
+</div>
+
+<div class="proposition">
+<p>
+For every integer <img src="ltximg/AdvancedModernAlgebra_35506ee52a5882e6e19e14dc090f81b458989448.png" alt="AdvancedModernAlgebra_35506ee52a5882e6e19e14dc090f81b458989448.png" />
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_7b497d791c700afeb868f81094e04941cdd0779f.png" alt="AdvancedModernAlgebra_7b497d791c700afeb868f81094e04941cdd0779f.png" />
+</span>
+<span class="equation-label">
+7
+</span>
+</div>
+
+</div>
+
+<div class="definition">
+<p>
+Define &phi;as the degree of the nth cyclotomic
+polynomial
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_b26a6b692674e81dc25a5f4bdbde7806cfe1d6b9.png" alt="AdvancedModernAlgebra_b26a6b692674e81dc25a5f4bdbde7806cfe1d6b9.png" />
+</span>
+<span class="equation-label">
+8
+</span>
+</div>
+
+</div>
+
+<div class="proposition">
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_d570d98860404b0df54990171cb8eb7f86f1aa8a.png" alt="AdvancedModernAlgebra_d570d98860404b0df54990171cb8eb7f86f1aa8a.png" /> is an integer, then <img src="ltximg/AdvancedModernAlgebra_036fc2240b3897a0e840b6458cd53a105f1819bd.png" alt="AdvancedModernAlgebra_036fc2240b3897a0e840b6458cd53a105f1819bd.png" /> is the number of integers <img src="ltximg/AdvancedModernAlgebra_cacc6e621955f02415601c14e1b6ab39ba8bd76a.png" alt="AdvancedModernAlgebra_cacc6e621955f02415601c14e1b6ab39ba8bd76a.png" /> with
+<img src="ltximg/AdvancedModernAlgebra_fff1f9177181fab23550de460db6cdcdd639d36e.png" alt="AdvancedModernAlgebra_fff1f9177181fab23550de460db6cdcdd639d36e.png" /> and <img src="ltximg/AdvancedModernAlgebra_0389b0e7587c2b75445b920abc8c45c04f8232b9.png" alt="AdvancedModernAlgebra_0389b0e7587c2b75445b920abc8c45c04f8232b9.png" />
+</p>
+
+</div>
+
+<div class="proof">
+<p>
+Suffice to prove <img src="ltximg/AdvancedModernAlgebra_6260123646f69ad10bbd4673514e5dbb7c37bd44.png" alt="AdvancedModernAlgebra_6260123646f69ad10bbd4673514e5dbb7c37bd44.png" /> is a primitive nth root of unity if and only
+if <img src="ltximg/AdvancedModernAlgebra_cacc6e621955f02415601c14e1b6ab39ba8bd76a.png" alt="AdvancedModernAlgebra_cacc6e621955f02415601c14e1b6ab39ba8bd76a.png" /> and <img src="ltximg/AdvancedModernAlgebra_ac4e677c1ff6181e4eaf5ea73c75e784beaf4ad1.png" alt="AdvancedModernAlgebra_ac4e677c1ff6181e4eaf5ea73c75e784beaf4ad1.png" /> are relatively prime
+</p>
+
+</div>
+
+<div class="corollary">
+<p>
+For every integer <img src="ltximg/AdvancedModernAlgebra_35506ee52a5882e6e19e14dc090f81b458989448.png" alt="AdvancedModernAlgebra_35506ee52a5882e6e19e14dc090f81b458989448.png" />, we have
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_1b2f9e63a772cc90754ed9d4bbed69c70f7930ba.png" alt="AdvancedModernAlgebra_1b2f9e63a772cc90754ed9d4bbed69c70f7930ba.png" />
+</span>
+<span class="equation-label">
+9
+</span>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org4d0ff8e" class="outline-2">
+<h2 id="org4d0ff8e">Group </h2>
+<div class="outline-text-2" id="text-org4d0ff8e">
+</div>
+<div id="outline-container-org81c113c" class="outline-3">
+<h3 id="org81c113c">Permutations</h3>
+<div class="outline-text-3" id="text-org81c113c">
 <div class="definition">
 <p>
 A of a set <img src="ltximg/AdvancedModernAlgebra_bfb3a654a5ab24203b8b68ee7603ff396b1ab72e.png" alt="AdvancedModernAlgebra_bfb3a654a5ab24203b8b68ee7603ff396b1ab72e.png" /> is a bijection from <img src="ltximg/AdvancedModernAlgebra_bfb3a654a5ab24203b8b68ee7603ff396b1ab72e.png" alt="AdvancedModernAlgebra_bfb3a654a5ab24203b8b68ee7603ff396b1ab72e.png" /> to itself.
@@ -295,7 +494,7 @@ Let <img src="ltximg/AdvancedModernAlgebra_a873e4ff78b91b0d0d2f72fcc78bc5e632231
 <img src="ltximg/AdvancedModernAlgebra_b568ffe1b3f762780c8010fc881ff619f8bf4a5b.png" alt="AdvancedModernAlgebra_b568ffe1b3f762780c8010fc881ff619f8bf4a5b.png" />
 </span>
 <span class="equation-label">
-1
+10
 </span>
 </div>
 <p>
@@ -308,7 +507,7 @@ then &alpha; is called an textbf{r-cycle}. &alpha; is a cycle of
 <img src="ltximg/AdvancedModernAlgebra_4c522ba73ccc09b4397363d6ee28e800d24b9af0.png" alt="AdvancedModernAlgebra_4c522ba73ccc09b4397363d6ee28e800d24b9af0.png" />
 </span>
 <span class="equation-label">
-2
+11
 </span>
 </div>
 
@@ -385,7 +584,7 @@ structure as <img src="ltximg/AdvancedModernAlgebra_0ef1ace5a2ebd3dd75d5c3773c62
 <img src="ltximg/AdvancedModernAlgebra_3aa8f474ed77fbbd4da8c22122cb9ba2d6681486.png" alt="AdvancedModernAlgebra_3aa8f474ed77fbbd4da8c22122cb9ba2d6681486.png" />
 </span>
 <span class="equation-label">
-3
+12
 </span>
 </div>
 <p>
@@ -404,7 +603,7 @@ Example. Suppose
 <img src="ltximg/AdvancedModernAlgebra_0d952d5b76d26504354b857a8a648e47019bc094.png" alt="AdvancedModernAlgebra_0d952d5b76d26504354b857a8a648e47019bc094.png" />
 </span>
 <span class="equation-label">
-4
+13
 </span>
 </div>
 <p>
@@ -416,7 +615,7 @@ then we can easily find the <img src="ltximg/AdvancedModernAlgebra_75043bd1b2927
 <img src="ltximg/AdvancedModernAlgebra_de71b40e1ac734a62bfb5f16ee6957cd38f40dc1.png" alt="AdvancedModernAlgebra_de71b40e1ac734a62bfb5f16ee6957cd38f40dc1.png" />
 </span>
 <span class="equation-label">
-5
+14
 </span>
 </div>
 <div class="theorem">
@@ -461,7 +660,7 @@ factorization, then <img src="ltximg/AdvancedModernAlgebra_75043bd1b29277ae0543b
 <img src="ltximg/AdvancedModernAlgebra_3c86c5972e5830b46e5b90431816af5c2b7cc61d.png" alt="AdvancedModernAlgebra_3c86c5972e5830b46e5b90431816af5c2b7cc61d.png" />
 </span>
 <span class="equation-label">
-6
+15
 </span>
 </div>
 
@@ -477,7 +676,7 @@ For all <img src="ltximg/AdvancedModernAlgebra_d761ed8f529539421f85eac2a77941348
 <img src="ltximg/AdvancedModernAlgebra_32e56b567dc8ec155b8744c09c6d88901695648b.png" alt="AdvancedModernAlgebra_32e56b567dc8ec155b8744c09c6d88901695648b.png" />
 </span>
 <span class="equation-label">
-7
+16
 </span>
 </div>
 
@@ -503,9 +702,9 @@ Let <img src="ltximg/AdvancedModernAlgebra_d761ed8f529539421f85eac2a77941348f2b4
 </div>
 </div>
 </div>
-<div id="outline-container-orgd4e8328" class="outline-3">
-<h3 id="orgd4e8328">Groups</h3>
-<div class="outline-text-3" id="text-orgd4e8328">
+<div id="outline-container-orgde01873" class="outline-3">
+<h3 id="orgde01873">Groups</h3>
+<div class="outline-text-3" id="text-orgde01873">
 <div class="definition">
 <p>
 A on a set <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> is a function
@@ -516,7 +715,7 @@ A on a set <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc16
 <img src="ltximg/AdvancedModernAlgebra_18520bb7ed5f6c812a586240e42d1df4b1f681c3.png" alt="AdvancedModernAlgebra_18520bb7ed5f6c812a586240e42d1df4b1f681c3.png" />
 </span>
 <span class="equation-label">
-8
+17
 </span>
 </div>
 
@@ -614,9 +813,9 @@ group} with <img src="ltximg/AdvancedModernAlgebra_4167d4076071d90a9f0f4081585e2
 </div>
 </div>
 </div>
-<div id="outline-container-org485798d" class="outline-3">
-<h3 id="org485798d">Lagrange's theorem</h3>
-<div class="outline-text-3" id="text-org485798d">
+<div id="outline-container-org533c4e6" class="outline-3">
+<h3 id="org533c4e6">Lagrange's theorem</h3>
+<div class="outline-text-3" id="text-org533c4e6">
 <div class="definition">
 <p>
 A subset <img src="ltximg/AdvancedModernAlgebra_4a9422449352c09b3cd8e6bd61a75ec1736d359a.png" alt="AdvancedModernAlgebra_4a9422449352c09b3cd8e6bd61a75ec1736d359a.png" /> of a group <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> is a if
@@ -660,7 +859,7 @@ If <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc375
 <img src="ltximg/AdvancedModernAlgebra_4ecca5a8e5aefb513651ccdcf3d338f5413990b8.png" alt="AdvancedModernAlgebra_4ecca5a8e5aefb513651ccdcf3d338f5413990b8.png" />
 </span>
 <span class="equation-label">
-9
+18
 </span>
 </div>
 <p>
@@ -687,7 +886,7 @@ Let <img src="ltximg/AdvancedModernAlgebra_8dbb3ee3355ac914cfd670b2e33c88f6bcbd9
 <ol class="org-ol">
 <li>If <img src="ltximg/AdvancedModernAlgebra_f0028ebced195746e3ce2d1d33c57bb3ef6502ac.png" alt="AdvancedModernAlgebra_f0028ebced195746e3ce2d1d33c57bb3ef6502ac.png" />, then <img src="ltximg/AdvancedModernAlgebra_9f8aa214f88afe13d6b0589014e04be32e8024c0.png" alt="AdvancedModernAlgebra_9f8aa214f88afe13d6b0589014e04be32e8024c0.png" /> for some <img src="ltximg/AdvancedModernAlgebra_fb0596a46ec6730fb7002193f2658e08a0d6d15d.png" alt="AdvancedModernAlgebra_fb0596a46ec6730fb7002193f2658e08a0d6d15d.png" /> with <img src="ltximg/AdvancedModernAlgebra_f888ae8031ce8737649a66d3d22e54543d3d8fa3.png" alt="AdvancedModernAlgebra_f888ae8031ce8737649a66d3d22e54543d3d8fa3.png" /></li>
 <li>If <img src="ltximg/AdvancedModernAlgebra_6c497939b9c2a4331603cbbfdbb5b8d89a513ba7.png" alt="AdvancedModernAlgebra_6c497939b9c2a4331603cbbfdbb5b8d89a513ba7.png" />, then <img src="ltximg/AdvancedModernAlgebra_87e7f3ef3284de4f0a7ed4a7cad0522bc4c79d1c.png" alt="AdvancedModernAlgebra_87e7f3ef3284de4f0a7ed4a7cad0522bc4c79d1c.png" /></li>
-<li>$<sub>m</sub> $ has exactly <img src="ltximg/AdvancedModernAlgebra_161b3c299e4b9ebb6e602606daf15c83d92a0090.png" alt="AdvancedModernAlgebra_161b3c299e4b9ebb6e602606daf15c83d92a0090.png" /> elements</li>
+<li><img src="ltximg/AdvancedModernAlgebra_b35ddc01407aefa40c3801cb84e89e4ff56896b2.png" alt="AdvancedModernAlgebra_b35ddc01407aefa40c3801cb84e89e4ff56896b2.png" /> has exactly <img src="ltximg/AdvancedModernAlgebra_161b3c299e4b9ebb6e602606daf15c83d92a0090.png" alt="AdvancedModernAlgebra_161b3c299e4b9ebb6e602606daf15c83d92a0090.png" /> elements</li>
 </ol>
 
 </div>
@@ -705,7 +904,7 @@ If <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc375
 <img src="ltximg/AdvancedModernAlgebra_136250574b39c67bd65d3bf432c18cb096eedf0a.png" alt="AdvancedModernAlgebra_136250574b39c67bd65d3bf432c18cb096eedf0a.png" />
 </span>
 <span class="equation-label">
-10
+19
 </span>
 </div>
 <p>
@@ -790,7 +989,7 @@ where
 <img src="ltximg/AdvancedModernAlgebra_8e6cae7c3fbbb509eaa61bcd5d18ae58d887020e.png" alt="AdvancedModernAlgebra_8e6cae7c3fbbb509eaa61bcd5d18ae58d887020e.png" />
 </span>
 <span class="equation-label">
-11
+20
 </span>
 </div>
 
@@ -836,7 +1035,7 @@ Let <img src="ltximg/AdvancedModernAlgebra_087560c2b8762021c29c6e256cd062254cb9b
 <img src="ltximg/AdvancedModernAlgebra_dedadd65aba0f2294e07928e7c336e32489309c8.png" alt="AdvancedModernAlgebra_dedadd65aba0f2294e07928e7c336e32489309c8.png" />
 </span>
 <span class="equation-label">
-12
+21
 </span>
 </div>
 <p>
@@ -848,7 +1047,7 @@ hence
 <img src="ltximg/AdvancedModernAlgebra_90b3438ecf3538b8f908b75ca140bc95d2772527.png" alt="AdvancedModernAlgebra_90b3438ecf3538b8f908b75ca140bc95d2772527.png" />
 </span>
 <span class="equation-label">
-13
+22
 </span>
 </div>
 <p>
@@ -898,14 +1097,14 @@ The set <img src="ltximg/AdvancedModernAlgebra_8dcfd2f7d926bfc1da1cb26ed2326a9dc
 
 <div class="equation-container">
 <span class="equation">
-<img src="ltximg/AdvancedModernAlgebra_d13e373cced7c04baf95ed589e80aa5749eb8317.png" alt="AdvancedModernAlgebra_d13e373cced7c04baf95ed589e80aa5749eb8317.png" />
+<img src="ltximg/AdvancedModernAlgebra_69bfca8c8bed1efb3f5fcbbb1d3ba039bc6e8dcf.png" alt="AdvancedModernAlgebra_69bfca8c8bed1efb3f5fcbbb1d3ba039bc6e8dcf.png" />
 </span>
 <span class="equation-label">
-14
+23
 </span>
 </div>
 <p>
-is a multiplicative group of order <img src="ltximg/AdvancedModernAlgebra_0d3ba1a0de596ed95684c94c92d143a32404bcab.png" alt="AdvancedModernAlgebra_0d3ba1a0de596ed95684c94c92d143a32404bcab.png" />. If <img src="ltximg/AdvancedModernAlgebra_f6790564aa002d161fef8af5770b64d8ef8e635c.png" alt="AdvancedModernAlgebra_f6790564aa002d161fef8af5770b64d8ef8e635c.png" /> is a prime, then
+is a multiplicative group of order <img src="ltximg/AdvancedModernAlgebra_37214d681ab758a4ba4294765aa483473b221272.png" alt="AdvancedModernAlgebra_37214d681ab758a4ba4294765aa483473b221272.png" />. If <img src="ltximg/AdvancedModernAlgebra_f6790564aa002d161fef8af5770b64d8ef8e635c.png" alt="AdvancedModernAlgebra_f6790564aa002d161fef8af5770b64d8ef8e635c.png" /> is a prime, then
 <img src="ltximg/AdvancedModernAlgebra_baad263a265b5b4bdc6ab80f4a635de52e6a8cde.png" alt="AdvancedModernAlgebra_baad263a265b5b4bdc6ab80f4a635de52e6a8cde.png" />, the nonzero elements of <img src="ltximg/AdvancedModernAlgebra_f4aedb35bbbda439c414378ff1ad6d7bc1d22bdd.png" alt="AdvancedModernAlgebra_f4aedb35bbbda439c414378ff1ad6d7bc1d22bdd.png" />.
 </p>
 
@@ -921,7 +1120,7 @@ If <img src="ltximg/AdvancedModernAlgebra_f6790564aa002d161fef8af5770b64d8ef8e63
 <img src="ltximg/AdvancedModernAlgebra_82b12e02762fa41e3fdf0a7dbbd1160da1fcb731.png" alt="AdvancedModernAlgebra_82b12e02762fa41e3fdf0a7dbbd1160da1fcb731.png" />
 </span>
 <span class="equation-label">
-15
+24
 </span>
 </div>
 
@@ -930,7 +1129,7 @@ If <img src="ltximg/AdvancedModernAlgebra_f6790564aa002d161fef8af5770b64d8ef8e63
 <div class="proof">
 <p>
 suffices to show <img src="ltximg/AdvancedModernAlgebra_6a93f83a18445dffbef083cb1fddfa52fd36c093.png" alt="AdvancedModernAlgebra_6a93f83a18445dffbef083cb1fddfa52fd36c093.png" /> in <img src="ltximg/AdvancedModernAlgebra_f4aedb35bbbda439c414378ff1ad6d7bc1d22bdd.png" alt="AdvancedModernAlgebra_f4aedb35bbbda439c414378ff1ad6d7bc1d22bdd.png" />. If <img src="ltximg/AdvancedModernAlgebra_2724ad3e8b04fd43a825b7ed405ac9b6b302ba8c.png" alt="AdvancedModernAlgebra_2724ad3e8b04fd43a825b7ed405ac9b6b302ba8c.png" />, then <img src="ltximg/AdvancedModernAlgebra_ac6fa206c8b9089ef85a66a75efe8aa0d0be6e63.png" alt="AdvancedModernAlgebra_ac6fa206c8b9089ef85a66a75efe8aa0d0be6e63.png" />.
-Else, since <img src="ltximg/AdvancedModernAlgebra_bff4e83fae7ed7b365dd5f1feff6c981c4e87ca3.png" alt="AdvancedModernAlgebra_bff4e83fae7ed7b365dd5f1feff6c981c4e87ca3.png" />, <img src="ltximg/AdvancedModernAlgebra_985aacaf333585f4e2bd368eac29706b885b795a.png" alt="AdvancedModernAlgebra_985aacaf333585f4e2bd368eac29706b885b795a.png" />
+Else, since <img src="ltximg/AdvancedModernAlgebra_591099f723f0bcf6592974b7eba5ac8f9878b679.png" alt="AdvancedModernAlgebra_591099f723f0bcf6592974b7eba5ac8f9878b679.png" />, <img src="ltximg/AdvancedModernAlgebra_985aacaf333585f4e2bd368eac29706b885b795a.png" alt="AdvancedModernAlgebra_985aacaf333585f4e2bd368eac29706b885b795a.png" />
 </p>
 
 </div>
@@ -946,7 +1145,7 @@ If <img src="ltximg/AdvancedModernAlgebra_fd27bd17f26c13b825a50590e585b51b3e7aa7
 <img src="ltximg/AdvancedModernAlgebra_28c2446b4f0a5711c90d4bfe930bb31f92d65035.png" alt="AdvancedModernAlgebra_28c2446b4f0a5711c90d4bfe930bb31f92d65035.png" />
 </span>
 <span class="equation-label">
-16
+25
 </span>
 </div>
 
@@ -962,21 +1161,800 @@ An integer <img src="ltximg/AdvancedModernAlgebra_f6790564aa002d161fef8af5770b64
 <img src="ltximg/AdvancedModernAlgebra_770c362567fb7533661d1f430f76c80133ff5b0c.png" alt="AdvancedModernAlgebra_770c362567fb7533661d1f430f76c80133ff5b0c.png" />
 </span>
 <span class="equation-label">
-17
+26
 </span>
 </div>
 
 </div>
 </div>
 </div>
-<div id="outline-container-org2ea7916" class="outline-3">
-<h3 id="org2ea7916">Homomorphisms</h3>
+<div id="outline-container-orge7f1ef6" class="outline-3">
+<h3 id="orge7f1ef6">Homomorphisms</h3>
+<div class="outline-text-3" id="text-orge7f1ef6">
+<div class="definition">
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_0d960e76101bf26c98426e16f7bc91c2d6cfc697.png" alt="AdvancedModernAlgebra_0d960e76101bf26c98426e16f7bc91c2d6cfc697.png" /> and <img src="ltximg/AdvancedModernAlgebra_b6072449563ee5738edb1678c46fb91365c308d0.png" alt="AdvancedModernAlgebra_b6072449563ee5738edb1678c46fb91365c308d0.png" /> are groups, then a function <img src="ltximg/AdvancedModernAlgebra_34fe0af4c9d6a69a2ae586a40d70ab8ee5d1a716.png" alt="AdvancedModernAlgebra_34fe0af4c9d6a69a2ae586a40d70ab8ee5d1a716.png" /> is a
+if
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_992afc26649c49dc698aae853ce048ff89d9e31a.png" alt="AdvancedModernAlgebra_992afc26649c49dc698aae853ce048ff89d9e31a.png" />
+</span>
+<span class="equation-label">
+27
+</span>
+</div>
+<p>
+for all <img src="ltximg/AdvancedModernAlgebra_35919cab79f639d299bbcbfe7f9e07909f4617c0.png" alt="AdvancedModernAlgebra_35919cab79f639d299bbcbfe7f9e07909f4617c0.png" />. If <img src="ltximg/AdvancedModernAlgebra_437f7bc465232f301713ea82a511ed3892545be8.png" alt="AdvancedModernAlgebra_437f7bc465232f301713ea82a511ed3892545be8.png" /> is also a bijection, then <img src="ltximg/AdvancedModernAlgebra_437f7bc465232f301713ea82a511ed3892545be8.png" alt="AdvancedModernAlgebra_437f7bc465232f301713ea82a511ed3892545be8.png" /> is called an
+. <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> and <img src="ltximg/AdvancedModernAlgebra_4a9422449352c09b3cd8e6bd61a75ec1736d359a.png" alt="AdvancedModernAlgebra_4a9422449352c09b3cd8e6bd61a75ec1736d359a.png" /> are called , denoted by <img src="ltximg/AdvancedModernAlgebra_550fece0b1eff4f8a08283bfe4657e379cce2c69.png" alt="AdvancedModernAlgebra_550fece0b1eff4f8a08283bfe4657e379cce2c69.png" />
+</p>
+
+</div>
+
+<div class="lemma">
+<p>
+Let <img src="ltximg/AdvancedModernAlgebra_34fe0af4c9d6a69a2ae586a40d70ab8ee5d1a716.png" alt="AdvancedModernAlgebra_34fe0af4c9d6a69a2ae586a40d70ab8ee5d1a716.png" /> be a homomorphism
+</p>
+<ol class="org-ol">
+<li><img src="ltximg/AdvancedModernAlgebra_2f2a7f50db6a65142d1679b6d1934ac1bab7d5a0.png" alt="AdvancedModernAlgebra_2f2a7f50db6a65142d1679b6d1934ac1bab7d5a0.png" /></li>
+<li><img src="ltximg/AdvancedModernAlgebra_339029eead0de48e980fa9cd7f412513cd44c0f0.png" alt="AdvancedModernAlgebra_339029eead0de48e980fa9cd7f412513cd44c0f0.png" /></li>
+<li><img src="ltximg/AdvancedModernAlgebra_a53c0c8ca9cd40f702630882c186c03ec32ad924.png" alt="AdvancedModernAlgebra_a53c0c8ca9cd40f702630882c186c03ec32ad924.png" /> for all <img src="ltximg/AdvancedModernAlgebra_bfa5eb879d11750c775f6c0f6a9f99850cc338fc.png" alt="AdvancedModernAlgebra_bfa5eb879d11750c775f6c0f6a9f99850cc338fc.png" /></li>
+</ol>
+
+</div>
+
+<div class="definition">
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_34fe0af4c9d6a69a2ae586a40d70ab8ee5d1a716.png" alt="AdvancedModernAlgebra_34fe0af4c9d6a69a2ae586a40d70ab8ee5d1a716.png" /> is a homomorphism, define
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_51a8f9f9b863e39c4f5fcb1f3e9ec3b7b97ed552.png" alt="AdvancedModernAlgebra_51a8f9f9b863e39c4f5fcb1f3e9ec3b7b97ed552.png" />
+</span>
+<span class="equation-label">
+28
+</span>
+</div>
+<p>
+and
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_747305222c8367e77fc0927547df8bb007b7014d.png" alt="AdvancedModernAlgebra_747305222c8367e77fc0927547df8bb007b7014d.png" />
+</span>
+<span class="equation-label">
+29
+</span>
+</div>
+
+</div>
+
+<div class="proposition">
+<p>
+Let <img src="ltximg/AdvancedModernAlgebra_34fe0af4c9d6a69a2ae586a40d70ab8ee5d1a716.png" alt="AdvancedModernAlgebra_34fe0af4c9d6a69a2ae586a40d70ab8ee5d1a716.png" /> be a homomorphism
+</p>
+<ol class="org-ol">
+<li><img src="ltximg/AdvancedModernAlgebra_e7fd867a59b5cc739efa5e20d72ab02c2504027d.png" alt="AdvancedModernAlgebra_e7fd867a59b5cc739efa5e20d72ab02c2504027d.png" /> is a subgroup of <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> and <img src="ltximg/AdvancedModernAlgebra_19f95ca6580225e7a024e2b39217bae6b5743430.png" alt="AdvancedModernAlgebra_19f95ca6580225e7a024e2b39217bae6b5743430.png" /> is a subgroup of <img src="ltximg/AdvancedModernAlgebra_4a9422449352c09b3cd8e6bd61a75ec1736d359a.png" alt="AdvancedModernAlgebra_4a9422449352c09b3cd8e6bd61a75ec1736d359a.png" /></li>
+<li>if <img src="ltximg/AdvancedModernAlgebra_3048db437f13cfcfdc925c593b4ffecdcff37ad2.png" alt="AdvancedModernAlgebra_3048db437f13cfcfdc925c593b4ffecdcff37ad2.png" /> and if <img src="ltximg/AdvancedModernAlgebra_4dbf538f330909da98dfe2fa6a3e79d99d4d6d35.png" alt="AdvancedModernAlgebra_4dbf538f330909da98dfe2fa6a3e79d99d4d6d35.png" />, then <img src="ltximg/AdvancedModernAlgebra_4ee38e5c493a831f83b3a5b30c975030530f715c.png" alt="AdvancedModernAlgebra_4ee38e5c493a831f83b3a5b30c975030530f715c.png" /></li>
+<li><img src="ltximg/AdvancedModernAlgebra_437f7bc465232f301713ea82a511ed3892545be8.png" alt="AdvancedModernAlgebra_437f7bc465232f301713ea82a511ed3892545be8.png" /> is an injection if and only if <img src="ltximg/AdvancedModernAlgebra_4003595d982cf5070edcb9394492a686dbebc9dd.png" alt="AdvancedModernAlgebra_4003595d982cf5070edcb9394492a686dbebc9dd.png" /></li>
+</ol>
+
+</div>
+
+<div class="proof">
+<ol class="org-ol">
+<li><img src="ltximg/AdvancedModernAlgebra_b08317b7314bb87e893b5016944999dd4be041db.png" alt="AdvancedModernAlgebra_b08317b7314bb87e893b5016944999dd4be041db.png" /></li>
+</ol>
+
+</div>
+
+<div class="definition">
+<p>
+A subgroup <img src="ltximg/AdvancedModernAlgebra_ffa4c91f7a04c50a3910c6745fa39d5c86717aa9.png" alt="AdvancedModernAlgebra_ffa4c91f7a04c50a3910c6745fa39d5c86717aa9.png" /> of a group <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> is called a if <img src="ltximg/AdvancedModernAlgebra_8e171c666d542892fbc794b6f0b7cc22f174cdc2.png" alt="AdvancedModernAlgebra_8e171c666d542892fbc794b6f0b7cc22f174cdc2.png" />
+and <img src="ltximg/AdvancedModernAlgebra_4030a74b50d5ca088dbe539134cf629fb186d394.png" alt="AdvancedModernAlgebra_4030a74b50d5ca088dbe539134cf629fb186d394.png" /> imply <img src="ltximg/AdvancedModernAlgebra_dc7c6cb7b66ad7efa05a850b5f0532bbb536bca2.png" alt="AdvancedModernAlgebra_dc7c6cb7b66ad7efa05a850b5f0532bbb536bca2.png" />, denoted by <img src="ltximg/AdvancedModernAlgebra_9511e831ff8210e99f1dd5266e736a3ad78c2ee7.png" alt="AdvancedModernAlgebra_9511e831ff8210e99f1dd5266e736a3ad78c2ee7.png" />
+</p>
+
+</div>
+
+<div class="definition">
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> is a group and <img src="ltximg/AdvancedModernAlgebra_4dbf538f330909da98dfe2fa6a3e79d99d4d6d35.png" alt="AdvancedModernAlgebra_4dbf538f330909da98dfe2fa6a3e79d99d4d6d35.png" />, then a of <img src="ltximg/AdvancedModernAlgebra_3c9eecb910868dde7967c9a58f146ce989b326b5.png" alt="AdvancedModernAlgebra_3c9eecb910868dde7967c9a58f146ce989b326b5.png" /> is any element
+in <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> of the form
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_e7e02be991fad8af5440f51db4ab55328674cf0a.png" alt="AdvancedModernAlgebra_e7e02be991fad8af5440f51db4ab55328674cf0a.png" />
+</span>
+<span class="equation-label">
+30
+</span>
+</div>
+<p>
+where <img src="ltximg/AdvancedModernAlgebra_4030a74b50d5ca088dbe539134cf629fb186d394.png" alt="AdvancedModernAlgebra_4030a74b50d5ca088dbe539134cf629fb186d394.png" />
+</p>
+
+</div>
+
+<div class="definition">
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> is a group and <img src="ltximg/AdvancedModernAlgebra_4030a74b50d5ca088dbe539134cf629fb186d394.png" alt="AdvancedModernAlgebra_4030a74b50d5ca088dbe539134cf629fb186d394.png" />, define <img src="ltximg/AdvancedModernAlgebra_b00ee003dd9a2b3d77e9e057b825a277fef3b224.png" alt="AdvancedModernAlgebra_b00ee003dd9a2b3d77e9e057b825a277fef3b224.png" /> by
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_30516c7395a110af2c4dd2853b39202e55508f40.png" alt="AdvancedModernAlgebra_30516c7395a110af2c4dd2853b39202e55508f40.png" />
+</span>
+<span class="equation-label">
+31
+</span>
+</div>
+<p>
+for all <img src="ltximg/AdvancedModernAlgebra_4dbf538f330909da98dfe2fa6a3e79d99d4d6d35.png" alt="AdvancedModernAlgebra_4dbf538f330909da98dfe2fa6a3e79d99d4d6d35.png" />
+</p>
+
+</div>
+
+<div class="proposition">
+<ol class="org-ol">
+<li>If <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> is a group and <img src="ltximg/AdvancedModernAlgebra_4030a74b50d5ca088dbe539134cf629fb186d394.png" alt="AdvancedModernAlgebra_4030a74b50d5ca088dbe539134cf629fb186d394.png" />, then conjugation <img src="ltximg/AdvancedModernAlgebra_b00ee003dd9a2b3d77e9e057b825a277fef3b224.png" alt="AdvancedModernAlgebra_b00ee003dd9a2b3d77e9e057b825a277fef3b224.png" /> is an
+isomorphism</li>
+<li>Conjugate elements have the same order</li>
+</ol>
+
+</div>
+
+<div class="proof">
+<ol class="org-ol">
+<li>bijection: <img src="ltximg/AdvancedModernAlgebra_fb8dc945f8028aaf6e32df43d27cb27dac1be441.png" alt="AdvancedModernAlgebra_fb8dc945f8028aaf6e32df43d27cb27dac1be441.png" /></li>
+</ol>
+
+</div>
+
+<div class="proposition">
+<ol class="org-ol">
+<li>If <img src="ltximg/AdvancedModernAlgebra_4a9422449352c09b3cd8e6bd61a75ec1736d359a.png" alt="AdvancedModernAlgebra_4a9422449352c09b3cd8e6bd61a75ec1736d359a.png" /> is a subgroup of index 2 in a group <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" />, then <img src="ltximg/AdvancedModernAlgebra_f0c75fb7526d53a1dda3bed0d5328ca453de82d4.png" alt="AdvancedModernAlgebra_f0c75fb7526d53a1dda3bed0d5328ca453de82d4.png" /> for every
+<img src="ltximg/AdvancedModernAlgebra_4030a74b50d5ca088dbe539134cf629fb186d394.png" alt="AdvancedModernAlgebra_4030a74b50d5ca088dbe539134cf629fb186d394.png" /></li>
+<li>If <img src="ltximg/AdvancedModernAlgebra_4a9422449352c09b3cd8e6bd61a75ec1736d359a.png" alt="AdvancedModernAlgebra_4a9422449352c09b3cd8e6bd61a75ec1736d359a.png" /> is a subgroup of index 2 in a group <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" />, then <img src="ltximg/AdvancedModernAlgebra_4a9422449352c09b3cd8e6bd61a75ec1736d359a.png" alt="AdvancedModernAlgebra_4a9422449352c09b3cd8e6bd61a75ec1736d359a.png" /> is a normal
+subgroup of <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /></li>
+</ol>
+
+</div>
+
+<div class="definition">
+<p>
+The group of is the group <img src="ltximg/AdvancedModernAlgebra_7ef17ae66bfc26b00e17349113379fcd7945c26a.png" alt="AdvancedModernAlgebra_7ef17ae66bfc26b00e17349113379fcd7945c26a.png" /> of order 8 consisting of the
+following matrices in <img src="ltximg/AdvancedModernAlgebra_c4671a5576091b6aeb0f829dfd4d5dd94752ea3d.png" alt="AdvancedModernAlgebra_c4671a5576091b6aeb0f829dfd4d5dd94752ea3d.png" />
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_201c626b28eab0a9573cf878cb31175b49391642.png" alt="AdvancedModernAlgebra_201c626b28eab0a9573cf878cb31175b49391642.png" />
+</span>
+<span class="equation-label">
+32
+</span>
+</div>
+<p>
+where <img src="ltximg/AdvancedModernAlgebra_558025fc229dfee58c54911e31dbd3144463ab70.png" alt="AdvancedModernAlgebra_558025fc229dfee58c54911e31dbd3144463ab70.png" /> is the identity matrix
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_1342ad6f39410f1b7f2255713e29fdf8aaf1fae5.png" alt="AdvancedModernAlgebra_1342ad6f39410f1b7f2255713e29fdf8aaf1fae5.png" />
+</span>
+<span class="equation-label">
+33
+</span>
+</div>
+
+</div>
+
+
+<div class="proposition">
+<p>
+The alternating group <img src="ltximg/AdvancedModernAlgebra_764d7aceed9d73aaef04e497af8adc7211f32f6b.png" alt="AdvancedModernAlgebra_764d7aceed9d73aaef04e497af8adc7211f32f6b.png" /> is a group of order 12 having no subgroup of
+order 6
+</p>
+
+</div>
+</div>
+</div>
+<div id="outline-container-orgec1c57a" class="outline-3">
+<h3 id="orgec1c57a">Quotient group</h3>
+<div class="outline-text-3" id="text-orgec1c57a">
+<p>
+<img src="ltximg/AdvancedModernAlgebra_9a56d049f0eb64b1a6a5c5ca37d7987f52ab8980.png" alt="AdvancedModernAlgebra_9a56d049f0eb64b1a6a5c5ca37d7987f52ab8980.png" /> is the set of all nonempty subsets of a group <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" />. If
+<img src="ltximg/AdvancedModernAlgebra_d0237306d995b77b1b74e92891aaf6c30e671fca.png" alt="AdvancedModernAlgebra_d0237306d995b77b1b74e92891aaf6c30e671fca.png" />, define
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_f129b3c8baf7d42efbe955770a689200382c5fc4.png" alt="AdvancedModernAlgebra_f129b3c8baf7d42efbe955770a689200382c5fc4.png" />
+</span>
+<span class="equation-label">
+34
+</span>
+</div>
+
+<div class="lemma">
+<p>
+<img src="ltximg/AdvancedModernAlgebra_2ea82ca350f54e88555bb3e99e62c4513cbee31b.png" alt="AdvancedModernAlgebra_2ea82ca350f54e88555bb3e99e62c4513cbee31b.png" /> is normal if and only if
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_1fbc2e2922660d26fa72866b2ab537d6e2754ddb.png" alt="AdvancedModernAlgebra_1fbc2e2922660d26fa72866b2ab537d6e2754ddb.png" />
+</span>
+<span class="equation-label">
+35
+</span>
+</div>
+
+</div>
+
+<p>
+A natural question is that whether <img src="ltximg/AdvancedModernAlgebra_ab98c3aa77c2694a6a2e17c66ebfb9956c827744.png" alt="AdvancedModernAlgebra_ab98c3aa77c2694a6a2e17c66ebfb9956c827744.png" /> is a subgroup when <img src="ltximg/AdvancedModernAlgebra_4a9422449352c09b3cd8e6bd61a75ec1736d359a.png" alt="AdvancedModernAlgebra_4a9422449352c09b3cd8e6bd61a75ec1736d359a.png" /> and <img src="ltximg/AdvancedModernAlgebra_ffa4c91f7a04c50a3910c6745fa39d5c86717aa9.png" alt="AdvancedModernAlgebra_ffa4c91f7a04c50a3910c6745fa39d5c86717aa9.png" /> are
+subgroups. The answer is no. Let <img src="ltximg/AdvancedModernAlgebra_6c8125d09d5373dc33ea2130d8cde939a65d1a85.png" alt="AdvancedModernAlgebra_6c8125d09d5373dc33ea2130d8cde939a65d1a85.png" />
+</p>
+
+
+<div class="proposition">
+<ol class="org-ol">
+<li>If <img src="ltximg/AdvancedModernAlgebra_4a9422449352c09b3cd8e6bd61a75ec1736d359a.png" alt="AdvancedModernAlgebra_4a9422449352c09b3cd8e6bd61a75ec1736d359a.png" /> and <img src="ltximg/AdvancedModernAlgebra_ffa4c91f7a04c50a3910c6745fa39d5c86717aa9.png" alt="AdvancedModernAlgebra_ffa4c91f7a04c50a3910c6745fa39d5c86717aa9.png" /> are subgroups of a group <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" />, and if one of them is normal,
+then <img src="ltximg/AdvancedModernAlgebra_b079a13c177da8fd5cf47db310e997457b7f8250.png" alt="AdvancedModernAlgebra_b079a13c177da8fd5cf47db310e997457b7f8250.png" /> and <img src="ltximg/AdvancedModernAlgebra_6ff20a626e72202894373be16d608be26f8037b4.png" alt="AdvancedModernAlgebra_6ff20a626e72202894373be16d608be26f8037b4.png" /></li>
+<li>If <img src="ltximg/AdvancedModernAlgebra_726e280e3da11aa66f895473c089290f93d5dde9.png" alt="AdvancedModernAlgebra_726e280e3da11aa66f895473c089290f93d5dde9.png" />, then <img src="ltximg/AdvancedModernAlgebra_3eeeeb33eed4d92d594370c54646528dd903f81c.png" alt="AdvancedModernAlgebra_3eeeeb33eed4d92d594370c54646528dd903f81c.png" /></li>
+</ol>
+
+</div>
+
+<div class="theorem">
+<p>
+Let <img src="ltximg/AdvancedModernAlgebra_f969f744123f250ad3dca1a6ae77dd1fc84f78d0.png" alt="AdvancedModernAlgebra_f969f744123f250ad3dca1a6ae77dd1fc84f78d0.png" /> denote the family of all the left cosets of a subgroup <img src="ltximg/AdvancedModernAlgebra_ffa4c91f7a04c50a3910c6745fa39d5c86717aa9.png" alt="AdvancedModernAlgebra_ffa4c91f7a04c50a3910c6745fa39d5c86717aa9.png" /> of <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" />.
+If <img src="ltximg/AdvancedModernAlgebra_f8405554a8fd58ba976b6417d3b1136402d89d47.png" alt="AdvancedModernAlgebra_f8405554a8fd58ba976b6417d3b1136402d89d47.png" />, then
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_e688c231a192cfea4cb04ebb4d7086cb340402c1.png" alt="AdvancedModernAlgebra_e688c231a192cfea4cb04ebb4d7086cb340402c1.png" />
+</span>
+<span class="equation-label">
+36
+</span>
+</div>
+<p>
+for all <img src="ltximg/AdvancedModernAlgebra_104e0702e1fb18ca6e9625f3ebe3ff596ad7f71e.png" alt="AdvancedModernAlgebra_104e0702e1fb18ca6e9625f3ebe3ff596ad7f71e.png" /> and <img src="ltximg/AdvancedModernAlgebra_f969f744123f250ad3dca1a6ae77dd1fc84f78d0.png" alt="AdvancedModernAlgebra_f969f744123f250ad3dca1a6ae77dd1fc84f78d0.png" /> is a group under this operation
+</p>
+
+</div>
+
+<div class="proof">
+<p>
+<img src="ltximg/AdvancedModernAlgebra_fd49a7e45e0354b3f994eed739800fb8f86ede25.png" alt="AdvancedModernAlgebra_fd49a7e45e0354b3f994eed739800fb8f86ede25.png" />
+</p>
+
+</div>
+
+<p>
+<img src="ltximg/AdvancedModernAlgebra_f969f744123f250ad3dca1a6ae77dd1fc84f78d0.png" alt="AdvancedModernAlgebra_f969f744123f250ad3dca1a6ae77dd1fc84f78d0.png" /> is called the <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> mod <img src="ltximg/AdvancedModernAlgebra_ffa4c91f7a04c50a3910c6745fa39d5c86717aa9.png" alt="AdvancedModernAlgebra_ffa4c91f7a04c50a3910c6745fa39d5c86717aa9.png" />
+</p>
+
+<div class="corollary">
+<p>
+Every <img src="ltximg/AdvancedModernAlgebra_f8405554a8fd58ba976b6417d3b1136402d89d47.png" alt="AdvancedModernAlgebra_f8405554a8fd58ba976b6417d3b1136402d89d47.png" /> is the kernel of some homomorphism
+</p>
+
+</div>
+
+<div class="proof">
+<p>
+Define the <img src="ltximg/AdvancedModernAlgebra_2bec7ac2af5f32e96f560d21eb20b107b0e02771.png" alt="AdvancedModernAlgebra_2bec7ac2af5f32e96f560d21eb20b107b0e02771.png" />, <img src="ltximg/AdvancedModernAlgebra_88eedd2fe5061eb1bc70aa1e6533c8ad9367ca89.png" alt="AdvancedModernAlgebra_88eedd2fe5061eb1bc70aa1e6533c8ad9367ca89.png" />
+</p>
+
+</div>
+
+<div class="theorem">
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_34fe0af4c9d6a69a2ae586a40d70ab8ee5d1a716.png" alt="AdvancedModernAlgebra_34fe0af4c9d6a69a2ae586a40d70ab8ee5d1a716.png" /> is a homomorphism, then
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_1f34606393b9d7458f56fb7277bd07db7fe666af.png" alt="AdvancedModernAlgebra_1f34606393b9d7458f56fb7277bd07db7fe666af.png" />
+</span>
+<span class="equation-label">
+37
+</span>
+</div>
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_ea472667e23cb67830721b5cab71996ad511857c.png" alt="AdvancedModernAlgebra_ea472667e23cb67830721b5cab71996ad511857c.png" /> and <img src="ltximg/AdvancedModernAlgebra_5afd9cb04aad9e7ae1963501e1e23dc3724456d3.png" alt="AdvancedModernAlgebra_5afd9cb04aad9e7ae1963501e1e23dc3724456d3.png" />, then <img src="ltximg/AdvancedModernAlgebra_37b567b709aebd0aa961a4fa22bd31a94d59e052.png" alt="AdvancedModernAlgebra_37b567b709aebd0aa961a4fa22bd31a94d59e052.png" />
+is an isomorphism
+</p>
+
+</div>
+
+<p>
+
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_3b977b0cf64bd0ac0f7e73f2d7c9201da402ae3e.png" alt="AdvancedModernAlgebra_3b977b0cf64bd0ac0f7e73f2d7c9201da402ae3e.png" />
+</span>
+<span class="equation-label">
+38
+</span>
+</div>
+
+<div class="proposition">
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_4a9422449352c09b3cd8e6bd61a75ec1736d359a.png" alt="AdvancedModernAlgebra_4a9422449352c09b3cd8e6bd61a75ec1736d359a.png" /> and <img src="ltximg/AdvancedModernAlgebra_ffa4c91f7a04c50a3910c6745fa39d5c86717aa9.png" alt="AdvancedModernAlgebra_ffa4c91f7a04c50a3910c6745fa39d5c86717aa9.png" /> are subgroups of a finite group <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" />, then
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_e707961a924c3c175b326d8d9ed43f461673ebd8.png" alt="AdvancedModernAlgebra_e707961a924c3c175b326d8d9ed43f461673ebd8.png" />
+</span>
+<span class="equation-label">
+38
+</span>
+</div>
+
+</div>
+
+<div class="proof">
+<p>
+Define a function <img src="ltximg/AdvancedModernAlgebra_d860578fa56266a8e6859164454a751336c96cdf.png" alt="AdvancedModernAlgebra_d860578fa56266a8e6859164454a751336c96cdf.png" />. Show that
+<img src="ltximg/AdvancedModernAlgebra_581fee80d133bdd14415be963c458560d7f2ae08.png" alt="AdvancedModernAlgebra_581fee80d133bdd14415be963c458560d7f2ae08.png" />. 
+</p>
+
+<p>
+Claim that if <img src="ltximg/AdvancedModernAlgebra_143b0cf8f10c8685ed3a249ab31f78f3632e9b01.png" alt="AdvancedModernAlgebra_143b0cf8f10c8685ed3a249ab31f78f3632e9b01.png" />, then
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_bfcde83c8ebfea47d6aa168dad278c69deca7dc1.png" alt="AdvancedModernAlgebra_bfcde83c8ebfea47d6aa168dad278c69deca7dc1.png" />
+</span>
+<span class="equation-label">
+39
+</span>
+</div>
+
+</div>
+
+<div class="theorem">
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_7a82b54fcd11bf28808d71522671a59ffceccd02.png" alt="AdvancedModernAlgebra_7a82b54fcd11bf28808d71522671a59ffceccd02.png" />, then <img src="ltximg/AdvancedModernAlgebra_b8e1f304b963f57c5bf7a0c78ce5e2cc612b1e53.png" alt="AdvancedModernAlgebra_b8e1f304b963f57c5bf7a0c78ce5e2cc612b1e53.png" /> and
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_a9d967188e95a26d00412166073cc54810f54100.png" alt="AdvancedModernAlgebra_a9d967188e95a26d00412166073cc54810f54100.png" />
+</span>
+<span class="equation-label">
+40
+</span>
+</div>
+
+</div>
+
+<div class="proof">
+<p>
+<img src="ltximg/AdvancedModernAlgebra_c276bab6678d0f358d36039f2b55c24a2af89f31.png" alt="AdvancedModernAlgebra_c276bab6678d0f358d36039f2b55c24a2af89f31.png" />
+</p>
+
+</div>
+
+<div class="theorem">
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_726e280e3da11aa66f895473c089290f93d5dde9.png" alt="AdvancedModernAlgebra_726e280e3da11aa66f895473c089290f93d5dde9.png" /> with <img src="ltximg/AdvancedModernAlgebra_bfcc4be5dde8efbca4569c4360f0589c4186e1b9.png" alt="AdvancedModernAlgebra_bfcc4be5dde8efbca4569c4360f0589c4186e1b9.png" />, then <img src="ltximg/AdvancedModernAlgebra_98dc2e61ac4819e1ef69139450dbc59c86635a4b.png" alt="AdvancedModernAlgebra_98dc2e61ac4819e1ef69139450dbc59c86635a4b.png" /> and
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_384338ef4f6e6b37d90589b90b05405bccb68568.png" alt="AdvancedModernAlgebra_384338ef4f6e6b37d90589b90b05405bccb68568.png" />
+</span>
+<span class="equation-label">
+41
+</span>
+</div>
+
+</div>
+
+<div class="theorem">
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_5f9cf43e264537e6f609baaf725ea900c9263a1f.png" alt="AdvancedModernAlgebra_5f9cf43e264537e6f609baaf725ea900c9263a1f.png" /> is the natural map, then
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_d776ca86e612fa10961cbc0e7e9e7edbd4840c9c.png" alt="AdvancedModernAlgebra_d776ca86e612fa10961cbc0e7e9e7edbd4840c9c.png" />
+</span>
+<span class="equation-label">
+42
+</span>
+</div>
+<p>
+is a bijection between <img src="ltximg/AdvancedModernAlgebra_c67889940db829803b60d4e84b7e317537eff782.png" alt="AdvancedModernAlgebra_c67889940db829803b60d4e84b7e317537eff782.png" />, the family of all those subgroups <img src="ltximg/AdvancedModernAlgebra_e2c9edc0698a385f1bd1c0af7278f0ab3f828141.png" alt="AdvancedModernAlgebra_e2c9edc0698a385f1bd1c0af7278f0ab3f828141.png" /> of
+<img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> that contain <img src="ltximg/AdvancedModernAlgebra_ffa4c91f7a04c50a3910c6745fa39d5c86717aa9.png" alt="AdvancedModernAlgebra_ffa4c91f7a04c50a3910c6745fa39d5c86717aa9.png" />, and <img src="ltximg/AdvancedModernAlgebra_9041f5ef05888faa169b418cb9e65137b9ffbf8c.png" alt="AdvancedModernAlgebra_9041f5ef05888faa169b418cb9e65137b9ffbf8c.png" />, the family of all the subgroups of
+<img src="ltximg/AdvancedModernAlgebra_f969f744123f250ad3dca1a6ae77dd1fc84f78d0.png" alt="AdvancedModernAlgebra_f969f744123f250ad3dca1a6ae77dd1fc84f78d0.png" />. If we denote <img src="ltximg/AdvancedModernAlgebra_398a703db09e691ade533bb2d4181d53069c90e4.png" alt="AdvancedModernAlgebra_398a703db09e691ade533bb2d4181d53069c90e4.png" /> by <img src="ltximg/AdvancedModernAlgebra_15d263b2fe62a2e5d883179704a2894ff2da0da3.png" alt="AdvancedModernAlgebra_15d263b2fe62a2e5d883179704a2894ff2da0da3.png" />, then
+</p>
+<ol class="org-ol">
+<li><img src="ltximg/AdvancedModernAlgebra_9c5a984c127a55e74a1ba9d97d17954dc64a4629.png" alt="AdvancedModernAlgebra_9c5a984c127a55e74a1ba9d97d17954dc64a4629.png" /> if and only if <img src="ltximg/AdvancedModernAlgebra_0e49c1dd8a55f3f21490e495eebcb259e671a3c8.png" alt="AdvancedModernAlgebra_0e49c1dd8a55f3f21490e495eebcb259e671a3c8.png" />, in which case <img src="ltximg/AdvancedModernAlgebra_3fbdf251056d0a2a47f4b77e642fabe58ab294a8.png" alt="AdvancedModernAlgebra_3fbdf251056d0a2a47f4b77e642fabe58ab294a8.png" /></li>
+<li><img src="ltximg/AdvancedModernAlgebra_474e3825a5cfe83c571df3bf191291cbe37f5769.png" alt="AdvancedModernAlgebra_474e3825a5cfe83c571df3bf191291cbe37f5769.png" /> if and only if <img src="ltximg/AdvancedModernAlgebra_331df9e8ccb7e40771fb290d7ada601489c17abb.png" alt="AdvancedModernAlgebra_331df9e8ccb7e40771fb290d7ada601489c17abb.png" />, in which case <img src="ltximg/AdvancedModernAlgebra_268b2a37e1c5ed071c7d3a6744a73d90be28ef4e.png" alt="AdvancedModernAlgebra_268b2a37e1c5ed071c7d3a6744a73d90be28ef4e.png" /></li>
+</ol>
+
+</div>
+
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_78214fbe7bb8ac3d6425f9248e0da8c0588a5856.png" alt="AdvancedModernAlgebra_78214fbe7bb8ac3d6425f9248e0da8c0588a5856.png" />
+</span>
+<span class="equation-label">
+43
+</span>
+</div>
+
+<div class="proof">
+<p>
+Use <img src="ltximg/AdvancedModernAlgebra_30eefc2dfdf75ec659c3415945abec314ee35367.png" alt="AdvancedModernAlgebra_30eefc2dfdf75ec659c3415945abec314ee35367.png" /> and <img src="ltximg/AdvancedModernAlgebra_2d90fd5f6445cba301ccc2031e8e493ac7c2220a.png" alt="AdvancedModernAlgebra_2d90fd5f6445cba301ccc2031e8e493ac7c2220a.png" /> to prove injectivity and surjectivity
+respectively. 
+</p>
+
+<p>
+For <img src="ltximg/AdvancedModernAlgebra_3fbdf251056d0a2a47f4b77e642fabe58ab294a8.png" alt="AdvancedModernAlgebra_3fbdf251056d0a2a47f4b77e642fabe58ab294a8.png" />, show there is a bijection between the family of all
+cosets of the form <img src="ltximg/AdvancedModernAlgebra_a3b3bfcffcd1b2df92af7f1cd8e10560c011ed30.png" alt="AdvancedModernAlgebra_a3b3bfcffcd1b2df92af7f1cd8e10560c011ed30.png" /> and the family of all the cosets of the form
+<img src="ltximg/AdvancedModernAlgebra_8a6add822d2a8d7bfb028c6e8280d8122a94ab78.png" alt="AdvancedModernAlgebra_8a6add822d2a8d7bfb028c6e8280d8122a94ab78.png" />.
+</p>
+
+<p>
+injective:
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_2407923192e63400f1970d07edbce83bc15c1ea1.png" alt="AdvancedModernAlgebra_2407923192e63400f1970d07edbce83bc15c1ea1.png" />
+</span>
+<span class="equation-label">
+43
+</span>
+</div>
+
+<p>
+surjective:
+</p>
+
+
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> is finite, then
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_a0f9be0dfba39b5d2c56c96d4c4e19f4ad5736c3.png" alt="AdvancedModernAlgebra_a0f9be0dfba39b5d2c56c96d4c4e19f4ad5736c3.png" />
+</span>
+<span class="equation-label">
+44
+</span>
+</div>
+
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_474e3825a5cfe83c571df3bf191291cbe37f5769.png" alt="AdvancedModernAlgebra_474e3825a5cfe83c571df3bf191291cbe37f5769.png" />, by third isomorphism theorem, <img src="ltximg/AdvancedModernAlgebra_8c96ef8dfbd7decf9a4d96c3c7e4fdde59dfb870.png" alt="AdvancedModernAlgebra_8c96ef8dfbd7decf9a4d96c3c7e4fdde59dfb870.png" />
+</p>
+
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_331df9e8ccb7e40771fb290d7ada601489c17abb.png" alt="AdvancedModernAlgebra_331df9e8ccb7e40771fb290d7ada601489c17abb.png" />, 
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_a74ec062fa83023627bcc01e827913103a1e53fe.png" alt="AdvancedModernAlgebra_a74ec062fa83023627bcc01e827913103a1e53fe.png" />
+</span>
+<span class="equation-label">
+45
+</span>
+</div>
+<p>
+so that <img src="ltximg/AdvancedModernAlgebra_1c1fa0a3f417c7e43455b14b2effaec7ecedcbd9.png" alt="AdvancedModernAlgebra_1c1fa0a3f417c7e43455b14b2effaec7ecedcbd9.png" />
+</p>
+
+</div>
+
+
+<div class="proposition">
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> is a finite abelian group and <img src="ltximg/AdvancedModernAlgebra_977db7fb79c07792b9c669eb040971f5380c1193.png" alt="AdvancedModernAlgebra_977db7fb79c07792b9c669eb040971f5380c1193.png" /> is a divisor of <img src="ltximg/AdvancedModernAlgebra_6e92116d4d1e950767277a41cddaed91b9090d57.png" alt="AdvancedModernAlgebra_6e92116d4d1e950767277a41cddaed91b9090d57.png" />, then <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" />
+contains a subgroup of order <img src="ltximg/AdvancedModernAlgebra_977db7fb79c07792b9c669eb040971f5380c1193.png" alt="AdvancedModernAlgebra_977db7fb79c07792b9c669eb040971f5380c1193.png" />
+</p>
+
+</div>
+
+<div class="proof">
+<p>
+Abelian group's subgroup is normal and hence we can build quotient groups.
+p90 for proof. Use the correspondence theorem
+</p>
+
+</div>
+
+<div class="definition">
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_4a9422449352c09b3cd8e6bd61a75ec1736d359a.png" alt="AdvancedModernAlgebra_4a9422449352c09b3cd8e6bd61a75ec1736d359a.png" /> and <img src="ltximg/AdvancedModernAlgebra_ffa4c91f7a04c50a3910c6745fa39d5c86717aa9.png" alt="AdvancedModernAlgebra_ffa4c91f7a04c50a3910c6745fa39d5c86717aa9.png" /> are grops, then their , denoted by <img src="ltximg/AdvancedModernAlgebra_a311e1cb4dc33ac2bd5dd7b458ef63114d5127e1.png" alt="AdvancedModernAlgebra_a311e1cb4dc33ac2bd5dd7b458ef63114d5127e1.png" />, is the set of all ordered pairs <img src="ltximg/AdvancedModernAlgebra_dfccbee2cdc3516bc9a7a5e6026939181b1dabb1.png" alt="AdvancedModernAlgebra_dfccbee2cdc3516bc9a7a5e6026939181b1dabb1.png" /> with the operation
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_322e60fcf82e8322d1df8920f30777f5b0fd9f96.png" alt="AdvancedModernAlgebra_322e60fcf82e8322d1df8920f30777f5b0fd9f96.png" />
+</span>
+<span class="equation-label">
+46
+</span>
+</div>
+
+</div>
+
+<div class="proposition">
+<p>
+Let <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> and <img src="ltximg/AdvancedModernAlgebra_81502282e17239d50533eaceda13169527f4caaa.png" alt="AdvancedModernAlgebra_81502282e17239d50533eaceda13169527f4caaa.png" /> be groups and <img src="ltximg/AdvancedModernAlgebra_09c35fe594e3d9b7caa8acb7c45f865d99cc03d2.png" alt="AdvancedModernAlgebra_09c35fe594e3d9b7caa8acb7c45f865d99cc03d2.png" />. Then <img src="ltximg/AdvancedModernAlgebra_37edfccc16f93715def9543295b05f4306ca768c.png" alt="AdvancedModernAlgebra_37edfccc16f93715def9543295b05f4306ca768c.png" /> and
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_3203207930e038b3ab4e9595fae932eed570ed6d.png" alt="AdvancedModernAlgebra_3203207930e038b3ab4e9595fae932eed570ed6d.png" />
+</span>
+<span class="equation-label">
+47
+</span>
+</div>
+
+</div>
+
+<div class="proposition">
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> is a group containing normal subgroups <img src="ltximg/AdvancedModernAlgebra_4a9422449352c09b3cd8e6bd61a75ec1736d359a.png" alt="AdvancedModernAlgebra_4a9422449352c09b3cd8e6bd61a75ec1736d359a.png" /> and <img src="ltximg/AdvancedModernAlgebra_ffa4c91f7a04c50a3910c6745fa39d5c86717aa9.png" alt="AdvancedModernAlgebra_ffa4c91f7a04c50a3910c6745fa39d5c86717aa9.png" /> and <img src="ltximg/AdvancedModernAlgebra_8f61e3e97c7b39e4a959d817b7d4d1bc76fd3141.png" alt="AdvancedModernAlgebra_8f61e3e97c7b39e4a959d817b7d4d1bc76fd3141.png" />
+and <img src="ltximg/AdvancedModernAlgebra_311049055f139ae4272eee6b39869253b9e1385d.png" alt="AdvancedModernAlgebra_311049055f139ae4272eee6b39869253b9e1385d.png" />, then <img src="ltximg/AdvancedModernAlgebra_64af5b2b94044e25ade05924876b0a4f238abfbc.png" alt="AdvancedModernAlgebra_64af5b2b94044e25ade05924876b0a4f238abfbc.png" />
+</p>
+
+</div>
+
+<div class="proof">
+<p>
+Note <img src="ltximg/AdvancedModernAlgebra_6894f9e7a02491c00ac82e6fd651aa2c4f0477e7.png" alt="AdvancedModernAlgebra_6894f9e7a02491c00ac82e6fd651aa2c4f0477e7.png" />. Consider <img src="ltximg/AdvancedModernAlgebra_acbe5c68c1a5cd47a56749ac1f2433cc5a01c10b.png" alt="AdvancedModernAlgebra_acbe5c68c1a5cd47a56749ac1f2433cc5a01c10b.png" />. Show it's homo and bijective.
+</p>
+
+</div>
+
+<div class="theorem">
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_6d175f678369933a32e1a66f6cb8d474e8e82b87.png" alt="AdvancedModernAlgebra_6d175f678369933a32e1a66f6cb8d474e8e82b87.png" /> are relatively prime, then
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_017c6e9687415db9135c9977cba84c6dc24cf373.png" alt="AdvancedModernAlgebra_017c6e9687415db9135c9977cba84c6dc24cf373.png" />
+</span>
+<span class="equation-label">
+48
+</span>
+</div>
+
+</div>
+
+<div class="proof">
+<p>
+<img src="ltximg/AdvancedModernAlgebra_d501593e562f7c3e0019c133687521656cee5265.png" alt="AdvancedModernAlgebra_d501593e562f7c3e0019c133687521656cee5265.png" />
+</p>
+
+</div>
+
+<div class="proposition">
+<p>
+Let <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> be a group, and <img src="ltximg/AdvancedModernAlgebra_104e0702e1fb18ca6e9625f3ebe3ff596ad7f71e.png" alt="AdvancedModernAlgebra_104e0702e1fb18ca6e9625f3ebe3ff596ad7f71e.png" /> be commuting elements of orders <img src="ltximg/AdvancedModernAlgebra_6d175f678369933a32e1a66f6cb8d474e8e82b87.png" alt="AdvancedModernAlgebra_6d175f678369933a32e1a66f6cb8d474e8e82b87.png" />. If
+<img src="ltximg/AdvancedModernAlgebra_9b431fdc1f99f8ed5b03adf6e927942b992ebac5.png" alt="AdvancedModernAlgebra_9b431fdc1f99f8ed5b03adf6e927942b992ebac5.png" />, then <img src="ltximg/AdvancedModernAlgebra_cb815445a7d63ec8cc66e8ec03dbf187f692ec53.png" alt="AdvancedModernAlgebra_cb815445a7d63ec8cc66e8ec03dbf187f692ec53.png" /> has order <img src="ltximg/AdvancedModernAlgebra_5eece457d0cf463599ccf8b600c88b8cb5a8126e.png" alt="AdvancedModernAlgebra_5eece457d0cf463599ccf8b600c88b8cb5a8126e.png" />
+</p>
+
+</div>
+
+<div class="corollary">
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_9b431fdc1f99f8ed5b03adf6e927942b992ebac5.png" alt="AdvancedModernAlgebra_9b431fdc1f99f8ed5b03adf6e927942b992ebac5.png" />, then <img src="ltximg/AdvancedModernAlgebra_63d51cb8c79161e0f8df953e60b570df98de1b14.png" alt="AdvancedModernAlgebra_63d51cb8c79161e0f8df953e60b570df98de1b14.png" />
+</p>
+
+</div>
+
+
+<div class="corollary">
+<ol class="org-ol">
+<li>If <img src="ltximg/AdvancedModernAlgebra_f6790564aa002d161fef8af5770b64d8ef8e635c.png" alt="AdvancedModernAlgebra_f6790564aa002d161fef8af5770b64d8ef8e635c.png" /> is a prime, then <img src="ltximg/AdvancedModernAlgebra_886b9c618ec6d5db6dad2bff72d130b0ac7a9ca6.png" alt="AdvancedModernAlgebra_886b9c618ec6d5db6dad2bff72d130b0ac7a9ca6.png" /></li>
+<li><p>
+If <img src="ltximg/AdvancedModernAlgebra_1613f78eda45334f29367e4a963e4278b4a1037a.png" alt="AdvancedModernAlgebra_1613f78eda45334f29367e4a963e4278b4a1037a.png" />, then
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_a16b95086baf6247c9f331ca463df963f86a675f.png" alt="AdvancedModernAlgebra_a16b95086baf6247c9f331ca463df963f86a675f.png" />
+</span>
+<span class="equation-label">
+49
+</span>
+</div></li>
+</ol>
+
+</div>
+
+<div class="lemma">
+<p>
+A cyclic group of order <img src="ltximg/AdvancedModernAlgebra_ac4e677c1ff6181e4eaf5ea73c75e784beaf4ad1.png" alt="AdvancedModernAlgebra_ac4e677c1ff6181e4eaf5ea73c75e784beaf4ad1.png" /> has a unique subgroup of order <img src="ltximg/AdvancedModernAlgebra_977db7fb79c07792b9c669eb040971f5380c1193.png" alt="AdvancedModernAlgebra_977db7fb79c07792b9c669eb040971f5380c1193.png" />, for each
+divisor <img src="ltximg/AdvancedModernAlgebra_977db7fb79c07792b9c669eb040971f5380c1193.png" alt="AdvancedModernAlgebra_977db7fb79c07792b9c669eb040971f5380c1193.png" /> of <img src="ltximg/AdvancedModernAlgebra_ac4e677c1ff6181e4eaf5ea73c75e784beaf4ad1.png" alt="AdvancedModernAlgebra_ac4e677c1ff6181e4eaf5ea73c75e784beaf4ad1.png" />, and this subgroup is cyclic.
+</p>
+
+</div>
+
+<p>
+Define an equivalence relation on a group <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> by <img src="ltximg/AdvancedModernAlgebra_33e8f28985695101bf9456e152ef92b770a089dd.png" alt="AdvancedModernAlgebra_33e8f28985695101bf9456e152ef92b770a089dd.png" /> if <img src="ltximg/AdvancedModernAlgebra_e778b837cd7f54571087ff4ad85510756e03bfe1.png" alt="AdvancedModernAlgebra_e778b837cd7f54571087ff4ad85510756e03bfe1.png" />. Denote the equivalence class containing <img src="ltximg/AdvancedModernAlgebra_3c046227ddcab7ccaeb7873b33606f934e6b9331.png" alt="AdvancedModernAlgebra_3c046227ddcab7ccaeb7873b33606f934e6b9331.png" /> by <img src="ltximg/AdvancedModernAlgebra_e45989d24d781a0c33a9fc6304cd66ce78158cdb.png" alt="AdvancedModernAlgebra_e45989d24d781a0c33a9fc6304cd66ce78158cdb.png" />, where <img src="ltximg/AdvancedModernAlgebra_3f49d4f961436455d5d2af539cc55549f403f9ff.png" alt="AdvancedModernAlgebra_3f49d4f961436455d5d2af539cc55549f403f9ff.png" />. Equivalence classes form a partition and we get
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_04faa91f413775af6d86a864f1d8e9aec2bbb2d9.png" alt="AdvancedModernAlgebra_04faa91f413775af6d86a864f1d8e9aec2bbb2d9.png" />
+</span>
+<span class="equation-label">
+50
+</span>
+</div>
+<p>
+where <img src="ltximg/AdvancedModernAlgebra_a87137ee05c47ac9c118f7f05404ad2f260631b0.png" alt="AdvancedModernAlgebra_a87137ee05c47ac9c118f7f05404ad2f260631b0.png" /> ranges over all cyclic subgroups of <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" />. Note <img src="ltximg/AdvancedModernAlgebra_c5ef01690101fb8580af615e5ca19961de67545f.png" alt="AdvancedModernAlgebra_c5ef01690101fb8580af615e5ca19961de67545f.png" />
+</p>
+
+<div class="theorem">
+<p>
+A group <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> of order <img src="ltximg/AdvancedModernAlgebra_ac4e677c1ff6181e4eaf5ea73c75e784beaf4ad1.png" alt="AdvancedModernAlgebra_ac4e677c1ff6181e4eaf5ea73c75e784beaf4ad1.png" /> is cyclic if and only if for each divisor <img src="ltximg/AdvancedModernAlgebra_977db7fb79c07792b9c669eb040971f5380c1193.png" alt="AdvancedModernAlgebra_977db7fb79c07792b9c669eb040971f5380c1193.png" /> of
+<img src="ltximg/AdvancedModernAlgebra_ac4e677c1ff6181e4eaf5ea73c75e784beaf4ad1.png" alt="AdvancedModernAlgebra_ac4e677c1ff6181e4eaf5ea73c75e784beaf4ad1.png" />, there is at most one cyclic subgroup of order <img src="ltximg/AdvancedModernAlgebra_977db7fb79c07792b9c669eb040971f5380c1193.png" alt="AdvancedModernAlgebra_977db7fb79c07792b9c669eb040971f5380c1193.png" />
+</p>
+
+</div>
+
+<div class="theorem">
+<p>
+   If <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> is an abelian group of order <img src="ltximg/AdvancedModernAlgebra_ac4e677c1ff6181e4eaf5ea73c75e784beaf4ad1.png" alt="AdvancedModernAlgebra_ac4e677c1ff6181e4eaf5ea73c75e784beaf4ad1.png" /> having at most one cyclic subgroup o
+f
+   order <img src="ltximg/AdvancedModernAlgebra_f6790564aa002d161fef8af5770b64d8ef8e635c.png" alt="AdvancedModernAlgebra_f6790564aa002d161fef8af5770b64d8ef8e635c.png" /> for each prime divisor <img src="ltximg/AdvancedModernAlgebra_f6790564aa002d161fef8af5770b64d8ef8e635c.png" alt="AdvancedModernAlgebra_f6790564aa002d161fef8af5770b64d8ef8e635c.png" /> of <img src="ltximg/AdvancedModernAlgebra_ac4e677c1ff6181e4eaf5ea73c75e784beaf4ad1.png" alt="AdvancedModernAlgebra_ac4e677c1ff6181e4eaf5ea73c75e784beaf4ad1.png" />, then <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> is cyclic
+</p>
+
+</div>
+
+<p>
+Exercise:
+</p>
+<ul class="org-ul">
+<li>2.71 Suppose <img src="ltximg/AdvancedModernAlgebra_901ae86f459c408ee306f86efaa82dedc3ebf2d0.png" alt="AdvancedModernAlgebra_901ae86f459c408ee306f86efaa82dedc3ebf2d0.png" />. Since <img src="ltximg/AdvancedModernAlgebra_83e77eab8b76f2314701a40d2e1e6fa0dc2e4820.png" alt="AdvancedModernAlgebra_83e77eab8b76f2314701a40d2e1e6fa0dc2e4820.png" />,
+<img src="ltximg/AdvancedModernAlgebra_ceca06896867893d4a289739569086ef67d0cc33.png" alt="AdvancedModernAlgebra_ceca06896867893d4a289739569086ef67d0cc33.png" />. Hence <img src="ltximg/AdvancedModernAlgebra_024b8e3ab91b6e96fd1ebc867a066e88fcba368b.png" alt="AdvancedModernAlgebra_024b8e3ab91b6e96fd1ebc867a066e88fcba368b.png" /></li>
+<li>2.67 1. <img src="ltximg/AdvancedModernAlgebra_24feda707160f8f135e2e9d3d1500e1fbd40ce27.png" alt="AdvancedModernAlgebra_24feda707160f8f135e2e9d3d1500e1fbd40ce27.png" /> and <img src="ltximg/AdvancedModernAlgebra_22e16aca269d885d7de5b17da029752d5750d01c.png" alt="AdvancedModernAlgebra_22e16aca269d885d7de5b17da029752d5750d01c.png" />.
+Hence <img src="ltximg/AdvancedModernAlgebra_56240f7912fa1bbecb354e04e81525e4cf2ac074.png" alt="AdvancedModernAlgebra_56240f7912fa1bbecb354e04e81525e4cf2ac074.png" /></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge0787e8" class="outline-3">
+<h3 id="orge0787e8">Group Actions</h3>
+<div class="outline-text-3" id="text-orge0787e8">
+<div class="theorem">
+<p>
+Every group <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> is isomorphic to a subgroup of the symmetric group <img src="ltximg/AdvancedModernAlgebra_c9b6cc17f37f5776f9e50b689acde18ff5772c29.png" alt="AdvancedModernAlgebra_c9b6cc17f37f5776f9e50b689acde18ff5772c29.png" />. In
+particular, if <img src="ltximg/AdvancedModernAlgebra_776c0db70c5d7e556270229ab6db94c38a3df01d.png" alt="AdvancedModernAlgebra_776c0db70c5d7e556270229ab6db94c38a3df01d.png" />, then <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> is isomorphic to a subgroup of <img src="ltximg/AdvancedModernAlgebra_8fbbf580ad143e54f6c0b1a5dc5e625f9b46067d.png" alt="AdvancedModernAlgebra_8fbbf580ad143e54f6c0b1a5dc5e625f9b46067d.png" />
+</p>
+
+</div>
+
+<div class="proof">
+<p>
+For each <img src="ltximg/AdvancedModernAlgebra_4dbf538f330909da98dfe2fa6a3e79d99d4d6d35.png" alt="AdvancedModernAlgebra_4dbf538f330909da98dfe2fa6a3e79d99d4d6d35.png" />, define <img src="ltximg/AdvancedModernAlgebra_085652f440ba5261a34c78d3ceac6bc749fe67eb.png" alt="AdvancedModernAlgebra_085652f440ba5261a34c78d3ceac6bc749fe67eb.png" /> for every <img src="ltximg/AdvancedModernAlgebra_49ec455184aafd7497b37325df691f573555bd1b.png" alt="AdvancedModernAlgebra_49ec455184aafd7497b37325df691f573555bd1b.png" />. <img src="ltximg/AdvancedModernAlgebra_903ba943c43758e3bc5b93b4a2012dbfd5750ac4.png" alt="AdvancedModernAlgebra_903ba943c43758e3bc5b93b4a2012dbfd5750ac4.png" /> is a
+bijection for its inverse is <img src="ltximg/AdvancedModernAlgebra_4f020c11a98444612e2227ef7dfa630c7a8fac4b.png" alt="AdvancedModernAlgebra_4f020c11a98444612e2227ef7dfa630c7a8fac4b.png" />
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_c4f659ad94adc88164b59bddcbe3328521f65989.png" alt="AdvancedModernAlgebra_c4f659ad94adc88164b59bddcbe3328521f65989.png" />
+</span>
+<span class="equation-label">
+51
+</span>
+</div>
+
+</div>
+
+<div class="theorem">
+<p>
+Let <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> be a group and <img src="ltximg/AdvancedModernAlgebra_ee28882132183c9ab31d94cc93b9cd4b7915a590.png" alt="AdvancedModernAlgebra_ee28882132183c9ab31d94cc93b9cd4b7915a590.png" /> having finite index <img src="ltximg/AdvancedModernAlgebra_ac4e677c1ff6181e4eaf5ea73c75e784beaf4ad1.png" alt="AdvancedModernAlgebra_ac4e677c1ff6181e4eaf5ea73c75e784beaf4ad1.png" />. Then there exists a
+homomorphism <img src="ltximg/AdvancedModernAlgebra_b1789afd6d166e1b926cd24cf0a072d96b990e3a.png" alt="AdvancedModernAlgebra_b1789afd6d166e1b926cd24cf0a072d96b990e3a.png" /> with <img src="ltximg/AdvancedModernAlgebra_6beac699e097fe444016c9b47bf40ce86f07a098.png" alt="AdvancedModernAlgebra_6beac699e097fe444016c9b47bf40ce86f07a098.png" />
+</p>
+
+</div>
+
+<p>
+When <img src="ltximg/AdvancedModernAlgebra_addf348932bf222deb682de6c5c3a662e9b46508.png" alt="AdvancedModernAlgebra_addf348932bf222deb682de6c5c3a662e9b46508.png" />, this is the Cayley theorem.
+</p>
+
+<div class="proposition">
+<p>
+Every group <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> of order 4 is isomorphic to either <img src="ltximg/AdvancedModernAlgebra_389cae9442458442cf02ebc76b92c0a893201698.png" alt="AdvancedModernAlgebra_389cae9442458442cf02ebc76b92c0a893201698.png" /> or the four-group
+<img src="ltximg/AdvancedModernAlgebra_a2c2b052f4a496108ba537fa281ba3a4f9472908.png" alt="AdvancedModernAlgebra_a2c2b052f4a496108ba537fa281ba3a4f9472908.png" />. And <img src="ltximg/AdvancedModernAlgebra_4377bace33bc8e95f0ff426b8bd1176e79d6e639.png" alt="AdvancedModernAlgebra_4377bace33bc8e95f0ff426b8bd1176e79d6e639.png" />
+</p>
+
+</div>
+
+<div class="proof">
+<p>
+By lagrange's theorem, every element in <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> other than 1 has order 2 or 4. If
+4, then <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> is cyclic.
+</p>
+
+<p>
+Suppose <img src="ltximg/AdvancedModernAlgebra_9ab38527ed4473f4924cc72ec49b24cac100e6ff.png" alt="AdvancedModernAlgebra_9ab38527ed4473f4924cc72ec49b24cac100e6ff.png" />, then <img src="ltximg/AdvancedModernAlgebra_1d4ac713f716a3d5c355df172cd50edc355020fa.png" alt="AdvancedModernAlgebra_1d4ac713f716a3d5c355df172cd50edc355020fa.png" />. Hence <img src="ltximg/AdvancedModernAlgebra_059f7ce7845ebce90de5109b653b6fca3e28b2ff.png" alt="AdvancedModernAlgebra_059f7ce7845ebce90de5109b653b6fca3e28b2ff.png" />.
+</p>
+
+</div>
+
+
+<div class="proposition">
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> is a group of order 6, then <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> is isomorphic to either <img src="ltximg/AdvancedModernAlgebra_3dae9d2b49850bc29f0b419dbe512897fee3ce0e.png" alt="AdvancedModernAlgebra_3dae9d2b49850bc29f0b419dbe512897fee3ce0e.png" /> or
+<img src="ltximg/AdvancedModernAlgebra_395b6167c07f23e34013e746017f4a0422f6a9c0.png" alt="AdvancedModernAlgebra_395b6167c07f23e34013e746017f4a0422f6a9c0.png" />. Moreover <img src="ltximg/AdvancedModernAlgebra_d761e3ad6404e0b7c6955db524f4d6c9ad192fbd.png" alt="AdvancedModernAlgebra_d761e3ad6404e0b7c6955db524f4d6c9ad192fbd.png" />
+</p>
+
+</div>
+
+<div class="proof">
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> is not cyclic. Since <img src="ltximg/AdvancedModernAlgebra_6e92116d4d1e950767277a41cddaed91b9090d57.png" alt="AdvancedModernAlgebra_6e92116d4d1e950767277a41cddaed91b9090d57.png" /> is even, it has some elements having
+order 2, say <img src="ltximg/AdvancedModernAlgebra_ee3d16b615d61d9564b9c933504da406f12df2e9.png" alt="AdvancedModernAlgebra_ee3d16b615d61d9564b9c933504da406f12df2e9.png" />.
+</p>
+
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> is abelian. Suppose it has another different element <img src="ltximg/AdvancedModernAlgebra_3c9eecb910868dde7967c9a58f146ce989b326b5.png" alt="AdvancedModernAlgebra_3c9eecb910868dde7967c9a58f146ce989b326b5.png" /> with order 2.
+Then <img src="ltximg/AdvancedModernAlgebra_782b02411378c5f598578b2c07a925e88a82cf49.png" alt="AdvancedModernAlgebra_782b02411378c5f598578b2c07a925e88a82cf49.png" /> is a subgroup which contradict. Hence it must contain
+an element <img src="ltximg/AdvancedModernAlgebra_fd7630bddfcf1fb4d1e31730bdd22cd042c387d9.png" alt="AdvancedModernAlgebra_fd7630bddfcf1fb4d1e31730bdd22cd042c387d9.png" /> of order 3. Then <img src="ltximg/AdvancedModernAlgebra_c43b9871df4e1183f561b3313765107204c890e0.png" alt="AdvancedModernAlgebra_c43b9871df4e1183f561b3313765107204c890e0.png" /> has order 6 and <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> is cyclic.
+</p>
+
+<p>
+If <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> is not abelian. If <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> doesn't have elements of order 3, then it's
+abelian. Hence <img src="ltximg/AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" alt="AdvancedModernAlgebra_0620fffcc7396ea107646cdc8bfc163a6fc37565.png" /> has an element <img src="ltximg/AdvancedModernAlgebra_162cfc3e5a2693fa9c0db3527c0a961f3ce9018d.png" alt="AdvancedModernAlgebra_162cfc3e5a2693fa9c0db3527c0a961f3ce9018d.png" /> of order 3.
+</p>
+
+<p>
+Now <img src="ltximg/AdvancedModernAlgebra_bfeea76dd2025d28af341ef71ea9ae729fea68c0.png" alt="AdvancedModernAlgebra_bfeea76dd2025d28af341ef71ea9ae729fea68c0.png" />, so <img src="ltximg/AdvancedModernAlgebra_b01c3469d9d3704cbda57af7ee38f45d6713b2c0.png" alt="AdvancedModernAlgebra_b01c3469d9d3704cbda57af7ee38f45d6713b2c0.png" /> and <img src="ltximg/AdvancedModernAlgebra_5d28e08a21f17768a44ed5b3710d8ac432b7ba1e.png" alt="AdvancedModernAlgebra_5d28e08a21f17768a44ed5b3710d8ac432b7ba1e.png" /> is normal. Since <img src="ltximg/AdvancedModernAlgebra_a18c7b861d6f038cc9035511006dfb87838895f2.png" alt="AdvancedModernAlgebra_a18c7b861d6f038cc9035511006dfb87838895f2.png" />, <img src="ltximg/AdvancedModernAlgebra_c99d05da27fee5e6a4cfc25e44081d1a22e6ae72.png" alt="AdvancedModernAlgebra_c99d05da27fee5e6a4cfc25e44081d1a22e6ae72.png" />. If <img src="ltximg/AdvancedModernAlgebra_10f8918c3e4496dba77901724fe3b33fd9988e31.png" alt="AdvancedModernAlgebra_10f8918c3e4496dba77901724fe3b33fd9988e31.png" />, <img src="ltximg/AdvancedModernAlgebra_592bca3ad394f2eff077d22642371e64330a65e4.png" alt="AdvancedModernAlgebra_592bca3ad394f2eff077d22642371e64330a65e4.png" />.
+If <img src="ltximg/AdvancedModernAlgebra_2677a21114c5031f4992ac3f689757989ded1632.png" alt="AdvancedModernAlgebra_2677a21114c5031f4992ac3f689757989ded1632.png" />, <img src="ltximg/AdvancedModernAlgebra_3ab3e965c4238dd45b77dd89289afc70259f3e4f.png" alt="AdvancedModernAlgebra_3ab3e965c4238dd45b77dd89289afc70259f3e4f.png" />. If <img src="ltximg/AdvancedModernAlgebra_f9d77aa22992eee57bd181daf1caf7ae1651fdda.png" alt="AdvancedModernAlgebra_f9d77aa22992eee57bd181daf1caf7ae1651fdda.png" />.
+</p>
+
+<p>
+Let <img src="ltximg/AdvancedModernAlgebra_e431fca33a648809a2aab21432e870b5e28529de.png" alt="AdvancedModernAlgebra_e431fca33a648809a2aab21432e870b5e28529de.png" />, <img src="ltximg/AdvancedModernAlgebra_a5541f224a4af79651c72b6f8e8d067fb9658c22.png" alt="AdvancedModernAlgebra_a5541f224a4af79651c72b6f8e8d067fb9658c22.png" /> given by
+</p>
+
+<div class="equation-container">
+<span class="equation">
+<img src="ltximg/AdvancedModernAlgebra_4429598cb56a7c272625128e530bc7fcf128b8d8.png" alt="AdvancedModernAlgebra_4429598cb56a7c272625128e530bc7fcf128b8d8.png" />
+</span>
+<span class="equation-label">
+52
+</span>
+</div>
+<p>
+By representation on cosets, <img src="ltximg/AdvancedModernAlgebra_588d11ae06586a10dca966c40108f1c462669baa.png" alt="AdvancedModernAlgebra_588d11ae06586a10dca966c40108f1c462669baa.png" />. Hence
+<img src="ltximg/AdvancedModernAlgebra_2c35480f30f5f1b15eba0c3b67a24c965a6c1017.png" alt="AdvancedModernAlgebra_2c35480f30f5f1b15eba0c3b67a24c965a6c1017.png" /> or <img src="ltximg/AdvancedModernAlgebra_78ee38eb1a8970cdbd8a9e2f26dc1937b3600f3e.png" alt="AdvancedModernAlgebra_78ee38eb1a8970cdbd8a9e2f26dc1937b3600f3e.png" />
+</p>
+
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Joseph J. Rotman</p>
-<p class="date">Created: 2019-09-12 四 13:58</p>
+<p class="date">Created: 2019-09-21 六 15:13</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
