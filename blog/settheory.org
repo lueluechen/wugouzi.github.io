@@ -8,7 +8,7 @@
 * Models of Set - Sertraline
 ** Some mathematical logic
   #+ATTR_LATEX: :options [Gödel’s second incompleteness theorem]
-  #+BEGIN_theoremo
+  #+BEGIN_theorem
   If a consistent recursive axiom set $T$ contains $\zfc$, then
   \begin{equation*}
   T\not\vdash\con(t)
