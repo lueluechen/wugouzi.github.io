@@ -2,6 +2,7 @@
 
 - [[file:AdvancedModernAlgebra.org][Advanced Modern Algebra]]
 - [[file:BookList.org][Books I Collected]]
+- [[file:settheory.org][Notes on Set Theory]]
 - [[file:NumericalAnalysis.org][Numerical Analysis]]
 - [[file:RoughSets.org][Rough Sets: Theoretical aspects of reasoning about data]]
 - [[file:Today.org][Today]]

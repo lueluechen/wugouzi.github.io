@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-09-21 六 15:13 -->
+<!-- 2019-12-11 三 14:53 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Rough Sets: Theoretical aspects of reasoning about data</title>
@@ -247,77 +247,77 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgc320014">Knowledge</a>
+<li><a href="#org74ee24f">Knowledge</a>
 <ul>
-<li><a href="#org4a836a9">Knowledge base</a></li>
-<li><a href="#orgc07e702">Equivalence, generalization and specialization of knowledge</a></li>
+<li><a href="#org7a38ace">Knowledge base</a></li>
+<li><a href="#org233f2c7">Equivalence, generalization and specialization of knowledge</a></li>
 </ul>
 </li>
-<li><a href="#orgaddac5a">Imprecise categories, approximations and rough sets</a>
+<li><a href="#orgd399a1a">Imprecise categories, approximations and rough sets</a>
 <ul>
-<li><a href="#orgc3332ad">Rough sets</a></li>
-<li><a href="#orgc778590">Approximations of set</a></li>
-<li><a href="#org57aef17">Properties of approximations</a></li>
-<li><a href="#orga53d094">Approximations and membership relation</a></li>
-<li><a href="#org21541b5">Numerical characterization of imprecision</a></li>
-<li><a href="#org5d295a6">Topological characterization of imprecision</a></li>
-<li><a href="#org8e61ea4">Approximation of classifications</a></li>
-<li><a href="#orgeb6b149">Rough equality of sets</a></li>
-<li><a href="#orgaa33952">Rough inclusion of sets</a></li>
+<li><a href="#orgc9bf9ef">Rough sets</a></li>
+<li><a href="#org9e51aeb">Approximations of set</a></li>
+<li><a href="#org3864165">Properties of approximations</a></li>
+<li><a href="#org754b20f">Approximations and membership relation</a></li>
+<li><a href="#orged804c5">Numerical characterization of imprecision</a></li>
+<li><a href="#orgafbc0b5">Topological characterization of imprecision</a></li>
+<li><a href="#orgf18e11f">Approximation of classifications</a></li>
+<li><a href="#orgcbdc81b">Rough equality of sets</a></li>
+<li><a href="#orge218f56">Rough inclusion of sets</a></li>
 </ul>
 </li>
-<li><a href="#orga0c5083">Reduction of knowledge</a>
+<li><a href="#org1201670">Reduction of knowledge</a>
 <ul>
-<li><a href="#orgdd434d7">Reduct and Core of Knowledge</a></li>
-<li><a href="#org0b86358">Relative reduct and relative core of knowledge</a></li>
-<li><a href="#orgc78d37e">Reduction of categories</a></li>
-<li><a href="#org7dbe389">Relative reduct and core of categories</a></li>
+<li><a href="#orgff21ae6">Reduct and Core of Knowledge</a></li>
+<li><a href="#orgf5da9d4">Relative reduct and relative core of knowledge</a></li>
+<li><a href="#org6dd34e3">Reduction of categories</a></li>
+<li><a href="#orgd677c14">Relative reduct and core of categories</a></li>
 </ul>
 </li>
-<li><a href="#org504c964">Dependencies in knowledge base</a>
+<li><a href="#org7ec8075">Dependencies in knowledge base</a>
 <ul>
-<li><a href="#orgeb9d6c2">Dependency of knowledge</a></li>
-<li><a href="#orgd50d2d3">Partial dependency of knowledge</a></li>
+<li><a href="#org805557e">Dependency of knowledge</a></li>
+<li><a href="#orgdcff33f">Partial dependency of knowledge</a></li>
 </ul>
 </li>
-<li><a href="#org3e4ee0a">Knowledege prepresentation</a>
+<li><a href="#org8201f2b">Knowledege prepresentation</a>
 <ul>
-<li><a href="#orgec8ac69">Formal definition</a></li>
-<li><a href="#org6029b85">Discernibility matrix</a></li>
+<li><a href="#org5723580">Formal definition</a></li>
+<li><a href="#org89c16aa">Discernibility matrix</a></li>
 </ul>
 </li>
-<li><a href="#orgb098a5d">Decision tables</a>
+<li><a href="#orgcfb5d11">Decision tables</a>
 <ul>
-<li><a href="#org8500316">Formal definition and some properties</a></li>
-<li><a href="#org875af6d">Simplification of decision tables</a></li>
+<li><a href="#org4a90ff5">Formal definition and some properties</a></li>
+<li><a href="#org0f1936e">Simplification of decision tables</a></li>
 </ul>
 </li>
-<li><a href="#org4c0ed26">Reasoning about knowledge</a>
+<li><a href="#org82264c6">Reasoning about knowledge</a>
 <ul>
-<li><a href="#orgf6c9abc">The language of decision logic</a></li>
-<li><a href="#orgfe19a37">Semantics of decision logic language</a></li>
-<li><a href="#orgcecd72c">Deduction in decision logic</a></li>
-<li><a href="#org8199670">Normal forms</a></li>
-<li><a href="#org1ae221c">Decision rules and decision algorithms</a></li>
-<li><a href="#org599824e">Truth and indiscernibility</a></li>
-<li><a href="#org8fe82c4">Dependency of attributes</a></li>
-<li><a href="#org6f2389d">Reduction of consistent algorithms</a></li>
-<li><a href="#orgeb7c66e">Reduction of inconsistent algorithms</a></li>
-<li><a href="#org44fc3e0">reduction of decision rules</a></li>
-<li><a href="#org21af1b5">Minimization of decision algorithm</a></li>
+<li><a href="#org08348a7">The language of decision logic</a></li>
+<li><a href="#org69dbe9d">Semantics of decision logic language</a></li>
+<li><a href="#org7188dc1">Deduction in decision logic</a></li>
+<li><a href="#orgb4e73ac">Normal forms</a></li>
+<li><a href="#orgaecb57d">Decision rules and decision algorithms</a></li>
+<li><a href="#org3e9159b">Truth and indiscernibility</a></li>
+<li><a href="#org21844e2">Dependency of attributes</a></li>
+<li><a href="#org9c548aa">Reduction of consistent algorithms</a></li>
+<li><a href="#org1ba5492">Reduction of inconsistent algorithms</a></li>
+<li><a href="#org4f2c3b0">reduction of decision rules</a></li>
+<li><a href="#orgfc1ccbb">Minimization of decision algorithm</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgc320014" class="outline-2">
-<h2 id="orgc320014">Knowledge</h2>
-<div class="outline-text-2" id="text-orgc320014">
+<div id="outline-container-org74ee24f" class="outline-2">
+<h2 id="org74ee24f">Knowledge</h2>
+<div class="outline-text-2" id="text-org74ee24f">
 </div>
-<div id="outline-container-org4a836a9" class="outline-3">
-<h3 id="org4a836a9">Knowledge base</h3>
-<div class="outline-text-3" id="text-org4a836a9">
+<div id="outline-container-org7a38ace" class="outline-3">
+<h3 id="org7a38ace">Knowledge base</h3>
+<div class="outline-text-3" id="text-org7a38ace">
 <p>
 Given a finite set <img src="ltximg/RoughSets_c7377480a90becc9ae037a693dcd35e7b9adc17e.png" alt="RoughSets_c7377480a90becc9ae037a693dcd35e7b9adc17e.png" /> (the universe). Any subset <img src="ltximg/RoughSets_0ca23b10cfb5ecf84ebfc428b87d60851189406e.png" alt="RoughSets_0ca23b10cfb5ecf84ebfc428b87d60851189406e.png" />
 of the universe is called a <b>concept</b> or a <b>category</b> in <img src="ltximg/RoughSets_dca00d42fc90fc9505a2998bc8661542a7f4efff.png" alt="RoughSets_dca00d42fc90fc9505a2998bc8661542a7f4efff.png" />. And any family of
@@ -395,9 +395,9 @@ referred to as <img src="ltximg/RoughSets_2a5859cec3bc392b0a244db61dfb5bdacfc7cc
 </p>
 </div>
 </div>
-<div id="outline-container-orgc07e702" class="outline-3">
-<h3 id="orgc07e702">Equivalence, generalization and specialization of knowledge</h3>
-<div class="outline-text-3" id="text-orgc07e702">
+<div id="outline-container-org233f2c7" class="outline-3">
+<h3 id="org233f2c7">Equivalence, generalization and specialization of knowledge</h3>
+<div class="outline-text-3" id="text-org233f2c7">
 <p>
 Let <img src="ltximg/RoughSets_e4c2a5a7879e8ab4918d3934891c67929583743e.png" alt="RoughSets_e4c2a5a7879e8ab4918d3934891c67929583743e.png" />. <img src="ltximg/RoughSets_ffa4c91f7a04c50a3910c6745fa39d5c86717aa9.png" alt="RoughSets_ffa4c91f7a04c50a3910c6745fa39d5c86717aa9.png" /> and <img src="ltximg/RoughSets_e36220977657d731eccecffec80ec65c01228826.png" alt="RoughSets_e36220977657d731eccecffec80ec65c01228826.png" /> are <b>equivalent</b> <img src="ltximg/RoughSets_081a0b41647654843ab8319469b7e700cb21dfde.png" alt="RoughSets_081a0b41647654843ab8319469b7e700cb21dfde.png" /> if <img src="ltximg/RoughSets_98b5ea752a9e81a9972fd26a71ddba9210f2fd11.png" alt="RoughSets_98b5ea752a9e81a9972fd26a71ddba9210f2fd11.png" />. Hence <img src="ltximg/RoughSets_8d0df42993e5a0e1c6965ca4f33464613cdc66fb.png" alt="RoughSets_8d0df42993e5a0e1c6965ca4f33464613cdc66fb.png" /> if both <img src="ltximg/RoughSets_ffa4c91f7a04c50a3910c6745fa39d5c86717aa9.png" alt="RoughSets_ffa4c91f7a04c50a3910c6745fa39d5c86717aa9.png" /> and
 <img src="ltximg/RoughSets_e36220977657d731eccecffec80ec65c01228826.png" alt="RoughSets_e36220977657d731eccecffec80ec65c01228826.png" /> have the same set of elememtary categories. <i>This means that knowledge in
@@ -412,13 +412,13 @@ of <img src="ltximg/RoughSets_dd05beccb604f530064c7564d1d169772d2173bf.png" alt=
 </div>
 </div>
 </div>
-<div id="outline-container-orgaddac5a" class="outline-2">
-<h2 id="orgaddac5a">Imprecise categories, approximations and rough sets</h2>
-<div class="outline-text-2" id="text-orgaddac5a">
+<div id="outline-container-orgd399a1a" class="outline-2">
+<h2 id="orgd399a1a">Imprecise categories, approximations and rough sets</h2>
+<div class="outline-text-2" id="text-orgd399a1a">
 </div>
-<div id="outline-container-orgc3332ad" class="outline-3">
-<h3 id="orgc3332ad">Rough sets</h3>
-<div class="outline-text-3" id="text-orgc3332ad">
+<div id="outline-container-orgc9bf9ef" class="outline-3">
+<h3 id="orgc9bf9ef">Rough sets</h3>
+<div class="outline-text-3" id="text-orgc9bf9ef">
 <p>
 Let <img src="ltximg/RoughSets_92d1b8932533f34c117fe22338354c04077c6db6.png" alt="RoughSets_92d1b8932533f34c117fe22338354c04077c6db6.png" />. <img src="ltximg/RoughSets_bfb3a654a5ab24203b8b68ee7603ff396b1ab72e.png" alt="RoughSets_bfb3a654a5ab24203b8b68ee7603ff396b1ab72e.png" /> is <img src="ltximg/RoughSets_fcdabc9aace148c0b9f2a947c3ccfe2d98b955a3.png" alt="RoughSets_fcdabc9aace148c0b9f2a947c3ccfe2d98b955a3.png" /> or <img src="ltximg/RoughSets_e5ccae521c837244d35f0a0d8257ab111db75930.png" alt="RoughSets_e5ccae521c837244d35f0a0d8257ab111db75930.png" /> if <img src="ltximg/RoughSets_bfb3a654a5ab24203b8b68ee7603ff396b1ab72e.png" alt="RoughSets_bfb3a654a5ab24203b8b68ee7603ff396b1ab72e.png" /> is the union of some
 <img src="ltximg/RoughSets_95ea6d1e7135d9465d278acb46bdccd001622f6c.png" alt="RoughSets_95ea6d1e7135d9465d278acb46bdccd001622f6c.png" /> categories. otherwise
@@ -426,9 +426,9 @@ Let <img src="ltximg/RoughSets_92d1b8932533f34c117fe22338354c04077c6db6.png" alt
 </p>
 </div>
 </div>
-<div id="outline-container-orgc778590" class="outline-3">
-<h3 id="orgc778590">Approximations of set</h3>
-<div class="outline-text-3" id="text-orgc778590">
+<div id="outline-container-org9e51aeb" class="outline-3">
+<h3 id="org9e51aeb">Approximations of set</h3>
+<div class="outline-text-3" id="text-org9e51aeb">
 <p>
 Given <img src="ltximg/RoughSets_bb9425a55a9ffe838c15b57cd6c5ae51aa632a13.png" alt="RoughSets_bb9425a55a9ffe838c15b57cd6c5ae51aa632a13.png" />
 </p>
@@ -476,9 +476,9 @@ If <img src="ltximg/RoughSets_79a746ac93ad1af59f80e8119d06a0dc886b0945.png" alt=
 </div>
 </div>
 </div>
-<div id="outline-container-org57aef17" class="outline-3">
-<h3 id="org57aef17">Properties of approximations</h3>
-<div class="outline-text-3" id="text-org57aef17">
+<div id="outline-container-org3864165" class="outline-3">
+<h3 id="org3864165">Properties of approximations</h3>
+<div class="outline-text-3" id="text-org3864165">
 <div class="proposition">
 <ol class="org-ol">
 <li><img src="ltximg/RoughSets_edac68c7c6db6652815adb8ba0ff2a7268c7ea63.png" alt="RoughSets_edac68c7c6db6652815adb8ba0ff2a7268c7ea63.png" /></li>
@@ -506,9 +506,9 @@ topological space <img src="ltximg/RoughSets_8c0cb0ef10a49c8de60d68f95ad892d29a5
 </p>
 </div>
 </div>
-<div id="outline-container-orga53d094" class="outline-3">
-<h3 id="orga53d094">Approximations and membership relation</h3>
-<div class="outline-text-3" id="text-orga53d094">
+<div id="outline-container-org754b20f" class="outline-3">
+<h3 id="org754b20f">Approximations and membership relation</h3>
+<div class="outline-text-3" id="text-org754b20f">
 
 <div class="equation-container">
 <span class="equation">
@@ -534,9 +534,9 @@ where <img src="ltximg/RoughSets_98ae8afe4032952fe8818d7fad88f801ac0ebe04.png" a
 </div>
 </div>
 </div>
-<div id="outline-container-org21541b5" class="outline-3">
-<h3 id="org21541b5">Numerical characterization of imprecision</h3>
-<div class="outline-text-3" id="text-org21541b5">
+<div id="outline-container-orged804c5" class="outline-3">
+<h3 id="orged804c5">Numerical characterization of imprecision</h3>
+<div class="outline-text-3" id="text-orged804c5">
 <p>
 <b>accuracy measure</b>
 </p>
@@ -551,9 +551,9 @@ where <img src="ltximg/RoughSets_98ae8afe4032952fe8818d7fad88f801ac0ebe04.png" a
 </div>
 </div>
 </div>
-<div id="outline-container-org5d295a6" class="outline-3">
-<h3 id="org5d295a6">Topological characterization of imprecision</h3>
-<div class="outline-text-3" id="text-org5d295a6">
+<div id="outline-container-orgafbc0b5" class="outline-3">
+<h3 id="orgafbc0b5">Topological characterization of imprecision</h3>
+<div class="outline-text-3" id="text-orgafbc0b5">
 <div class="definition">
 <ol class="org-ol">
 <li>If <img src="ltximg/RoughSets_2a037d9be5dddfaf6baf3cfa918de61642b82772.png" alt="RoughSets_2a037d9be5dddfaf6baf3cfa918de61642b82772.png" /> and <img src="ltximg/RoughSets_f9c3b220c41f12625d52c51fa5dc47cee41a429f.png" alt="RoughSets_f9c3b220c41f12625d52c51fa5dc47cee41a429f.png" />, then we say that <img src="ltximg/RoughSets_bfb3a654a5ab24203b8b68ee7603ff396b1ab72e.png" alt="RoughSets_bfb3a654a5ab24203b8b68ee7603ff396b1ab72e.png" /> is
@@ -606,9 +606,9 @@ R-undefinable</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org8e61ea4" class="outline-3">
-<h3 id="org8e61ea4">Approximation of classifications</h3>
-<div class="outline-text-3" id="text-org8e61ea4">
+<div id="outline-container-orgf18e11f" class="outline-3">
+<h3 id="orgf18e11f">Approximation of classifications</h3>
+<div class="outline-text-3" id="text-orgf18e11f">
 <p>
 If <img src="ltximg/RoughSets_d8a5958f35384c791828a8cc205ea6b068eb7873.png" alt="RoughSets_d8a5958f35384c791828a8cc205ea6b068eb7873.png" /> is a family of non empty sets, then
 <img src="ltximg/RoughSets_9a204ae30a051206ae7b9dea0b7d64f3da7f2355.png" alt="RoughSets_9a204ae30a051206ae7b9dea0b7d64f3da7f2355.png" /> and <img src="ltximg/RoughSets_f19f280ce1802c66f3c6c6fa39e52a03e844e664.png" alt="RoughSets_f19f280ce1802c66f3c6c6fa39e52a03e844e664.png" />,
@@ -686,9 +686,9 @@ then <img src="ltximg/RoughSets_e0ee997d48d4104915d7582bdbb0555b9403f52d.png" al
 </div>
 </div>
 </div>
-<div id="outline-container-orgeb6b149" class="outline-3">
-<h3 id="orgeb6b149">Rough equality of sets</h3>
-<div class="outline-text-3" id="text-orgeb6b149">
+<div id="outline-container-orgcbdc81b" class="outline-3">
+<h3 id="orgcbdc81b">Rough equality of sets</h3>
+<div class="outline-text-3" id="text-orgcbdc81b">
 <div class="definition">
 <p>
 Let <img src="ltximg/RoughSets_aafa16db59fcc7417f2c97c29117cf1aab0b9b6c.png" alt="RoughSets_aafa16db59fcc7417f2c97c29117cf1aab0b9b6c.png" /> be a knowledge base, <img src="ltximg/RoughSets_0585ed28fc3ef64a0bb4bd567f18582ace87d6b0.png" alt="RoughSets_0585ed28fc3ef64a0bb4bd567f18582ace87d6b0.png" /> and <img src="ltximg/RoughSets_601c489838f24f7640eaccf5e642df1dcd69e940.png" alt="RoughSets_601c489838f24f7640eaccf5e642df1dcd69e940.png" />, then
@@ -731,9 +731,9 @@ For any equivalence relation <img src="ltximg/RoughSets_a9c849b7994ab67913d23174
 </div>
 </div>
 </div>
-<div id="outline-container-orgaa33952" class="outline-3">
-<h3 id="orgaa33952">Rough inclusion of sets</h3>
-<div class="outline-text-3" id="text-orgaa33952">
+<div id="outline-container-orge218f56" class="outline-3">
+<h3 id="orge218f56">Rough inclusion of sets</h3>
+<div class="outline-text-3" id="text-orge218f56">
 <div class="definition">
 <p>
 Let <img src="ltximg/RoughSets_aafa16db59fcc7417f2c97c29117cf1aab0b9b6c.png" alt="RoughSets_aafa16db59fcc7417f2c97c29117cf1aab0b9b6c.png" /> be a knowledge base, <img src="ltximg/RoughSets_0585ed28fc3ef64a0bb4bd567f18582ace87d6b0.png" alt="RoughSets_0585ed28fc3ef64a0bb4bd567f18582ace87d6b0.png" /> and <img src="ltximg/RoughSets_601c489838f24f7640eaccf5e642df1dcd69e940.png" alt="RoughSets_601c489838f24f7640eaccf5e642df1dcd69e940.png" />.
@@ -770,13 +770,13 @@ Let <img src="ltximg/RoughSets_aafa16db59fcc7417f2c97c29117cf1aab0b9b6c.png" alt
 </div>
 </div>
 </div>
-<div id="outline-container-orga0c5083" class="outline-2">
-<h2 id="orga0c5083">Reduction of knowledge</h2>
-<div class="outline-text-2" id="text-orga0c5083">
+<div id="outline-container-org1201670" class="outline-2">
+<h2 id="org1201670">Reduction of knowledge</h2>
+<div class="outline-text-2" id="text-org1201670">
 </div>
-<div id="outline-container-orgdd434d7" class="outline-3">
-<h3 id="orgdd434d7">Reduct and Core of Knowledge</h3>
-<div class="outline-text-3" id="text-orgdd434d7">
+<div id="outline-container-orgff21ae6" class="outline-3">
+<h3 id="orgff21ae6">Reduct and Core of Knowledge</h3>
+<div class="outline-text-3" id="text-orgff21ae6">
 <p>
 Let <img src="ltximg/RoughSets_4d1867f60f4a91d5287d30d79172ee3855cb7e54.png" alt="RoughSets_4d1867f60f4a91d5287d30d79172ee3855cb7e54.png" /> be a family of equivalence relations and let <img src="ltximg/RoughSets_21d7cf68b80e83869b7ab6313124e276d966fb56.png" alt="RoughSets_21d7cf68b80e83869b7ab6313124e276d966fb56.png" />. <img src="ltximg/RoughSets_a9c849b7994ab67913d2317464bb3ea307c16692.png" alt="RoughSets_a9c849b7994ab67913d2317464bb3ea307c16692.png" /> is
 <b>dispensable</b> in <img src="ltximg/RoughSets_873664634911ab4550c95a30ee7d71b976d7e522.png" alt="RoughSets_873664634911ab4550c95a30ee7d71b976d7e522.png" /> if <img src="ltximg/RoughSets_17bd53430ce255f750b3e87bb67ceb2ad261ecc6.png" alt="RoughSets_17bd53430ce255f750b3e87bb67ceb2ad261ecc6.png" />. Otherwise <img src="ltximg/RoughSets_a9c849b7994ab67913d2317464bb3ea307c16692.png" alt="RoughSets_a9c849b7994ab67913d2317464bb3ea307c16692.png" /> is
@@ -840,9 +840,9 @@ that there exists an independent subset <img src="ltximg/RoughSets_07562a915150d
 </div>
 </div>
 </div>
-<div id="outline-container-org0b86358" class="outline-3">
-<h3 id="org0b86358">Relative reduct and relative core of knowledge</h3>
-<div class="outline-text-3" id="text-org0b86358">
+<div id="outline-container-orgf5da9d4" class="outline-3">
+<h3 id="orgf5da9d4">Relative reduct and relative core of knowledge</h3>
+<div class="outline-text-3" id="text-orgf5da9d4">
 <p>
 Let <img src="ltximg/RoughSets_e7ccc49c9d5c0701b49bb066e6e426a89c850410.png" alt="RoughSets_e7ccc49c9d5c0701b49bb066e6e426a89c850410.png" /> and <img src="ltximg/RoughSets_df28573540d45e5df807764257a558f8d3567cd0.png" alt="RoughSets_df28573540d45e5df807764257a558f8d3567cd0.png" /> be equivalence relations over <img src="ltximg/RoughSets_dca00d42fc90fc9505a2998bc8661542a7f4efff.png" alt="RoughSets_dca00d42fc90fc9505a2998bc8661542a7f4efff.png" />
 </p>
@@ -921,9 +921,9 @@ where <img src="ltximg/RoughSets_e75e11c80ae0e73d519328a036bd0c2e0b47c1ce.png" a
 </div>
 </div>
 </div>
-<div id="outline-container-orgc78d37e" class="outline-3">
-<h3 id="orgc78d37e">Reduction of categories</h3>
-<div class="outline-text-3" id="text-orgc78d37e">
+<div id="outline-container-org6dd34e3" class="outline-3">
+<h3 id="org6dd34e3">Reduction of categories</h3>
+<div class="outline-text-3" id="text-org6dd34e3">
 <p>
 Basic categories are pieces of knowledge, which can be considered as
 "building blocks" of concepts. Every concept in the knowledge base can be
@@ -972,9 +972,9 @@ denoted <img src="ltximg/RoughSets_f5a6bbef497e97e95fcb9acc90e94452a99722ef.png"
 </div>
 </div>
 </div>
-<div id="outline-container-org7dbe389" class="outline-3">
-<h3 id="org7dbe389">Relative reduct and core of categories</h3>
-<div class="outline-text-3" id="text-org7dbe389">
+<div id="outline-container-orgd677c14" class="outline-3">
+<h3 id="orgd677c14">Relative reduct and core of categories</h3>
+<div class="outline-text-3" id="text-orgd677c14">
 <p>
 <img src="ltximg/RoughSets_15aba0222ad28c7906da25cc8a59f7ed569cc989.png" alt="RoughSets_15aba0222ad28c7906da25cc8a59f7ed569cc989.png" /> and a subset <img src="ltximg/RoughSets_15b5e7aecb8dcda14b9b417077fd7f8a2409c614.png" alt="RoughSets_15b5e7aecb8dcda14b9b417077fd7f8a2409c614.png" /> s.t.
 <img src="ltximg/RoughSets_59d30e5ab27afe7d378f1b35298d450fde8aec46.png" alt="RoughSets_59d30e5ab27afe7d378f1b35298d450fde8aec46.png" />
@@ -1015,13 +1015,13 @@ the <img src="ltximg/RoughSets_b98e882b0ba5aea72763b5f32ed9f446c0dc3223.png" alt
 </div>
 </div>
 
-<div id="outline-container-org504c964" class="outline-2">
-<h2 id="org504c964">Dependencies in knowledge base</h2>
-<div class="outline-text-2" id="text-org504c964">
+<div id="outline-container-org7ec8075" class="outline-2">
+<h2 id="org7ec8075">Dependencies in knowledge base</h2>
+<div class="outline-text-2" id="text-org7ec8075">
 </div>
-<div id="outline-container-orgeb9d6c2" class="outline-3">
-<h3 id="orgeb9d6c2">Dependency of knowledge</h3>
-<div class="outline-text-3" id="text-orgeb9d6c2">
+<div id="outline-container-org805557e" class="outline-3">
+<h3 id="org805557e">Dependency of knowledge</h3>
+<div class="outline-text-3" id="text-org805557e">
 <p>
 Knowledge <img src="ltximg/RoughSets_7ef17ae66bfc26b00e17349113379fcd7945c26a.png" alt="RoughSets_7ef17ae66bfc26b00e17349113379fcd7945c26a.png" /> is <b>derivable</b> from knowledge <img src="ltximg/RoughSets_dd05beccb604f530064c7564d1d169772d2173bf.png" alt="RoughSets_dd05beccb604f530064c7564d1d169772d2173bf.png" /> if all elementary
 categories of <img src="ltximg/RoughSets_7ef17ae66bfc26b00e17349113379fcd7945c26a.png" alt="RoughSets_7ef17ae66bfc26b00e17349113379fcd7945c26a.png" /> can be defined in terms of some elementary categories of
@@ -1161,9 +1161,9 @@ And <img src="ltximg/RoughSets_ebda754be84d9f3d7f9434bbe5531e5cc074aa09.png" alt
 </div>
 </div>
 </div>
-<div id="outline-container-orgd50d2d3" class="outline-3">
-<h3 id="orgd50d2d3">Partial dependency of knowledge</h3>
-<div class="outline-text-3" id="text-orgd50d2d3">
+<div id="outline-container-orgdcff33f" class="outline-3">
+<h3 id="orgdcff33f">Partial dependency of knowledge</h3>
+<div class="outline-text-3" id="text-orgdcff33f">
 <p>
 Let <img src="ltximg/RoughSets_aafa16db59fcc7417f2c97c29117cf1aab0b9b6c.png" alt="RoughSets_aafa16db59fcc7417f2c97c29117cf1aab0b9b6c.png" /> be the knowledge base and <img src="ltximg/RoughSets_422cee7fe3ccbfb7eb02523f046537ff4024e849.png" alt="RoughSets_422cee7fe3ccbfb7eb02523f046537ff4024e849.png" />. Knowledge
 <img src="ltximg/RoughSets_7ef17ae66bfc26b00e17349113379fcd7945c26a.png" alt="RoughSets_7ef17ae66bfc26b00e17349113379fcd7945c26a.png" /> <b>depends in a degree</b> <img src="ltximg/RoughSets_7c477bf0fe60b85609e5d054f745e0af1dd5b93a.png" alt="RoughSets_7c477bf0fe60b85609e5d054f745e0af1dd5b93a.png" /> from knowledge <img src="ltximg/RoughSets_dd05beccb604f530064c7564d1d169772d2173bf.png" alt="RoughSets_dd05beccb604f530064c7564d1d169772d2173bf.png" />,
@@ -1204,13 +1204,13 @@ Ability to classify objects.
 </div>
 </div>
 </div>
-<div id="outline-container-org3e4ee0a" class="outline-2">
-<h2 id="org3e4ee0a">Knowledege prepresentation</h2>
-<div class="outline-text-2" id="text-org3e4ee0a">
+<div id="outline-container-org8201f2b" class="outline-2">
+<h2 id="org8201f2b">Knowledege prepresentation</h2>
+<div class="outline-text-2" id="text-org8201f2b">
 </div>
-<div id="outline-container-orgec8ac69" class="outline-3">
-<h3 id="orgec8ac69">Formal definition</h3>
-<div class="outline-text-3" id="text-orgec8ac69">
+<div id="outline-container-org5723580" class="outline-3">
+<h3 id="org5723580">Formal definition</h3>
+<div class="outline-text-3" id="text-org5723580">
 <p>
 <b>Knowledge representation system</b> is a pair <img src="ltximg/RoughSets_c39bd8811a49a2ddc4e2b67cdb6d96140ea6d022.png" alt="RoughSets_c39bd8811a49a2ddc4e2b67cdb6d96140ea6d022.png" /> where <img src="ltximg/RoughSets_dca00d42fc90fc9505a2998bc8661542a7f4efff.png" alt="RoughSets_dca00d42fc90fc9505a2998bc8661542a7f4efff.png" /> is a nonempty
 finite set called the <b>universe</b>, and <img src="ltximg/RoughSets_777f92029960f1ff94b3207e98d8d487f470a443.png" alt="RoughSets_777f92029960f1ff94b3207e98d8d487f470a443.png" /> is a nonempty finite set of
@@ -1383,9 +1383,9 @@ The universe <img src="ltximg/RoughSets_f3d8f96985e6e0614a105fd057afca3bd278398b
 </div>
 </div>
 </div>
-<div id="outline-container-org6029b85" class="outline-3">
-<h3 id="org6029b85">Discernibility matrix</h3>
-<div class="outline-text-3" id="text-org6029b85">
+<div id="outline-container-org89c16aa" class="outline-3">
+<h3 id="org89c16aa">Discernibility matrix</h3>
+<div class="outline-text-3" id="text-org89c16aa">
 <p>
 Let <img src="ltximg/RoughSets_c39bd8811a49a2ddc4e2b67cdb6d96140ea6d022.png" alt="RoughSets_c39bd8811a49a2ddc4e2b67cdb6d96140ea6d022.png" /> be a knowledge representation system with <img src="ltximg/RoughSets_4d1fb910bd1ca99d10f316e0d8f500a7b6096446.png" alt="RoughSets_4d1fb910bd1ca99d10f316e0d8f500a7b6096446.png" />. By an <b>discernibility matrix of</b> <img src="ltximg/RoughSets_e2c9edc0698a385f1bd1c0af7278f0ab3f828141.png" alt="RoughSets_e2c9edc0698a385f1bd1c0af7278f0ab3f828141.png" /> is
 </p>
@@ -1419,13 +1419,13 @@ discernibility matrix
 </div>
 </div>
 </div>
-<div id="outline-container-orgb098a5d" class="outline-2">
-<h2 id="orgb098a5d">Decision tables</h2>
-<div class="outline-text-2" id="text-orgb098a5d">
+<div id="outline-container-orgcfb5d11" class="outline-2">
+<h2 id="orgcfb5d11">Decision tables</h2>
+<div class="outline-text-2" id="text-orgcfb5d11">
 </div>
-<div id="outline-container-org8500316" class="outline-3">
-<h3 id="org8500316">Formal definition and some properties</h3>
-<div class="outline-text-3" id="text-org8500316">
+<div id="outline-container-org4a90ff5" class="outline-3">
+<h3 id="org4a90ff5">Formal definition and some properties</h3>
+<div class="outline-text-3" id="text-org4a90ff5">
 <p>
 Let <img src="ltximg/RoughSets_bc001b131f61b60fcd4599cef7cfb647f3d9d7a2.png" alt="RoughSets_bc001b131f61b60fcd4599cef7cfb647f3d9d7a2.png" /> be a knowledge representation system and let <img src="ltximg/RoughSets_a3e7c30e867eb2ed4ba01e5aedee0784840f90e6.png" alt="RoughSets_a3e7c30e867eb2ed4ba01e5aedee0784840f90e6.png" /> be
 two subsets of attributes called <b>condition</b> and <b>decision attributes</b>
@@ -1479,7 +1479,7 @@ and <img src="ltximg/RoughSets_dcab79d2bcda9ff02f0ef4aa89de4bb9326f9b61.png" alt
 <p>
 Example. Consider
 </p>
-<table id="orge6a615e" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org727343a" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 1:</span> Knowledge representation system</caption>
 
 <colgroup>
@@ -1593,7 +1593,7 @@ Assume that a,b,c are condition attributes and d,e are decision attributes.
 </span>
 </div>
 
-<table id="orged6c4cf" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org841bf73" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 2:</span> </caption>
 
 <colgroup>
@@ -1658,7 +1658,7 @@ Assume that a,b,c are condition attributes and d,e are decision attributes.
 </tbody>
 </table>
 
-<table id="orgab49925" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="orgea97006" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 3:</span> </caption>
 
 <colgroup>
@@ -1724,13 +1724,13 @@ Assume that a,b,c are condition attributes and d,e are decision attributes.
 </table>
 
 <p>
-Table <a href="#orged6c4cf">2</a> is consistent whereas table <a href="#orgab49925">3</a> is totally inconsistent
+Table <a href="#org841bf73">2</a> is consistent whereas table <a href="#orgea97006">3</a> is totally inconsistent
 </p>
 </div>
 </div>
-<div id="outline-container-org875af6d" class="outline-3">
-<h3 id="org875af6d">Simplification of decision tables</h3>
-<div class="outline-text-3" id="text-org875af6d">
+<div id="outline-container-org0f1936e" class="outline-3">
+<h3 id="org0f1936e">Simplification of decision tables</h3>
+<div class="outline-text-3" id="text-org0f1936e">
 <p>
 Step
 </p>
@@ -2350,13 +2350,13 @@ This solution is <b>minimal</b>
 </div>
 </div>
 </div>
-<div id="outline-container-org4c0ed26" class="outline-2">
-<h2 id="org4c0ed26">Reasoning about knowledge</h2>
-<div class="outline-text-2" id="text-org4c0ed26">
+<div id="outline-container-org82264c6" class="outline-2">
+<h2 id="org82264c6">Reasoning about knowledge</h2>
+<div class="outline-text-2" id="text-org82264c6">
 </div>
-<div id="outline-container-orgf6c9abc" class="outline-3">
-<h3 id="orgf6c9abc">The language of decision logic</h3>
-<div class="outline-text-3" id="text-orgf6c9abc">
+<div id="outline-container-org08348a7" class="outline-3">
+<h3 id="org08348a7">The language of decision logic</h3>
+<div class="outline-text-3" id="text-org08348a7">
 <p>
 <b>alphabet</b> of the language
 </p>
@@ -2378,9 +2378,9 @@ formulas</b> are formulas of the DL-language for any <img src="ltximg/RoughSets_
 </ol>
 </div>
 </div>
-<div id="outline-container-orgfe19a37" class="outline-3">
-<h3 id="orgfe19a37">Semantics of decision logic language</h3>
-<div class="outline-text-3" id="text-orgfe19a37">
+<div id="outline-container-org69dbe9d" class="outline-3">
+<h3 id="org69dbe9d">Semantics of decision logic language</h3>
+<div class="outline-text-3" id="text-org69dbe9d">
 <p>
 atomic formula <img src="ltximg/RoughSets_7b9b5ca604ec8e2908c2c1dbaa0378d412b84a92.png" alt="RoughSets_7b9b5ca604ec8e2908c2c1dbaa0378d412b84a92.png" /> is interpreted as a description of all objects having
 value <img src="ltximg/RoughSets_a89a5e0948426ab78ed566bb7cce9354cacad9f9.png" alt="RoughSets_a89a5e0948426ab78ed566bb7cce9354cacad9f9.png" /> for attribute <img src="ltximg/RoughSets_3c9eecb910868dde7967c9a58f146ce989b326b5.png" alt="RoughSets_3c9eecb910868dde7967c9a58f146ce989b326b5.png" />. By the model we mean the KR-system <img src="ltximg/RoughSets_c39bd8811a49a2ddc4e2b67cdb6d96140ea6d022.png" alt="RoughSets_c39bd8811a49a2ddc4e2b67cdb6d96140ea6d022.png" />.
@@ -2457,9 +2457,9 @@ Formulas &phi; and &psi; are equivalent in <img src="ltximg/RoughSets_e2c9edc069
 </div>
 </div>
 </div>
-<div id="outline-container-orgcecd72c" class="outline-3">
-<h3 id="orgcecd72c">Deduction in decision logic</h3>
-<div class="outline-text-3" id="text-orgcecd72c">
+<div id="outline-container-org7188dc1" class="outline-3">
+<h3 id="org7188dc1">Deduction in decision logic</h3>
+<div class="outline-text-3" id="text-org7188dc1">
 <p>
 In order to define our logic, we need to verify the semantic equivalence of
 formulas. To do this we need to finish with suitable rules for transforming
@@ -2515,7 +2515,7 @@ whole table is now represented by the set of all such formulas
 <p>
 Consider
 </p>
-<table id="org2abf52d" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="org60b7741" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 4:</span> REE</caption>
 
 <colgroup>
@@ -2659,9 +2659,9 @@ derivable from &Omega;
 </p>
 </div>
 </div>
-<div id="outline-container-org8199670" class="outline-3">
-<h3 id="org8199670">Normal forms</h3>
-<div class="outline-text-3" id="text-org8199670">
+<div id="outline-container-orgb4e73ac" class="outline-3">
+<h3 id="orgb4e73ac">Normal forms</h3>
+<div class="outline-text-3" id="text-orgb4e73ac">
 <p>
 Let <img src="ltximg/RoughSets_d0fa5fe3bcb7397fac2510a8d3e8ef0712958697.png" alt="RoughSets_d0fa5fe3bcb7397fac2510a8d3e8ef0712958697.png" /> and &phi; be a formula.
 </p>
@@ -2685,9 +2685,9 @@ Then there is a formula &psi; in the <img src="ltximg/RoughSets_1ec947332542e8e8
 </div>
 </div>
 </div>
-<div id="outline-container-org1ae221c" class="outline-3">
-<h3 id="org1ae221c">Decision rules and decision algorithms</h3>
-<div class="outline-text-3" id="text-org1ae221c">
+<div id="outline-container-orgaecb57d" class="outline-3">
+<h3 id="orgaecb57d">Decision rules and decision algorithms</h3>
+<div class="outline-text-3" id="text-orgaecb57d">
 <p>
 Any implication <img src="ltximg/RoughSets_66c8d621dcf92d4c1e7155d515679d01ecbee0d5.png" alt="RoughSets_66c8d621dcf92d4c1e7155d515679d01ecbee0d5.png" /> will be called a <b>decision rule</b> in the KR-langauge. &phi;
 and &psi; are referred to as the <b>predecessor</b> and the <b>successor</b> of <img src="ltximg/RoughSets_66c8d621dcf92d4c1e7155d515679d01ecbee0d5.png" alt="RoughSets_66c8d621dcf92d4c1e7155d515679d01ecbee0d5.png" />
@@ -2735,7 +2735,7 @@ rule is false
 </div>
 
 <p>
-For example, the rule <img src="ltximg/RoughSets_f630323ac3d600fb9fa54ff8198e771661e3e1b0.png" alt="RoughSets_f630323ac3d600fb9fa54ff8198e771661e3e1b0.png" /> is false in <a href="#org2abf52d">4</a>, because the 
+For example, the rule <img src="ltximg/RoughSets_f630323ac3d600fb9fa54ff8198e771661e3e1b0.png" alt="RoughSets_f630323ac3d600fb9fa54ff8198e771661e3e1b0.png" /> is false in <a href="#org60b7741">4</a>, because the 
 <img src="ltximg/RoughSets_46cb7238b5945c40acbae8f8c4b049e5e9510e06.png" alt="RoughSets_46cb7238b5945c40acbae8f8c4b049e5e9510e06.png" /> form of <img src="ltximg/RoughSets_29017d9b11eb77706eb5b22a6101ab0c11a8966e.png" alt="RoughSets_29017d9b11eb77706eb5b22a6101ab0c11a8966e.png" /> is <img src="ltximg/RoughSets_b039cd4be1ec62d5c13d8f4c2d390d2a06f4fe21.png" alt="RoughSets_b039cd4be1ec62d5c13d8f4c2d390d2a06f4fe21.png" />, 
 <img src="ltximg/RoughSets_46cb7238b5945c40acbae8f8c4b049e5e9510e06.png" alt="RoughSets_46cb7238b5945c40acbae8f8c4b049e5e9510e06.png" /> form of <img src="ltximg/RoughSets_9f50f5b924eb94166178f1fcd156823bf8c75dae.png" alt="RoughSets_9f50f5b924eb94166178f1fcd156823bf8c75dae.png" /> is <img src="ltximg/RoughSets_5448b9f46d428550e8f454943f858b55106dad88.png" alt="RoughSets_5448b9f46d428550e8f454943f858b55106dad88.png" />
 </p>
@@ -2879,9 +2879,9 @@ attributes. Sets <img src="ltximg/RoughSets_e7ccc49c9d5c0701b49bb066e6e426a89c85
 </div>
 </div>
 </div>
-<div id="outline-container-org599824e" class="outline-3">
-<h3 id="org599824e">Truth and indiscernibility</h3>
-<div class="outline-text-3" id="text-org599824e">
+<div id="outline-container-org3e9159b" class="outline-3">
+<h3 id="org3e9159b">Truth and indiscernibility</h3>
+<div class="outline-text-3" id="text-org3e9159b">
 <div class="proposition">
 <p>
 A <img src="ltximg/RoughSets_6bd4ce786330f20e7f01213ea9c63d8cc70988f4.png" alt="RoughSets_6bd4ce786330f20e7f01213ea9c63d8cc70988f4.png" /> rule <img src="ltximg/RoughSets_66c8d621dcf92d4c1e7155d515679d01ecbee0d5.png" alt="RoughSets_66c8d621dcf92d4c1e7155d515679d01ecbee0d5.png" /> in a <img src="ltximg/RoughSets_6bd4ce786330f20e7f01213ea9c63d8cc70988f4.png" alt="RoughSets_6bd4ce786330f20e7f01213ea9c63d8cc70988f4.png" /> algorithm is
@@ -2903,9 +2903,9 @@ replaced by the concept of indiscernibility.
 </div>
 </div>
 </div>
-<div id="outline-container-org8fe82c4" class="outline-3">
-<h3 id="org8fe82c4">Dependency of attributes</h3>
-<div class="outline-text-3" id="text-org8fe82c4">
+<div id="outline-container-org21844e2" class="outline-3">
+<h3 id="org21844e2">Dependency of attributes</h3>
+<div class="outline-text-3" id="text-org21844e2">
 <p>
 The set of attributes <img src="ltximg/RoughSets_df28573540d45e5df807764257a558f8d3567cd0.png" alt="RoughSets_df28573540d45e5df807764257a558f8d3567cd0.png" /> <b>depends totally</b> (or in short <b>depends</b>) on the set of
 attributes <img src="ltximg/RoughSets_e7ccc49c9d5c0701b49bb066e6e426a89c850410.png" alt="RoughSets_e7ccc49c9d5c0701b49bb066e6e426a89c850410.png" /> in <img src="ltximg/RoughSets_e2c9edc0698a385f1bd1c0af7278f0ab3f828141.png" alt="RoughSets_e2c9edc0698a385f1bd1c0af7278f0ab3f828141.png" /> if there exists a consistent <img src="ltximg/RoughSets_56d774324c1661d5d386356c93c9f1fdc204a3a3.png" alt="RoughSets_56d774324c1661d5d386356c93c9f1fdc204a3a3.png" /> in
@@ -2947,9 +2947,9 @@ will write <img src="ltximg/RoughSets_f8854551888bdec714021722ed69e5565b2a7634.p
 </p>
 </div>
 </div>
-<div id="outline-container-org6f2389d" class="outline-3">
-<h3 id="org6f2389d">Reduction of consistent algorithms</h3>
-<div class="outline-text-3" id="text-org6f2389d">
+<div id="outline-container-org9c548aa" class="outline-3">
+<h3 id="org9c548aa">Reduction of consistent algorithms</h3>
+<div class="outline-text-3" id="text-org9c548aa">
 <p>
 Let <img src="ltximg/RoughSets_ded1a07a0ad71082974678dac94c31569ce59192.png" alt="RoughSets_ded1a07a0ad71082974678dac94c31569ce59192.png" /> be a consistent algorithm, and <img src="ltximg/RoughSets_4715d9d138ab6cccfa02d402c101ab30ae294b59.png" alt="RoughSets_4715d9d138ab6cccfa02d402c101ab30ae294b59.png" />. Attribute <img src="ltximg/RoughSets_3c9eecb910868dde7967c9a58f146ce989b326b5.png" alt="RoughSets_3c9eecb910868dde7967c9a58f146ce989b326b5.png" /> is
 <b>dispensable</b> in the algorithm <img src="ltximg/RoughSets_ded1a07a0ad71082974678dac94c31569ce59192.png" alt="RoughSets_ded1a07a0ad71082974678dac94c31569ce59192.png" /> if and only if the algorithm 
@@ -3377,9 +3377,9 @@ remove c we get
 </table>
 </div>
 </div>
-<div id="outline-container-orgeb7c66e" class="outline-3">
-<h3 id="orgeb7c66e">Reduction of inconsistent algorithms</h3>
-<div class="outline-text-3" id="text-orgeb7c66e">
+<div id="outline-container-org1ba5492" class="outline-3">
+<h3 id="org1ba5492">Reduction of inconsistent algorithms</h3>
+<div class="outline-text-3" id="text-org1ba5492">
 <p>
 Let <img src="ltximg/RoughSets_ded1a07a0ad71082974678dac94c31569ce59192.png" alt="RoughSets_ded1a07a0ad71082974678dac94c31569ce59192.png" /> be a inconsistent algorithm, and <img src="ltximg/RoughSets_4715d9d138ab6cccfa02d402c101ab30ae294b59.png" alt="RoughSets_4715d9d138ab6cccfa02d402c101ab30ae294b59.png" />
 </p>
@@ -3390,9 +3390,9 @@ An attribute <img src="ltximg/RoughSets_3c9eecb910868dde7967c9a58f146ce989b326b5
 </p>
 </div>
 </div>
-<div id="outline-container-org44fc3e0" class="outline-3">
-<h3 id="org44fc3e0">reduction of decision rules</h3>
-<div class="outline-text-3" id="text-org44fc3e0">
+<div id="outline-container-org4f2c3b0" class="outline-3">
+<h3 id="org4f2c3b0">reduction of decision rules</h3>
+<div class="outline-text-3" id="text-org4f2c3b0">
 <p>
 If &phi; is <img src="ltximg/RoughSets_2b3ab086938e3b85269c762ab5bed71f8069eb49.png" alt="RoughSets_2b3ab086938e3b85269c762ab5bed71f8069eb49.png" /> formula and <img src="ltximg/RoughSets_4391a28781f5c61e83b81d8618c90a13a42c3929.png" alt="RoughSets_4391a28781f5c61e83b81d8618c90a13a42c3929.png" /> then by <img src="ltximg/RoughSets_8753749bace869fa3f0a8062f59841099dfc402d.png" alt="RoughSets_8753749bace869fa3f0a8062f59841099dfc402d.png" /> we
 mean the <img src="ltximg/RoughSets_58122d715b0c8b0d9b5c17cc31c11bc632bdeb9f.png" alt="RoughSets_58122d715b0c8b0d9b5c17cc31c11bc632bdeb9f.png" /> formula obtained from the formula &phi; by removing
@@ -3757,9 +3757,9 @@ Note that 1' and 4 are identical.
 </div>
 </div>
 
-<div id="outline-container-org21af1b5" class="outline-3">
-<h3 id="org21af1b5">Minimization of decision algorithm</h3>
-<div class="outline-text-3" id="text-org21af1b5">
+<div id="outline-container-orgfc1ccbb" class="outline-3">
+<h3 id="orgfc1ccbb">Minimization of decision algorithm</h3>
+<div class="outline-text-3" id="text-orgfc1ccbb">
 <p>
 Let <img src="ltximg/RoughSets_68ba32f000a95bf6bac2ed24d3ec1a957e1b38aa.png" alt="RoughSets_68ba32f000a95bf6bac2ed24d3ec1a957e1b38aa.png" /> be a basic algorithm and let <img src="ltximg/RoughSets_c39bd8811a49a2ddc4e2b67cdb6d96140ea6d022.png" alt="RoughSets_c39bd8811a49a2ddc4e2b67cdb6d96140ea6d022.png" /> be a KR-system. The set of all
 basic rules in <img src="ltximg/RoughSets_68ba32f000a95bf6bac2ed24d3ec1a957e1b38aa.png" alt="RoughSets_68ba32f000a95bf6bac2ed24d3ec1a957e1b38aa.png" /> having the same successor <img src="ltximg/RoughSets_fa729386d65924590039aa0d8aea165ecdc167fe.png" alt="RoughSets_fa729386d65924590039aa0d8aea165ecdc167fe.png" /> will be denoted
@@ -4216,7 +4216,7 @@ Hence
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: wu</p>
-<p class="date">Created: 2019-09-21 六 15:13</p>
+<p class="date">Created: 2019-12-11 三 14:53</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
