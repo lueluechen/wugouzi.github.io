@@ -18,6 +18,7 @@
     "stmaryrd"
     "empheq"
     "tikz"
+    "tikz-cd"
     "tcolorbox"
     "actuarialsymbol"
     "threeparttable"
@@ -30,6 +31,8 @@
    (TeX-add-symbols
     '("stcomp" 1)
     '("rom" 1)
+    '("trcl" 1)
+    '("ran" 1)
     '("dom" 1)
     '("fixwidehat" 1)
     '("tf" 1)
@@ -41,6 +44,7 @@
     '("what" 1)
     "widehatsym"
     "lowerwidehatsym"
+    "zfm"
     "varprod"
     "bigtimes"
     "odiv"

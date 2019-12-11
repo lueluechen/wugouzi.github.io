@@ -41,6 +41,7 @@
 \usepackage{stmaryrd}
 \usepackage{empheq}
 \usepackage{tikz}
+\usepackage{tikz-cd}
 %\usepackage[notextcomp]{stix}
 \usetikzlibrary{arrows.meta}
 \usepackage[most]{tcolorbox}
@@ -128,6 +129,18 @@
 \mathrm{dom}{(#1)}
 }
 
+\newcommand{\ran}[1]{%
+  \mathrm{ran}{(#1)}
+}
+
+
+
+\newcommand{\trcl}[1]{%
+  \mathrm{trcl}{(#1)}
+}
+
+
+
 % Roman numerals
 \makeatletter
 \newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
@@ -141,6 +154,7 @@
 \def \bo {\boldsymbol{o}}
 \def \bU {\boldsymbol{U}}
 \def \bc {\boldsymbol{c}}
+\def \bL {\boldsymbol{L}}
 \def \bV {\boldsymbol{V}}
 \def \bI {\boldsymbol{I}}
 \def \bK {\boldsymbol{K}}
@@ -167,6 +181,7 @@
 \def \bY {\boldsymbol{Y}}
 \def \bH {\boldsymbol{H}}
 \def \bB {\boldsymbol{B}}
+\def \bG {\boldsymbol{G}}
 \def \blambda {\boldsymbol{\lambda}}
 \def \bPhi {\boldsymbol{\Phi}}
 \def \btheta {\boldsymbol{\theta}}
@@ -176,6 +191,8 @@
 \def \bSigma {\boldsymbol{\Sigma}}
 \def \lb {\left\{}
 \def \rb {\right\}}
+\def \la {\langle}
+\def \ra {\rangle}
 \def \caln {\mathcal{N}}
 \def \dissum {\displaystyle\Sigma}
 \def \dispro {\displaystyle\prod}
@@ -186,6 +203,9 @@
 \def \R {\mathbb{R}}
 \def \P {\mathbb{P}}
 \def \A {\mathbb{A}}
+\def \Z {\mathbb{Z}}
+\def \I {\mathbb{I}}
+\def \C {\mathbb{C}}
 \def \cala {\mathcal{A}}
 \def \calb {\mathcal{B}}
 \def \calq {\mathcal{Q}}
@@ -200,7 +220,42 @@
 \def \calk {\mathcal{K}}
 \def \call {\mathcal{L}}
 \def \calu {\mathcal{U}}
+\def \calo {\mathcal{O}}
+\def \calh {\mathcal{H}}
 \def \bcup {\bigcup}
+
+% set theory
+\def \zfc {\textbf{ZFC }}
+\def \zfcm {\textbf{ZFC}}
+\def \zfcc {\textbf{ZFC}^-}
+\def \ac  {\textbf{AC}}
+\def \gl  {\textbf{L }}
+\def \gll {\textbf{L}}
+\newcommand{\zfm}{$\textbf{ZF}^-$}
+
+%\def \zfm {$\textbf{ZF}^-$}
+\def \zfmm {\textbf{ZF}^-}
+\def \zf {\textbf{ZF }}
+\def \wf {\textbf{WF }}
+\def \on {\textbf{On }}
+\def \cm {\textbf{M }}
+\def \cn {\textbf{N }}
+\def \cv {\textbf{V }}
+\def \zc {\textbf{ZC }}
+\def \zcm {\textbf{ZC}}
+\def \zff {\textbf{ZF}}
+\def \wfm {\textbf{WF}}
+\def \onm {\textbf{On}}
+\def \cmm {\textbf{M}}
+\def \cnm {\textbf{N}}
+\def \cvm {\textbf{V}}
+\def \gchh {\textbf{GCH}}
+\renewcommand{\restriction}{\mathord{\upharpoonright}}
+\def \pred {\text{pred}}
+\def \cl {\text{cl}}
+\def \rank {\text{rank}}
+\def \con {\text{Con}}
+\def \deff {\text{Def}}
 
 
 \def \uin {\underline{\in}}
@@ -215,6 +270,14 @@
 \def \e {\enspace}
 
 \def \sgn {\operatorname{sgn}}
+\def \gen {\operatorname{gen}}
+\def \ker {\operatorname{ker}}
+\def \im {\operatorname{im}}
+\def \aut {\operatorname{Aut}}
+\def \inn {\operatorname{Inn}}
+
+\def \tril {\triangleleft}
+
 
 % \varprod
 \DeclareSymbolFont{largesymbolsA}{U}{txexa}{m}{n}
