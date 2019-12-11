@@ -2,14 +2,13 @@
 #+AUTHOR: Qi'ao Chen
 #+OPTIONS: tex:imagemagick
 #+LATEX_HEADER: \input{preamble.tex}
-#+EXPORT_FILE_NAME: ../latex/settheory/SetTheory.tex
 
 * Foreword
   Notes for the entrance examination
 * Models of Set - Sertraline
 ** Some mathematical logic
   #+ATTR_LATEX: :options [Gödel’s second incompleteness theorem]
-  #+BEGIN_theorem
+  #+BEGIN_theoremo
   If a consistent recursive axiom set $T$ contains $\zfc$, then
   \begin{equation*}
   T\not\vdash\con(t)
