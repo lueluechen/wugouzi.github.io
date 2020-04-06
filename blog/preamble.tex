@@ -1,10 +1,6 @@
 % TIPS
 % \substack{a\\b} for multiple lines text
 
-
-
-
-
 % pdfplots will load xolor automatically without option
 \usepackage[dvipsnames]{xcolor}
 
@@ -22,7 +18,7 @@
     }}}
 %\usepackage{flexisym}
 % load order of mathtools and mathabx, otherwise conflict overbrace
-
+\usepackage[utf8]{inputenc}
 \usepackage{mathtools}
 %\usepackage{fourier}
 \usepackage{pgfplots}
@@ -34,6 +30,8 @@
 %\usepackage{,  , }
 \usepackage{amsfonts}
 \usepackage{amssymb}
+% \usepackage{unicode-math}
+% \usepackage{contour}
 % importing symbols https://tex.stackexchange.com/questions/14386/importing-a-single-symbol-from-a-different-font
 %mathabx change every symbol
 % use instead stmaryrd
@@ -52,24 +50,47 @@
 \usepackage{threeparttable}
 \usepackage{scalerel,stackengine}
 \usepackage{stackrel}
+\usepackage{tabularx}
 % \stackrel[a]{b}{c}
 \usepackage{dsfont}
 % text font
 \usepackage{newpxtext}
-%\usepackage{newpxmath}
+% \usepackage{newpxmath}
+\usepackage{enumitem}
+\usepackage{siunitx}
+\usepackage{subcaption}
+\setlist{nosep}
+
+\usepackage{imakeidx}
+\indexsetup{othercode=\small}
+\makeindex[columns=2,options={-s /media/wu/file/stuuudy/notes/index_style.ist},intoc]
+\makeatletter
+\def\@idxitem{\par\hangindent 0pt}
+\makeatother
+
+\usepackage{hyperref}
 
 %\newcounter{dummy} \numberwithin{dummy}{section}
 \newtheorem{dummy}{dummy}[section]
 \theoremstyle{definition}
 \newtheorem{definition}[dummy]{Definition}
+\theoremstyle{plain}
 \newtheorem{corollary}[dummy]{Corollary}
 \newtheorem{lemma}[dummy]{Lemma}
 \newtheorem{proposition}[dummy]{Proposition}
 \newtheorem{theorem}[dummy]{Theorem}
 \theoremstyle{definition}
-\newtheorem{example}[dummy]{Example}
+\newtheorem{examplle}{Example}[section]
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
+\newtheorem{exercise}{Exercise}[subsection]
+\newtheorem{observation}{Observation}[section]
+\usepackage{soul}
+
+\newenvironment{claim}[1]{\par\noindent\textbf{Claim:}\space#1}{}
+
+
+\setcounter{MaxMatrixCols}{20}
 
 
 \newcommand\what[1]{\ThisStyle{%
@@ -145,44 +166,54 @@
 \makeatletter
 \newcommand*{\rom}[1]{\expandafter\@slowromancap\romannumeral #1@}
 \makeatother
+% \\def \\b\([a-zA-Z]\) {\\boldsymbol{[a-zA-z]}}
+% \\DeclareMathOperator{\\b\1}{\\textbf{\1}}
 
 \def \fR {\mathfrak{R}}
-\def \bx {\boldsymbol{x}}
-\def \bz {\boldsymbol{z}}
-\def \ba {\boldsymbol{a}}
-\def \bh {\boldsymbol{h}}
-\def \bo {\boldsymbol{o}}
-\def \bU {\boldsymbol{U}}
-\def \bc {\boldsymbol{c}}
-\def \bL {\boldsymbol{L}}
-\def \bV {\boldsymbol{V}}
-\def \bI {\boldsymbol{I}}
-\def \bK {\boldsymbol{K}}
-\def \bt {\boldsymbol{t}}
-\def \bb {\boldsymbol{b}}
-\def \bA {\boldsymbol{A}}
-\def \bX {\boldsymbol{X}}
-\def \bu {\boldsymbol{u}}
-\def \bS {\boldsymbol{S}}
-\def \bZ {\boldsymbol{Z}}
-\def \bz {\boldsymbol{z}}
-\def \by {\boldsymbol{y}}
-\def \bw {\boldsymbol{w}}
-\def \bT {\boldsymbol{T}}
-\def \bF {\boldsymbol{F}}
-\def \bS {\boldsymbol{S}}
-\def \bm {\boldsymbol{m}}
-\def \bW {\boldsymbol{W}}
-\def \bR {\boldsymbol{R}}
-\def \bQ {\boldsymbol{Q}}
-\def \bS {\boldsymbol{S}}
-\def \bP {\boldsymbol{P}}
-\def \bT {\boldsymbol{T}}
-\def \bY {\boldsymbol{Y}}
-\def \bH {\boldsymbol{H}}
-\def \bB {\boldsymbol{B}}
-\def \bG {\boldsymbol{G}}
+\def \fA {\mathfrak{A}}
+\DeclareMathOperator{\bx}{\textbf{x}}
+\DeclareMathOperator{\bz}{\textbf{z}}
+\DeclareMathOperator{\ba}{\textbf{a}}
+\DeclareMathOperator{\bk}{\textbf{k}}
+\DeclareMathOperator{\bs}{\textbf{s}}
+\DeclareMathOperator{\bh}{\textbf{h}}
+\DeclareMathOperator{\bc}{\textbf{c}}
+\DeclareMathOperator{\bo}{\textbf{o}}
+\DeclareMathOperator{\bU}{\textbf{U}}
+\DeclareMathOperator{\bL}{\textbf{L}}
+\DeclareMathOperator{\bV}{\textbf{V}}
+\def \bzero {\boldsymbol{0}}
+\DeclareMathOperator{\bv}{\textbf{v}}
+\DeclareMathOperator{\bp}{\textbf{p}}
+\DeclareMathOperator{\bI}{\textbf{I}}
+\DeclareMathOperator{\bM}{\textbf{M}}
+\DeclareMathOperator{\bK}{\textbf{K}}
+\DeclareMathOperator{\bt}{\textbf{t}}
+\DeclareMathOperator{\bb}{\textbf{b}}
+\DeclareMathOperator{\bA}{\textbf{A}}
+\DeclareMathOperator{\bX}{\textbf{X}}
+\DeclareMathOperator{\bu}{\textbf{u}}
+\DeclareMathOperator{\bS}{\textbf{S}}
+\DeclareMathOperator{\bZ}{\textbf{Z}}
+\DeclareMathOperator{\by}{\textbf{y}}
+\DeclareMathOperator{\bw}{\textbf{w}}
+\DeclareMathOperator{\bT}{\textbf{T}}
+\DeclareMathOperator{\bF}{\textbf{F}}
+\DeclareMathOperator{\bm}{\textbf{m}}
+\DeclareMathOperator{\bW}{\textbf{W}}
+\DeclareMathOperator{\bR}{\textbf{R}}
+\DeclareMathOperator{\bC}{\textbf{C}}
+\DeclareMathOperator{\bQ}{\textbf{Q}}
+\DeclareMathOperator{\bP}{\textbf{P}}
+\DeclareMathOperator{\bY}{\textbf{Y}}
+\DeclareMathOperator{\bH}{\textbf{H}}
+\DeclareMathOperator{\bB}{\textbf{B}}
+\DeclareMathOperator{\bG}{\textbf{G}}
 \def \blambda {\boldsymbol{\lambda}}
+\def \boldeta {\boldsymbol{\eta}}
+
+\newcommand{\bto}{{\boldsymbol{\to}}}
+\newcommand{\Ra}{\Rightarrow}
 \def \bPhi {\boldsymbol{\Phi}}
 \def \btheta {\boldsymbol{\theta}}
 \def \bTheta {\boldsymbol{\Theta}}
@@ -203,6 +234,7 @@
 \def \R {\mathbb{R}}
 \def \P {\mathbb{P}}
 \def \A {\mathbb{A}}
+\def \F {\mathbb{F}}
 \def \Z {\mathbb{Z}}
 \def \I {\mathbb{I}}
 \def \C {\mathbb{C}}
@@ -211,10 +243,14 @@
 \def \calq {\mathcal{Q}}
 \def \calp {\mathcal{P}}
 \def \cals {\mathcal{S}}
+\def \calx {\mathcal{S}}
 \def \calg {\mathcal{G}}
+\def \cald {\mathcal{D}}
 \def \caln {\mathcal{N}}
 \def \calr {\mathcal{R}}
+\def \calt {\mathcal{T}}
 \def \calm {\mathcal{M}}
+\def \calw {\mathcal{W}}
 \def \calc {\mathcal{C}}
 \def \calf {\mathcal{F}}
 \def \calk {\mathcal{K}}
@@ -222,11 +258,12 @@
 \def \calu {\mathcal{U}}
 \def \calo {\mathcal{O}}
 \def \calh {\mathcal{H}}
+\def \cali {\mathcal{I}}
+
 \def \bcup {\bigcup}
 
 % set theory
-\def \zfc {\textbf{ZFC }}
-\def \zfcm {\textbf{ZFC}}
+
 \def \zfcc {\textbf{ZFC}^-}
 \def \ac  {\textbf{AC}}
 \def \gl  {\textbf{L }}
@@ -235,7 +272,6 @@
 
 %\def \zfm {$\textbf{ZF}^-$}
 \def \zfmm {\textbf{ZF}^-}
-\def \zf {\textbf{ZF }}
 \def \wf {\textbf{WF }}
 \def \on {\textbf{On }}
 \def \cm {\textbf{M }}
@@ -252,7 +288,7 @@
 \def \gchh {\textbf{GCH}}
 \renewcommand{\restriction}{\mathord{\upharpoonright}}
 \def \pred {\text{pred}}
-\def \cl {\text{cl}}
+
 \def \rank {\text{rank}}
 \def \con {\text{Con}}
 \def \deff {\text{Def}}
@@ -271,19 +307,50 @@
 
 \def \sgn {\operatorname{sgn}}
 \def \gen {\operatorname{gen}}
-\def \ker {\operatorname{ker}}
-\def \im {\operatorname{im}}
-\def \aut {\operatorname{Aut}}
-\def \inn {\operatorname{Inn}}
+\def \Hom {\operatorname{Hom}}
+
+% \def \minus {\text{-}}
+% \newcommand{\minus}{\scalebox{0.75}[1.0]{$-$}}
+% \DeclareUnicodeCharacter{002D}{\minus}
+\def \minus {-}
 
 \def \tril {\triangleleft}
 
+\def \acf {\text{ACF}}
+\def \gl {\text{GL}}
+\def \equal {=}
+\def \deg {\text{deg}}
+\def \app {\text{App}}
+\def \fv {\text{FV}}
+\def \conv {\text{conv}}
+\def \cont {\text{cont}}
+\DeclareMathOperator{\cl}{\textbf{CL}}
+\DeclareMathOperator{\sg}{sg}
+\def \ord {\text{Ord}}
+\DeclareMathOperator{\cf}{cf}
+\DeclareMathOperator{\zfc}{ZFC}
+\DeclareMathOperator{\Th}{Th}
+%\def \th {\text{Th}}
+% \newcommand{\th}{\text{Th}}
+\DeclareMathOperator{\type}{type}
+\DeclareMathOperator{\zf}{\textbf{ZF}}
+\def \fc {\mathfrak{c}}
+%\DeclareMathOperator{\ker}{ker}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\aut}{Aut}
+\DeclareMathOperator{\inn}{Inn}
+\DeclareMathOperator{\AC}{\textbf{AC}}
 
+\DeclareMathOperator{\LT}{LT}
+\DeclareMathOperator{\Mat}{Mat}
 % \varprod
 \DeclareSymbolFont{largesymbolsA}{U}{txexa}{m}{n}
 \DeclareMathSymbol{\varprod}{\mathop}{largesymbolsA}{16}
-
+% \DeclareMathSymbol{\tonm}{\boldsymbol{\to}\textbf{Nm}}
+\def \tonm {\bto\textbf{Nm}}
+\def \tohm {\bto\textbf{Hm}}
 % \bigtimes
+
 \DeclareFontFamily{U}{mathx}{\hyphenchar\font45}
 \DeclareFontShape{U}{mathx}{m}{n}{
       <5> <6> <7> <8> <9> <10>
@@ -311,3 +378,4 @@
   \ooalign{\raise0ex\hbox{\scalebox{0.8}{$\subset$}}\cr\hidewidth\raise1ex\hbox{\scalebox{0.75}{$\sim$}}\hidewidth\cr\raise-0.95ex\hbox{\scalebox{0.8}{$\sim$}}\cr\hidewidth}}}
 \newcommand{\stcomp}[1]{{#1}^{\mathsf{c}}}
 
+\setlength{\baselineskip}{0.8in}
