@@ -1,0 +1,5 @@
+#+TITLE: Abstract Nonsense
+
+
+* Blogs
+    [[./blog/test.org][test]]

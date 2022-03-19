@@ -1,7 +1,0 @@
-#+OPTIONS: TOC:nil 
-#+OPTIONS: NUM:nil 
-#+OPTIONS: AUTHOR:wugouzi 
-
-
-
-* ewf
